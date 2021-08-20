@@ -1,0 +1,28 @@
+<div class="calendar" ng-init="loadCalendar()">
+  <div ng-repeat="month in calendar | filter:{name:param.month}" class="month">
+    <!-- <div ng-repeat="month in calendar" class="month"> -->
+    <div class="monthname">{{month.name}}</div>
+    <div class="day-of-week">
+      <div>Sun</div>
+      <div>Mon</div>
+      <div>Tue</div>
+      <div>Wed</div>
+      <div>Thu</div>
+      <div>Fri</div>
+      <div>Sat</div>
+    </div>
+    <div class="date-grid">
+      <div class="day" ng-style="{ 'grid-column': $first ? month.offset : ''}" ng-repeat="day in month.days" ng-class="{'text-muted': day.events.length < 1 || !day.events}">
+        <div class="datenum">{{day.day | date:'d'}}</div>
+        <div class="banner" ng-if="day.banner" ng-bind-html="day.banner | to_trusted">{{day.banner}}</div>
+        <div ng-repeat="event in day.events" class="event">
+          <div class="banner" ng-bind-html="event.banner | to_trusted"></div>
+          <div class="title" ng-bind-html="event.title | to_trusted"></div>
+          <div class="time" ng-if="event.starttime">{{event.starttime | date:'shortTime'}} - {{event.endtime | date:'shortTime'}}</div>
+          <div class="caption" ng-bind-html="event.caption | to_trusted"></div>
+        </div>
+        <div class="footer" ng-if="day.footer" ng-bind-html="day.footer | to_trusted">{{day.footer}}</div>
+      </div>
+    </div>
+  </div>
+</div>

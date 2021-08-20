@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap");
+
+.font-cursive {
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+}
+
+$font-size-base: 1rem;
+$font-family-sans-serif: "Lato", sans-serif;
+a,
+.cursor-pointer {
+  cursor: pointer;
+}
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  padding-top: 70px;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-top: 77px;
+  }
+}
+
+$theme-colors: (
+  "pink": rgb(255, 153, 255),
+  "purple": rgb(204, 153, 255),
+  "blue": rgb(153, 204, 255)
+);
+
+$primary: rgb(255, 153, 255);
+$secondary: rgb(204, 153, 255);
+$info: rgb(153, 204, 255);
+$success: rgb(0, 175, 0);
+$warning: rgb(253, 182, 13);
+$danger: rgb(204, 0, 0);
+$dark: rgb(51, 51, 51);
+$light: #f8f9fa;
+$white: rgb(255, 255, 255);
+
+a {
+  white-space: nowrap;
+}
+
+.btn {
+  font-weight: 700 !important;
+  &.btn-primary,
+  &.btn-secondary,
+  &.btn-info,
+  &.btn-success,
+  &.btn-warning,
+  &.btn-danger,
+  &.btn-dark,
+  &:hover:not(.btn-link) {
+    color: $white !important;
+  }
+}
+
+.img-cover {
+  width: auto;
+  height: 200px;
+}
+
+.navbar-light {
+  .navbar-nav {
+    .nav-link {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0 0.25rem;
+      color: $primary !important;
+      &:hover {
+        color: darken($primary, 10%) !important;
+      }
+    }
+  }
+}
+
+.card {
+  .card-body {
+    .card-title {
+      font-weight: 300;
+      font-size: 1.6rem;
+    }
+    .card-text {
+      font-weight: 300;
+    }
+  }
+}
+
+button:focus {
+  outline: 5px auto $primary !important;
+}
+.navbar-light .navbar-toggler {
+  color: $primary !important;
+  border-color: $primary !important;
+}
+
+.carousel-nav {
+  color: $primary !important;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 6px;
+  margin: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.brand-divider {
+  text-align: center;
+  line-height: 1px;
+  padding: 4px 0;
+  div {
+    padding: 2px 20px;
+    margin: 1px;
+    display: inline-block;
+    border-radius: 6px;
+    &:nth-of-type(1) {
+      background: $primary;
+    }
+    &:nth-of-type(2) {
+      background: $secondary;
+    }
+    &:nth-of-type(3) {
+      background: $info;
+    }
+  }
+}
+
+// .svg {
+//   display: inline-block;
+//   position: relative;
+//   width: 100%;
+//   padding-bottom: 100%;
+//   vertical-align: middle;
+//   overflow: hidden;
+
+//   svg {
+//     display: inline-block;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//   }
+// }
+
+// .svg-primary {
+//   svg {
+//     .st0 {
+//       fill: $primary;
+//     }
+//   }
+// }
+// .svg-secondary {
+//   svg {
+//     .st0 {
+//       fill: $secondary;
+//     }
+//   }
+// }
+// .svg-info {
+//   svg {
+//     .st0 {
+//       fill: $info;
+//     }
+//   }
+// }
+// .svg-dark {
+//   svg {
+//     .st0 {
+//       fill: $dark;
+//     }
+//   }
+// }
+// .svg-light {
+//   svg {
+//     .st0 {
+//       fill: $light;
+//     }
+//   }
+// }
+// .svg-white {
+//   svg {
+//     .st0 {
+//       fill: $white;
+//     }
+//   }
+// }
+
+@media print {
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+}
+
+// import all bootstrap variables (values from above will overwrite defaults)
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// // all calendar stuff to style and theme
+@import "calendar";
+@import "schedule";
+
+@import "./slideout/slideout";
+
+a[aria-expanded="true"] > .expanded-indicator {
+  transform: rotate(180deg);
+  transition: transform 200ms ease;
+}
+a[aria-expanded="false"] > .expanded-indicator {
+  transform: rotate(360deg);
+  transition: transform 200ms ease;
+}
+
+// ----------------------------------------------------------------------------------------
+// import the entire bootstrap library
+// ----------------------------------------------------------------------------------------
+@import "../../node_modules/bootstrap/scss/bootstrap";
+// ----------------------------------------------------------------------------------------

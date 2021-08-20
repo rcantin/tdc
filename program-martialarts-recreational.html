@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <title>The Dream Centre</title>
+    <link href="node_modules/hc-offcanvas-nav/src/scss/hc-offcanvas-nav.css" rel="stylesheet" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "953981534727552");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=953981534727552&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body class="" ng-init="getScheduleData()">
+    <!-- banner include -->
+    <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
+    <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
+    <!-- / banner include -->
+
+    <div class="container pb-5" style="padding-top: 60px">
+      <div class="h2 font-tdc text-info text-center text-uppercase pt-5 pb-2">Martial Arts</div>
+
+      <div class="row pt-5">
+        <div class="col-12 col-md-7 col-xl-7">
+          <div class="pb-4">
+            <div class="h4 text-info font-weight-bold">Recreational</div>
+            <p>Our Martial Arts program utilizes the International Tae Kwon Do curriculum combined with modern teaching methods to provide the ultimate martial arts experience for your child!</p>
+            <p>
+              Martial Arts promotes respect, self-discipline, body awareness and confidence in students of all ages and is an excellent tool for lifelong success. Our classes are taught by experienced instructors with many years of training and teaching, both in martial arts and child development
+              studies.
+            </p>
+          </div>
+          <div class="pb-4">
+            <div class="h4 text-info font-weight-bold">Belt Evaluations</div>
+            <p>
+              Belt Evaluations will take place every three months during the season, with student eligibility based on attendance, attitude, and overall readiness. Information on the process will be made available to parents prior to each evaluation. Your child should be present at each evaluation
+              in order to progress effectively throughout our curriculum. Higher belt levels might only be required to evaluate once or twice per season. Each belt evaluation cost is $88.00 +hst.
+            </p>
+            <ul>
+              <li>Evaluation 1: November 13-14</li>
+              <li>Evaluation 2: February 26-27</li>
+              <li>Evaluation 3: May 28-29</li>
+            </ul>
+          </div>
+          <div class="pb-4">
+            <div class="h4 text-info font-weight-bold">Safe Sparring</div>
+            <div>
+              <p>Sparring practice allows students to engage with the drills they practice, to increase their fitness levels, and develop increased comfort with movement and blocking which are vital to effective self-defense.</p>
+              <p>Sparring practice follows set rules, with partners working to better each other, rather than 'win'. A strong emphasis is placed on communication and teamwork, while practicing strength, control, and understanding of different ability levels.</p>
+              <p>
+                All students taking part in sparring must have all 'safe sparring gear' with them (including a mouthguard) for everyone's safety and sanitary consideration. A “Safe Sparring Package” can be purchased through the program Director at The Dream Centre. Our program Director will connect
+                with you as to when your child is eligible to participate in safe sparring training. Pricing for this package will be determined based on a child’s specific needs and skill level.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-5 col-lg-4 offset-lg-1">
+          <div class="small border-left bg-light p-3">
+            <div class="h5 text-info">Martial Arts Uniform</div>
+            <div>
+              <p>
+                Your first uniform is on us when you purchase your first Martial Arts T-Shirt!! A question we receive from a lot of families is “What if the program just isn’t for my child, and then we’ve spent money on a uniform that we can’t use?” We’re certain that your child will absolutely love
+                our program, and excel at it! We want your experience with us to be as enjoyable and risk free as possible. So, your first uniform is on us with the purchase of a Martial Arts T-shirt! $19.99 each or two for $34.99. T-shirts can be worn in place of your Gi top, or under your Gi top.
+                Uniform pants, belt, t-shirt and/or Gi top are to be worn to each class.
+              </p>
+              <p>Families will be required to pay for additional uniforms in the future. Pricing to be advised.</p>
+              <p>New students are welcome to wear a comfortable t-shirt, with a pair of leggings or track pants and bare feet until such time as their Martial Arts uniform arrives.</p>
+            </div>
+          </div>
+          <div class="py-4">
+            <div class="accordion" id="maAges">
+              <div class="card">
+                <div class="card-header p-0" id="maAge1">
+                  <a href="#" class="text-blue font-weight-bold" data-toggle="collapse" data-target="#maAgeContent1" aria-expanded="true" aria-controls="maAgeContent1">
+                    <div class="text-center p-2">
+                      <div class="h6 mb-0 font-weight-bold">Taekwondo Minis</div>
+                      <div class="small">Ages 3 - 4</div>
+                    </div>
+                  </a>
+                </div>
+                <div id="maAgeContent1" class="collapse" aria-labelledby="maAge1" data-parent="#maAges">
+                  <div class="card-body small">
+                    <p>
+                      This class is dedicated to engaging students in teamwork and personal growth through games and skill-based learning. Students are introduced to the fundamental building blocks of the values associated with martial arts (sharing, teamwork) teamwork and pre-cursors to martial
+                      arts techniques (striking, kicks, ducks, blocks).
+                    </p>
+                    <p>
+                      Students are engaged through age-appropriate skill building activities and whole body movement. Students are introduced to the basics of martial arts (stances, blocks, kicks) and focus on developing life skills (such as communicating needs, sharing, teamwork and conflict
+                      resolution).
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header p-0" id="maAge2">
+                  <a href="#" class="text-blue font-weight-bold" data-toggle="collapse" data-target="#maAgeContent2" aria-expanded="true" aria-controls="maAgeContent2">
+                    <div class="text-center p-2">
+                      <div class="h6 mb-0 font-weight-bold">Dragons</div>
+                      <div class="small">Ages 5 - 6</div>
+                    </div>
+                  </a>
+                </div>
+                <div id="maAgeContent2" class="collapse" aria-labelledby="maAge2" data-parent="#maAges">
+                  <div class="card-body small">
+                    <p>
+                      This class is dedicated to engaging students in a life long passion for martial arts through games and skill-based learning. Students work on the values associated with martial arts (sharing, teamwork) teamwork and basic martial arts techniques in a no contact environment.
+                      Focus is put on non-violent problem solving, self confidence, and utilizing the tools around us to help us manage our emotions safely.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header p-0" id="maAge3">
+                  <a href="#" class="text-blue font-weight-bold" data-toggle="collapse" data-target="#maAgeContent3" aria-expanded="true" aria-controls="maAgeContent3">
+                    <div class="text-center p-2">
+                      <div class="h6 mb-0 font-weight-bold">Bo Staff</div>
+                      <div class="small">Ages 6+</div>
+                    </div>
+                  </a>
+                </div>
+                <div id="maAgeContent3" class="collapse" aria-labelledby="maAge3" data-parent="#maAges">
+                  <div class="card-body small">
+                    <p>An introduction to Tae Kwon Do's most prominent weapon, students will learn the fundamentals of Bo Staff skills, and work on basic forms. Students must have at least 3 months of martial arts experience.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header p-0" id="maAge4">
+                  <a href="#" class="text-blue font-weight-bold" data-toggle="collapse" data-target="#maAgeContent4" aria-expanded="true" aria-controls="maAgeContent4">
+                    <div class="text-center p-2">
+                      <div class="h6 mb-0 font-weight-bold">Taekwando Elites</div>
+                      <div class="small">Ages 7 - 10</div>
+                    </div>
+                  </a>
+                </div>
+                <div id="maAgeContent4" class="collapse" aria-labelledby="maAge4" data-parent="#maAges">
+                  <div class="card-body small">
+                    <p>
+                      Our students focus on developing strong martial arts technique (forms, sparring, self-defense) and martial arts values (such as focus, respect, self-discipline and leadership). Students engage in high-paced classes that grows their physical fitness levels and expands their
+                      understanding of body mechanics. Our students progress through their belts according to curriculum expectations and are presented with leadership opportunities within class as well as with our Tots and Exceptionalities classes. A strong emphasis is placed on self-defense and
+                      conflict resolution.
+                    </p>
+                    <p>
+                      Our Teen/Adults class focuses on providing martial arts training combined with physical fitness. Our students progress through their belts according to curriculum expectations, with the option to participate in contact and non-contact streams. Students are presented with
+                      leadership opportunities within class as well as our youth and Exceptionalities programs to provide personal growth and role-modelling. Encouraging personal growth and comradery, with goal-setting aided by the martial arts belt system, all adults can benefit from this program.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header p-0" id="maAge5">
+                  <a href="#" class="text-blue font-weight-bold" data-toggle="collapse" data-target="#maAgeContent5" aria-expanded="true" aria-controls="maAgeContent5">
+                    <div class="text-center p-2">
+                      <div class="h6 mb-0 font-weight-bold">Inter Advanced Tae Kwon Do</div>
+                      <div class="small">Ages 7+ orange belt and above</div>
+                    </div>
+                  </a>
+                </div>
+                <div id="maAgeContent5" class="collapse" aria-labelledby="maAge4" data-parent="#maAges">
+                  <div class="card-body small">
+                    <p>Our Inter-Advanced class is designed to meet the skill level of students with their full orange belt and above (minium 7 years old)</p>
+                    <p>Working on proper falls, throws, multi-step defences and combinations, this class leads students on their path to Black Belt. Students with their orange belt and above should be striving to consistently be registered in, and attend, two classes per week.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="h4 font-weight-bold text-blue">Classes</div>
+          <!-- <div class="font-weight-light pb-2">Please ensure you register for the age &amp; day you want.</div> -->
+          <div>
+            <table class="table table-hover table-borderless table-sm small">
+              <tbody
+                ng-repeat="group in [{'daylong':'Monday','dayshort':'mon'},{'daylong':'Tuesday','dayshort':'tue'},{'daylong':'Wednesday','dayshort':'wed'},{'daylong':'Thursday','dayshort':'thu'},{'daylong':'Friday','dayshort':'fri'},{'daylong':'Saturday','dayshort':'sat'},{'daylong':'Sunday','dayshort':'sun'}]"
+              >
+                <tr ng-show="filteredmon.length > 0" class="border-bottom">
+                  <td colspan="5" class="h6 mb-0 font-weight-bold pb-2 pt-4">{{group.daylong}} Classes</td>
+                </tr>
+                <tr class="border-bottom" ng-repeat="item in filteredmon = (scheduledata | orderBy:['min_age', 'max_age'] | filter:{category1:'Martial Arts'} | filter:{category2:'Recreational'} | filter:{category3:'!Sweet Dreamers'} | filter:limitDay(group.dayshort))">
+                  <td>
+                    <div class="d-md-none pb-2">
+                      <div class="font-weight-bold">{{item.name}}</div>
+                      <div class="small">
+                        <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                        <span>{{item.start_time}} - {{item.end_time}}</span>
+                      </div>
+                      <div class="small">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                      <div class="small">Ages: {{item.min_age}} - {{item.max_age}}</div>
+                      <div class="small">{{item.tuition.fee | currency}} monthly</div>
+                    </div>
+                    <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-blue font-weight-bold">
+                      <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                      <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                    </a>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    {{item.name}}
+                    <div class="small font-weight-light">{{item.category1}} | {{item.category2}} | {{item.category3}}</div>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    <div>
+                      <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                      <span>{{item.start_time}} - {{item.end_time}}</span>
+                    </div>
+                    <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                  </td>
+                  <td class="d-none d-md-table-cell">Ages: {{item.min_age}} - {{item.max_age}}</td>
+                  <td class="d-none d-md-table-cell">
+                    {{item.tuition.fee | currency}}
+                    <div class="small font-weight-light">monthly</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- <div class="col-12">
+                    <div class="pt-4 h5 text-blue font-weight-bold">Monday Classes</div>
+                    <div class="pt-2">
+                        <table class="table table-striped table-hover table-sm small">
+                            <thead class=" thead-sm"><tr><th> </th><th>Class</th><th>When</th><th>Age(s)</th><th>Tuition</th></tr></thead>
+                            <tbody>
+                                <tr ng-repeat="item in scheduledata | orderBy:'start_time' | filter:{category1:'Martial Arts'} | filter:{category2:'Recreational'} | filter:{category3:'!Sweet Dreamers'} | filter:limitDay('mon')">
+                                    <td>
+                                        <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-blue font-weight-bold">
+                                            <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                                            <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                                        </a>
+                                    </td>
+                                    <td>{{item.name}}</td>
+                                    <td class="">
+                                        <div>
+                                            <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                                            <span>{{item.start_time}} - {{item.end_time}}</span>
+                                        </div>
+                                        <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                                    </td>
+                                    <td>{{item.min_age}} - {{item.max_age}}</td>
+                                    <td>{{item.tuition.fee | currency}}<div class="small font-weight-light">monthly</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="pt-4 h5 text-blue font-weight-bold">Tuesday Classes</div>
+                    <div class="pt-2">
+                        <table class="table table-striped table-hover table-sm small">
+                            <thead class=" thead-sm"><tr><th> </th><th>Class</th><th>When</th><th>Age(s)</th><th>Tuition</th></tr></thead>
+                            <tbody>
+                                <tr ng-repeat="item in scheduledata | orderBy:'start_time' | filter:{category1:'Martial Arts'} | filter:{category2:'Recreational'} | filter:{category3:'!Sweet Dreamers'} | filter:limitDay('tue')">
+                                    <td>
+                                        <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-blue font-weight-bold">
+                                            <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                                            <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                                        </a>
+                                    </td>
+                                    <td>{{item.name}}</td>
+                                    <td class="">
+                                        <div>
+                                            <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                                            <span>{{item.start_time}} - {{item.end_time}}</span>
+                                        </div>
+                                        <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                                    </td>
+                                    <td>{{item.min_age}} - {{item.max_age}}</td>
+                                    <td>{{item.tuition.fee | currency}}<div class="small font-weight-light">monthly</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="pt-4 h5 text-blue font-weight-bold">Wednesday Classes</div>
+                    <div class="pt-2">
+                        <table class="table table-striped table-hover table-sm small">
+                            <thead class=" thead-sm"><tr><th> </th><th>Class</th><th>When</th><th>Age(s)</th><th>Tuition</th></tr></thead>
+                            <tbody>
+                                <tr ng-repeat="item in scheduledata | orderBy:'start_time' | filter:{category1:'Martial Arts'} | filter:{category2:'Recreational'} | filter:{category3:'!Sweet Dreamers'} | filter:limitDay('wed')">
+                                    <td>
+                                        <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-blue font-weight-bold">
+                                            <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                                            <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                                        </a>
+                                    </td>
+                                    <td>{{item.name}}</td>
+                                    <td class="">
+                                        <div>
+                                            <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                                            <span>{{item.start_time}} - {{item.end_time}}</span>
+                                        </div>
+                                        <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                                    </td>
+                                    <td>{{item.min_age}} - {{item.max_age}}</td>
+                                    <td>{{item.tuition.fee | currency}}<div class="small font-weight-light">monthly</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="pt-4 h5 text-blue font-weight-bold">Thursday Classes</div>
+                    <div class="pt-2">
+                        <table class="table table-striped table-hover table-sm small">
+                            <thead class=" thead-sm"><tr><th> </th><th>Class</th><th>When</th><th>Age(s)</th><th>Tuition</th></tr></thead>
+                            <tbody>
+                                <tr ng-repeat="item in scheduledata | orderBy:'start_time' | filter:{category1:'Martial Arts'} | filter:{category2:'Recreational'} | filter:{category3:'!Sweet Dreamers'} | filter:limitDay('thu')">
+                                    <td>
+                                        <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-blue font-weight-bold">
+                                            <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                                            <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                                        </a>
+                                    </td>
+                                    <td>{{item.name}}</td>
+                                    <td class="">
+                                        <div>
+                                            <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                                            <span>{{item.start_time}} - {{item.end_time}}</span>
+                                        </div>
+                                        <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                                    </td>
+                                    <td>{{item.min_age}} - {{item.max_age}}</td>
+                                    <td>{{item.tuition.fee | currency}}<div class="small font-weight-light">monthly</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="pt-4 h5 text-blue font-weight-bold">Saturday Classes</div>
+                    <div class="pt-2">
+                        <table class="table table-striped table-hover table-sm small">
+                            <thead class=" thead-sm"><tr><th> </th><th>Class</th><th>When</th><th>Age(s)</th><th>Tuition</th></tr></thead>
+                            <tbody>
+                                <tr ng-repeat="item in scheduledata | orderBy:'start_time' | filter:{category1:'Martial Arts'} | filter:{category2:'Recreational'} | filter:{category3:'!Sweet Dreamers'} | filter:limitDay('sat')">
+                                    <td>
+                                        <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-blue font-weight-bold">
+                                            <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                                            <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                                        </a>
+                                    </td>
+                                    <td>{{item.name}}</td>
+                                    <td class="">
+                                        <div>
+                                            <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                                            <span>{{item.start_time}} - {{item.end_time}}</span>
+                                        </div>
+                                        <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                                    </td>
+                                    <td>{{item.min_age}} - {{item.max_age}}</td>
+                                    <td>{{item.tuition.fee | currency}}<div class="small font-weight-light">monthly</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div> -->
+      </div>
+    </div>
+
+    <!-- footer include -->
+    <div ng-include src="'footer.html'"></div>
+    <!-- / footer include -->
+  </body>
+</html>

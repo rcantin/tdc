@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- <meta name="theme-color" content="#000000" /> -->
+    <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="./img/badge-colour-transparent.png" type="image/png" />
+    <title>The Family Tree</title>
+    <link href="./scss/nav/hc-offcanvas-nav.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js" integrity="sha256-23hi0Ag650tclABdGCdMNSjxvikytyQ44vYGo9HyOrU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-animate.min.js" integrity="sha256-biQnzwpmTVb5ZZDRDiU8iwbj7ZPTH9SZSxn5gewyFA0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js" integrity="sha256-jZRUyy674QanjfVAn9YBW+d1iuxj8csDOxrwS35/GLo=" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-cloak ng-init="getScheduleData()">
+    <div class="d-none d-md-block" ng-include src="'banner.html'"></div>
+    <div class="d-md-none" ng-include src="'_banner-slide.html'"></div>
+
+    <!-- <div ng-include src="'_page-intro.html'"></div> -->
+
+    <div class="container bg-white pb-5 mb-5">
+      <div class="bg-danger text-white p-4 mb-5">Check registration links!</div>
+
+      <!-- <div class="display-4 mb-3 text-center font-cursive font-weight-bold">Memberships &amp; Passes</div>
+      <div ng-include="'_brand-divider.html'"></div>
+      <div>
+        <div>
+          <div class="h1 font-cursive">The Nest</div>
+          <p>
+            Our beautiful 3600 sq/ft lounge area where Mamas can relax while they nurture their Littles, and grow new friendships. Our Nest is equipped with two large-screen televisions for educational programming, sofas, lounge chairs, and additional seating, enclosed play area with lots of fun
+            toys for Littles, change tables, change areas, water station, wi-fi.
+          </p>
+        </div>
+      </div>
+
+      <br /><br /><br /><br /><br /><br /><br /> -->
+
+      <div class="display-4 mb-3 text-center font-cursive font-weight-bold">Memberships &amp; Passes</div>
+      <div ng-include="'_brand-divider.html'"></div>
+
+      <div class="d-flex justify-content-center align-items-center flex-column flex-md-row pt-3 pb-5">
+        <div class="px-3">Mamas (adult)</div>
+        <div class="px-3">Littles (6-40 months recommended)</div>
+        <div class="px-3">Extra Littles (under 6 months)</div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-7 col-xl-7">
+          <!-- <hr /> -->
+          <div class="pb-5">
+            <div class="h3 font-weight-bold">The Nest</div>
+            <div class="pb-3">
+              <div class="">
+                <span class="text-nowrap">Open Tuesday to Thursday:</span>
+                <span class="text-nowrap">9:30 AM <span>to</span> 2:00 PM</span>
+              </div>
+            </div>
+            <div>
+              <div class="font-weight-light pb-2">
+                Our beautiful 3600 sq/ft lounge area where Mamas can relax while they nurture their Littles, and grow new friendships. Our Nest is equipped with two large-screen televisions for educational programming, sofas, lounge chairs, and additional seating, enclosed play area with lots of fun
+                toys for Littles, change tables, change areas, water station, wi-fi.
+              </div>
+              <div class="font-weight-light">Includes</div>
+              <ul class="font-weight-light">
+                <li>Full Nest access during regularly scheduled hours</li>
+                <li>Classes and Open Gym excluded</li>
+                <li>Special Guests and Events may be an additional charge</li>
+              </ul>
+            </div>
+            <div class="pt-3">
+              <div class="d-flex justify-content-start align-items-center">
+                <div class="pr-3">
+                  <a class="btn btn-primary btn-lg" href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10692769&loc=" target="_blank"> Register </a>
+                </div>
+                <div>
+                  <div class="h5 mb-0">$49.99/month</div>
+                  <div class="mb-2 small font-weight-light">All prices subject to HST</div>
+                  <div class="">Child under 6 months are FREE</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="pb-5">
+            <div class="h3 font-weight-bold">Family Tree All Access</div>
+            <div>
+              <div class="font-weight-light pb-2">
+                We provide our Mamas and their Littles with fun activities, events, programs and resources designed to enhance both physical and social development all within our stunning, 20,000 sq/ft state-of-the-art facility. Our Family Tree Memberships include full Nest access, as well as every
+                activity listed on our calendar, including Open Gym, and access to nearly all Special Guests and Events.
+              </div>
+              <div class="font-weight-light">Includes</div>
+              <ul class="font-weight-light">
+                <li>Full Nest access during regularly scheduled hours</li>
+                <li>Open Gym access</li>
+                <li>All weekly classes based on available spaces</li>
+                <li>Some Special Guests</li>
+                <li>Some Special Events</li>
+                <li>Extra Littles are FREE and limited to The Nest Membership structure</li>
+              </ul>
+            </div>
+            <div class="pt-3">
+              <div class="d-flex justify-content-start align-items-center">
+                <div class="pr-3">
+                  <a class="btn btn-primary btn-lg" href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10692769&loc=" target="_blank"> Register </a>
+                </div>
+                <div>
+                  <div class="h5 mb-0">$99.99/month</div>
+                  <div class="mb-2 small font-weight-light">All prices subject to HST</div>
+                  <div class="">Mama + Little (2nd Child is FREE)</div>
+                  <div class="">Children 6-40 months recommended</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="pb-5">
+            <div class="h3 font-weight-bold">Drop-In Rate</div>
+            <div>
+              <div class="font-weight-light">Includes</div>
+              <ul class="font-weight-light">
+                <li>Full Nest access during regularly scheduled hours</li>
+                <li>Open Gym access</li>
+                <li>Daily classes based on available spaces</li>
+                <li>Some Special Guests</li>
+                <li>Some Special Events</li>
+              </ul>
+            </div>
+            <div class="pt-3">
+              <div class="d-flex justify-content-start align-items-center">
+                <div class="pr-3">
+                  <div class="text-muted text-center bg-light p-3">Pay Upon Arrival via Credit or Debit only</div>
+                </div>
+                <div>
+                  <div class="h5 mb-0">$19.99</div>
+                  <div class="mb-2 small font-weight-light">All prices subject to HST</div>
+                  <div class="">Mama + Little (2nd Child is FREE)</div>
+                  <div class="">Children 6-40 months recommended</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="pb-5">
+            <div class="h3 font-weight-bold">6 Visit Pass</div>
+            <div>
+              <div class="font-weight-light">Includes</div>
+              <ul class="font-weight-light">
+                <li>Full Nest access during regularly scheduled hours</li>
+                <li>Open Gym access</li>
+                <li>Daily classes based on available spaces</li>
+                <li>Some Special Guests</li>
+                <li>Some Special Events</li>
+              </ul>
+            </div>
+            <div class="pt-3">
+              <div class="d-flex justify-content-start align-items-center">
+                <div class="pr-3">
+                  <a class="btn btn-primary btn-lg" href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10692769&loc=" target="_blank"> Register </a>
+                </div>
+                <div>
+                  <div class="h5 mb-0">$99.99/month</div>
+                  <div class="mb-2 small font-weight-light">All prices subject to HST</div>
+                  <div class="">Mama + Little (2nd Child is FREE)</div>
+                  <div class="">Children 6-40 months recommended</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row">
+                    <div class="col-12">
+                      <div class="h4 mb-4 font-weight-light">Memberships</div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5">
+                      <div class="card bg-light shadow h-100">
+                        <div class="card-header">
+                          <div class="h5 mb-0 font-weight-bold">The Nest</div>
+                        </div>
+                        <div class="card-body">
+                          <div class="font-weight-light">
+                            Our beautiful 3600 sq/ft lounge area where Mamas can relax while they nurture their Littles, and grow new friendships. Our Nest is equipped with two large-screen televisions for educational programming, sofas, lounge chairs, and additional seating, enclosed play area with
+                            lots of fun toys for Littles, change tables, change areas, water station, wi-fi.
+                          </div>
+                          <div class="pb-2">
+                            <div class="h5 mb-0">$49.99/month</div>
+                            <div class="mb-2 small font-weight-light">All prices subject to HST</div>
+                            <div class="h6">Child under 6 months are FREE</div>
+                          </div>
+                          <div>
+                            <div>Includes</div>
+                            <ul class="small pl-4">
+                              <li>Full Nest access during regularly scheduled hours</li>
+                              <li>Classes and Open Gym excluded</li>
+                              <li>Special Guests and Events may be an additional charge</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="card-footer">
+                          <a href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10692769&loc=" class="btn btn-primary btn-block" target="_blank"> Register </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5">
+                      <div class="card bg-light shadow-sm h-100">
+                        <div class="card-header">
+                          <div style="position: absolute; margin: -26px 0 0 10px" class="bg-info rounded-pill small shadow-sm text-white font-weight-bold px-3 py-0">One Extra Little Free!</div>
+                          <div class="h5 font-weight-bold">The Nest <span class="font-italic">Plus</span></div>
+                          <div class="">Mama + 2 Extra Littles</div>
+                          <div class="font-weight-light">Both children under 6 months</div>
+                        </div>
+                        <div class="card-body">
+                          <div class="">
+                            <div class="pb-2">
+                              <div class="h5 mb-0">$49.99/month</div>
+                              <div class="small font-weight-light">All prices subject to HST</div>
+                            </div>
+                            <div>Includes</div>
+                            <ul class="small pl-4">
+                              <li>Full Nest access during regularly scheduled hours</li>
+                              <li>Most Special Guest visits</li>
+                              <li>Most Special Events</li>
+                              <li>Does not include classes and open gym</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="p-3">
+                          <a href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10692769&loc=" class="btn btn-primary btn-block" target="_blank"> Register </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+          <!-- <hr />
+          <div>
+            <div class="display-4 font-cursive font-weight-bold">The Family Tree</div>
+            <p>
+              We provide our Mamas and their Littles with fun activities, events, programs and resources designed to enhance both physical and social development all within our stunning, 20,000 sq/ft state-of-the-art facility. Our Family Tree Memberships include full Nest access, as well as every
+              activity listed on our calendar, including Open Gym, and access to nearly all Special Guests and Events.
+            </p>
+            <hr />
+            <div class="">
+              <div class="row">
+                <div class="col-12">
+                  <div class="h4 mb-4 font-weight-light">Memberships</div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5">
+                  <div class="card bg-light shadow-sm h-100">
+                    <div class="card-header">
+                      <div style="position: absolute; margin: -26px 0 0 10px" class="bg-info rounded-pill small shadow-sm text-white font-weight-bold px-3 py-0">Extra Littles Free!</div>
+                      <div class="h5 font-weight-bold">Family Tree All Access</div>
+                      <div class="">Mama + Little</div>
+                      <div class="font-weight-light">Child 6 – 40 months recommended</div>
+                    </div>
+                    <div class="card-body">
+                      <div class="pb-2">
+                        <div class="h5 mb-0">$119.99/month</div>
+                        <div class="small font-weight-light">All prices subject to HST</div>
+                      </div>
+                      <div class="">
+                        <div>Includes</div>
+                        <ul class="small pl-4">
+                          <li>Full Nest access during regularly scheduled hours</li>
+                          <li>Open Gym access</li>
+                          <li>All weekly classes based on available spaces</li>
+                          <li>Most Special Guests</li>
+                          <li>Most Special Events</li>
+                          <li>Extra Littles are FREE and limited to The Nest Membership structure</li>
+                        </ul>
+                      </div>
+                      <a href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10692788&loc=" class="btn btn-primary btn-block" target="_blank"> Register </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5">
+                  <div class="card bg-light shadow-sm h-100">
+                    <div class="card-header">
+                      <div style="position: absolute; margin: -26px 0 0 10px" class="bg-info rounded-pill small shadow-sm text-white font-weight-bold px-3 py-0">Extra Littles Free!</div>
+                      <div class="h5 font-weight-bold">
+                        Family Tree All Access
+                        <span class="font-italic">Plus</span>
+                      </div>
+                      <div class="">Mama + 2 Littles</div>
+                      <div class="font-weight-light">Child 6 – 40 months recommended</div>
+                    </div>
+                    <div class="card-body">
+                      <div class="pb-2">
+                        <div class="h5 mb-0">$199.99/month</div>
+                        <div class="small font-weight-light">All prices subject to HST</div>
+                      </div>
+                      <div class="">
+                        <div>Includes</div>
+                        <ul class="small pl-4">
+                          <li>Full Nest access during regularly scheduled hours</li>
+                          <li>Open Gym access</li>
+                          <li>All weekly classes based on available spaces</li>
+                          <li>Most Special Guests</li>
+                          <li>Most Special Events</li>
+                          <li>Extra Littles are FREE and limited to The Nest Membership structure</li>
+                        </ul>
+                      </div>
+                      <a href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10734724&loc=" class="btn btn-primary btn-block" target="_blank"> Register </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div>
+            <div class="display-4 font-cursive font-weight-bold">Day Passes</div>
+            <p>
+              Would day passes work better for your family's scheduling needs? We provide our Mamas and their Littles with fun activities, events, programs and resources designed to enhance both physical and social development all within our stunning, 20,000 sq/ft state-of-the-art facility. Register
+              for one of our passes and receive full Nest access, as well as every activity listed on our calendar, including Open Gym, and access to nearly all Special Guests and Events.
+            </p>
+            <hr />
+            <div class="">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5">
+                  <div class="card bg-light shadow-sm h-100">
+                    <div class="card-header">
+                      <div class="h5 font-weight-bold">Drop-In Rate</div>
+                      <div class="">Mama + Little</div>
+                      <div class="font-weight-light">Child 6 – 40 months recommended</div>
+                    </div>
+                    <div class="card-body">
+                      <div class="pb-2">
+                        <div class="h5 mb-0">$19.99/month</div>
+                        <div class="small font-weight-light">All prices subject to HST</div>
+                      </div>
+                      <div class="small pb-3 font-weight-bold">2nd child from same household/family as first child FREE</div>
+                      <div class="">
+                        <div>Includes</div>
+                        <ul class="small pl-4">
+                          <li>Full Nest access during regularly scheduled hours</li>
+                          <li>Open Gym access</li>
+                          <li>Daily classes based on available spaces</li>
+                          <li>Most Special Guests</li>
+                          <li>Most Special Events</li>
+                        </ul>
+                      </div>
+                      <div class="h4 font-weight-light mb-0">Pay Upon Arrival</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5">
+                  <div class="card bg-light shadow-sm h-100">
+                    <div class="card-header">
+                      <div class="h5 font-weight-bold">6 Visit Pass</div>
+                      <div class="">Mama + Little</div>
+                      <div class="font-weight-light">Child 6 – 40 months recommended</div>
+                    </div>
+                    <div class="card-body">
+                      <div class="pb-2">
+                        <div class="h5 mb-0">$99.99/month</div>
+                        <div class="h6 mb-0">$29 for 2nd child</div>
+                        <div class="small font-weight-light">All prices subject to HST</div>
+                      </div>
+                      <div class="">
+                        <div>Includes</div>
+                        <ul class="small pl-4">
+                          <li>Full Nest access during regularly scheduled hours</li>
+                          <li>Open Gym access</li>
+                          <li>All weekly classes based on available spaces</li>
+                          <li>Most Special Guests</li>
+                          <li>Most Special Events</li>
+                        </ul>
+                      </div>
+                      <a href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10856812&loc=" class="btn btn-primary btn-block" target="_blank"> Register </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-12 col-lg-6 mb-5">
+                  <div class="card bg-light shadow-sm h-100">
+                    <div class="card-header">
+                      <div class="h5 font-weight-bold">
+                        10 Day Pass
+                      </div>
+                      <div class="">Mama + Little</div>
+                      <div class="font-weight-light">
+                        Child 6 – 40 months recommended
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="h5">$159.99</div>
+                      <div class="pb-2 ">$40 for 2nd child</div>
+                      <div class="">
+                        <div>Includes</div>
+                        <ul class="small pl-4">
+                          <li>Full Nest access during regularly scheduled hours</li>
+                          <li>Open Gym access</li>
+                          <li>All weekly classes based on available spaces</li>
+                          <li>Most Special Guests</li>
+                          <li>Most Special Events</li>
+                          <li>Passes must be used within a 90 day period</li>
+                        </ul>
+                      </div>
+                      <a href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10768658&loc=" class="btn btn-primary btn-block" target="_blank">
+                        Register
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="col offset-lg-1 border-left">
+          <div class="">
+            <div class="font-weight-light">
+              <div class="h6 font-weight-bold">Family Tree &amp; Nest Memberships</div>
+              <p>
+                We provide our Mamas and their Littles with fun activities, events, programs and resources designed to enhance both physical and social development. To become a part of our family, Mamas, simply click on the Membership Icon below and you and your Littles will be all set to grow with
+                us!
+              </p>
+              <p>
+                All membership amounts are promotional at this point in time and subject to change with at least 30 days notice. Once you select your preferred membership type, please add Mama/Parent/Guardian information and only register your Littles as the students. Tuition amounts are adjusted by
+                our administrative team if necessary once your registration process is complete.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div ng-include src="'footer.html'"></div>
+  </body>
+</html>

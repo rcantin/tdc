@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <title>The Dream Centre</title>
+    <link href="node_modules/hc-offcanvas-nav/src/scss/hc-offcanvas-nav.css" rel="stylesheet" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "953981534727552");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=953981534727552&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body class="" ng-init="getScheduleData()">
+    <!-- banner include -->
+    <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
+    <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
+    <!-- / banner include -->
+
+    <div class="container pb-5 pt-5 mt-5">
+      <div class="h2 font-tdc text-primary text-center text-uppercase py-4">Competitive Dance</div>
+
+      <div class="pt-4">
+        <div class="pb-5">
+          Our company is a group of focused, dedicated dancers who take part in competitions, community events, and other performances throughout the year. It takes a lot of dedication and hard work on, both the part of the dancer and the parent, in order to be a part of our Award Winning Company.
+          Dancers should have previous dance experience, excellent attendance and attitude. They must show dedication and respect to teachers, choreographers, and other students at all times as they are representatives of the studio. Our competitive team consists of Small-Frys who are ages 4-6,
+          Minis who are ages 7-9, Juniors who are ages 10-12, Intermediates who are ages 13-15, and Seniors who are 16+. Anyone who is interested in being a part of our Competitive Company for the upcoming season will need to attend scheduled audition dates. Auditions are an opportunity for the
+          program Director to assess student interests and ability levels, and to determine if a student is ready for the competitive stream. Live Dream Dance is still accepting dancers for our competitive team. Call now to book an appointment! 905-690-9022 or
+          <a href="contact.html">send us a message</a>.
+        </div>
+        <div class="">
+          <hr />
+          <div class="pb-3 text-center">
+            <div class="h3 font-weight-light">COMPETITIVE DANCE INTENSIVE WEEK</div>
+            <div class="h5 font-weight-light">July 19th to 23rd</div>
+
+            <div>
+              <div ng-repeat="item in scheduledata | orderBy:'age' | filter:{category1:'Camp'} | filter:{category2:'Competitive'} | filter:{name:'Competitive Dance Intensive'} | filter:{start_date:'2019-07-30'}" class="d-inline-block p-3 text-center">
+                <div class="pb-2 font-weight-bold">Ages {{item.min_age}} - {{item.max_age}}</div>
+                <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="btn btn-pink glass px-5"><span ng-if="item.openings.calculated_openings > 0">Register</span><span ng-if="item.openings.calculated_openings <= 0">Wait List</span></a>
+                <!-- <div class="small font-weight-light pt-1">{{item.name}}</div>
+                                <div class="small font-weight-light">{{item.start_date}}</div> -->
+              </div>
+            </div>
+
+            <!-- <div class="">Ages 4 - 11</div> -->
+            <div class="py-2">Please inquire about tuition and time</div>
+            <div class="">
+              Our Dance Intensive is designed for the serious, dedicated dancer who is interested in being a part of one of our Award Winning Competitive or Pre-Competitive Dance Teams in the upcoming season. Dancers will participate in Ballet, Jazz, Acro, Lyrical, Contemporary, Tap, Hip Hop, and
+              Improvisation classes, as well as, Stretch and Conditioning, and Tumbling classes in our gymnastics facility with National level coaches. This camp is mandatory for any new or returning dancer wishing to audition for one of our teams. Come and train with our Award Winning Dance and
+              Fitness Faculty, and amazing special guest choreographers from throughout North America.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="pb-4">
+                <div class="h4 text-primary font-weight-bold">Private Lessons</div>
+                <div>Ready to take your dance skills to the next level?  Our highly experienced and professional dance teachers are available for private lessons.</div>
+            </div> -->
+    </div>
+
+    <!-- footer include -->
+    <div ng-include src="'footer.html'"></div>
+    <!-- / footer include -->
+  </body>
+</html>

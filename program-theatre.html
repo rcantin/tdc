@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MainController">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <title>The Dream Centre</title>
+    <link href="node_modules/hc-offcanvas-nav/src/scss/hc-offcanvas-nav.css" rel="stylesheet" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/app-w-classes.js"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "953981534727552");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=953981534727552&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body>
+    <!-- banner include -->
+    <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
+    <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
+    <!-- / banner include -->
+
+    <div class="container pb-5 pt-5 mt-5">
+      <div ng-init="getClasses('Dance', 'Recreational', 'Triple Threat'); brandColor='red';" ng-controller="ClassController">
+        <div class="h2 font-tdc text-red text-center text-uppercase pt-4">Musical Theatre</div>
+        <div class="h5 mb-3 font-weight-bold text-center">Led by The Star Project &amp; Director Jo Payne</div>
+        <div class="text-center pb-5">
+          Musical Theatre is a wonderful way of bringing out the confidence in young people by exploring the 3 main disciplines, dance, singing and acting. Musical Theatre discovers childrens' ability to express themselves in many different ways. Students explore different show themes and learn
+          techniques such as improvisation, characterisation, script work, accents, voice projection, mime, comedy, physical theatre, dance genres, vocal technique, harmonies, ensemble singing and much more! They will also get to perform many times a year.
+        </div>
+
+        <div class="row">
+          <div class="col pb-5">
+            <div class="h3 mb-0 font-weight-bold" ng-class="'text-' + brandColor">SHOW THEMES</div>
+            <hr />
+            <div class="pb-4">
+              Join us on our Musical Theatre journey and develop your confidence and skills as a performer. We’ve divided your journey into 3 terms and each term rolls into the next. There’s no additional cost for costumes or prop/set pieces. Just a small fee per ticket for each performance.
+              Performance dates and ticket prices are TBA.
+            </div>
+            <div class="pb-2">
+              <a href="#" data-toggle="collapse" data-target="#themedetailRisingStars" aria-expanded="false" ng-class="'text-' + brandColor">
+                <div class="d-flex justify-content-start align-items-center flex-wrap py-3">
+                  <div class="pr-2"><i class="fas fa-chevron-down expanded-indicator"></i></div>
+                  <div class="h5 mb-0 font-weight-bold">RISING STARS&nbsp;</div>
+                  <div class="h5 mb-0 font-weight-light">AGES 4-6</div>
+                </div>
+              </a>
+              <div class="collapse" id="themedetailRisingStars">
+                <div class="pl-4">
+                  <div class="py-2">
+                    <div class="h6 mb-0 font-weight-bold" ng-class="'text-' + brandColor">TERM 1: MARY POPPINS</div>
+                    <div>Monday, Sept 13th – Monday, Dec 13th</div>
+                    <div>13 Weeks – Closed Oct. 11th for Thanksgiving</div>
+                    <div class="pt-2 font-weight-light">
+                      Students begin their 34 week adventure onto the stage. They begin with the basics of theatre as they follow the magical story of Mary Poppins. This term students will use the themes of imagination and confidence. Learning songs, dances and scenes from the show Mary Poppins,
+                      they will develop their grounding skills and techniques to becoming a performer. This is a skill building term that prepares students for Term 2!
+                    </div>
+                  </div>
+                  <div class="py-2">
+                    <div class="h6 mb-0 font-weight-bold" ng-class="'text-' + brandColor">TERM 2: FINDING NEMO</div>
+                    <div>Monday, January 10th – Monday, March 7th</div>
+                    <div>9 weeks – Closed Feb 21st for Family Day</div>
+                    <div class="pt-2 font-weight-light">
+                      This term students will head down under the sea for a magical journey with Dori and Nemo as they learn to tell a story through dance drama and singing, and perform to their friends and family as they demonstrate the creative pieces they have learnt. This is a skill building
+                      term that prepares students for Term 3!
+                    </div>
+                  </div>
+                  <div class="py-2">
+                    <div class="h6 mb-0 font-weight-bold" ng-class="'text-' + brandColor">TERM 3: PETER PAN</div>
+                    <div>Monday, March 21st – Monday, June 13th</div>
+                    <div>11 Weeks - Closed April 18th, Easter Monday</div>
+                    <div class="pt-2 font-weight-light">
+                      It’s time to head to Neverland, dance with the pirates, sing with the fairies and play games with the mermaids in this fun and exciting show term. Students will work toward a bigger production, to include; wearing a costume, using a microphone and performing under theatre
+                      lights. This is the term they have spent the year working towards, where their efforts come to fruition and they can be very proud of their achievements. Students also will also receive a trophy at the end of the 34 week season as part of celebrating their accomplishments!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pb-2">
+              <a href="#" data-toggle="collapse" data-target="#themedetailJuniors" aria-expanded="false" ng-class="'text-' + brandColor">
+                <div class="d-flex justify-content-start align-items-center flex-wrap py-3">
+                  <div class="pr-2"><i class="fas fa-chevron-down expanded-indicator"></i></div>
+                  <div class="h5 mb-0 font-weight-bold">JUNIORS&nbsp;</div>
+                  <div class="h5 mb-0 font-weight-light">AGES 7-9</div>
+                </div>
+              </a>
+              <div class="collapse" id="themedetailJuniors">
+                <div class="pl-4">
+                  <div class="py-2">
+                    <div class="h6 mb-0 font-weight-bold" ng-class="'text-' + brandColor">TERM 1: WICKED</div>
+                    <div>Monday, Sept 13th – Monday, Dec 13th</div>
+                    <div>13 Weeks – Closed Oct. 11th for Thanksgiving</div>
+                    <div class="pt-2 font-weight-light">
+                      This is the beginning of their 34 week journey into developing their skills in Musical Theatre. Learning choreography, scenes and songs from the musical Wicked and showcasing them in a small performance to friends and family at the end of the term. By the end of the season they
+                      will be fully confident on the stage and will have developed their skills and their self belief as they look back on 3 accomplished shows. Constantly building and growing on their achievements and ability as young performers, this term is the opportunity to perform without the
+                      pressure of lights, costumes and microphones. This is a skill building term that prepares students for Term 2!
+                    </div>
+                  </div>
+                  <div class="py-2">
+                    <div class="h6 mb-0 font-weight-bold" ng-class="'text-' + brandColor">TERM 2: BACKSTAGE PASS</div>
+                    <div>Monday, January 10th – Monday, March 7th</div>
+                    <div>9 weeks – Closed Feb. 21st for Family Day</div>
+                    <div class="pt-2 font-weight-light">
+                      This term students begin rehearsals for their big end of season show a larger style production to an audience of family and friends at The Dream Centre. Children are further challenged in their 3 disciplines, continuing the theme of Wicked The Musical and allowing them to take
+                      on bigger roles. Children will be given an experience of the backstage elements to their show and the opportunity to help with creating the show backdrop, organise props and plan lighting and sound. They will also go through a fun audition process for their casting. At the end
+                      of this term they will present to their family and friends the numbers they have worked on so far, their technical show plans and their creative ideas for their performance. They are given the freedom and responsibility to make their show their own and be a part of the process
+                      which is hugely rewarding and exciting. This is a skill building term that prepares students for Term 3!
+                    </div>
+                  </div>
+                  <div class="py-2">
+                    <div class="h6 mb-0 font-weight-bold" ng-class="'text-' + brandColor">TERM 3: WICKED SHOW TERM</div>
+                    <div>Monday, March 21st – Monday, June 13th</div>
+                    <div>11 Weeks - Closed April 18th, Easter Monday</div>
+                    <div class="pt-2 font-weight-light">
+                      This term we focus on polishing and bringing together their show. Tech rehearsals and dress rehearsals are introduced and students will have the opportunity to work with the other age groups to practice transitions, entrances and exits. The excitement builds as they prepare for
+                      opening night and everything they’ve worked so hard for inviting everyone to join them in The Emerald City!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pb-2">
+              <a href="#" data-toggle="collapse" data-target="#themedetailIntermediates" aria-expanded="false" ng-class="'text-' + brandColor">
+                <div class="d-flex justify-content-start align-items-center flex-wrap py-3">
+                  <div class="pr-2"><i class="fas fa-chevron-down expanded-indicator"></i></div>
+                  <div class="h5 mb-0 font-weight-bold">INTERMEDIATES&nbsp;</div>
+                  <div class="h5 mb-0 font-weight-light">AGES 9-13</div>
+                </div>
+              </a>
+              <div class="collapse" id="themedetailIntermediates">
+                <div class="pl-4">
+                  <div class="py-2">
+                    <div class="h6 mb-0 font-weight-bold" ng-class="'text-' + brandColor">TERM 1: WICKED</div>
+                    <div>Monday, Sept 13th – Monday, Dec 13th</div>
+                    <div>13 Weeks – Closed Oct. 11th for Thanksgiving</div>
+                    <div class="pt-2 font-weight-light">
+                      This is the beginning of their 34 week journey into developing their skills in Musical Theatre. Learning choreography, scenes and songs from the musical Wicked and showcasing them in a small performance to friends and family at the end of the term. By the end of the season they
+                      will be fully confident on the stage and will have developed their skills and their self belief as they look back on 3 accomplished shows. Constantly building and growing on their achievements and ability as young performers, this term is the opportunity to perform without the
+                      pressure of lights, costumes and microphones. This is a skill building term that prepares students for Term 2!
+                    </div>
+                  </div>
+                  <div class="py-2">
+                    <div class="h6 mb-0 font-weight-bold" ng-class="'text-' + brandColor">TERM 2: BACKSTAGE PASS</div>
+                    <div>Monday, January 10th – Monday, March 7th</div>
+                    <div>9 weeks – Closed Feb. 21st for Family Day</div>
+                    <div class="pt-2 font-weight-light">
+                      This term students begin rehearsals for their big end of season show a larger style production to an audience of family and friends at The Dream Centre. Children are further challenged in their 3 disciplines, continuing the theme of Wicked The Musical and allowing them to take
+                      on bigger roles. Children will be given an experience of the backstage elements to their show and the opportunity to help with creating the show backdrop, organise props and plan lighting and sound. They will also go through a fun audition process for their casting. At the end
+                      of this term they will present to their family and friends the numbers they have worked on so far, their technical show plans and their creative ideas for their performance. They are given the freedom and responsibility to make their show their own and be a part of the process
+                      which is hugely rewarding and exciting. This is a skill building term that prepares students for Term 3!
+                    </div>
+                  </div>
+                  <div class="py-2">
+                    <div class="h6 mb-0 font-weight-bold" ng-class="'text-' + brandColor">TERM 3: WICKED SHOW TERM</div>
+                    <div>Monday, March 21st – Monday, June 13th</div>
+                    <div>11 Weeks - Closed April 18th, Easter Monday</div>
+                    <div class="pt-2 font-weight-light">
+                      This term we focus on polishing and bringing together their show. Tech rehearsals and dress rehearsals are introduced and students will have the opportunity to work with the other age groups to practice transitions, entrances and exits. The excitement builds as they prepare for
+                      opening night and everything they’ve worked so hard for inviting everyone to join them in The Emerald City!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-5 offset-md-1 col-lg-4 offset-lg-0">
+            <div class="h3 mb-0 font-weight-bold" ng-class="'text-' + brandColor">CLASS REGISTRATION</div>
+            <hr />
+            <div ng-if="!classesreturned" class="font-weight-light pb-4"><i class="fas fa-spinner fa-pulse mr-2"></i>Loading classes...</div>
+            <div ng-if="classesreturned">
+              <div ng-if="classlistlength == 0" class="font-weight-light font-italic">No classes to list here at this time. Please check back soon for updates!</div>
+              <div ng-if="classlistlength > 0">
+                <div ng-repeat="daygroup in [ {short:'mon',long:'Monday'},{short:'tue',long:'Tuesday'},{short:'wed',long:'Wednesday'},{short:'thu',long:'Thursday'},{short:'fri',long:'Friday'},{short:'sat',long:'Saturday'},{short:'sun',long:'Sunday'} ]">
+                  <div ng-show="results.length > 0" class="h5 mb-3 font-weight-bold text-uppercase">{{ daygroup.long }} Classes</div>
+                  <div class="mb-4 pl-3" ng-repeat="item in results = (classes | orderBy:['min_age','start_date'] | filter:subfilter | dayFilter:daygroup.short | limitTo:3)">
+                    <div class="font-weight-bold">{{item.name}}</div>
+                    <div class="font-weight-light pb-2">
+                      <div class="text-uppercase">
+                        <div>{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                        <div><span ng-repeat="day in item.meeting_days.daylist">{{day}} </span><span>{{item.start_time}} - {{item.end_time}}</span></div>
+                      </div>
+                      <div ng-if="item.min_age">Ages {{item.min_age}} - {{item.max_age}}</div>
+                      <div ng-if="item.tuition.fee">{{ item.tuition.fee | currency:'$':2 }} <small class="font-weight-light">/ month</small></div>
+                    </div>
+                    <div>
+                      <div ng-if="!item.online_reg_link" class="small font-weight-light font-italic">Contact us for registration</div>
+                      <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="btn btn-sm glass text-nowrap px-3" ng-class="'btn-' + brandColor">
+                        <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                        <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div>
+                  <table class="table table-sm">
+                    <tbody ng-repeat="daygroup in [ {short:'mon',long:'Monday'},{short:'tue',long:'Tuesday'},{short:'wed',long:'Wednesday'},{short:'thu',long:'Thursday'},{short:'fri',long:'Friday'},{short:'sat',long:'Saturday'},{short:'sun',long:'Sunday'} ]">
+                      <tr ng-show="results.length > 0" class="bg-light">
+                        <td class="font-weight-bold py-1" colspan="6">{{ daygroup.long }} Classes</td>
+                      </tr>
+                      <tr ng-repeat="item in results = (classes | orderBy:['min_age','start_date'] | filter:subfilter | dayFilter:daygroup.short)">
+                        <td>
+                          <div class="d-flex justify-content-between align-items-start flex-column small">
+                            <div>{{item.name}}</div>
+                            <div class="text-uppercase text-nowrap">
+                              <div>{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                              <div><span ng-repeat="day in item.meeting_days.daylist">{{day}} </span><span>{{item.start_time}} - {{item.end_time}}</span></div>
+                            </div>
+                            <div class="text-nowrap">Ages {{item.min_age}} - {{item.max_age}}</div>
+                            <div class="text-nowrap" ng-if="item.tuition.fee">{{ item.tuition.fee | currency:'$':2 }}</div>
+                            <div>
+                              <div ng-if="!item.online_reg_link" class="small font-weight-light text-center">Contact us for registration</div>
+                              <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="btn btn-sm glass text-nowrap px-3" ng-class="'btn-' + brandColor">
+                                <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                                <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                              </a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer include -->
+    <div ng-include src="'footer.html'"></div>
+    <!-- / footer include -->
+  </body>
+</html>

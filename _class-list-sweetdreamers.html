@@ -1,0 +1,163 @@
+<div ng-if="!classesreturned" class="font-weight-light pb-4"><i class="fas fa-spinner fa-pulse mr-2"></i>Loading classes...</div>
+
+<div ng-if="classesreturned">
+  <div class="h3 mb-4 font-weight-bold" ng-class="'text-' + brandColor">Class Registration</div>
+  <div ng-show="classes.length == 0" class="font-weight-light">No classes found. Check back soon for updates!</div>
+  <div ng-show="classes.length > 0">
+    <div>
+      <div>
+        <table class="table table-hover" ng-repeat="yeargroup in [ 2021,2022 ]">
+          <tbody
+            ng-repeat="monthgroup in [ {short:'jan',long:'January'},{short:'feb',long:'February'},{short:'mar',long:'March'},{short:'apr',long:'April'},{short:'may',long:'May'},{short:'jun',long:'June'},{short:'jul',long:'July'},{short:'aug',long:'August'},{short:'sep',long:'September'},{short:'oct',long:'October'},{short:'nov',long:'November'},{short:'dec',long:'December'} ]"
+          >
+            <tr ng-show="results.length > 0">
+              <td class="h5 font-weight-bold text-uppercase bg-light py-3" colspan="6">{{ monthgroup.long }} {{ yeargroup }}</td>
+            </tr>
+            <tr ng-repeat="item in results = (classes | orderBy:['min_age','start_date'] | yearFilter:yeargroup | monthFilter:monthgroup.long | filter:subfilter)">
+              <td>
+                <div ng-if="!item.online_reg_link" class="small font-weight-light font-italic">Contact us for registration</div>
+                <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="btn btn-sm glass text-nowrap px-3" ng-class="'btn-' + brandColor">
+                  <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                  <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                </a>
+              </td>
+              <td class="d-none d-md-table-cell">{{item.name}}</td>
+              <td class="d-none d-md-table-cell text-uppercase text-nowrap font-weight-light text-nowrap">
+                <div><span class="font-weight-bold text-white bg-dark px-1 py-0" ng-repeat="day in item.meeting_days.daylist">{{day}}</span>&nbsp;<span class="font-weight-bold">{{item.start_time}} - {{item.end_time}}</span></div>
+                <div>{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+              </td>
+              <td class="d-none d-md-table-cell font-weight-light text-nowrap">Ages {{item.min_age}} - {{item.max_age}}</td>
+              <td class="d-none d-md-table-cell font-weight-light text-nowrap text-right">
+                <div class="pl-3" ng-if="item.tuition.fee">{{ item.tuition.fee | currency:'$':2 }}</div>
+              </td>
+              <td class="d-md-none">
+                <div class="d-flex justify-content-between align-items-start flex-column flex-md-row">
+                  <div class="font-weight-bold">{{item.name}}</div>
+                  <div class="font-weight-light text-uppercase text-nowrap pl-md-3">
+                    <div>{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                    <div><span class="font-weight-bold text-white bg-dark px-1 py-0" ng-repeat="day in item.meeting_days.daylist">{{day}}</span>&nbsp;<span>{{item.start_time}} - {{item.end_time}}</span></div>
+                  </div>
+                  <div class="font-weight-light text-nowrap pl-md-3">Ages {{item.min_age}} - {{item.max_age}}</div>
+                  <div class="font-weight-light text-nowrap pl-md-3" ng-if="item.tuition.fee">{{ item.tuition.fee | currency:'$':2 }}</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- <div ng-repeat="daygroup in [ {short:'mon',long:'Monday'},{short:'tue',long:'Tuesday'},{short:'wed',long:'Wednesday'},{short:'thu',long:'Thursday'},{short:'fri',long:'Friday'},{short:'sat',long:'Saturday'},{short:'sun',long:'Sunday'} ]">
+      <div class="h5 font-weight-bold" ng-show="results.length > 0">{{daygroup.long}}</div>
+      <div>
+        <table class="table table-hover">
+          <tbody>
+            <tr ng-repeat="item in results = (classes | orderBy:['min_age','start_date'] | filter:subfilter | dayFilter:daygroup.short)">
+              <td>
+                <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="btn btn-sm glass text-nowrap px-3" ng-class="'btn-' + brandColor">
+                  <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                  <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                </a>
+              </td>
+              <td class="d-none d-md-table-cell font-weight-bold">{{item.name}}</td>
+              <td class="d-none d-md-table-cell text-uppercase text-nowrap font-weight-light text-nowrap">
+                <div>{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                <div><span ng-repeat="day in item.meeting_days.daylist">{{day}} </span><span>{{item.start_time}} - {{item.end_time}}</span></div>
+              </td>
+              <td class="d-none d-md-table-cell font-weight-light text-nowrap">Ages {{item.min_age}} - {{item.max_age}}</td>
+              <td class="d-none d-md-table-cell font-weight-light text-nowrap text-right">
+                <div class="pl-3" ng-if="item.tuition.fee">{{ item.tuition.fee | currency:'$':2 }}</div>
+              </td>
+              <td class="d-md-none">
+                <div class="d-flex justify-content-between align-items-start flex-column flex-md-row">
+                  <div class="font-weight-bold">{{item.name}}</div>
+                  <div class="font-weight-light text-uppercase text-nowrap pl-md-3">
+                    <div>{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                    <div><span ng-repeat="day in item.meeting_days.daylist">{{day}} </span><span>{{item.start_time}} - {{item.end_time}}</span></div>
+                  </div>
+                  <div class="font-weight-light text-nowrap pl-md-3">Ages {{item.min_age}} - {{item.max_age}}</div>
+                  <div class="font-weight-light text-nowrap pl-md-3" ng-if="item.tuition.fee">{{ item.tuition.fee | currency:'$':2 }}</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+<!-- <div class="form-row">
+  <div class="col-12 col-md-6 col-lg-4 pb-3" ng-repeat="item in classes | orderBy:['min_age','start_date'] | filter:subfilter | dayFilter:filterDay">
+    <div class="card shadow h-100">
+      <div class="card-body p-1">
+        <div class="border-left p-2 h-100" ng-class="'border-' + brandColor" style="border-left-width: 4px !important">
+          <div class="pl-2">
+            <div class="font-weight-bold">{{ item.name }}</div>
+            <div>
+              <span class="text-nowrap">{{ item.start_date | date:'MMMM d' }} - {{ item.end_date | date:'d, yyyy' }}</span>
+              <span class="px-2 font-weight-light">|</span>
+              <span class="text-nowrap">{{ item.start_time }} - {{ item.end_time }}</span>
+            </div>
+            <div>Ages {{ item.min_age }} - {{ item.max_age }}</div>
+          </div>
+          <hr />
+          <div class="d-flex justify-content-between align-items-center">
+            <div ng-if="item.online_reg_link">
+              <a ng-href="{{item.online_reg_link}}" target="_blank" ng-if="item.openings.calculated_openings > 0" class="btn btn-block btn-sm glass text-nowrap px-4" ng-class="'btn-' + brandColor">Register Now!</a>
+              <a ng-href="{{item.online_reg_link}}" target="_blank" ng-if="item.openings.calculated_openings <= 0" class="btn btn-block btn-sm text-nowrap px-4" ng-class="'btn-outline-' + brandColor">Join Wait List</a>
+            </div>
+            <div ng-if="!item.online_reg_link">
+              <div class="small text-center font-weight-bold">Please contact us for registration info</div>
+            </div>
+            <div class="pl-3" ng-if="item.tuition.fee">{{ item.tuition.fee | currency:'$':2 }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <table class="table table-hover border-bottom">
+  <tbody>
+    <tr ng-repeat="item in classes | orderBy:['min_age','start_date'] | filter:{category3:cat3}">
+      <td>
+        <div ng-if="item.online_reg_link">
+          <a ng-href="{{item.online_reg_link}}" target="_blank" ng-if="item.openings.calculated_openings > 0" class="btn btn-block btn-sm glass text-nowrap" ng-class="'btn-' + brandColor">Register Now!</a>
+          <a ng-href="{{item.online_reg_link}}" target="_blank" ng-if="item.openings.calculated_openings <= 0" class="btn btn-block btn-sm glass text-nowrap" ng-class="'btn-outline-' + brandColor">Join Wait List</a>
+        </div>
+        <div ng-if="!item.online_reg_link">
+          <div class="small text-center font-weight-bold">Please contact us for registration info</div>
+        </div>
+      </td>
+      <td class="w-100">
+        <div class="d-flex justify-content-around align-items-center flex-column flex-sm-row">
+          <div>Ages {{ item.min_age }} - {{ item.max_age }}</div>
+          <div>{{ item.start_date | date:'MMMM d' }} - {{ item.end_date | date:'d, yyyy' }}</div>
+          <div>{{ item.start_time }} - {{ item.end_time }}</div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table> -->
+
+<!-- <div class="form-row">
+  <div ng-repeat="item in classes | orderBy:'start_date' | filter:{category3:cat3}" class="col-6 col-sm-6 col-md-4 col-lg-3">
+    <div class="card shadow-sm mb-3">
+      <div class="card-body p-2 text-center">
+        <div>{{ item.start_date | date:'MMMM d' }} - {{ item.end_date | date:'d, yyyy' }}</div>
+        <div>{{ item.start_time }} - {{ item.end_time }}</div>
+        <div>Ages {{ item.min_age }} - {{ item.max_age }}</div>
+        <div class="pt-3">
+          <div ng-if="item.online_reg_link">
+            <a ng-href="{{item.online_reg_link}}" target="_blank" ng-if="item.openings.calculated_openings > 0" class="btn btn-block btn-sm glass text-nowrap" ng-class="'btn-' + brandColor">Register Now!</a>
+            <a ng-href="{{item.online_reg_link}}" target="_blank" ng-if="item.openings.calculated_openings <= 0" class="btn btn-block btn-sm glass text-nowrap" ng-class="'btn-outline-' + brandColor">Join Wait List</a>
+          </div>
+          <div ng-if="!item.online_reg_link">
+            <div class="small text-center font-weight-bold">Please contact us for registration info</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,162 @@
+<!-- Modal for agreement terms -->
+<div
+  class="modal fade"
+  id="modalAgreementTerms"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalAgreementTermsLabel"
+  aria-hidden="true"
+  style="z-index: 9990"
+>
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAgreementTermsLabel">
+          Family Tree Agreement Terms
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Terms included here... -->
+        <div ng-include src="'terms.html'"></div>
+        <!-- / Terms included here... -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for contact form -->
+<div
+  class="modal fade"
+  id="modalContactUs"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalContactUsLabel"
+  aria-hidden="true"
+  style="z-index: 9990"
+>
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalContactUsLabel">
+          Contact Us
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div ng-include src="'_contact-form.html'"></div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          data-dismiss="modal"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="bg-dark border-top no-print py-4">
+  <div class="container">
+    <div class="form-row">
+      <div class="col-12 col-md-4 text-center py-4">
+        <div class="font-weight-light text-white">
+          The Dream Centre<br />
+          70 Innovation Drive<br />
+          Waterdown ON L9H 7P3<br />
+          <i class="fas fa-phone mr-2 fa-sm"></i>905-690-9022<br />
+        </div>
+        <div class="pt-2">
+          <a
+            href=""
+            data-toggle="modal"
+            data-target="#modalContactUs"
+            class="font-weight-normal"
+            >Send us a Message</a
+          >
+        </div>
+      </div>
+      <div class="col-12 col-md-4 text-center py-4">
+        <div class="py-1">
+          <a href="./index.html" target="_self" class="font-weight-normal"
+            >Home</a
+          >
+        </div>
+        <div class="py-1">
+          <a href="./programs.html" target="_self" class="font-weight-normal"
+            >Programs</a
+          >
+        </div>
+        <div class="py-1">
+          <a href="./membership.html" target="_self" class="font-weight-normal"
+            >Membership</a
+          >
+        </div>
+        <div class="py-1">
+          <a href="./calendar.html" target="_self" class="font-weight-normal"
+            >Calendar</a
+          >
+        </div>
+        <div class="py-1">
+          <a href="" data-toggle="modal" data-target="#modalAgreementTerms">
+            Agreement Terms
+          </a>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 text-center py-4">
+        <div class="pb-4">
+          <a href="index.html">
+            <img src="./img/tftlogo-colour.svg" style="height: 35px;" alt="" />
+          </a>
+        </div>
+        <div class="">
+          <div class="d-inline-block">
+            <a
+              href="https://www.instagram.com/thefamilytree_waterdown/"
+              target="_blank"
+              class="btn btn-dark btn-sm"
+            >
+              <div><i class="fab fa-instagram fa-2x"></i></div>
+              <div class="text-uppercase small font-weight-light">
+                Instagram
+              </div>
+            </a>
+          </div>
+          <div class="d-inline-block">
+            <a
+              href="https://www.facebook.com/thefamilytreewaterdown"
+              target="_blank"
+              class="btn btn-dark btn-sm"
+            >
+              <div><i class="fab fa-facebook fa-2x"></i></div>
+              <div class="text-uppercase small font-weight-light">
+                Facebook
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="linkApp" ng-controller="linkController">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link href="../scss/theme.css" type="text/css" rel="Stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png" />
+    <title>The Dream Centre</title>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="../js/links.js"></script>
+    <style>
+      li {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+    </style>
+  </head>
+  <body class="p-3" ng-init="init()">
+    <div class="container py-4">
+      <div class="">
+        <div class="h1 font-tdc text-center text-uppercase mb-4">Policies &amp; Procedures</div>
+
+        <!-- <div class="d-flex justify-content-center align-items-center mb-3">
+          <div><i class="fas fa-square m-1 text-pink"></i></div>
+          <div><i class="fas fa-square m-1 text-purple"></i></div>
+          <div><i class="fas fa-square m-1 text-blue"></i></div>
+        </div> -->
+
+        <div class="font-weight-light">
+          <p>
+            Our main focus for our families, students, and staff is safety, and ensuring we do our best to provide everyone with an environment that feels as normal and as FUN as possible. Our new policies and procedures for our Regular Season Classes and Camps will be updated regularly as
+            information becomes available to us.
+          </p>
+          <div class="py-2">
+            <div class="h4">Lobby</div>
+            <ul>
+              <li>
+                Our lobby is open for pick up and drop-off purposes only, and for one parent/guardian only at a time. There will be a maximum of 20 safely distanced seats available for parents/guardians who may need to stay onsite for special circumstances for children ages 6 and under. For the
+                short term we ask that parents/guardians please wait in their vehicles or a space nearby while their child/children attends classes. Please ensure all of your necessary contact information is up to date in your client portal in case of required assistance or emergency. Wi-fi will be
+                available in the parking lot.
+              </li>
+            </ul>
+          </div>
+          <div class="py-2">
+            <div class="h4">Masks &amp; Face Coverings</div>
+            <ul>
+              <li>
+                Are to be worn in common areas (lobby, hallways, bathrooms, change areas, etc.) by everyone unless there are special circumstances where a mask/face covering cannot be worn (medical reasons, personal reasons, etc.). Children are not required to wear masks during camps or classes.
+              </li>
+              <li>The Dream Centre will provide masks/face coverings for staff only.</li>
+              <li>Students riding the bus for Before and After School Program purposes are required to wear a mask/face covering.</li>
+            </ul>
+          </div>
+          <div class="py-2">
+            <div class="h4">Changerooms</div>
+            <ul>
+              <li>
+                We would like to limit the use of changerooms during evening and weekend programs so we ask that children come to class as prepared as possible. Masks should be warn in changing areas. All personal belongings must be removed each day for proper sanitization of the changing areas.
+                Parents/students run the risk of having their belongings disposed of if left behind.
+              </li>
+            </ul>
+          </div>
+          <div class="py-2">
+            <div class="h4">Personal Hygiene</div>
+            <ul>
+              <li>Hand wash instructions will be posted for students and staff.</li>
+              <li>Scheduled washes will be set throughout camp hours for all cohorts. Proper personal hygiene care is recommended before, during, and after all scheduled programming.</li>
+              <li>Multiple hand sanitizer locations will be setup throughout the facility.</li>
+              <li>We recommend students bring their own hand sanitizer if possible.</li>
+              <li>Bathroom breaks will be scheduled throughout camp hours for all cohorts. Should a child require a bathroom break outside of their scheduled time slot their camp leader will certainly allow this.</li>
+            </ul>
+          </div>
+          <div class="py-2">
+            <div class="h4">Cleaning</div>
+            <ul>
+              <li>Scheduled cleaning times and logs are set for each day.</li>
+              <li>Individual use items, shared items, bathrooms, activity areas, and our entire facility will be cleaned on one or more occasions daily.</li>
+              <li>Cleanings will be logged for quality assurance and safety purposes.</li>
+            </ul>
+          </div>
+          <div class="py-2">
+            <div class="h4">Designated Spaces for Activities &amp; Personal Items</div>
+            <ul>
+              <li>The Dream Centre has 20,000 sq/ft of space for multiple activity uses.</li>
+              <li>Floors and walls will be marked to control flow and safety.</li>
+              <li>We have divided our space into 11 separate areas to minimize the mixing of students. This allows for separate activity and lunch areas depending on daily programming.</li>
+              <li>Campers will have a designated space for their personal belongings.</li>
+            </ul>
+          </div>
+          <div class="py-2">
+            <div class="h4">Lunch Areas (Camp Activities)</div>
+            <ul>
+              <li>Lunch areas will be divided and designated to specific cohorts each week.</li>
+              <li>Please, no food sharing.</li>
+            </ul>
+          </div>
+          <div class="py-2">
+            <div class="h4">Camp Structures</div>
+            <ul>
+              <li>All camps will be slightly modified to accommodate ministry guidelines. They will still be amazing and filled with fun!</li>
+              <li>Campers will have opportunities to participate in multiple activities, including a lot of the activities they were initially signed up for.</li>
+              <li>Crafts, games, and other activities will also be scheduled into our fun-filled weeks.</li>
+            </ul>
+          </div>
+          <div class="py-2">
+            <div class="h4">Extended Care (Camps / Before and After School Program)</div>
+            <ul>
+              <li>Extended care is not available until further notice (Camps).</li>
+              <li>
+                Late penalties – $30 for first 15min, 2/min afterwards. Please be on time to pick up your children. Our team of staff will have a lot of cleaning and reorganizing to complete at the end of each working day. On top of a long working day, they’ll want to get home to their families.
+              </li>
+            </ul>
+          </div>
+          <div class="py-2">
+            <div class="h4">Security</div>
+            <ul>
+              <li>For the safety of our campers, our entryways will be locked at all times. Should you require access to The Dream Centre for any reason please come during schedule pickup and drop-off times.</li>
+              <li>There are 31 security cameras recording at all times to ensure the quality and safety of all operations.</li>
+              <li>Should you require access please call 905-690-9022 and we’ll be happy to assist you</li>
+            </ul>
+          </div>
+          <div class="py-2">
+            <div class="h4">Screening Protocols During Sing-In/Out for Camps</div>
+            <ul>
+              <li>Screening protocols are set in place and each family will be required to go through a screening process each morning upon arrival (COVID 19 Screening Questions).</li>
+              <li>If a child has a temperature of 100.4 degrees F or higher they will not be allowed access to our facility.</li>
+              <li>If a child becomes unwell during camp hours the parent/guardian will be contacted immediately. The child will remain supervised in an area separate from other campers until they’re picked up.</li>
+            </ul>
+          </div>
+          <div class="py-2">
+            <div class="h4">Daily Records</div>
+            <ul>
+              <li>The Dream Centre has a detailed list of every client and staff member scheduled to be in our facility each day. Special guests and visitors will be logged and recorded upon arrival and leaving our facility.</li>
+            </ul>
+          </div>
+
+          <div class="py-4 font-weight-light h5">PLEASE CONTINUE READING FOR FURTHER INFORMATION REGARDING OUR POLICIES AND PROCEDURES</div>
+
+          <div class="py-2">
+            <div class="h4">Requirements for Health and Safety</div>
+            <ol>
+              <li>
+                The Dream Centre team of staff will ensure all current infection prevention and control practices are adhered to. This includes, and is not limited to:
+                <ul>
+                  <li>The Dream Centre team of staff will ensure all current infection prevention and control practices are adhered to. This includes, and is not limited to:</li>
+                  <li>Minimizing the sharing and frequency of touching of objects, equipment and surfaces, and other personal items;</li>
+                  <li>Increasing the frequency of cleaning and disinfecting objects, toys, equipment and frequently touched items, especially between cohort use;</li>
+                  <li>Cleaning and disinfecting, at least twice per day, frequently touched surfaces. These surfaces are most likely to become contaminated, including doorknobs, water fountain knobs, light switches, toilet and faucet handles, electronic devices, and tabletops.</li>
+                  <li>Only using cleaning and disinfectant products that have a Drug Identification Number (DIN).</li>
+                  <li>Checking expiry dates of cleaning and disinfectant products used and always following the manufacturer’s instructions. Ensure that the product used are compatible with the item to be cleaned and disinfected;</li>
+                  <li>Performing and promoting frequent, proper hand hygiene (including supervising or assisting camp participants with hand hygiene). Hand washing using soap and water; and,</li>
+                  <li>Additional hand hygiene opportunities and bathroom breaks will be scheduled into the daily schedule.</li>
+                </ul>
+              </li>
+              <li>
+                The Dream Centre Team of Staff will encourage physical distancing of at least 2 metres between camp cohorts, participants, parents/guardians and staff by:
+                <ul>
+                  <li>Spreading camp participants out into different areas;</li>
+                  <li>Spreading furniture, camp equipment, and activity stations out into different areas;</li>
+                  <li>Using visual cues (e.g., signs, posters, floor markings, etc.);</li>
+                  <li>Staggering or alternating lunchtime and outdoor playtime to reduce number of individuals in lunch area;</li>
+                  <li>Incorporating more individual activities or activities that encourage more space between camp participants.</li>
+                </ul>
+              </li>
+              <li>
+                The Dream Centre will operate Camp programs in consistent cohorts meeting required Ministry guidelines including both staff and camp participants who stay together throughout the duration of the program for minimum 5 days, with the following considerations:
+                <ul>
+                  <li>While close contact may be unavoidable between members of a cohort, physical distancing and general infection prevention and control practices should still be encouraged, where possible;</li>
+                  <li>
+                    Face coverings (non-medical masks) are optional for campers and staff, and should be used if physical distancing of at least 2-metres cannot be maintained between cohorts: *Face coverings may not be tolerated by everyone based on underlying health, behaviour issues or beliefs.
+                    Consideration will be given to mitigating any possible physical and psychological injuries that may inadvertently be caused by wearing a face covering (e.g., interfering with the ability to see or speak clearly, or becoming accidentally lodged in equipment the wearer is
+                    operating). *Face coverings should be changed if visibly soiled, damp, or damaged.
+                  </li>
+                  <li>Cohorts will not mix with other cohorts or be within in the same room/space at the same time, including pick-ups and drop-offs, mealtimes, playtime, outdoor activities, program spaces, tents, staff areas/rooms, etc.;</li>
+                  <li>Programs that utilize a room/space that is shared by cohorts or has other user groups must ensure the room/space is cleaned and disinfected before and after using the space. A cleaning log will be posted and used to track cleaning;</li>
+                  <li>Each cohort should have designated equipment (e.g., balls, loose equipment) or clean and disinfect equipment between cohort uses;</li>
+                  <li>
+                    Personal belongings brought to camp should be minimized. If brought to camp, personal items (e.g., backpack, clothing, towel, water bottles, food, etc.) should be labeled and kept in an area designated for the individual’s cohort and should not be handled by individuals from
+                    other cohorts;
+                  </li>
+                  <li>Camp participants should bring their own sun protection, and this should not be shared;</li>
+                  <li>In shared outdoor space, cohorts must maintain a distance of at least 2 metres between groups and any other individuals outside of the cohort;</li>
+                  <li>Play structures can only be used by one cohort at a time and must be cleaned and disinfected before and after use by each cohort; and,</li>
+                  <li>
+                    Plans are set to prevent mixing of cohorts in washrooms/ changerooms and to frequently clean and disinfect shared surfaces in washrooms/changerooms. There are multiple bathrooms at our facility and bathrooms will be assigned to a specific cohort depending on the number of cohorts
+                    per camp week,
+                  </li>
+                </ul>
+              </li>
+              <li>Staff will avoid getting close to faces of participants, where possible.</li>
+              <li>Singing activities will be minimized and we’ll ensure physical distancing for singing activities.</li>
+              <li>Water or sensory tables will not be used indoors.</li>
+              <li>Field trips and activities requiring group transportation have been cancelled until further notice.</li>
+              <li>Aquatic activities have been cancelled.</li>
+              <li>Activities with exposure to animals or pets have been cancelled until further notice.</li>
+              <li>Activities that involve camp participants in preparing or serving of food have been cancelled until further notice.</li>
+              <li>
+                Meals or snacks brought by participants:
+                <ul>
+                  <li>Ensure participants and staff perform proper hand hygiene before and after eating;</li>
+                  <li>Ensure each participant has their own drink bottle that is labeled, kept with them during the day, and not shared;</li>
+                  <li>Fill water bottles rather than drink directly from the mouthpiece of water fountains;</li>
+                  <li>Ensure each participant has their own individual meal or snack with no common food items (e.g., salt/pepper shaker, condiments);</li>
+                  <li>Remove self-serving food items and open access dishware;</li>
+                  <li>Multi-use utensils must be cleaned after each use;</li>
+                  <li>Reinforce “no food sharing” policies; and,</li>
+                  <li>Physical distancing should be maintained while eating.</li>
+                </ul>
+              </li>
+              <li>Pick-up and drop-off of participants should happen outside the program setting unless it is determined that there is a need for the parent/guardian to enter the setting.</li>
+              <li>
+                Pick-up and drop-off procedures should support physical distancing and cohorting using strategies such as, but not limited to: having one designated parent/guardian pick-up and drop-off each participant, staggering entry/program start times, limiting the numbers of people in entry
+                areas, screening.
+              </li>
+              <li>
+                Camp programs only - All individuals, including camp participants, parents/guardians, staff, and visitors must be screened including daily temperature checks either at home prior to arrival or upon arrival at program setting prior to entry. Entry will be denied to any individual who
+                has any of the symptoms outlined in the Pandemic/COVID-19 Reference Document for Symptoms on the Ministry of Health’s COVID-19 website or who has come in close contact with a person with symptoms of or confirmed COVID-19 in the past 14 days. Camp participants, in particular, will be
+                monitored for atypical symptoms and signs of COVID-19.
+              </li>
+              <li>
+                Where possible, daily screening will be done electronically prior to arrival at Camp. If screening is done at the camp setting, screeners should take appropriate precautions when screening, including maintaining a distance of at least 2 metres (6 feet) from those being screened, or
+                wearing personal protective equipment (PPE) (i.e., surgical/procedure mask and eye protection (goggles or face shield)).
+              </li>
+              <li>Alcohol-based hand sanitizer containing at least 60% alcohol content should be placed at all screening stations and entrances to the program. Dispensers should not be in locations that can be accessed by young children.</li>
+              <li>Thermometers must not be used between camp participants/staff without single- use protective covers or disinfecting between use.</li>
+              <li>The Dream Centre does no permit participants who are ill to attend programs. Signs will be posted at screening stations and entrances to the program to remind staff, parents/guardians, and other visitors.</li>
+              <li>Protocols are set in place to notify parents/guardians if their participant begins to show symptoms of COVID-19 while in programming, including the need for immediate pick-up and an area to isolate the participant until pick-up.</li>
+              <li>
+                Daily records will be kept of anyone (e.g., participants, parent/guardian, staff and visitors) entering the program setting who stays for 15 minutes or longer. Records (e.g., name, contact information, time of arrival/departure, screening completion etc.) will be kept up-to-date and
+                available to facilitate contact tracing in the event of a confirmed COVID-19 case or outbreak.
+              </li>
+              <div class="py-3 font-weight-bold">Management of Camp Participants with Suspected COVID-19</div>
+              <li>
+                If a participant begins to experience symptoms of COVID-19 while attending camps/classes, it is recommended that:
+                <ul>
+                  <li>Symptomatic participants be immediately separated from others in a supervised area until they can go home. In addition, where possible, anyone who is providing care to the participant should maintain a distance of at least 2 metres.</li>
+                  <li>If a 2-metre distance cannot be maintained from the ill participant, advice from the local public health unit will be necessary to prevent/limit virus transmission to those providing care.</li>
+                  <li>Contact the local public health unit to notify them of a potential case and seek advice regarding the information that should be shared with other parents/ guardians of participants in the program.</li>
+                  <li>While contacting the public health unit, at a minimum the participant and staff member should wear a surgical/procedure mask (if tolerated), and the staff member should also wear eye protection (goggles or face shield).</li>
+                  <li>Participants should be reminded of hand hygiene and respiratory etiquette while waiting to be picked-up.</li>
+                  <li>Tissues will be provided to the participant to support proper respiratory etiquette, along with proper disposal of the tissues.</li>
+                  <li>
+                    Environmental cleaning/disinfection of the space and items used by the students/staff should be conducted once the participant has been picked up. Items that cannot cleaned and disinfected (e.g., paper, books, cardboard puzzles) should be removed from the program and stored in a
+                    sealed container for a minimum of 7 days.
+                  </li>
+                  <li>Participants with symptoms should be tested</li>
+                  <li>
+                    Other participants and staff who were present while a participant or staff member became ill should be identified as a close contact and further cohorted (i.e., grouped together) until they can be picked up by parents/guardians to self-isolate at home. The local public health
+                    unit will provide any further direction on testing and isolation of these close contacts.
+                  </li>
+                  <li>Participants or staff who have been exposed to a confirmed case of COVID-19 should be excluded from the program setting for 14 days.</li>
+                </ul>
+              </li>
+              <div class="py-3 font-weight-bold">Testing for COVID-19</div>
+              <li>
+                Symptomatic staff and participants should be referred for testing. Testing of asymptomatic persons should only be performed as directed by the local public health unit as part of case/contact and outbreak management. A list of symptoms, including atypical signs and symptoms, can be
+                also be found in the COVID-19 Reference Document for Symptoms on the Ministry of Health’s COVID-19 website.
+                <ul>
+                  <li>Those who test negative for COVID-19 must be excluded from the program until 24 hours after symptom resolution. If a symptomatic person receives a negative result, a repeat test within 24-48 hours can be considered if clinical suspicion is high.</li>
+                  <li>Those who test positive for COVID-19 must be excluded from the program for 14 days after the onset of symptoms and clearance has been received from the local public health unit.</li>
+                </ul>
+              </li>
+              <li>
+                Day camps must consider a single, symptomatic, laboratory confirmed case of COVID19 in a staff member or camp participant as a confirmed COVID-19 outbreak in consultation with the local public health unit. Outbreaks should be declared in collaboration between the program and the
+                local public health unit to ensure an outbreak number is provided.
+              </li>
+              <li>Participants or staff who have been in contact with a suspected COVID-19 case should be monitored for symptoms and further cohorted (i.e., grouped together) until laboratory tests, if any, have been completed or until directed by the local public health unit.</li>
+              <li>Staff members and participants awaiting test results should be excluded from camp. Occupational Health &amp; Safety</li>
+              <li>Employers must have written measures and procedures for staff safety, including for infection prevention and control. Detailed guidelines for COVID-19 are available on the Ministry of Health’s COVID-19 website.</li>
+              <li>If a staff member is diagnosed with COVID-19, the staff member must remain off work for 14 days following symptom onset and has received clearance from the local public health unit.</li>
+              <li>If a staff member is a close contact of an individual diagnosed with COVID-19, the staff member must remain off work for 14 days from last exposure.</li>
+              <li>The staff member should consult with the local public health unit to determine when they can return to work. Staff members should also report to their Employee Health/Occupational Health and Safety department prior to return to work.</li>
+              <li>If the staff member’s illness is determined to be work-related, in accordance with the Occupational Health and Safety Act (OHSA) and its regulations, the employer must provide a written notice within four days of being advised that a staff member has an occupational illness.</li>
+            </ol>
+          </div>
+
+          <div class="py-2">
+            <p>If you have reviewed all of the information above and require further assistance please be sure to connect with us via phone (905-690-9022) or email.</p>
+            <p>
+              Sincerely,<br />
+              Derek Conorton<br />
+              CEO<br />
+              The Dream Centre – Teamwork Makes the Dream Work!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

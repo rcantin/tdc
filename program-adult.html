@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <title>The Dream Centre</title>
+    <link href="node_modules/hc-offcanvas-nav/src/scss/hc-offcanvas-nav.css" rel="stylesheet" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "953981534727552");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=953981534727552&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body class="" ng-init="getScheduleData()">
+    <!-- banner include -->
+    <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
+    <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
+    <!-- / banner include -->
+
+    <div class="container pb-5 pt-5 mt-5">
+      <div class="h2 font-tdc text-dark text-center text-uppercase py-4">Adult Classes</div>
+
+      <div class="pt-4">
+        <div class="h4 text-dark font-weight-bold">Dance</div>
+        <div>
+          <p>Whether you’re a beginner, intermediate or more advanced dancer, we have a class for you!</p>
+          <p>
+            We are proud to offer the adult dancers in our community a comfortable, welcoming environment where you can continue to exercise and explore your love for dance and movement. Please see the list of available classes and be sure to connect with any program questions, or to setup a tour or
+            free trial class.
+          </p>
+        </div>
+      </div>
+
+      <!-- <div class="pt-4">
+                <div class="h4 text-dark font-weight-bold">Zumba, PiYo</div>
+                <div class="mb-0 font-weight-bold">Program Director: Liane Wysocki</div>
+                <div class="text-muted mb-3">Readers Choice #1 Fitness Instructor</div>
+                <div>
+                    <p>A health and wellness enthusiast, Liane's goal is to help others be their best version of themselves. With over 15 years of group fitness experience, Liane offers a fun and welcoming environment that caters to all ages and fitness levels.  Whether it's weight-loss, mental wellbeing or simply for fun, Liane's program is a great option to maximize your results!</p>
+                    <p>There is a separate registration link for Zumba/PiYo classes.  View all classes, <a href="https://www.zumba.com/en-US/profile/liane-wysocki/49236" target="_blank">pricing and registration info here</a></p>
+                </div>
+            </div> -->
+
+      <div class="pt-4">
+        <div class="h4 text-dark font-weight-bold">Adult Class Schedule</div>
+        <table class="table table-striped table-hover table-sm small">
+          <thead class="thead-sm">
+            <tr>
+              <th></th>
+              <th>Class</th>
+              <th>When</th>
+              <th>Age(s)</th>
+              <th>Tuition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in scheduledata | orderBy:'daylist' | filter:{category1:'Dance'} | filter:{category2:'Recreational'} | filter:{category3:'Adult'}">
+              <td>
+                <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-pink font-weight-bold">
+                  <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                  <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                </a>
+              </td>
+              <td>
+                {{item.name}}
+                <div class="small font-weight-light">{{item.category1}} | {{item.category2}} | {{item.category3}}</div>
+              </td>
+              <td class="">
+                <div>
+                  <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                  <span>{{item.start_time}} - {{item.end_time}}</span>
+                </div>
+                <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+              </td>
+              <td>{{item.min_age}} - {{item.max_age}}</td>
+              <td>
+                <div ng-show="item.tuition.fee > 0">
+                  {{item.tuition.fee | currency}}
+                  <div class="small font-weight-light">monthly</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- footer include -->
+    <div ng-include src="'footer.html'"></div>
+    <!-- / footer include -->
+  </body>
+</html>

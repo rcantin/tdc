@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+@import "custom-font"; // tdc font "You Are Loved" (normal weight only)
+
+$font-size-base: 1rem;
+$font-family-sans-serif: "Roboto Condensed", Arial, sans-serif;
+.font-tdc {
+  font-family: "You Are Loved", "Roboto Condensed", Arial, sans-serif !important;
+}
+.font-script {
+  font-family: "Parisienne" !important;
+}
+.text-spaced {
+  letter-spacing: 0.25em;
+}
+a,
+.cursor-pointer {
+  cursor: pointer;
+}
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+
+$theme-colors: (
+  "pink": rgb(237, 14, 123),
+  "purple": rgb(132, 77, 158),
+  "blue": rgb(0, 149, 218),
+  "yellow": rgb(255, 182, 0),
+  "orange": rgb(255, 110, 0),
+  "green": rgb(51, 204, 0),
+  "red": rgb(255, 0, 0),
+  "black": rgb(0, 0, 0),
+  "kinstruct": #618aa3,
+  "barbella": #9464ac,
+  "familytree": #ff99ff,
+  "birthday": #ff7dff,
+);
+
+$primary: rgb(237, 14, 123);
+$secondary: rgb(132, 77, 158);
+$info: rgb(0, 149, 218);
+$success: rgb(0, 175, 0);
+$warning: rgb(253, 182, 13);
+$danger: rgb(204, 0, 0);
+$dark: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
+
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+$btn-border-radius: 50px;
+$btn-border-radius-lg: 50px;
+$btn-border-radius-sm: 50px;
+
+.grow {
+  transition: all 0.1s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.025);
+  filter: brightness(110%);
+}
+.grow a {
+  text-decoration: none !important;
+}
+
+// glass button stuff
+.btn.glass {
+  border-width: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.2) 45%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.2) 100%);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+.camp-pills {
+  justify-content: center;
+  .nav-item {
+    text-align: center;
+    .nav-link {
+      .orb {
+        width: 120px;
+      }
+    }
+  }
+}
+
+.clearfix {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+// import all bootstrap variables (values from above will overwrite defaults)
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+.navbar-nav .nav-item.dropdown .dropdown-menu a {
+  white-space: nowrap;
+}
+
+$popover-bg: $primary;
+$popover-body-color: $white;
+$popover-border-color: $primary;
+
+$navbar-dark-color: $white;
+$navbar-dark-hover-color: $primary;
+$navbar-dark-active-color: $primary;
+
+$navbar-dark-toggler-border-color: transparent;
+
+$dropdown-header-color: $info;
+$dropdown-bg: $dark;
+$dropdown-border-color: $dark;
+$dropdown-link-color: $white;
+$dropdown-link-hover-color: $white;
+$dropdown-link-hover-bg: lighten($dark, 10%);
+
+$table-accent-bg: darken($light, 2%);
+$table-hover-bg: darken($light, 5%);
+
+a[aria-expanded="true"] {
+  .expanded {
+    display: inherit;
+  }
+  .collapsed {
+    display: none;
+  }
+}
+a[aria-expanded="false"] {
+  .expanded {
+    display: none;
+  }
+  .collapsed {
+    display: inherit;
+  }
+}
+
+[aria-expanded="true"] .expanded-indicator {
+  transform: rotate(180deg);
+  transition: transform 200ms ease;
+}
+[aria-expanded="false"] .expanded-indicator {
+  transform: rotate(360deg);
+  transition: transform 200ms ease;
+}
+
+.text-rotate-90 {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+// -----------------------------------
+@keyframes flickerAnimation {
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes flickerAnimation {
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes flickerAnimation {
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes flickerAnimation {
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.animate-flicker {
+  -webkit-animation: flickerAnimation 1s infinite;
+  -moz-animation: flickerAnimation 1s infinite;
+  -o-animation: flickerAnimation 1s infinite;
+  animation: flickerAnimation 1s infinite;
+}
+// -----------------------------------
+
+// graphical checkboxes using icons and text
+@import "custom-checkbox";
+
+@import "class-cell";
+
+@import "multilevel-navbar";
+
+@import "orb-grid";
+
+// ----------------------------------------------------------------------------------------
+// import the entire bootstrap library
+// ----------------------------------------------------------------------------------------
+@import "../node_modules/bootstrap/scss/bootstrap";
+// ----------------------------------------------------------------------------------------
+
+.card-columns {
+  @include media-breakpoint-only(sm) {
+    column-count: 1;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 2;
+  }
+}

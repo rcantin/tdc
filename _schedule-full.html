@@ -1,0 +1,109 @@
+
+
+<div ng-init="getScheduleData()">
+
+    <div ng-if="!scheduledatareturned">
+        <div class="font-weight-light text-center p-3"><i class="fas fa-spinner fa-spin mr-1"></i>Loading schedule data...</div>
+    </div>
+
+    <div ng-if="scheduledatareturned">
+
+        <div class="form-row mb-4">
+            <div class="col-12 col-sm-12 col-lg-5 pb-2">
+                <input type="text" class="form-control" ng-model="searchString" placeholder="Search for something specific...">
+            </div>
+            <div class="col-12 col-sm-4 col-lg-3 pb-2">
+                <select ng-model="filterCat1" class="form-control">
+                    <option value="">All Classes</option>
+                    <option value="Dance">Dance</option>
+                    <option value="Gymnastics">Gymnastics</option>
+                    <option value="Martial Arts">Martial Arts</option>
+                    <option value="Triple Threat Performance">Musical Theatre</option>
+                    <option value="Camp">Camps</option>
+                </select>
+            </div>
+            <div class="col-12 col-sm-4 col-lg-2 pb-2">
+                <select ng-model="filterAge" class="form-control">
+                    <option value="">All Ages</option>
+                    <option value="1.5">1.5 years</option>
+                    <option value="2">2 years</option>
+                    <option value="3">3 years</option>
+                    <option value="4">4 years</option>
+                    <option value="5">5 years</option>
+                    <option value="6">6 years</option>
+                    <option value="7">7 years</option>
+                    <option value="8">8 years</option>
+                    <option value="9">9 years</option>
+                    <option value="10">10 years</option>
+                    <option value="11">11 years</option>
+                    <option value="12">12 years</option>
+                    <option value="13">13 years</option>
+                    <option value="14">14 years</option>
+                    <option value="15">15 years</option>
+                    <option value="16">16 years</option>
+                </select>
+            </div>
+            <div class="col-12 col-sm-4 col-lg-2 pb-2">
+                <select ng-model="filterDay" class="form-control">
+                    <option value="">All Days</option>
+                    <option value="mon">Monday</option>
+                    <option value="tue">Tuesday</option>
+                    <option value="wed">Wednesday</option>
+                    <option value="thu">Thursday</option>
+                    <option value="fri">Friday</option>
+                    <option value="sat">Saturday</option>
+                    <option value="sun">Sunday</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="pb-5">
+            <table class="table table-hover small">
+                <tbody>
+                    <tr ng-repeat="class in filteredclasses = (scheduledata | orderBy:'min_age' | filter:{name:searchString} | filter:{category1:filterCat1} | ageFilter:filterAge | dayFilter:filterDay)">
+                        <td class="d-none d-md-table-cell text-right text-uppercase">
+                            <a ng-if="class.online_reg_link" ng-href="{{class.online_reg_link}}" target="_blank" class="font-weight-bold text-nowrap" ng-class="
+                            {
+                                'text-pink': class.category1 == 'Dance' || class.category1 == 'Triple Threat Performance',
+                                'text-purple': class.category1 == 'Gymnastics',
+                                'text-blue': class.category1 == 'Martial Arts',
+                                'text-orange': class.category1 == 'Camp' || class.category1 == 'March Break Camp'
+                            }
+                        "><span ng-if="class.openings.calculated_openings > 0">Register</span><span ng-if="class.openings.calculated_openings <= 0">Wait List</span></a>
+                        </td>
+                        <td>
+                            {{ class.name }}
+                            <div class="font-weight-light small">{{ class.category1 }} | {{ class.category2 }} | {{ class.category3 }}</div>
+                            <div class="d-block d-md-none text-nowrap">Ages {{ class.min_age }} - {{ class.max_age }}</div>
+                            <div class="d-block d-md-none text-nowrap" ng-if="class.tuition.fee">Tuition: {{ class.tuition.fee | currency:'$':2 }}</div>
+                            <div class="d-block d-md-none">
+                                <span><span ng-repeat="day in class.meeting_days | activedays">{{convertWeekday(day)}}s<span ng-if="!$last">, </span></span></span>
+                                <span> {{class.start_time}} - {{class.end_time}}</span>
+                            </div>
+                            <div class="d-block d-md-none text-uppercase">
+                                <a ng-if="class.online_reg_link" ng-href="{{class.online_reg_link}}" target="_blank" class="font-weight-bold" ng-class="{'text-blue': class.category1 == 'Dance', 'text-purple': class.category1 == 'Gymnastics', 'text-blue': class.category1 == 'Martial Arts'}"><span ng-if="class.openings.calculated_openings > 0">Register</span><span ng-if="class.openings.calculated_openings <= 0">Wait List</span></a>
+                            </div>
+                        </td>
+                        <td class="d-none d-md-table-cell text-nowrap">
+                            <div>Ages {{ class.min_age }} - {{ class.max_age }}</div>
+                            <div ng-if="class.tuition.fee">Tuition: {{ class.tuition.fee | currency:'$':2 }}</div>
+                        </td>
+                        <td class="d-none d-md-table-cell">
+                            <span><span ng-repeat="day in class.meeting_days | activedays">{{convertWeekday(day)}}s<span ng-if="!$last">, </span></span></span>
+                            <span> {{class.start_time}} - {{class.end_time}}</span>
+                        </td>
+                    </tr>
+                    <tr ng-if="filteredclasses.length == 0">
+                        <td class="p-3 bg-light text-center">
+                            <div class="font-weight-bold h5">No classes found</div>
+                            <div class="font-weight-light">Please change your search and filters to find classes</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+</div>
+

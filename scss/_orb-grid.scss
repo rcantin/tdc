@@ -1,0 +1,26 @@
+.orb-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .cell {
+    padding: 1rem;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .orb-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .orb-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .orb-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

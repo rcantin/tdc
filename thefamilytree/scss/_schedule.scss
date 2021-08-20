@@ -1,0 +1,61 @@
+.schedule {
+  .month {
+    margin: 2rem 0 2rem 0;
+    .monthname {
+      font-size: 1.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      padding: 0.5rem 0 2rem 0;
+      text-align: center;
+    }
+    .day {
+      padding: 14px 8px;
+      border-top: solid 1px lighten($dark, 50%);
+      .datewkd {
+        text-align: center;
+        font-weight: 300;
+        line-height: 1em;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+      .datenum {
+        text-align: center;
+        font-weight: 700;
+        line-height: 1em;
+        font-size: 2rem;
+      }
+      .datemon {
+        text-align: center;
+        font-weight: 300;
+        line-height: 1em;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+      .banner {
+        font-weight: 700;
+        color: $primary;
+        font-size: 1.2rem;
+      }
+      .footer {
+        font-weight: 700;
+        color: $secondary;
+        font-size: 1rem;
+      }
+      .event {
+        padding: 6px 0;
+        .title {
+          font-weight: 700;
+          font-size: 1.2rem;
+        }
+        .time {
+          font-weight: 300;
+          font-size: 1.1rem;
+        }
+        .caption {
+          font-weight: 300;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

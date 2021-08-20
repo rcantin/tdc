@@ -1,0 +1,765 @@
+[
+  {
+    "type": "Dance",
+    "id": "dance",
+    "order": 3,
+    "orb": "./img/orb-dance-wtext.svg",
+    "general": [
+      {
+        "title": "EACH WEEK OF SUMMER CAMP",
+        "items": ["Fun structured themed lessons in Dance", "Lots of themed games, crafts and activities", "Friday dance performances for family and friends", "Special guests"]
+      },
+      {
+        "title": "CAMP HOURS",
+        "items": [
+          "Monday to Friday 9:00-4:00 (except for holiday long weekend July 1 and August 3 no camp)",
+          "Extended care is available 7:00 am to 6:00 pm – No extra Charge. Please let us know if you require Before or Aftercare. In order to provide a safe environment for your children, we need to know how many kids require extended hours so we can staff accordingly."
+        ]
+      },
+      {
+        "title": "PIZZA LUNCH FRIDAY’S!!",
+        "items": ["For full day campers", "Campers with dietary restrictions should bring their own lunch. Please advise the staff of any dietary restrictions when you drop your child off."]
+      },
+      {
+        "title": "WHAT TO BRING",
+        "items": ["Lunch – Please send nut free lunch", "Snacks – Please send nut free snacks", "Water Bottle", "Hat", "Sunscreen", "Running Shoes", "Change of Clothes"]
+      }
+    ],
+    "weeks": [
+      {
+        "week": 1,
+        "camps": [
+          {
+            "name": "Princess and Prince Dance Camp",
+            "date": "June 29 to July 3 – Short Week (no camp Wednesday)",
+            "description": "<p>Our Princess Camps are so popular and exciting that we are back with more!!! Come dressed as your favourite Princess or Prince to this very special camp. Featured characters include Moana, Belle, Ariel, Jasmine and Cinderella from the Magic Kingdom! Enjoy a week-long camp that will include Princess/Prince themed ballet classes as well as jazz, Acro, and Hip Hop classes too. Campers will also take part in themed crafts and games, princess makeover day, and a special princess tea party with Princess Belle from Beauty and the Beast! This camp is a perfect way to introduce dance to the newest little dancers! Parents are invited to our Royal Ball at 3:30pm on Friday.</p><p class='font-weight-bold'>Pizza Lunch Friday</p>",
+            "costs": ["$169 Full week", "$99 Half day, full week", "Individual full day $49 & Individual half day $29"],
+            "age": "3.5 to 7 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746775&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 2,
+        "camps": [
+          {
+            "name": "Magical Unicorns Dance Camp",
+            "date": "July 6 to 10",
+            "description": "<p>Would you like to meet a REAL UNICORN??! Do you love magic and rainbows and sparkles too? This camp was inspired by our Award Winning float in the Flamborough Santa Claus Parade. Campers will not only enjoy a themed week of dancing, activities, crafts and games. They’ll actually get to MEET A REAL UNICORN!! Parents are welcome to join us at 3:30pm on Friday for a magical performance!</p><p class='font-weight-bold'>Pizza Lunch Friday</p>",
+            "costs": ["$199 Full week", "$119 Half day, Full week"],
+            "age": "3.5 to 7 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746656&amp;loc="
+          },
+          {
+            "name": "Pop Stars Camp – Sing/Dance/Act",
+            "date": "July 6 to 10",
+            "description": "<p>Have you always wanted to reach the STARS with your talents? Now is your chance in our “one of a kind” camp! Campers will sing, dance, and act to stardom! Each student will have the opportunity to learn dance choreography and song lyrics for an exciting music video that we will present to families and friends at our end of the week “Red Carpet Gala!”, Friday at 3:30pm.</p><p>How We’ll Have Fun:<ul><li>Dance classes in jazz, acro and hip hop</li><li>Singing techniques and fun karaoke sessions</li><li>Record our music video song as a group</li><li>Take professional headshots on our ‘Glamour Day” (complete with makeup)</li><li>Learn acting techniques and work on a Commercial to present</li><li>Fun crafts: making microphones, CD necklaces, VIP passes, bios and biography writing</li><li>Walk the ‘Red Carpet’ at our end of week Gala for friends and families</li></ul></p><p class='font-weight-bold'>Pizza Lunch Friday</p>",
+            "costs": ["$299 Full week", "No option for individual days or half days"],
+            "age": "7 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10833828&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 3,
+        "camps": [
+          {
+            "name": "Disney Extravaganza Dance Camp",
+            "date": "July 13 to 17",
+            "description": "<p>This summer we have included another special dance opportunity in our Disney Extravaganza Camp! We are offering another chance to dance and have fun with an array of amazing Disney Characters! Come dressed as your favourite Disney Character to this very special camp. We will have a different theme each day for featuring characters, dance classes, crafts and activities. Parents are welcome to join us at 3:30pm on Friday for a special dance performance!</p><p><ul><li>Day 1: The Lion King</li><li>Day 2: Aladdin</li><li>Day 3: Star Wars</li><li>Day 4: The Little Mermaid</li><li>Day 5: Frozen 2</li></ul></p><p class='font-weight-bold'>Pizza Lunch Friday</p>",
+            "costs": ["$199 Full week", "$119 Half day, full week", "Individual full day $49 & Individual half day $29"],
+            "age": "3.5 to 7 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746888&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 4,
+        "camps": [
+          {
+            "name": "Competitive Intensive",
+            "date": "July 20 to 24",
+            "description": "<p>Our Dance Intensive is designed for the serious, dedicated dancer who is interested in being a part of one of our Award Winning Competitive or Pre-Competitive Dance Teams in the upcoming season. Dancers will participate in Ballet, Jazz, Acro, Lyrical, Contemporary, Tap, Hip Hop and Improvisation classes, as well as Stretch and Conditioning, and Tumbling Classes in our gymnastics facility with National Level Coaches. This camp is mandatory for any new or returning dancer wishing to audition for one of our teams. Come and train with our Award Winning Dance and Fitness Faculty, and amazing special guest choreographers from throughout North America.</p>",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746925&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 5,
+        "camps": [
+          {
+            "name": "Disney Extravaganza Dance Camp",
+            "date": "July 27 – 31",
+            "description": "<p>Would you like to meet the REAL Queen Elsa? How about Olaf? Well, Queen Elsa and friends would LOVE to meet YOU! And they’d be sooo excited to dance with you as well! Queen Elsa has launched Frozen 2 and she’d love to sing and dance with you. Campers will have fun learning Ballet, Jazz, Acro, and Hip Hop. Our week of dance camp will also include themed crafts, games and other awesome activities. Parents are welcome to join us at 3:30pm on Friday for a special dance performance.</p><p class='font-weight-bold'>Pizza Lunch Friday</p>",
+            "costs": ["$199 Full week", "$119 Half day, full week", "Individual full day $49 & Individual half day $29"],
+            "age": "3.5 to 7 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746913&amp;loc="
+          },
+          {
+            "name": "Acro and Hip Hop Camp",
+            "date": "July 27 – 31",
+            "description": "<p>Welcome to a full week of adventure that focuses on the amazing hip hop skills all morning and acro-jazz in the afternoon!</p><p>Campers will have fun learning new hip hop skills: popping, locking, tutting, krumping, and other hip hop styles. In the afternoon, campers will learn Acro skills in our dance studios on our state-of-the-art sprung floors and in our beautiful gymnastics facility. Acro skills include: bridges, walkovers, cartwheels, aerials, handsprings etc. These two genres compliment each other greatly and will make for a fun-filled week learning special choreography and tricks for an incredible showcase on Friday that parents are welcome to attend at 3:30.</p><p class='font-weight-bold'>Pizza Lunch Friday</p>",
+            "costs": ["$199 Full week", "$119 Half day, full week", "Individual full day $49 & Individual half day $29"],
+            "age": "7 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10833846&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 6,
+        "camps": [
+          {
+            "name": "Rock and Trolls",
+            "date": "August 4 – 7 Short Week",
+            "description": "<p>It’s time to Get Back Up for ROCK AND TROLLS DANCE CAMP! Join us for a fun-filled week of dancing around the forest and enjoying themed activities, crafts, games and more. Campers will develop basic technique in dance genres such as, ballet, jazz, acro and hip hop. Parents are welcome to join us at 3:30pm on Friday for a special dance performance!</p><p class='font-weight-bold'>Pizza Lunch Friday</p>",
+            "costs": ["$169 Full week", "$99 Half day, full week", "Individual full day $49 & Individual half day $29"],
+            "age": "3.5 to 7 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746931&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 7,
+        "camps": [
+          {
+            "name": "Magical Unicorns Dance Camp",
+            "date": "August 10 - 14",
+            "description": "<p>Would you like to meet a REAL UNICORN??! Do you love magic and rainbows and sparkles too? This camp was inspired by our Award Winning float in the Flamborough Santa Claus Parade. Campers will not only enjoy a themed week of dancing, activities, crafts and games. They’ll actually get to MEET A REAL UNICORN!! Parents are welcome to join us at 3:30pm on Friday for a magical performance!</p><p class='font-weight-bold'>Pizza Lunch Friday</p>",
+            "costs": ["$199 Full week", "$119 Half day, full week", "Individual full day $49 & Individual half day $29"],
+            "age": "3.5 to 7 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746935&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 8,
+        "camps": [
+          {
+            "name": "Prince and Princess Dance Camp",
+            "date": "August 17 - 21",
+            "description": "<p>Our Princess Camps are so popular and exciting that we are back with more!!! Come dressed as your favourite Princess or Prince to this very special camp. Featured characters include Moana, Belle, Ariel, Jasmine and Cinderella from the Magic Kingdom! Enjoy a week-long camp that will include Princess/Prince themes ballet classes as well as jazz, Acro, and hip hop classes too. Campers will also take part in themed crafts and games, princess makeover day, and a special princess tea party with Princess Belle from Beauty and the Beast! This camp is a perfect ay to introduce dance to the newest little dancers! Parents are invited to our Cinderella Ball at 3:30pm on Friday.</p><p class='font-weight-bold'>Pizza Lunch Friday</p>",
+            "costs": ["$199 Full week", "$119 Half day, full week", "Individual full day $49 & Individual half day $29"],
+            "age": "3.5 to 7 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746938&amp;loc="
+          },
+          {
+            "name": "Dance Around the World Camp",
+            "date": "August 17 - 21",
+            "description": "<p>Travel around the world through song and dance! Come learn about different styles of dance from all over the world! African, Irish, Step, Hawaiian ,Bollywood, Salsa as well as jazz, Ballet, Acro, Hip Hop and so much more! A summer camp experience that is sure to enhance your knowledge of the world of dance with a huge emphasis on FUN! All of these classes as well as, worldly arts and crafts lead up to the show finale for parents at 3:30pm on Friday! No experience necessary.</p><p class='font-weight-bold'>Pizza Lunch Friday</p>",
+            "costs": ["$199 Full week", "$119 Half day, full week", "Individual full day $49 & Individual half day $29"],
+            "age": "7 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10833868&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 9,
+        "camps": [
+          {
+            "name": "Disney Extravaganza Dance Camp",
+            "date": "August 24 - 28",
+            "description": "<p>This summer we have included another special dance opportunity in our Disney Extravaganza Camp! We are offering another chance to dance and have fun with an array of amazing Disney Characters! Come dressed as your favourite Disney Character to this very special camp. We will have a different theme each day for featuring characters, dance classes, crafts and activities. Parents are welcome to join us at 3:30pm on Friday for a special dance performance!</p><p><ul><li>Day 1: The Lion King</li><li>Day 2: Aladdin</li><li>Day 3: Star Wars</li><li>Day 4: The Little Mermaid</li><li>Day 5: Frozen 2</li></ul></p><p class='font-weight-bold'>Pizza Lunch Friday</p>",
+            "costs": ["$199 Full week", "$119 Half day, full week", "Individual full day $49 & Individual half day $29"],
+            "age": "3.5 to 7 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746941&amp;loc="
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Gymnastics",
+    "id": "gymnastics",
+    "order": 4,
+    "orb": "./img/orb-gymnastics-wtext.svg",
+    "general": [
+      {
+        "title": "EACH WEEK OF SUMMER CAMP",
+        "items": [
+          "Fun structured lessons in Dance, Gymnastics, and Martial Arts.",
+          "Lots of themed games, crafts and activities.",
+          "Special guests and excursions related to the weekly theme are incorporated to keep things engaging, energetic and educational. Day trips only apply to full day campers. Age restrictions may apply."
+        ]
+      },
+      {
+        "title": "CAMP HOURS",
+        "items": [
+          "Monday to Friday 9:00-4:00 (except for Holidays on Wednesday July 1st and Monday August 3rd No Camp)",
+          "Extended care is available 7:00am to 6:00pm – No extra Charge. Please let us know if you require Before or Aftercare. In order to provide a safe environment for your children, we need to know how many kids require extended hours so we can staff accordingly."
+        ]
+      },
+      {
+        "title": "PIZZA LUNCH FRIDAY’S!!",
+        "items": ["For full day campers", "Campers with dietary restrictions should bring their own lunch. Please advise the staff of any dietary restrictions when you drop your child off."]
+      },
+      {
+        "title": "WHAT TO BRING",
+        "items": ["Lunch – Please send nut free lunch", "Snacks – Please send nut free snacks", "Water Bottle", "Hat", "Sunscreen", "Running Shoes", "Change of Clothes"]
+      }
+    ],
+    "weeks": [
+      {
+        "week": 1,
+        "camps": [
+          {
+            "name": "Kick Off to Summer",
+            "date": "June 29 to July 3 – Short Week (no camp Wednesday)",
+            "description": "<p>What better way to kick off the summer than to spend it with your friends, learning the fundamentals of gymnastics, dance, martial arts and ninja warrior. Our campers will spend time learning, playing and building relationships in our first camp of the summer. You won’t want to miss it!</p><p>Each week includes structured classes in Gymnastics, Dance, Ninja Warrior and Martial Arts.</p>",
+            "events": ["Thursday July 2nd – Wet & Wild Day", "Friday July 3rd – Pizza Day"],
+            "costs": ["$189 Full week", "$99 Half day, full week", "Individual full day $49 & Individual half day $29"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746654&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 2,
+        "camps": [
+          {
+            "name": "Sports Stars",
+            "date": "July 6 to 10",
+            "description": "<p>Become a sports star at our amazing summer camp! From gymnastics to dance to ninja warrior to rock climbing our campers will get a wide variety of sports experience. They will also get a chance to show off their climbing skills at Gravity Climbing Gym. There are so many fun activities planned, it is bound to be a star-studded week.</p><p>Each week includes structured classes in Gymnastics, Dance, Ninja Warrior and Martial Arts.</p>",
+            "events": ["Wednesday July 8th – Gravity Climbing Gym Trip", "Friday July 10th – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 and  Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746669&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 3,
+        "camps": [
+          {
+            "name": "Animal Planet",
+            "date": "July 13 to 17",
+            "description": "<p>Who doesn’t love animals! Our camp will feature a trip to the Brantford Zoo, a visit from our friends at Little Ray’s Reptile Zoo, crafts, games, activities and so much more. If your kids have a love for animals and can’t wait to meet them in person, this is the perfect camp for them!</p><p>Each week includes structured classes in Gymnastics, Dance, Ninja Warrior and Martial Arts.</p>",
+            "events": ["Wednesday July 15th – Brantford Zoo Trip", "Friday July 17th – Animal Ambassadors Visit", "Friday July 17th – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 and  Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746798&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 4,
+        "camps": [
+          {
+            "name": "Water Works",
+            "date": "July 20 to 24",
+            "description": "<p>Best way to beat the summer heat is to spend time in the water! Our campers will be heading to the splash pad at African Lion Safari for a day full of fun. The camp will feature numerous different water games and activities. It will also provide time for our campers to learn and develop gymnastics, dance, martial arts and ninja warrior skills. It is going to be so much fun in the water and sun!</p><p>Each week includes structured classes in Gymnastics, Dance, Ninja Warrior and Martial Arts.</p>",
+            "events": ["Wednesday July 22nd – African Lion Safari Splash Pad Trip", "Friday July 24th – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 and  Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746827&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 5,
+        "camps": [
+          {
+            "name": "Magical & Messy",
+            "date": "July 27 to 31",
+            "description": "<p>From magic and mystery to chocolate and creativity this camp has it all. Our campers will get to see an amazing magic show that will be sure to blow their minds! They will also get a chance to learn how to make their own chocolate from our friends at Chocolate Tales. Gymnastics, Dance, Martial Arts, Ninja Warrior, Crafts, Pizza Day and so much more. You won’t want to miss out on this wild and magical adventure.</p><p>Each week includes structured classes in Gymnastics, Dance, Ninja Warrior and Martial Arts.</p>",
+            "events": ["Wednesday July 29th – Chocolate Tales Visit", "Thursday July 30th – Magician Visit", "Friday July 31st  – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 and  Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10747093&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 6,
+        "camps": [
+          {
+            "name": "Go for Gold!",
+            "date": "August 4 to 7 – Short Week",
+            "description": "<p>Every young gymnast dreams of becoming an Olympian and winning a gold medal! At our Olympic camp our campers will get a chance to compete for Gold as they practice numerous different Olympic Sports including gymnastics. It will be an awesome week filled with learning, laughing and team spirit. Dream big and go for gold!</p><p>Each week includes structured classes in Gymnastics, Dance, Ninja Warrior and Martial Arts.</p>",
+            "events": ["Wednesday August 5th – Olympic Day", "Friday August 7th – Pizza Day"],
+            "costs": ["$189 Full week", "$99 Half day, full week", "Individual full day $49 & Individual half day $29 "],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746970&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 7,
+        "camps": [
+          {
+            "name": "Wild Safari",
+            "date": "August  10 to 14",
+            "description": "<p>Take a trip to the wild plains of Africa and see all the animals this beautiful continent has to offer on our exciting Wild Safari Camp. Your camper will get a chance to learn about and even interact with lots of different animals. It is going to be a week full of gymnastics, dance, martial arts, ninja warrior and animal adventures that you won’t want to miss.</p><p>Each week includes structured classes in Gymnastics, Dance, Ninja Warrior and Martial Arts.</p>",
+            "events": ["Wednesday August 12th – African Lion Safari Tour Trip", "Friday August 14th – Reptile Visit", "Friday August 14th – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 and  Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746977&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 8,
+        "camps": [
+          {
+            "name": "Splish Splash",
+            "date": "August  17 to 21",
+            "description": "<p>Nothing says summer like hanging out with your friends and playing in the water. If your camper loves water balloons, slip and slides and splash pads look no further than our amazing summer camp. Between gymnastics, dance, martial arts, ninja warrior, crafts, obstacle courses and water games, your camper will be laughing and having fun all week. Can’t wait to see you there. It is going to be a splash!</p><p>Each week includes structured classes in Gymnastics, Dance, Ninja Warrior and Martial Arts.</p>",
+            "events": ["Wednesday August 19th – Wet & Wild Day", "Friday August 21st – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 and  Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10747001&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 9,
+        "camps": [
+          {
+            "name": "Outdoors Adventures",
+            "date": "August 24 to 28",
+            "description": "<p>Let’s get adventurous!  This week campers will engage in activities and games inspired by the outdoors. Campers will also take a trip to the Royal Botanical Gardens to learn and interact with different types of wildlife and nature trails. It is going to be a fun filled week with lots of awesome activities to do. Come explore and be adventurous with us in the outdoors!</p><p>Each week includes structured classes in Gymnastics, Dance, Ninja Warrior and Martial Arts.</p>",
+            "events": ["Tuesday August 25th – Royal Botanical Gardens Trip", "Friday August 28th – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 and  Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10747037&amp;loc="
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Martial Arts",
+    "id": "martialarts",
+    "order": 5,
+    "orb": "./img/orb-martialarts-wtext.svg",
+    "general": [
+      {
+        "title": "EACH WEEK OF SUMMER CAMP",
+        "items": [
+          "Fun structured lessons in Ninja Warrior, Dance, Gymnastics, and Martial Arts.",
+          "Lots of themed games, crafts and activities.",
+          "Special guests and excursions related to the weekly theme are incorporated to keep things engaging, energetic and educational. Day trips only apply to full day campers. Day trips only apply to full day campers. Age restrictions may apply."
+        ]
+      },
+      {
+        "title": "CAMP HOURS",
+        "items": [
+          "Monday to Friday 9:00-4:00",
+          "Extended care is available 7:00 am to 6:00 pm – No extra Charge . Please let us know if you require Before or Aftercare. In order to provide a safe environment for your children, we need to know how many kids require extended hours so we can staff accordingly."
+        ]
+      },
+      {
+        "title": "PIZZA LUNCH FRIDAY’S!!",
+        "items": ["For full day campers", "Campers with dietary restrictions should bring their own lunch. Please advise the staff of any dietary restrictions when you drop your child off."]
+      },
+      {
+        "title": "WHAT TO BRING",
+        "items": ["Lunch – Please send nut free lunch", "Snacks – Please send nut free snacks", "Water Bottle", "Hat", "Sunscreen", "Running Shoes", "Change of Clothes"]
+      }
+    ],
+    "weeks": [
+      {
+        "week": 2,
+        "camps": [
+          {
+            "name": "JEDI TRANING CAMP",
+            "date": "July 6 to 10",
+            "description": "<p>Our martial artists dive into their skills this week, focusing on agility, self-defense and teamwork! Spin a bo like Rey, fight off the Storm troopers with your powerful kicks, and find your inner confidence with Yoda-inspired strength. No martial arts necessary experience, we all work together to become our best inner Jedis. </p>",
+            "events": ["Wednesday July 8th – Gravity Climbing Gym Trip", "Friday July 10th – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 & Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746766&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 5,
+        "camps": [
+          {
+            "name": "SUPER HEROES AND VILLAINS",
+            "date": "July 27 to 31",
+            "description": "<p>Our Martial Artists know that confidence, teamwork, and ninja skills can defeat any evil Villain! Amongst other challenges, we'll learn to use Nunchucks like the ninja turtles, leap like spiderman, block like we're wielding Thor's shield, and smash through boards like the Hulk. No Martial Arts experience necessary, we all have a place at this hero academy! </p>",
+            "events": ["Wednesday July 29th – Chocolate Tales Visit", "Thursday July 30th – Magician Visit", "Friday July 31st  – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746897&amp;loc="
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Musical Theatre",
+    "id": "theatre",
+    "order": 6,
+    "orb": "./img/orb-theatre-wtext.svg",
+    "general": [
+      {
+        "title": "CAMPERS CAN EXPECT TO",
+        "items": [
+          "Practice and improve their singing, dancing and acting skills",
+          "Learn scenes, songs and dances from specific musicals",
+          "Work with top professionals in Musical Theatre industry",
+          "Gain experience using props for their performance",
+          "Have lots of fun and build conﬁdence!",
+          "Have a fast paced journey through Musical Theatre! Children will spend the week on each discipline focusing on building confidence, creating character and stage presence in an energetic and fun environment with The Star Project Team!"
+        ]
+      },
+      {
+        "title": "CAMP HOURS",
+        "items": [
+          "Tuesday to Friday 9:00-4:00",
+          "Extended care is available 7:00 am to 6:00 pm – No extra Charge. Please let us know if you require Before or Aftercare. In order to provide a safe environment for your children, we need to know how many kids require extended hours so we can staff accordingly."
+        ]
+      },
+      {
+        "title": "PIZZA LUNCH FRIDAY’S!!",
+        "items": ["For full day campers", "Campers with dietary restrictions should bring their own lunch. Please advise the staff of any dietary restrictions when you drop your child off."]
+      },
+      {
+        "title": "WHAT TO BRING",
+        "items": ["Lunch – Please send nut free lunch", "Snacks – Please send nut free snacks", "Water Bottle", "Running Shoes", "Change of Clothes"]
+      }
+    ],
+    "weeks": [
+      {
+        "week": 6,
+        "camps": [
+          {
+            "name": "THE LITTLE MERMAID",
+            "date": "August 4 to 7 – Short Week",
+            "description": "<p>Join us this summer as we explore Under the Sea with The Little Mermaid and friends! Campers will explore the building blocks of musical theatre and participate in fun activities resulting in a performance on Friday at 3:30pm where campers invite our parents to be ‘Part of Our World’. </p>",
+            "costs": ["$199.99 Full Week", "No option for individual days or half days"],
+            "age": "6 to 9",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10833855&amp;loc="
+          },
+          {
+            "name": "BROADWAY MUSICAL",
+            "date": "August 4 to 7 – Short Week",
+            "description": "<p>Join us this summer as we explore Broadway Theatre and creativity skills for campers introduced to theatre! Campers will explore the building blocks of musical theatre as well as the training process of a Broadway actor/actress. Campers participate in interactive focusing/listening exercises and theatre activities resulting in a performance on Friday at 3:30pm where campers invite our parents to be ‘Part of a Broadway Production’. </p>",
+            "costs": ["$199.99 Full Week", "No option for individual days or half days"],
+            "age": "8 to 13",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10833861&amp;loc="
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Ninja Warrior",
+    "id": "ninja",
+    "order": 2,
+    "orb": "./img/orb-ninja-wtext.svg",
+    "general": [
+      {
+        "title": "EACH WEEK OF SUMMER CAMP",
+        "items": [
+          "Fun structured lessons in Ninja Warrior, Dance, Gymnastics, and Martial Arts.",
+          "Lots of themed games, crafts and activities.",
+          "Special guests and excursions, events related to the weekly theme are incorporated to keep things engaging, energetic and educational. Day trips only apply to full day campers. Age restrictions may apply."
+        ]
+      },
+      {
+        "title": "CAMP HOURS",
+        "items": [
+          "Monday to Friday 9:00-4:00 (except for holiday long weekend July 1 and August 3 no camp)",
+          "Extended care is available 7:00 am to 6:00 pm – No extra Charge. Please let us know if you require Before or Aftercare. In order to provide a safe environment for your children, we need to know how many kids require extended hours so we can staff accordingly."
+        ]
+      },
+      {
+        "title": "PIZZA LUNCH FRIDAY’S!!",
+        "items": ["For full day campers", "Campers with dietary restrictions should bring their own lunch. Please advise the staff of any dietary restrictions when you drop your child off."]
+      },
+      {
+        "title": "WHAT TO BRING",
+        "items": ["Lunch – Please send nut free lunch", "Snacks – Please send nut free snacks", "Water Bottle", "Hat", "Sunscreen", "Running Shoes", "Change of Clothes"]
+      }
+    ],
+    "weeks": [
+      {
+        "week": 1,
+        "camps": [
+          {
+            "name": "Kick Off to Summer",
+            "date": "June 29 to July 3 – Short Week ( No camp Wednesday)",
+            "description": "<p>What better way to kick off the summer than to spend it with your friends, learning the fundamentals of gymnastics, dance, martial arts and ninja warrior. Our campers will spend time learning, playing and building relationships in our first camp of the summer. You won’t want to miss it!</p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Thursday July 2nd – Wet & Wild Day", "Friday July 3rd – Pizza Day"],
+            "costs": ["$189 Full week", "$99 Half day, full week", "Individual full day $49 & Individual half day $29"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746650&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 2,
+        "camps": [
+          {
+            "name": "Sports Stars",
+            "date": "July 6 to 10",
+            "description": "<p>Become a sports star at our amazing summer camp! From gymnastics to dance to ninja warrior to rock climbing our campers will get a wide variety of sports experience. They will also get a chance to show off their climbing skills at Gravity Climbing Gym. There are sO many fun activities planned, it is bound to be a star-studded week.</p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Wednesday July 8th – Gravity Climbing Gym Trip", "Friday July 10th – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 & Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10755212&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 3,
+        "camps": [
+          {
+            "name": "Animal Planet",
+            "date": "July 13 to 17",
+            "description": "<p>Who doesn’t love animals! Our camp will feature a trip to the Brantford Zoo, a visit from our friends at Little Ray’s Reptile Zoo, crafts, games, activities and so much more. If your kids have a love for animals and can’t wait to meet them in person, this is the perfect camp for them!</p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Wednesday July 15th – Brantford Zoo Trip", "Friday July 17th – Animal Ambassadors Visit", "Friday July 17th – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 & Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746802&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 4,
+        "camps": [
+          {
+            "name": "Water Works",
+            "date": "July 20 to 24",
+            "description": "<p>Best way to beat the summer heat is to spend time in the water! Our campers will be heading to the splash pad at African Lion Safari for a day full of fun. The camp will feature numerous different water games and activities. It will also provide time for our campers to learn and develop gymnastics, dance, martial arts and ninja warrior skills. It is going to be so much fun in the water and sun! </p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Wednesday July 22nd – African Lion Safari Splash Pad Trip", "Friday July 24th – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 & Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746823&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 5,
+        "camps": [
+          {
+            "name": "Magical & Messy",
+            "date": "July 27 to 31",
+            "description": "<p>From magic and mystery to chocolate and creativity this camp has it all. Our campers will get to see an amazing magic show that will be sure to blow their minds! They will also get a chance to learn how to make their own chocolate from our friends at Chocolate Tales. Gymnastics, Dance, Martial Arts, Ninja Warrior, Crafts, Pizza Day and so much more. You won’t want to miss out on this wild and magical adventure. </p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Wednesday July 29th – Chocolate Tales Visit", "Thursday July 30th – Magician Visit", "Friday July 31st – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746910&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 6,
+        "camps": [
+          {
+            "name": "Go for Gold!",
+            "date": "August 4 to 7 – Short Week",
+            "description": "<p>Every young gymnast dreams of becoming an Olympian and winning a gold medal! At our Olympic camp our campers will get a chance to compete for Gold as they practice numerous different Olympic Sports including gymnastics. It will be an awesome week filled with learning, laughing and team spirit. Dream big and go for gold!</p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Wednesday August 5th – Olympic Day", "Friday August 7th – Pizza Day"],
+            "costs": ["$189 Full week", "$99 Half day, full week", "Individual full day $49 & Individual half day $29"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746968&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 7,
+        "camps": [
+          {
+            "name": "Wild Safari",
+            "date": "August  10 to 14",
+            "description": "<p>Take a trip to the wild plains of Africa and see all the animals this beautiful continent has to offer on our exciting Wild Safari Camp. Your camper will get a chance to learn about and even interact with lots of different animals. It is going to be a week full of gymnastics, dance, martial arts, ninja warrior and animal adventures that you won’t want to miss.</p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Wednesday August 12th – African Lion Safari Tour Trip", "Friday August 14th – Reptile Visit", "Friday August 14th – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 & Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746976&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 8,
+        "camps": [
+          {
+            "name": "Splish Splash",
+            "date": "August  17 to 21",
+            "description": "<p>Nothing says summer like hanging out with your friends and playing in the water. If your camper loves water balloons, slip and slides and splash pads look no further than our amazing summer camp. Between gymnastics, dance, martial arts, ninja warrior, crafts, obstacle courses and water games, your camper will be laughing and having fun all week. Can’t wait to see you there. It is going to be a splash!</p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Wednesday August 19th – Wet & Wild Day", "Friday August 21st – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 & Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746991&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 9,
+        "camps": [
+          {
+            "name": "Outdoors Adventures",
+            "date": "August  24 to 28",
+            "description": "<p>Let’s get adventurous!  This week campers will engage in activities and games inspired by the outdoors. Campers will also take a trip to the Royal Botanical Gardens to learn and interact with different types of wildlife and nature trails. It is going to be a fun filled week with lots of awesome activities to do. Come explore and be adventurous with us in the outdoors!</p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Tuesday August 25th – Royal Botanical Gardens Trip", "Friday August 28th – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 & Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10747112&amp;loc="
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "Activity",
+    "id": "activity",
+    "order": 1,
+    "orb": "./img/orb-activitycamp-wtext.svg",
+    "general": [
+      {
+        "title": "EACH WEEK OF SUMMER CAMP",
+        "items": [
+          "Fun structured lessons in Dance, Gymnastics, and Martial Arts.",
+          "Lots of themed games, crafts and activities.",
+          "Special guests and excursions related to the weekly theme are incorporated to keep things engaging, energetic and educational. Day trips only apply to full day campers. Age restrictions may apply."
+        ]
+      },
+      {
+        "title": "CAMP HOURS",
+        "items": [
+          "Monday to Friday 9:00-4:00 (except for holiday long weekend July 1 and August 3 no camp)",
+          "Extended care is available 7:00 am to 6:00 pm – No extra Charge. Please let us know if you require Before or Aftercare. In order to provide a safe environment for your children, we need to know how many kids require extended hours so we can staff accordingly."
+        ]
+      },
+      {
+        "title": "PIZZA LUNCH FRIDAY’S!!",
+        "items": ["For full day campers", "Campers with dietary restrictions should bring their own lunch. Please advise the staff of any dietary restrictions when you drop your child off."]
+      },
+      {
+        "title": "WHAT TO BRING",
+        "items": ["Lunch – Please send nut free lunch", "Snacks – Please send nut free snacks", "Water Bottle", "Hat", "Sunscreen", "Running Shoes", "Change of Clothes"]
+      }
+    ],
+    "weeks": [
+      {
+        "week": 1,
+        "camps": [
+          {
+            "name": "Kick Off to Summer",
+            "date": "June 29 to July 3 – Short Week (no camp Wednesday)",
+            "description": "<p>What better way to kick off the summer than to spend it with your friends, learning the fundamentals of gymnastics, dance, martial arts and ninja warrior. Our campers will spend time learning, playing and building relationships in our first camp of the summer. You won’t want to miss it!</p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Thursday July 2nd – Wet & Wild Day", "Friday July 3rd – Pizza Day"],
+            "costs": ["$189 Full week", "$99 Half day, full week", "Individual full day $49 & Individual half day $29"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10731472&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 2,
+        "camps": [
+          {
+            "name": "Sports Stars",
+            "date": "July 6 to 10",
+            "description": "<p>Become a sports star at our amazing summer camp! From gymnastics to dance to ninja warrior to rock climbing our campers will get a wide variety of sports experience. They will also get a chance to show off their climbing skills at Gravity Climbing Gym. There are so many fun activities planned, it is bound to be a star-studded week.</p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Wednesday July 8th – Gravity Climbing Gym Trip", "Friday July 10th – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 & Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746663&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 3,
+        "camps": [
+          {
+            "name": "Animal Planet",
+            "date": "July 13 to 17",
+            "description": "<p>Who doesn’t love animals! Our camp will feature a trip to the Brantford Zoo, a visit from our friends at Little Ray’s Reptile Zoo, crafts, games, activities and so much more. If your kids have a love for animals and can’t wait to meet them in person, this is the perfect camp for them!</p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Wednesday July 15th – Brantford Zoo Trip", "Friday July 17th – Animal Ambassadors Visit", "Friday July 17th – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 & Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746794&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 4,
+        "camps": [
+          {
+            "name": "Water Works",
+            "date": "July 20 to 24",
+            "description": "<p>Best way to beat the summer heat is to spend time in the water! Our campers will be heading to the splash pad at African Lion Safari for a day full of fun. The camp will feature numerous different water games and activities. It will also provide time for our campers to learn and develop gymnastics, dance, martial arts and ninja warrior skills. It is going to be so much fun in the water and sun! </p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Wednesday July 22nd – African Lion Safari Splash Pad Trip", "Friday July 24th – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 & Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746813&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 5,
+        "camps": [
+          {
+            "name": "Magical & Messy",
+            "date": "July 27 to 31",
+            "description": "<p>From magic and mystery to chocolate and creativity this camp has it all. Our campers will get to see an amazing magic show that will be sure to blow their minds! They will also get a chance to learn how to make their own chocolate from our friends at Chocolate Tales. Gymnastics, Dance, Martial Arts, Ninja Warrior, Crafts, Pizza Day and so much more. You won’t want to miss out on this wild and magical adventure. </p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Wednesday July 29th – Chocolate Tales Visit", "Thursday July 30th – Magician Visit", "Friday July 31st – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746903&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 6,
+        "camps": [
+          {
+            "name": "Go for Gold!",
+            "date": "August 4 to 7 – Short Week",
+            "description": "<p>Every young gymnast dreams of becoming an Olympian and winning a gold medal! At our Olympic camp our campers will get a chance to compete for Gold as they practice numerous different Olympic Sports including gymnastics. It will be an awesome week filled with learning, laughing and team spirit. Dream big and go for gold!</p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Wednesday August 5th – Olympic Day", "Friday August 7th – Pizza Day"],
+            "costs": ["$189 Full week", "$99 Half day, full week", "Individual full day $49 & Individual half day $29"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746964&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 7,
+        "camps": [
+          {
+            "name": "Wild Safari",
+            "date": "August  10 to 14",
+            "description": "<p>Take a trip to the wild plains of Africa and see all the animals this beautiful continent has to offer on our exciting Wild Safari Camp. Your camper will get a chance to learn about and even interact with lots of different animals. It is going to be a week full of gymnastics, dance, martial arts, ninja warrior and animal adventures that you won’t want to miss.</p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Wednesday August 12th – African Lion Safari Tour Trip", "Friday August 14th – Reptile Visit", "Friday August 14th – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 & Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746971&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 8,
+        "camps": [
+          {
+            "name": "Splish Splash",
+            "date": "August 17 to 21",
+            "description": "<p>Nothing says summer like hanging out with your friends and playing in the water. If your camper loves water balloons, slip and slides and splash pads look no further than our amazing summer camp. Between gymnastics, dance, martial arts, ninja warrior, crafts, obstacle courses and water games, your camper will be laughing and having fun all week. Can’t wait to see you there. It is going to be a splash!</p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Wednesday August 19th – Wet & Wild Day", "Friday August 21st – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 & Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10746999&amp;loc="
+          }
+        ]
+      },
+      {
+        "week": 9,
+        "camps": [
+          {
+            "name": "Outdoors Adventures",
+            "date": "August 24 to 28",
+            "description": "<p>Let’s get adventurous!  This week campers will engage in activities and games inspired by the outdoors. Campers will also take a trip to the Royal Botanical Gardens to learn and interact with different types of wildlife and nature trails. It is going to be a fun filled week with lots of awesome activities to do. Come explore and be adventurous with us in the outdoors!</p><p>Each week includes structured classes in Ninja Warrior, Dance, Gymnastics and Martial Arts.</p>",
+            "events": ["Tuesday August 25th – Royal Botanical Gardens Trip", "Friday August 28th – Pizza Day"],
+            "costs": ["$229 Full week", "$129 Half day, full week", "Individual full day  $49, Individual half day $29 & Field trip day $69"],
+            "age": "4 to 12 years",
+            "registration": "https://app.jackrabbitclass.com/reg.asp?id=520628&amp;hc=&amp;initEmpty=&amp;hdrColor=&amp;WL=0&amp;preLoadClassID=10747055&amp;loc="
+          }
+        ]
+      }
+    ]
+  }
+]

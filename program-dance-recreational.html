@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <title>The Dream Centre</title>
+    <link href="node_modules/hc-offcanvas-nav/src/scss/hc-offcanvas-nav.css" rel="stylesheet" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "953981534727552");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=953981534727552&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body class="" ng-init="getScheduleData()">
+    <!-- banner include -->
+    <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
+    <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
+    <!-- / banner include -->
+
+    <div class="container pb-5" style="padding-top: 60px">
+      <div class="h2 font-tdc text-primary text-center text-uppercase pt-5 pb-2">Recreational Dance</div>
+
+      <div class="row pt-5">
+        <div class="col-12 col-lg-7">
+          <div class="pb-4">
+            <div class="h3 text-primary font-weight-bold">Kiddazzled</div>
+            <div class="h5 font-weight-bold">Ages 2 to 6</div>
+            <div class="font-weight-light">
+              Classes include the following:
+              <ul>
+                <li>Perfectly Princess &amp; Prince BALLET or JAZZ</li>
+                <li>ACRO-JAZZ</li>
+                <li>Superhero HIP HOP</li>
+                <li>Happy Feet TAP</li>
+              </ul>
+              <div>
+                A new and innovative program to the dance scene in Waterdown. Special props (tiaras, wands, capes, masks, shapes, themed concepts, and more) and Princess and Superhero terminology are used to tell a story and engage children through the art of imagination and movement in a
+                fun-filled, family environment.
+              </div>
+            </div>
+            <div class="pt-3">
+              <table class="table table-hover table-borderless table-sm small">
+                <tbody
+                  ng-repeat="group in [{'daylong':'Monday','dayshort':'mon'},{'daylong':'Tuesday','dayshort':'tue'},{'daylong':'Wednesday','dayshort':'wed'},{'daylong':'Thursday','dayshort':'thu'},{'daylong':'Friday','dayshort':'fri'},{'daylong':'Saturday','dayshort':'sat'},{'daylong':'Sunday','dayshort':'sun'}]"
+                >
+                  <!-- <tr ng-show="filteredmon.length > 0" class="border-bottom">
+                                        <td colspan="5" class="h6 mb-0 font-weight-bold pb-2 pt-4">{{group.daylong}} Classes</td>
+                                        </tr> -->
+                  <tr class="border-bottom" ng-repeat="item in filteredmon = (scheduledata | orderBy:['min_age', 'max_age'] | filter:{category1:'Dance'} | filter:{category2:'Recreational'} | filter:{category3:'Kiddazzled'} | filter:limitDay(group.dayshort))">
+                    <td>
+                      <div class="d-md-none pb-2">
+                        <div class="font-weight-bold">{{item.name}}</div>
+                        <div class="small">
+                          <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                          <span>{{item.start_time}} - {{item.end_time}}</span>
+                        </div>
+                        <div class="small">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                        <div class="small">Ages: {{item.min_age}} - {{item.max_age}}</div>
+                        <div class="small">{{item.tuition.fee | currency}} monthly</div>
+                      </div>
+                      <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-pink font-weight-bold">
+                        <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                        <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                      </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">
+                      {{item.name}}
+                      <div class="small font-weight-light">{{item.category1}} | {{item.category2}} | {{item.category3}}</div>
+                    </td>
+                    <td class="d-none d-md-table-cell">
+                      <div>
+                        <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                        <span>{{item.start_time}} - {{item.end_time}}</span>
+                      </div>
+                      <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                    </td>
+                    <td class="d-none d-md-table-cell">Ages: {{item.min_age}} - {{item.max_age}}</td>
+                    <td class="d-none d-md-table-cell">
+                      {{item.tuition.fee | currency}}
+                      <div class="small font-weight-light">monthly</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="pb-4">
+            <div class="h3 text-primary font-weight-bold">Ballet</div>
+            <div class="h5 font-weight-bold">Ages 7-9 &amp; 10-14</div>
+            <div class="font-weight-light">Ballet improves body posture, grace and strength and is the fundamental training that applies to all other dance forms. Our ballet classes can be a great complement to other recreational activities or a perfect introduction to dance for any age.</div>
+            <div class="pt-3">
+              <table class="table table-hover table-borderless table-sm small">
+                <tbody
+                  ng-repeat="group in [{'daylong':'Monday','dayshort':'mon'},{'daylong':'Tuesday','dayshort':'tue'},{'daylong':'Wednesday','dayshort':'wed'},{'daylong':'Thursday','dayshort':'thu'},{'daylong':'Friday','dayshort':'fri'},{'daylong':'Saturday','dayshort':'sat'},{'daylong':'Sunday','dayshort':'sun'}]"
+                >
+                  <!-- <tr ng-show="filteredmon.length > 0" class="border-bottom">
+                                    <td colspan="5" class="h6 mb-0 font-weight-bold pb-2 pt-4">{{group.daylong}} Classes</td>
+                                    </tr> -->
+                  <tr class="border-bottom" ng-repeat="item in filteredmon = (scheduledata | orderBy:['min_age', 'max_age'] | filter:{category1:'Dance'} | filter:{category2:'Recreational'} | filter:{category3:'Ballet'} | filter:limitDay(group.dayshort))">
+                    <td>
+                      <div class="d-md-none pb-2">
+                        <div class="font-weight-bold">{{item.name}}</div>
+                        <div class="small">
+                          <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                          <span>{{item.start_time}} - {{item.end_time}}</span>
+                        </div>
+                        <div class="small">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                        <div class="small">Ages: {{item.min_age}} - {{item.max_age}}</div>
+                        <div class="small">{{item.tuition.fee | currency}} monthly</div>
+                      </div>
+                      <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-pink font-weight-bold">
+                        <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                        <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                      </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">
+                      {{item.name}}
+                      <div class="small font-weight-light">{{item.category1}} | {{item.category2}} | {{item.category3}}</div>
+                    </td>
+                    <td class="d-none d-md-table-cell">
+                      <div>
+                        <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                        <span>{{item.start_time}} - {{item.end_time}}</span>
+                      </div>
+                      <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                    </td>
+                    <td class="d-none d-md-table-cell">Ages: {{item.min_age}} - {{item.max_age}}</td>
+                    <td class="d-none d-md-table-cell">
+                      {{item.tuition.fee | currency}}
+                      <div class="small font-weight-light">monthly</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="pb-4">
+            <div class="h3 text-primary font-weight-bold">Jazz</div>
+            <div class="h5 font-weight-bold">Ages 7-9 &amp; 10-14</div>
+            <div class="font-weight-light">
+              An upbeat class that is not to be missed! Jazz is showcases style and originality. Every jazz dancer interprets and executes moves and steps in their own way. Jazz dancing is energetic and fun, consisting of unique moves, fancy footwork, big leaps and quick turns. Recreational Ballet
+              classes are recommended, but not required, as a prerequisite to basic jazz technique.
+            </div>
+            <div class="pt-3">
+              <table class="table table-hover table-borderless table-sm small">
+                <tbody
+                  ng-repeat="group in [{'daylong':'Monday','dayshort':'mon'},{'daylong':'Tuesday','dayshort':'tue'},{'daylong':'Wednesday','dayshort':'wed'},{'daylong':'Thursday','dayshort':'thu'},{'daylong':'Friday','dayshort':'fri'},{'daylong':'Saturday','dayshort':'sat'},{'daylong':'Sunday','dayshort':'sun'}]"
+                >
+                  <!-- <tr ng-show="filteredmon.length > 0" class="border-bottom">
+                                    <td colspan="5" class="h6 mb-0 font-weight-bold pb-2 pt-4">{{group.daylong}} Classes</td>
+                                    </tr> -->
+                  <tr class="border-bottom" ng-repeat="item in filteredmon = (scheduledata | orderBy:['min_age', 'max_age'] | filter:{category1:'Dance'} | filter:{category2:'Recreational'} | filter:{category3:'Jazz'} | filter:limitDay(group.dayshort))">
+                    <td>
+                      <div class="d-md-none pb-2">
+                        <div class="font-weight-bold">{{item.name}}</div>
+                        <div class="small">
+                          <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                          <span>{{item.start_time}} - {{item.end_time}}</span>
+                        </div>
+                        <div class="small">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                        <div class="small">Ages: {{item.min_age}} - {{item.max_age}}</div>
+                        <div class="small">{{item.tuition.fee | currency}} monthly</div>
+                      </div>
+                      <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-pink font-weight-bold">
+                        <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                        <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                      </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">
+                      {{item.name}}
+                      <div class="small font-weight-light">{{item.category1}} | {{item.category2}} | {{item.category3}}</div>
+                    </td>
+                    <td class="d-none d-md-table-cell">
+                      <div>
+                        <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                        <span>{{item.start_time}} - {{item.end_time}}</span>
+                      </div>
+                      <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                    </td>
+                    <td class="d-none d-md-table-cell">Ages: {{item.min_age}} - {{item.max_age}}</td>
+                    <td class="d-none d-md-table-cell">
+                      {{item.tuition.fee | currency}}
+                      <div class="small font-weight-light">monthly</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="pb-4">
+            <div class="h3 text-primary font-weight-bold">Acro</div>
+            <div class="h5 font-weight-bold">Ages 7-9 &amp; 10-14</div>
+            <div class="font-weight-light">
+              Acrobatic movements are combined with jazz dance steps as students learn the fundamentals of movement and timing with tumbling skills. Younger students are introduced to basic tumbling skills including cartwheels, handstands, forward and backward rolls, walk-overs. Older students learn
+              more advanced floor tumbling skills including aerials, front and back flips, layouts, walking on hands, and more. Recreational Jazz is recommended when taking this class.
+            </div>
+            <div class="pt-3">
+              <table class="table table-hover table-borderless table-sm small">
+                <tbody
+                  ng-repeat="group in [{'daylong':'Monday','dayshort':'mon'},{'daylong':'Tuesday','dayshort':'tue'},{'daylong':'Wednesday','dayshort':'wed'},{'daylong':'Thursday','dayshort':'thu'},{'daylong':'Friday','dayshort':'fri'},{'daylong':'Saturday','dayshort':'sat'},{'daylong':'Sunday','dayshort':'sun'}]"
+                >
+                  <!-- <tr ng-show="filteredmon.length > 0" class="border-bottom">
+                                    <td colspan="5" class="h6 mb-0 font-weight-bold pb-2 pt-4">{{group.daylong}} Classes</td>
+                                    </tr> -->
+                  <tr class="border-bottom" ng-repeat="item in filteredmon = (scheduledata | orderBy:['min_age', 'max_age'] | filter:{category1:'Dance'} | filter:{category2:'Recreational'} | filter:{category3:'Acro'} | filter:limitDay(group.dayshort))">
+                    <td>
+                      <div class="d-md-none pb-2">
+                        <div class="font-weight-bold">{{item.name}}</div>
+                        <div class="small">
+                          <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                          <span>{{item.start_time}} - {{item.end_time}}</span>
+                        </div>
+                        <div class="small">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                        <div class="small">Ages: {{item.min_age}} - {{item.max_age}}</div>
+                        <div class="small">{{item.tuition.fee | currency}} monthly</div>
+                      </div>
+                      <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-pink font-weight-bold">
+                        <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                        <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                      </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">
+                      {{item.name}}
+                      <div class="small font-weight-light">{{item.category1}} | {{item.category2}} | {{item.category3}}</div>
+                    </td>
+                    <td class="d-none d-md-table-cell">
+                      <div>
+                        <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                        <span>{{item.start_time}} - {{item.end_time}}</span>
+                      </div>
+                      <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                    </td>
+                    <td class="d-none d-md-table-cell">Ages: {{item.min_age}} - {{item.max_age}}</td>
+                    <td class="d-none d-md-table-cell">
+                      {{item.tuition.fee | currency}}
+                      <div class="small font-weight-light">monthly</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="pb-4">
+            <div class="h3 text-primary font-weight-bold">Hip Hop</div>
+            <div class="h5 font-weight-bold">Ages 7-9 &amp; 10-14</div>
+            <div class="font-weight-light">
+              Very popular with all ages! Hip Hop is a blend of today's high-energy "street style" movement. Dance to popular music and learn the coolest hip hop moves, and the art of choreography and improvisation. Some skills developed in these classes are: popping, locking, robot, breaking,
+              tutting, floating, etc. Everyone is capable of taking part and having fun!
+            </div>
+            <div class="pt-3">
+              <table class="table table-hover table-borderless table-sm small">
+                <tbody
+                  ng-repeat="group in [{'daylong':'Monday','dayshort':'mon'},{'daylong':'Tuesday','dayshort':'tue'},{'daylong':'Wednesday','dayshort':'wed'},{'daylong':'Thursday','dayshort':'thu'},{'daylong':'Friday','dayshort':'fri'},{'daylong':'Saturday','dayshort':'sat'},{'daylong':'Sunday','dayshort':'sun'}]"
+                >
+                  <!-- <tr ng-show="filteredmon.length > 0" class="border-bottom">
+                                    <td colspan="5" class="h6 mb-0 font-weight-bold pb-2 pt-4">{{group.daylong}} Classes</td>
+                                    </tr> -->
+                  <tr class="border-bottom" ng-repeat="item in filteredmon = (scheduledata | orderBy:['min_age', 'max_age'] | filter:{category1:'Dance'} | filter:{category2:'Recreational'} | filter:{category3:'Hip Hop'} | filter:limitDay(group.dayshort))">
+                    <td>
+                      <div class="d-md-none pb-2">
+                        <div class="font-weight-bold">{{item.name}}</div>
+                        <div class="small">
+                          <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                          <span>{{item.start_time}} - {{item.end_time}}</span>
+                        </div>
+                        <div class="small">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                        <div class="small">Ages: {{item.min_age}} - {{item.max_age}}</div>
+                        <div class="small">{{item.tuition.fee | currency}} monthly</div>
+                      </div>
+                      <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-pink font-weight-bold">
+                        <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                        <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                      </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">
+                      {{item.name}}
+                      <div class="small font-weight-light">{{item.category1}} | {{item.category2}} | {{item.category3}}</div>
+                    </td>
+                    <td class="d-none d-md-table-cell">
+                      <div>
+                        <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                        <span>{{item.start_time}} - {{item.end_time}}</span>
+                      </div>
+                      <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                    </td>
+                    <td class="d-none d-md-table-cell">Ages: {{item.min_age}} - {{item.max_age}}</td>
+                    <td class="d-none d-md-table-cell">
+                      {{item.tuition.fee | currency}}
+                      <div class="small font-weight-light">monthly</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="pb-4">
+            <div class="h3 text-primary font-weight-bold">Lyrical/Contemporary</div>
+            <div class="h5 font-weight-bold">Ages 7-9 &amp; 10-14</div>
+            <div class="font-weight-light">
+              Lyrical dance is a great form of creative expression where a dancer tells a story through music and motion. Dancers will work on graceful movements, creativity, expression of their inner emotions and musicality. Lyrical/Contemporary is a combination of ballet, jazz, and modern.
+              Students enrolled in this class are strongly encouraged to study ballet.
+            </div>
+            <div class="pt-3">
+              <table class="table table-hover table-borderless table-sm small">
+                <tbody
+                  ng-repeat="group in [{'daylong':'Monday','dayshort':'mon'},{'daylong':'Tuesday','dayshort':'tue'},{'daylong':'Wednesday','dayshort':'wed'},{'daylong':'Thursday','dayshort':'thu'},{'daylong':'Friday','dayshort':'fri'},{'daylong':'Saturday','dayshort':'sat'},{'daylong':'Sunday','dayshort':'sun'}]"
+                >
+                  <!-- <tr ng-show="filteredmon.length > 0" class="border-bottom">
+                                    <td colspan="5" class="h6 mb-0 font-weight-bold pb-2 pt-4">{{group.daylong}} Classes</td>
+                                    </tr> -->
+                  <tr class="border-bottom" ng-repeat="item in filteredmon = (scheduledata | orderBy:['min_age', 'max_age'] | filter:{category1:'Dance'} | filter:{category2:'Recreational'} | filter:{category3:'Lyrical'} | filter:limitDay(group.dayshort))">
+                    <td>
+                      <div class="d-md-none pb-2">
+                        <div class="font-weight-bold">{{item.name}}</div>
+                        <div class="small">
+                          <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                          <span>{{item.start_time}} - {{item.end_time}}</span>
+                        </div>
+                        <div class="small">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                        <div class="small">Ages: {{item.min_age}} - {{item.max_age}}</div>
+                        <div class="small">{{item.tuition.fee | currency}} monthly</div>
+                      </div>
+                      <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-pink font-weight-bold">
+                        <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                        <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                      </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">
+                      {{item.name}}
+                      <div class="small font-weight-light">{{item.category1}} | {{item.category2}} | {{item.category3}}</div>
+                    </td>
+                    <td class="d-none d-md-table-cell">
+                      <div>
+                        <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                        <span>{{item.start_time}} - {{item.end_time}}</span>
+                      </div>
+                      <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                    </td>
+                    <td class="d-none d-md-table-cell">Ages: {{item.min_age}} - {{item.max_age}}</td>
+                    <td class="d-none d-md-table-cell">
+                      {{item.tuition.fee | currency}}
+                      <div class="small font-weight-light">monthly</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="pb-4">
+            <div class="h3 text-primary font-weight-bold">Tap</div>
+            <div class="h5 font-weight-bold">Ages 7-9 &amp; 10-14</div>
+            <div class="font-weight-light">
+              Our tap program is a fun, exciting class that combines musicality, sound quality, correct body placement, and terminology. Recreational students will develop ear training and basic rhythms, as well as, integration of tap dance and music as it relates to improvisation and choreography.
+            </div>
+            <div class="pt-3">
+              <table class="table table-hover table-borderless table-sm small">
+                <tbody
+                  ng-repeat="group in [{'daylong':'Monday','dayshort':'mon'},{'daylong':'Tuesday','dayshort':'tue'},{'daylong':'Wednesday','dayshort':'wed'},{'daylong':'Thursday','dayshort':'thu'},{'daylong':'Friday','dayshort':'fri'},{'daylong':'Saturday','dayshort':'sat'},{'daylong':'Sunday','dayshort':'sun'}]"
+                >
+                  <!-- <tr ng-show="filteredmon.length > 0" class="border-bottom">
+                                    <td colspan="5" class="h6 mb-0 font-weight-bold pb-2 pt-4">{{group.daylong}} Classes</td>
+                                    </tr> -->
+                  <tr class="border-bottom" ng-repeat="item in filteredmon = (scheduledata | orderBy:['min_age', 'max_age'] | filter:{category1:'Dance'} | filter:{category2:'Recreational'} | filter:{category3:'Tap'} | filter:limitDay(group.dayshort))">
+                    <td>
+                      <div class="d-md-none pb-2">
+                        <div class="font-weight-bold">{{item.name}}</div>
+                        <div class="small">
+                          <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                          <span>{{item.start_time}} - {{item.end_time}}</span>
+                        </div>
+                        <div class="small">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                        <div class="small">Ages: {{item.min_age}} - {{item.max_age}}</div>
+                        <div class="small">{{item.tuition.fee | currency}} monthly</div>
+                      </div>
+                      <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-pink font-weight-bold">
+                        <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                        <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                      </a>
+                    </td>
+                    <td class="d-none d-md-table-cell">
+                      {{item.name}}
+                      <div class="small font-weight-light">{{item.category1}} | {{item.category2}} | {{item.category3}}</div>
+                    </td>
+                    <td class="d-none d-md-table-cell">
+                      <div>
+                        <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                        <span>{{item.start_time}} - {{item.end_time}}</span>
+                      </div>
+                      <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                    </td>
+                    <td class="d-none d-md-table-cell">Ages: {{item.min_age}} - {{item.max_age}}</td>
+                    <td class="d-none d-md-table-cell">
+                      {{item.tuition.fee | currency}}
+                      <div class="small font-weight-light">monthly</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4 offset-lg-1 border-left bg-light pt-3">
+          <div class="small">
+            <div class="mb-4 h6 text-center">
+              <a class="btn btn-primary px-3 glass" href="./media/RecDanceWear20192020.pdf" target="_blank">Recreational Class Attire Information</a>
+              <hr />
+            </div>
+            <div class="h5 text-primary">Recreational Dance Recital and Costume Deposit Information</div>
+            <div class="pb-2">
+              Our year end Dance Recital is a wonderful opportunity for our Recreational and Competitive dancers to showcase all of their dedication and skillset development during their dance season. Our performances will be remembered for years to come by all! Each dancer registered in our
+              recreational dance program will perform in on our year end Dance Recital in a professional theatre. Location, date, and associated fees TBA. Recital typically takes place during the first Saturday in June at the Burlington Performing Arts Centre.
+            </div>
+            <div>
+              A $50 costume deposit will apply to each recreational dance routine that performs in our year end recital, this fee will be posted on January 1st. There are no refunds issued after January 1st. The average final price of a recreational costume can range between $79-$99+hst, or more.
+              The cost for Recital tickets can change from year to year and typically total $30 after taxes and theatre fees, discounts apply to children ages 2 and under.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer include -->
+    <div ng-include src="'footer.html'"></div>
+    <!-- / footer include -->
+  </body>
+</html>

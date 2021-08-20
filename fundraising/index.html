@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="theme-color" content="#000000">
+        <link href="../../scss/theme.css" type="text/css" rel="Stylesheet" />
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+        <title>The Dream Centre</title>
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <script src="../js/app.js"></script>
+        <script src="fundraisingcontactscript.js"></script>
+    </head>
+    <body class="">
+
+        <!-- Modal -->
+        <div class="modal fade" id="contactmodal" tabindex="-1" role="dialog" aria-labelledby="contactmodallabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title" id="contactmodallabel">
+                            <div class="small">Send a message to the</div>
+                            <div class="h4 mb-0">Fundraising Team</div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i class="fas fa-times small"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="fundraisingcontactsend.php" id="contactForm">
+                            <div class="form-row pt-3 pb-4">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="contactname" class="mb-1">Your Name</label>
+                                        <input class="form-control" required type="text" name="contactname" id="contactname">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="contactemail" class="mb-1">Your Email Address</label>
+                                        <input class="form-control" required type="email" name="contactemail" id="contactemail">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="contactmessage" class="mb-1">Your Message</label>
+                                        <textarea class="form-control" required rows="4" name="contactmessage" id="contactmessage"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <button type="button" class="btn btn-sm btn-outline-primary px-3" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-sm btn-primary px-4">Send Message</button>
+                                <div class="d-none"><input type="text" name="documentlocation" id="documentlocation"></div>
+                                <div class="d-none"><input type="text" name="website" id="website"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="text-center bg-dark p-3 text-white">
+            <img src="../img/tdclogo-whitetext.svg" class="" style="width: 180px;">
+            <div class="h5 mt-4 text-center font-weight-light text-uppercase">Fundraising 2019</div>
+        </div>
+
+        <div class="container pt-4">
+
+            <div class="text-center">
+                <button type="button" class="btn btn-outline-primary px-4 font-weight-bold" data-toggle="modal" data-target="#contactmodal"><i class="fas fa-envelope mr-2"></i>Send a message to the fundraising team</button>
+            </div>
+
+            <div class="pt-4">
+                <ul class="nav justify-content-center nav-pills mb-3" id="navigation-content" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" id="tab01-tab" data-toggle="pill" href="#tab01" role="tab" aria-controls="tab01" aria-selected="false">Ultimate Sports Raffle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" id="tab02-tab" data-toggle="pill" href="#tab02" role="tab" aria-controls="tab02" aria-selected="false">Valentines Dance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" id="tab03-tab" data-toggle="pill" href="#tab03" role="tab" aria-controls="tab03" aria-selected="false">Halloween Dance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" id="tab04-tab" data-toggle="pill" href="#tab04" role="tab" aria-controls="tab04" aria-selected="false">Wine Raffle</a>
+                    </li>
+                </ul>
+                <div class="tab-content p-3" id="navigation-content">
+                    <div class="tab-pane fade" id="tab01" role="tabpanel" aria-labelledby="tab01-tab">
+                        <hr>
+                        <div class="h3 font-weight-light">Ultimate Sports Raffle</div>
+                        <div>Content about stuff and things...</div>
+                    </div>
+                    <div class="tab-pane fade" id="tab02" role="tabpanel" aria-labelledby="tab02-tab">
+                        <hr>
+                        <div class="h3 font-weight-light">Valentines Dance</div>
+                        <div>Content about stuff and things...</div>
+                    </div>
+                    <div class="tab-pane fade" id="tab03" role="tabpanel" aria-labelledby="tab03-tab">
+                        <hr>
+                        <div class="h3 font-weight-light">Halloween Dance</div>
+                        <div>Content about stuff and things...</div>
+                    </div>
+                    <div class="tab-pane fade" id="tab04" role="tabpanel" aria-labelledby="tab04-tab">
+                        <hr>
+                        <div class="h3 font-weight-light">Wine Raffle</div>
+                        <div>Content about stuff and things...</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </body>
+</html>

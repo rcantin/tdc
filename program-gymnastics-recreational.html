@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <title>The Dream Centre</title>
+    <link href="node_modules/hc-offcanvas-nav/src/scss/hc-offcanvas-nav.css" rel="stylesheet" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body class="" ng-init="getScheduleData()">
+    <!-- banner include -->
+    <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
+    <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
+    <!-- / banner include -->
+
+    <div class="container pb-5" style="padding-top: 60px;">
+      <div class="h2 font-tdc text-purple text-center text-uppercase pt-5 pb-2">Gymnastics</div>
+
+      <div class="row pt-5">
+        <div class="col-12 col-md-7 col-xl-7">
+          <div class="pb-4">
+            <div class="h4 text-purple font-weight-bold">Recreational</div>
+            <div>
+              We strive to develop habits that promote sharing, teamwork and friendship. Developmentally appropriate gymnastics fundamentals and equipment size ensures safety and encourages children to learn at their own pace. Alongside friends and the leadership of The Dream Centres’ coaches, your
+              child will learn the foundational skills in gymnastics: Beam, bars, vault, trampoline, floor, tumbling and much more. More so, each child will experience what it feels like to succeed and be confident in playing, making friends, and mastering skills.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-5 col-lg-4 offset-lg-1 border-left bg-light pt-3">
+          <div class="small">
+            <div class="h5 text-purple">What to Wear</div>
+            <div>
+              For your child's classes, please have them wear form fitted attire to any gymnastics class. When coaches are hands on and spotting children, loose fitting clothing can get caught up and be unsafe. Bodysuits and spandex shorts, tight fitting leggings, bikertards, bodysuits are all
+              appropriate.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="pt-4 h5 text-purple font-weight-bold">Monday Classes</div>
+          <div class="pt-2">
+            <table ng-if="scheduledatareturned" class="table table-striped table-hover table-sm small">
+              <thead class=" thead-sm">
+                <tr>
+                  <th></th>
+                  <th>Class</th>
+                  <th>When</th>
+                  <th>Age(s)</th>
+                  <th>Tuition</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  ng-repeat="item in scheduledata | orderBy:['age', 'day'] | filter:{category1:'Gymnastics'} | filter:{category2:'Recreational'} | filter:{category3:'!Sweet Dreamers'} | filter:{category3:'!Cheerleading'} | filter:{category3:'!Tumbling'} | filter:{name:'!Foundations'} | filter:limitDay('mon')"
+                >
+                  <td>
+                    <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-purple font-weight-bold">
+                      <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                      <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                    </a>
+                  </td>
+                  <td>{{item.name}}</td>
+                  <td class="">
+                    <div>
+                      <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                      <span>{{item.start_time}} - {{item.end_time}}</span>
+                    </div>
+                    <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                  </td>
+                  <td>{{item.min_age}} - {{item.max_age}}</td>
+                  <td>
+                    {{item.tuition.fee | currency}}
+                    <div class="small font-weight-light">monthly</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div ng-if="!scheduledatareturned" class="small font-weight-light pb-3"><i class="fas fa-spinner fa-spin mr-1"></i>Loading schedule data...</div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="pt-4 h5 text-purple font-weight-bold">Tuesday Classes</div>
+          <div class="pt-2">
+            <table ng-if="scheduledatareturned" class="table table-striped table-hover table-sm small">
+              <thead class=" thead-sm">
+                <tr>
+                  <th></th>
+                  <th>Class</th>
+                  <th>When</th>
+                  <th>Age(s)</th>
+                  <th>Tuition</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  ng-repeat="item in scheduledata | orderBy:['age', 'day'] | filter:{category1:'Gymnastics'} | filter:{category2:'Recreational'} | filter:{category3:'!Sweet Dreamers'} | filter:{category3:'!Cheerleading'} | filter:{category3:'!Tumbling'} | filter:{name:'!Foundations'} | filter:limitDay('tue')"
+                >
+                  <td>
+                    <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-purple font-weight-bold">
+                      <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                      <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                    </a>
+                  </td>
+                  <td>{{item.name}}</td>
+                  <td class="">
+                    <div>
+                      <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                      <span>{{item.start_time}} - {{item.end_time}}</span>
+                    </div>
+                    <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                  </td>
+                  <td>{{item.min_age}} - {{item.max_age}}</td>
+                  <td>
+                    {{item.tuition.fee | currency}}
+                    <div class="small font-weight-light">monthly</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div ng-if="!scheduledatareturned" class="small font-weight-light pb-3"><i class="fas fa-spinner fa-spin mr-1"></i>Loading schedule data...</div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="pt-4 h5 text-purple font-weight-bold">Wednesday Classes</div>
+          <div class="pt-2">
+            <table ng-if="scheduledatareturned" class="table table-striped table-hover table-sm small">
+              <thead class=" thead-sm">
+                <tr>
+                  <th></th>
+                  <th>Class</th>
+                  <th>When</th>
+                  <th>Age(s)</th>
+                  <th>Tuition</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  ng-repeat="item in scheduledata | orderBy:['age', 'day'] | filter:{category1:'Gymnastics'} | filter:{category2:'Recreational'} | filter:{category3:'!Sweet Dreamers'} | filter:{category3:'!Cheerleading'} | filter:{category3:'!Tumbling'} | filter:{name:'!Foundations'} | filter:limitDay('wed')"
+                >
+                  <td>
+                    <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-purple font-weight-bold">
+                      <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                      <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                    </a>
+                  </td>
+                  <td>{{item.name}}</td>
+                  <td class="">
+                    <div>
+                      <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                      <span>{{item.start_time}} - {{item.end_time}}</span>
+                    </div>
+                    <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                  </td>
+                  <td>{{item.min_age}} - {{item.max_age}}</td>
+                  <td>
+                    {{item.tuition.fee | currency}}
+                    <div class="small font-weight-light">monthly</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div ng-if="!scheduledatareturned" class="small font-weight-light pb-3"><i class="fas fa-spinner fa-spin mr-1"></i>Loading schedule data...</div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="pt-4 h5 text-purple font-weight-bold">Thursday Classes</div>
+          <div class="pt-2">
+            <table ng-if="scheduledatareturned" class="table table-striped table-hover table-sm small">
+              <thead class=" thead-sm">
+                <tr>
+                  <th></th>
+                  <th>Class</th>
+                  <th>When</th>
+                  <th>Age(s)</th>
+                  <th>Tuition</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  ng-repeat="item in scheduledata | orderBy:['age', 'day'] | filter:{category1:'Gymnastics'} | filter:{category2:'Recreational'} | filter:{category3:'!Sweet Dreamers'} | filter:{category3:'!Cheerleading'} | filter:{category3:'!Tumbling'} | filter:{name:'!Foundations'} | filter:limitDay('thu')"
+                >
+                  <td>
+                    <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-purple font-weight-bold">
+                      <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                      <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                    </a>
+                  </td>
+                  <td>{{item.name}}</td>
+                  <td class="">
+                    <div>
+                      <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                      <span>{{item.start_time}} - {{item.end_time}}</span>
+                    </div>
+                    <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                  </td>
+                  <td>{{item.min_age}} - {{item.max_age}}</td>
+                  <td>
+                    {{item.tuition.fee | currency}}
+                    <div class="small font-weight-light">monthly</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div ng-if="!scheduledatareturned" class="small font-weight-light pb-3"><i class="fas fa-spinner fa-spin mr-1"></i>Loading schedule data...</div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="pt-4 h5 text-purple font-weight-bold">Saturday Classes</div>
+          <div class="pt-2">
+            <table ng-if="scheduledatareturned" class="table table-striped table-hover table-sm small">
+              <thead class=" thead-sm">
+                <tr>
+                  <th></th>
+                  <th>Class</th>
+                  <th>When</th>
+                  <th>Age(s)</th>
+                  <th>Tuition</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  ng-repeat="item in scheduledata | orderBy:['age', 'day'] | filter:{category1:'Gymnastics'} | filter:{category2:'Recreational'} | filter:{category3:'!Sweet Dreamers'} | filter:{category3:'!Cheerleading'} | filter:{category3:'!Tumbling'} | filter:{name:'!Foundations'} | filter:limitDay('sat')"
+                >
+                  <td>
+                    <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-purple font-weight-bold">
+                      <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                      <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                    </a>
+                  </td>
+                  <td>{{item.name}}</td>
+                  <td class="">
+                    <div>
+                      <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                      <span>{{item.start_time}} - {{item.end_time}}</span>
+                    </div>
+                    <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                  </td>
+                  <td>{{item.min_age}} - {{item.max_age}}</td>
+                  <td>
+                    {{item.tuition.fee | currency}}
+                    <div class="small font-weight-light">monthly</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div ng-if="!scheduledatareturned" class="small font-weight-light pb-3"><i class="fas fa-spinner fa-spin mr-1"></i>Loading schedule data...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer include -->
+    <div ng-include src="'footer.html'"></div>
+    <!-- / footer include -->
+  </body>
+</html>

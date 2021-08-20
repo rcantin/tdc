@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <title>The Dream Centre</title>
+    <link href="node_modules/hc-offcanvas-nav/src/scss/hc-offcanvas-nav.css" rel="stylesheet" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "953981534727552");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=953981534727552&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body class="ng-cloak">
+    <!-- banner include -->
+    <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
+    <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
+    <!-- / banner include -->
+
+    <div class="container pb-5 pt-5 mt-5" ng-init="getEventData()">
+      <div class="h2 font-tdc text-dark text-center text-uppercase py-4">Upcoming Events</div>
+
+      <!-- spinner for getting event data -->
+      <div ng-show="!eventdatareturned" class="text-center m-0 pt-4 pb-5 font-weight-light"><i class="fas fa-spinner fa-pulse mr-1"></i>Getting events...</div>
+
+      <!-- {
+        "startdate": "2021-08-27",
+        "starttime": "",
+        "enddate": "2021-08-27",
+        "endtime": "",
+        "description": "Last Day of Summer Camps",
+        "caption": ""
+      }, -->
+
+      <div ng-show="eventdatareturned" class="pt-1">
+        <table class="table" ng-if="eventdata">
+          <tbody>
+            <tr ng-show="results.length < 1">
+              <td colspan="4" class="font-weight-light py-3 text-center">No events found. Check back soon for updates.</td>
+            </tr>
+            <tr ng-repeat="event in results = (eventdata | orderBy:'startdate' | filterBeforeToday)">
+              <td class="text-right font-weight-light d-none d-md-table-cell">
+                <div class="text-uppercase">
+                  <span style="white-space: nowrap">{{ event.startdate | date:"mediumDate" }}</span>
+                  <span ng-if="event.startdate < event.enddate" style="white-space: nowrap"> - {{ event.enddate | date:"mediumDate" }}</span>
+                </div>
+                <div class="font-weight-light text-uppercase">
+                  <span ng-if="event.starttime" style="white-space: nowrap">{{ event.starttime | date:"shortTime" }}</span>
+                  <span ng-if="event.starttime < event.endtime" style="white-space: nowrap"> - {{ event.endtime | date:"shortTime" }}</span>
+                </div>
+              </td>
+              <td class="text-left">
+                <div class="font-weight-bold" ng-bind-html="event.description | to_trusted"></div>
+                <div ng-if="event.caption" class="small font-weight-light">{{ event.caption }}</div>
+                <div class="d-md-none">
+                  <div class="text-uppercase">
+                    <span style="white-space: nowrap">{{ event.startdate | date:"mediumDate" }}</span>
+                    <span ng-if="event.startdate < event.enddate" style="white-space: nowrap"> - {{ event.enddate | date:"mediumDate" }}</span>
+                  </div>
+                  <div class="font-weight-light text-uppercase">
+                    <span ng-if="event.starttime" style="white-space: nowrap">{{ event.starttime | date:"shortTime" }}</span>
+                    <span ng-if="event.starttime < event.endtime" style="white-space: nowrap"> - {{ event.endtime | date:"shortTime" }}</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="font-weight-bold small py-3 text-right">Event details are subject to change</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- footer include -->
+    <div ng-include src="'footer.html'"></div>
+    <!-- / footer include -->
+  </body>
+</html>

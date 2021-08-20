@@ -1,0 +1,208 @@
+
+
+<div ng-init="getScheduleData()">
+
+    <div>
+
+        <div class="pb-5">
+            <div class="h4 text-pink font-weight-bold">Kiddazzled</div>
+            <div class="pb-3 small">
+                <p>A new and innovative program to the dance scene in Waterdown. Special props (tiaras, wands, capes, masks, shapes, themed concepts, and more) and Princess and Superhero terminology are used to tell a story and engage children through the art of imagination and movement in a fun-filled, family environment.</p>
+                <p>Classes include the following:
+                    <ul>
+                        <li>Perfectly Princess BALLET or JAZZ</li>
+                        <li>Recreational ACRO-JAZZ</li>
+                        <li>Superhero HIP HOP (Boys and Girls)</li>
+                        <li>Happy Feet TAP</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="h6 text-pink py-2">Class Schedule &amp; Registration</div>
+            <table ng-if="scheduledatareturned" class="table table-hover table-sm small">
+                <tbody ng-repeat="weekday in weekdayshort">
+                    <tr ng-if="filteredclasses.length > 0">
+                        <td colspan="4" class="font-weight-bold bg-light">{{convertWeekday(weekday)}}s</td>
+                    </tr>
+                    <tr ng-repeat="class in filteredclasses = (scheduledata | orderBy:'min_age' | filter:{category1:'Dance'} | filter:{category3:'Kiddazzled'} | activeOnDay:weekday)">
+                        <td>
+                            {{ class.name }}
+                            <div class="d-block d-md-none">Ages {{ class.min_age }} - {{ class.max_age }}</div>
+                            <div class="d-block d-md-none">
+                                <span><span ng-repeat="day in class.meeting_days | activedays">{{convertWeekday(day)}}s<span ng-if="!$last">, </span></span></span>
+                                <span> {{class.start_time}} - {{class.end_time}}</span>
+                            </div>
+                            <div class="d-block d-md-none text-uppercase pb-2">
+                                <a ng-if="class.online_reg_link" ng-href="{{class.online_reg_link}}" target="_blank" class="font-weight-bold" ng-class="{'text-blue': class.category1 == 'Dance', 'text-purple': class.category1 == 'Gymnastics', 'text-blue': class.category1 == 'Martial Arts'}"><span ng-if="class.openings.calculated_openings > 0">Register</span><span ng-if="class.openings.calculated_openings <= 0">Wait List</span></a>
+                            </div>
+                        </td>
+                        <td class="d-none d-md-table-cell">Ages {{ class.min_age }} - {{ class.max_age }}</td>
+                        <td class="d-none d-md-table-cell">
+                            <span><span ng-repeat="day in class.meeting_days | activedays">{{convertWeekday(day)}}s<span ng-if="!$last">, </span></span></span>
+                            <span> {{class.start_time}} - {{class.end_time}}</span>
+                        </td>
+                        <td class="d-none d-md-table-cell text-right text-uppercase">
+                            <a ng-if="class.online_reg_link" ng-href="{{class.online_reg_link}}" target="_blank" class="font-weight-bold" ng-class="{'text-blue': class.category1 == 'Dance', 'text-purple': class.category1 == 'Gymnastics', 'text-blue': class.category1 == 'Martial Arts'}"><span ng-if="class.openings.calculated_openings > 0">Register</span><span ng-if="class.openings.calculated_openings <= 0">Wait List</span></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div ng-if="!scheduledatareturned">
+                <div class="font-weight-light p-1 small"><i class="fas fa-spinner fa-spin mr-1"></i>Loading schedule data...</div>
+            </div>
+        </div>
+
+
+        <div class="pb-5">
+            <div class="h4 text-pink font-weight-bold">Ballet</div>
+            <div class="pb-3 small">Ballet improves body posture, grace and strength and is the fundamental training that applies to all other dance forms. Our ballet classes can be a great complement to other recreational activities or a perfect introduction to dance for any age.</div>
+            <div class="h6 text-pink py-2">Class Schedule &amp; Registration</div>
+            <table ng-if="scheduledatareturned" class="table table-hover table-sm small">
+                <tbody ng-repeat="weekday in weekdayshort">
+                    <tr ng-if="filteredclasses.length > 0">
+                        <td colspan="4" class="font-weight-bold bg-light">{{convertWeekday(weekday)}}s</td>
+                    </tr>
+                    <tr ng-repeat="class in filteredclasses = (scheduledata | orderBy:'min_age' | filter:{category1:'Dance'} | filter:{category2:'Recreational'} | filter:{category3:'Ballet'} | activeOnDay:weekday)">
+                        <td>
+                            {{ class.name }}
+                            <div class="d-block d-md-none">Ages {{ class.min_age }} - {{ class.max_age }}</div>
+                            <div class="d-block d-md-none">
+                                <span><span ng-repeat="day in class.meeting_days | activedays">{{convertWeekday(day)}}s<span ng-if="!$last">, </span></span></span>
+                                <span> {{class.start_time}} - {{class.end_time}}</span>
+                            </div>
+                            <div class="d-block d-md-none text-uppercase">
+                                <a ng-if="class.online_reg_link" ng-href="{{class.online_reg_link}}" target="_blank" class="font-weight-bold" ng-class="{'text-blue': class.category1 == 'Dance', 'text-purple': class.category1 == 'Gymnastics', 'text-blue': class.category1 == 'Martial Arts'}"><span ng-if="class.openings.calculated_openings > 0">Register</span><span ng-if="class.openings.calculated_openings <= 0">Wait List</span></a>
+                            </div>
+                        </td>
+                        <td class="d-none d-md-table-cell">Ages {{ class.min_age }} - {{ class.max_age }}</td>
+                        <td class="d-none d-md-table-cell">
+                            <span><span ng-repeat="day in class.meeting_days | activedays">{{convertWeekday(day)}}s<span ng-if="!$last">, </span></span></span>
+                            <span> {{class.start_time}} - {{class.end_time}}</span>
+                        </td>
+                        <td class="d-none d-md-table-cell text-right text-uppercase">
+                            <a ng-if="class.online_reg_link" ng-href="{{class.online_reg_link}}" target="_blank" class="font-weight-bold" ng-class="{'text-blue': class.category1 == 'Dance', 'text-purple': class.category1 == 'Gymnastics', 'text-blue': class.category1 == 'Martial Arts'}"><span ng-if="class.openings.calculated_openings > 0">Register</span><span ng-if="class.openings.calculated_openings <= 0">Wait List</span></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div ng-if="!scheduledatareturned">
+                <div class="font-weight-light p-1 small"><i class="fas fa-spinner fa-spin mr-1"></i>Loading schedule data...</div>
+            </div>
+        </div>
+
+
+        <div class="pb-5">
+            <div class="h4 text-pink font-weight-bold">Jazz</div>
+            <div class="pb-3 small">An upbeat class that is not to be missed! Jazz is showcases style and originality. Every jazz dancer interprets and executes moves and steps in their own way. Jazz dancing is energetic and fun, consisting of unique moves, fancy footwork, big leaps and quick turns. Recreational Ballet classes are recommended, but not required, as a prerequisite to basic jazz technique.</div>
+            <div class="h6 text-pink py-2">Class Schedule &amp; Registration</div>
+            <table ng-if="scheduledatareturned" class="table table-hover table-sm small">
+                <tbody ng-repeat="weekday in weekdayshort">
+                    <tr ng-if="filteredclasses.length > 0">
+                        <td colspan="4" class="font-weight-bold bg-light">{{convertWeekday(weekday)}}s</td>
+                    </tr>
+                    <tr ng-repeat="class in filteredclasses = (scheduledata | orderBy:'min_age' | filter:{category1:'Dance'} | filter:{category2:'Recreational'} | filter:{category3:'Jazz'} | activeOnDay:weekday)">
+                        <td>
+                            {{ class.name }}
+                            <div class="d-block d-md-none">Ages {{ class.min_age }} - {{ class.max_age }}</div>
+                            <div class="d-block d-md-none">
+                                <span><span ng-repeat="day in class.meeting_days | activedays">{{convertWeekday(day)}}s<span ng-if="!$last">, </span></span></span>
+                                <span> {{class.start_time}} - {{class.end_time}}</span>
+                            </div>
+                            <div class="d-block d-md-none text-uppercase">
+                                <a ng-if="class.online_reg_link" ng-href="{{class.online_reg_link}}" target="_blank" class="font-weight-bold" ng-class="{'text-blue': class.category1 == 'Dance', 'text-purple': class.category1 == 'Gymnastics', 'text-blue': class.category1 == 'Martial Arts'}"><span ng-if="class.openings.calculated_openings > 0">Register</span><span ng-if="class.openings.calculated_openings <= 0">Wait List</span></a>
+                            </div>
+                        </td>
+                        <td class="d-none d-md-table-cell">Ages {{ class.min_age }} - {{ class.max_age }}</td>
+                        <td class="d-none d-md-table-cell">
+                            <span><span ng-repeat="day in class.meeting_days | activedays">{{convertWeekday(day)}}s<span ng-if="!$last">, </span></span></span>
+                            <span> {{class.start_time}} - {{class.end_time}}</span>
+                        </td>
+                        <td class="d-none d-md-table-cell text-right text-uppercase">
+                            <a ng-if="class.online_reg_link" ng-href="{{class.online_reg_link}}" target="_blank" class="font-weight-bold" ng-class="{'text-blue': class.category1 == 'Dance', 'text-purple': class.category1 == 'Gymnastics', 'text-blue': class.category1 == 'Martial Arts'}"><span ng-if="class.openings.calculated_openings > 0">Register</span><span ng-if="class.openings.calculated_openings <= 0">Wait List</span></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div ng-if="!scheduledatareturned">
+                <div class="font-weight-light p-1 small"><i class="fas fa-spinner fa-spin mr-1"></i>Loading schedule data...</div>
+            </div>
+        </div>
+
+
+        <div class="pb-5">
+            <div class="h4 text-pink font-weight-bold">Hip Hop</div>
+            <div class="pb-3 small">Very popular with all ages! Hip Hop is a blend of today's high-energy "street style" movement. Dance to popular music and learn the coolest hip hop moves, and the art of choreography and improvisation. Some skills developed in these classes are: popping, locking, robot, breaking, tutting, floating, etc. Everyone is capable of taking part and having fun!</div>
+            <div class="h6 text-pink py-2">Class Schedule &amp; Registration</div>
+            <table ng-if="scheduledatareturned" class="table table-hover table-sm small">
+                <tbody ng-repeat="weekday in weekdayshort">
+                    <tr ng-if="filteredclasses.length > 0">
+                        <td colspan="4" class="font-weight-bold bg-light">{{convertWeekday(weekday)}}s</td>
+                    </tr>
+                    <tr ng-repeat="class in filteredclasses = (scheduledata | orderBy:'min_age' | filter:{category1:'Dance'} | filter:{category2:'Recreational'} | filter:{category3:'Hip Hop'} | activeOnDay:weekday)">
+                        <td>
+                            {{ class.name }}
+                            <div class="d-block d-md-none">Ages {{ class.min_age }} - {{ class.max_age }}</div>
+                            <div class="d-block d-md-none">
+                                <span><span ng-repeat="day in class.meeting_days | activedays">{{convertWeekday(day)}}s<span ng-if="!$last">, </span></span></span>
+                                <span> {{class.start_time}} - {{class.end_time}}</span>
+                            </div>
+                            <div class="d-block d-md-none text-uppercase">
+                                <a ng-if="class.online_reg_link" ng-href="{{class.online_reg_link}}" target="_blank" class="font-weight-bold" ng-class="{'text-blue': class.category1 == 'Dance', 'text-purple': class.category1 == 'Gymnastics', 'text-blue': class.category1 == 'Martial Arts'}"><span ng-if="class.openings.calculated_openings > 0">Register</span><span ng-if="class.openings.calculated_openings <= 0">Wait List</span></a>
+                            </div>
+                        </td>
+                        <td class="d-none d-md-table-cell">Ages {{ class.min_age }} - {{ class.max_age }}</td>
+                        <td class="d-none d-md-table-cell">
+                            <span><span ng-repeat="day in class.meeting_days | activedays">{{convertWeekday(day)}}s<span ng-if="!$last">, </span></span></span>
+                            <span> {{class.start_time}} - {{class.end_time}}</span>
+                        </td>
+                        <td class="d-none d-md-table-cell text-right text-uppercase">
+                            <a ng-if="class.online_reg_link" ng-href="{{class.online_reg_link}}" target="_blank" class="font-weight-bold" ng-class="{'text-blue': class.category1 == 'Dance', 'text-purple': class.category1 == 'Gymnastics', 'text-blue': class.category1 == 'Martial Arts'}"><span ng-if="class.openings.calculated_openings > 0">Register</span><span ng-if="class.openings.calculated_openings <= 0">Wait List</span></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div ng-if="!scheduledatareturned">
+                <div class="font-weight-light p-1 small"><i class="fas fa-spinner fa-spin mr-1"></i>Loading schedule data...</div>
+            </div>
+        </div>
+
+
+        <div class="pb-5">
+            <div class="h4 text-pink font-weight-bold">Lyrical/Contemporary</div>
+            <div class="pb-3 small">Lyrical dance is a great form of creative expression where a dancer tells a story through music and motion. Dancers will work on graceful movements, creativity, expression of their inner emotions and musicality. Lyrical/Contemporary is a combination of ballet, jazz, and modern. Students enrolled in this class are strongly encouraged to study ballet.</div>
+            <div class="h6 text-pink py-2">Class Schedule &amp; Registration</div>
+            <table ng-if="scheduledatareturned" class="table table-hover table-sm small">
+                <tbody ng-repeat="weekday in weekdayshort">
+                    <tr ng-if="filteredclasses.length > 0">
+                        <td colspan="4" class="font-weight-bold bg-light">{{convertWeekday(weekday)}}s</td>
+                    </tr>
+                    <tr ng-repeat="class in filteredclasses = (scheduledata | orderBy:'min_age' | filter:{category1:'Dance'} | filter:{category2:'Recreational'} | filter:{category3:'Lyrical'} | activeOnDay:weekday)">
+                        <td>
+                            {{ class.name }}
+                            <div class="d-block d-md-none">Ages {{ class.min_age }} - {{ class.max_age }}</div>
+                            <div class="d-block d-md-none">
+                                <span><span ng-repeat="day in class.meeting_days | activedays">{{convertWeekday(day)}}s<span ng-if="!$last">, </span></span></span>
+                                <span> {{class.start_time}} - {{class.end_time}}</span>
+                            </div>
+                            <div class="d-block d-md-none text-uppercase">
+                                <a ng-if="class.online_reg_link" ng-href="{{class.online_reg_link}}" target="_blank" class="font-weight-bold" ng-class="{'text-blue': class.category1 == 'Dance', 'text-purple': class.category1 == 'Gymnastics', 'text-blue': class.category1 == 'Martial Arts'}"><span ng-if="class.openings.calculated_openings > 0">Register</span><span ng-if="class.openings.calculated_openings <= 0">Wait List</span></a>
+                            </div>
+                        </td>
+                        <td class="d-none d-md-table-cell">Ages {{ class.min_age }} - {{ class.max_age }}</td>
+                        <td class="d-none d-md-table-cell">
+                            <span><span ng-repeat="day in class.meeting_days | activedays">{{convertWeekday(day)}}s<span ng-if="!$last">, </span></span></span>
+                            <span> {{class.start_time}} - {{class.end_time}}</span>
+                        </td>
+                        <td class="d-none d-md-table-cell text-right text-uppercase">
+                            <a ng-if="class.online_reg_link" ng-href="{{class.online_reg_link}}" target="_blank" class="font-weight-bold" ng-class="{'text-blue': class.category1 == 'Dance', 'text-purple': class.category1 == 'Gymnastics', 'text-blue': class.category1 == 'Martial Arts'}"><span ng-if="class.openings.calculated_openings > 0">Register</span><span ng-if="class.openings.calculated_openings <= 0">Wait List</span></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div ng-if="!scheduledatareturned">
+                <div class="font-weight-light p-1 small"><i class="fas fa-spinner fa-spin mr-1"></i>Loading schedule data...</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="linkApp" ng-controller="linkController">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link href="../scss/theme.css" type="text/css" rel="Stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png" />
+    <title>The Dream Centre</title>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="../js/links.js"></script>
+  </head>
+  <body class="p-3" ng-init="init()">
+    <div class="container py-4">
+      <div class="text-center">
+        <div class="h1 font-tdc">THE LINK CENTRE</div>
+        <div class="h5 font-weight-light">Links &amp; Resources for Dream Centre Families</div>
+      </div>
+
+      <div class="my-5">
+        <hr />
+        <div class="pb-2">
+          <div class="font-weight-light mb-3">Search and filter to help find what you're looking for</div>
+          <div class="row">
+            <div class="col-12 col-md-6 col-xl-4 mb-3 mb-md-0">
+              <input type="search" ng-model="searchtext" class="form-control form-control-lg" placeholder="Type to find something..." />
+            </div>
+            <div class="col-12 col-md-6 col-xl-4">
+              <select class="custom-select custom-select-lg" ng-model="category" ng-change="changecategory()">
+                <option value="">Show all categories</option>
+                <option ng-repeat="link in links | orderBy: 'category'" ng-value="link.category">{{ link.category }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <div class="pb-4" ng-repeat="link in links | orderBy: 'category' | filter:{category:category}">
+        <div class="">
+          <div class="h3 font-weight-bold text-uppercase">
+            <span>{{link.category}}</span>
+          </div>
+        </div>
+        <div class="pb-3">
+          <div ng-repeat="item in results = ( link.items | orderBy: 'name' | filter:textsearch )">
+            <div class="my-4">
+              <div class="pb-1">
+                <a href="{{item.url}}" target="_blank" class="h5 font-weight-bold"> <i ng-class="item.iconclasses"></i>{{item.name}} </a>
+              </div>
+              <div class="font-weight-light pb-2" ng-bind-html="item.description | to_trusted"></div>
+            </div>
+          </div>
+          <div class="font-weight-light text-muted" ng-if="results.length == 0">No results found. Check your filters and search parameters.</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

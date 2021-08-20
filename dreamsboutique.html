@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="theme-color" content="#000000">
+        <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+        <title>The Dream Centre</title>
+        <link href="node_modules/hc-offcanvas-nav/src/scss/hc-offcanvas-nav.css" rel="stylesheet">
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body class="">
+
+        <!-- banner include -->
+        <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
+        <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
+        <!-- / banner include -->
+
+
+        <div class="container pb-5 pt-5 mt-5">
+
+            <div class="h2 font-tdc text-dark text-center text-uppercase py-4">The Dreams Boutique</div>
+
+            <div class="row pt-4">
+
+                <div class="col-12 col-md-7 col-lg-7 pb-4">
+                    <div class="">
+                        <div class="font-weight-light">
+                            <p>The Dreams Boutique is a fully stocked dancewear and gym wear store for all of your child's class attire requirements.  Items include: Ballet Tights and Shoes, Bodysuits, Ballet skirts, Jazz shoes and Tights, Tap Shoes, Gym suits and shorts, leggings, Dream Centre Branded Clothing and SO MUCH MORE!  We will continue to add new inventory!  The Boutique is conveniently located within our facility in a separate shop within our lobby.  Our staff are current dancers who are trained to fit and size your child for all their dance and gym wear needs.</p>
+                            <p>Methods of payment are: Visa, Mastercard, Visa Debit or the items can be billed to your online account along with your regular tuition fees.  We do not accept cash or cheque.</p>
+                        </div>
+                        <div><img src="img/photos/DCB.jpg" alt="The Dreams Boutique" class="img-fluid"></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 offset-md-1 col-lg-4 offset-lg-1 border-left bg-light pt-3 pb-4">
+                    <div class="">
+                        <div class="h5 text-primary">Store Hours</div>
+                        <div class="">
+                            <table class="table table-sm table-hover table-striped">
+                                <tr>
+                                    <td>Monday</td>
+                                    <td class="text-right">4:00 pm - 7:00 pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td class="text-right">4:00 pm - 7:00 pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td class="text-right">9:00 am - 12:00 noon</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="font-weight-bold">
+                            <hr>
+                            <i class="fas fa-exclamation-circle mr-1"></i>Please be advised for hygienic reasons items cannot be returned or exchanged, so please be sure to bring your child with you in order to have the items fit properly.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- footer include -->
+        <div ng-include src="'footer.html'"></div>
+        <!-- / footer include -->
+
+
+
+    </body>
+</html>

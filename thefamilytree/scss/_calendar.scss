@@ -1,0 +1,77 @@
+.calendar {
+  .day-of-week,
+  .date-grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(5, 2fr) 1fr;
+    // grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 1fr;
+    grid-gap: 1px;
+  }
+
+  .day-of-week > * {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.25rem 0;
+    border: solid 1px lighten($dark, 60%);
+    background-color: $light;
+    margin-bottom: 1px;
+    font-weight: 300;
+  }
+
+  .month {
+    margin: 2rem 0 2rem 0;
+    .monthname {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 1px;
+      padding: 0.5rem;
+      border: solid 1px lighten($dark, 60%);
+      background-color: $light;
+    }
+    .day {
+      padding: 0 8px 8px 8px;
+      min-height: 7rem;
+      border: solid 1px lighten($dark, 60%);
+      font-weight: 300;
+      .datenum {
+        text-align: right;
+        padding: 0;
+        font-weight: 300;
+        font-size: 1.2rem;
+        border-bottom: solid 1px lighten($dark, 70%);
+      }
+      .banner {
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: $info;
+        text-align: center;
+        // background-color: $primary;
+        // padding: 4px;
+      }
+      .footer {
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: $secondary;
+        text-align: center;
+      }
+      .event {
+        padding: 6px;
+        text-align: center;
+        .title {
+          font-weight: 700;
+          font-size: 0.9rem;
+        }
+        .time {
+          font-weight: 300;
+          font-size: 0.8rem;
+        }
+        .caption {
+          font-weight: 300;
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}

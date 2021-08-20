@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- <meta name="theme-color" content="#000000" /> -->
+    <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="./img/badge-colour-transparent.png" type="image/png" />
+    <title>The Family Tree</title>
+    <link href="./scss/nav/hc-offcanvas-nav.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js" integrity="sha256-23hi0Ag650tclABdGCdMNSjxvikytyQ44vYGo9HyOrU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-animate.min.js" integrity="sha256-biQnzwpmTVb5ZZDRDiU8iwbj7ZPTH9SZSxn5gewyFA0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js" integrity="sha256-jZRUyy674QanjfVAn9YBW+d1iuxj8csDOxrwS35/GLo=" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-cloak>
+    <div class="d-none d-md-block" ng-include src="'banner.html'"></div>
+    <div class="d-md-none" ng-include src="'_banner-slide.html'"></div>
+
+    <div ng-include src="'_page-intro.html'"></div>
+
+    <!-- <div class="mb-5 d-table w-100" style="height: 260px; background-image: url('./img/photos/img_0088.JPG'); background-position: center; background-repeat: no-repeat; background-size: cover">
+      <div class="d-table-cell align-middle text-center">
+        <div class="card bg-white shadow mx-auto" style="width: 95%; max-width: 380px">
+          <div class="card-body text-center p-4">
+            <div class="h4">All Inclusive Memberships</div>
+            <div class="small font-weight-light pb-2">We provide our Mamas and their Littles with fun activities, events, programs and resources designed to enhance both physical and social development.</div>
+            <div class="h6">Memberships starting at $49.99/month</div>
+            <div>
+              <a href="./membership.html" target="_self" class="font-weight-bold h5 mb-0">Learn more...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- <hr class="m-4" />
+            <div class="font-weight-light h5 mb-0 font-cursive">
+              <span class="nowrap">Be well .</span>
+              <span class="nowrap">Be welcome .</span>
+              <span class="nowrap">Be Welcoming.</span>
+            </div> -->
+
+    <div class="container bg-white pb-5">
+      <div class="row pb-5">
+        <div class="col-12 col-lg-4 px-2 px-lg-4 mb-5">
+          <div class="display-4 font-weight-bold text-center font-cursive">Nest</div>
+          <hr />
+          <div class="">
+            <img src="./img/photos/img_0611.JPG" class="img-fluid" alt="" />
+            <div class="pt-3">
+              <p class="">Where Mamas connect and support each other during early stages of motherhood. A safe, nurturing environment for our Littles to blossom by enjoying some family time and creating new friendships.</p>
+            </div>
+            <div class="">
+              <div class="text-center d-flex">
+                <div class="w-100 pr-1">
+                  <a href="./programs.html" class="btn btn-primary btn-sm btn-block"> Program </a>
+                </div>
+                <div class="w-100 pr-1">
+                  <a href="./calendar.html" class="btn btn-primary btn-sm btn-block"> Calendar </a>
+                </div>
+                <div class="w-100">
+                  <a href="./membership.html" class="btn btn-primary btn-sm btn-block"> Membership </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-2 px-lg-4 mb-5">
+          <div class="display-4 font-weight-bold text-center font-cursive">Nurture</div>
+          <hr />
+          <div class="">
+            <img src="./img/photos/img_9943.JPG" class="img-fluid" alt="" />
+            <div class="pt-3">
+              <p class="">Educational platforms and activities to support our family during our postpartum journey.</p>
+            </div>
+            <div class="">
+              <div class="text-center d-flex">
+                <div class="w-100 pr-1">
+                  <a href="./programs.html" class="btn btn-primary btn-sm btn-block"> Program </a>
+                </div>
+                <div class="w-100 pr-1">
+                  <a href="./calendar.html" class="btn btn-primary btn-sm btn-block"> Calendar </a>
+                </div>
+                <div class="w-100">
+                  <a href="./membership.html" class="btn btn-primary btn-sm btn-block"> Membership </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 px-2 px-lg-4 mb-5">
+          <div class="display-4 font-weight-bold text-center font-cursive">Grow</div>
+          <hr />
+          <div class="">
+            <img src="./img/photos/img_0067.JPG" class="img-fluid" alt="" />
+            <div class="pt-3">
+              <p class="">
+                The Family Tree is our lifestyle, our journey from early stages of parenthood to the time where our Littles are ready to explore our
+                <a href="http://www.thedreamcentre.ca" target="_blank" class="font-weight-bold text-info">Continued Education Platforms</a>
+                with their mini supporters. Mamas continue to connect and thrive with our
+                <a href="https://www.barbella.ca" target="_blank" class="font-weight-bold text-info">Strong Mama</a>
+                Community.
+              </p>
+            </div>
+            <div class="">
+              <div class="text-center d-flex">
+                <div class="w-100 pr-1">
+                  <a href="./programs.html" class="btn btn-primary btn-sm btn-block"> Program </a>
+                </div>
+                <div class="w-100 pr-1">
+                  <a href="./calendar.html" class="btn btn-primary btn-sm btn-block"> Calendar </a>
+                </div>
+                <div class="w-100">
+                  <a href="./membership.html" class="btn btn-primary btn-sm btn-block"> Membership </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div ng-include src="'footer.html'"></div>
+  </body>
+</html>

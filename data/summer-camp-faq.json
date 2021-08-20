@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "question": "Is there before and after care?",
+    "answer": "Absolutely, before and after care is included free of charge. We offer a before-care program as early as 7:00am to 9:00am, and after care from 4:00pm to 6:00pm. Your child will be supervised by one of our qualified staff who will care for your child and provide entertaining activities to do. If you pick up your child past 6:00pm, there is a late fee of 3.00 per minute. If you require before or aftercare, please let us know what days you will require extended care when you register with us by emailing us or letting us know in the “comment section”. If you do not provide us with this information in advanced, we will not be able to provide this service to you."
+  },
+  {
+    "id": 2,
+    "question": "Do children have breaks during the day?",
+    "answer": "Yes. There will be periods of times where children will be able to sit, cool off and have a break. There are two snack times and lunch. Water breaks are encouraged throughout the day as well."
+  },
+  {
+    "id": 3,
+    "question": "How will participants be grouped during camp?",
+    "answer": "Participants ​will be divided by appropriate age groups and/or skill levels. Groups will be created at the discretion of our Program Director. Each child will receive a wrist band to identify the group s/he is in."
+  },
+  {
+    "id": 4,
+    "question": "What if my child wants to be with their friend?",
+    "answer": "We are happy to accommodate friend requests, provided the children are within 1 year of each other. Our programs are structured based on age in order to challenge the children appropriately. If you would like your child to be with their friend, you can let us know at the time of online registration by filling in the “comments” section with your request or send us an email. We will not make changes to the groups once the camp has begun to ensure safety and quality of programming."
+  },
+  {
+    "id": 5,
+    "question": "Does my child need any dance, gymnastics, or martial arts experience to attend?",
+    "answer": "No! There is no experience necessary. Come learn and enjoy all our camps!"
+  },
+  {
+    "id": 6,
+    "question": "What should my child wear & bring to camp?",
+    "answer": "<ul><li>Athletic attire such as shorts, t-shirts, or leotards, bare feet in the gym</li><li>Dance tights/bodysuits and dance slippers for dance camps and activities</li><li>Clean indoor running shoes are required for ninja warrior camps</li><li>Outdoor running shoes for hiking/walking trip/event (you will be notified ahead of time)</li><li>Labeled water bottles</li><li>Nut-free snacks to eat during the day</li><li>Nut-free lunches to eat during lunch (Pizza Lunch will be provided on Friday’s)</li><li>Long hair must be tied up, no jewelry</li><li>Binder and pen/pencil for theatre camps</li><li>Sunscreen for trip/event (you will be notified ahead of time)</li><li>Swimwear or bathing suit for trip/event (you will be notified ahead of time)</li><li>Change of clothes (in case of emergency)</li><li>Mask, if your child is exempt from wearing a mask please add in comments</li></ul>"
+  },
+  {
+    "id": 7,
+    "question": "My child has to take medications during the day. Can I leave it with the Staff for my child to take?",
+    "answer": "Yes. We will help your child properly take their medication at the appropriate time. However, all medication must be in its original container and properly labelled for us to administer it. We also provide the option to hold the medication at the front desk for your child throughout the week if you would like, so you do not have to bring it every day. Our front desk is locked and can only be opened by Senior Staff Members.  If your child requires medication, you will need to complete a medication form at the time of drop off or we can have one emailed to you to be completed ahead of time."
+  },
+  {
+    "id": 8,
+    "question": "Do I provide food for my child?",
+    "answer": "Yes, two healthy snacks are required, water bottles and a lunch. Please send nut free lunch and snacks.  There is a pizza lunch for full day campers on Friday’s."
+  },
+  {
+    "id": 9,
+    "question": "If my child is sick, can we switch to another week? Or get refunded?",
+    "answer": "Unfortunately, we do not offer refunds. A credit will be placed on your account to go toward future classes or camps specific to the child."
+  },
+  {
+    "id": 10,
+    "question": "If there is a lockdown will I receive a credit? Or get refunded?",
+    "answer": "Unfortunately, we do not offer refunds. We will make the necessary adjustments at the time, should there be a lockdown and TDC is required to close."
+  },
+  {
+    "id": 11,
+    "question": "Is my child required to wear a mask to camp?",
+    "answer": "A mask is required only in common areas.  Campers are not required to wear a mask during physical activity or during snacks and lunch.  If you child is exempt from wearing a mask let us know at the time of registration."
+  }
+]

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="theme-color" content="#000000">
+        <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+        <title>The Dream Centre</title>
+        <link href="node_modules/hc-offcanvas-nav/src/scss/hc-offcanvas-nav.css" rel="stylesheet">
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <script src="js/app-new.js"></script>
+
+    </head>
+    <body class="ng-cloak">
+
+        <!-- banner include -->
+        <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
+        <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
+        <!-- / banner include -->
+
+        <div class="container pb-5 pt-5 mt-5">
+
+            <div class="h2 font-tdc text-dark text-center text-uppercase py-4">Full Schedule</div>
+
+            <div class="row ">
+                <div class="col-12">
+                    <div ng-include src="'_schedule-full.html'"></div>
+                </div>
+                <!-- <div class="col-12 col-lg-4 col-xl-3 offset-xl-1">
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <div class="h6 font-weight-bold text-pink">Recreational Dance Recital &amp; Costume Deposit Information</div>
+                            <div class="small">
+                                <p>Our year end Dance Recital is a wonderful opportunity for our Recreational and Competitive dancers to showcase all of their dedication and skillset development during their dance season. Our performances will be remembered for years to come by all! Each dancer registered in our recreational dance program will perform in on our year end Dance Recital in a professional theatre. Location, date, and associated fees TBA. Recital typically takes place during the first Saturday in June at the Burlington Performing Arts Centre.</p>
+                                <p>A $50 costume deposit will apply to each recreational dance routine that performs in our year end recital, this fee will be posted on January 1st. There are no refunds issued after January 1st. The average final price of a recreational costume can range between $79-$99+hst, or more. The cost for Recital tickets can change from year to year and typically total $30 after taxes and theatre fees, discounts apply to children ages 2 and under.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+
+
+
+
+        </div>
+
+
+        <!-- footer include -->
+        <!-- <div ng-include src="'footer.html'"></div> -->
+        <!-- / footer include -->
+
+
+    </body>
+</html>

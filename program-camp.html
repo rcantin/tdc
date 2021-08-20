@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MainController">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <title>The Dream Centre</title>
+    <link href="node_modules/hc-offcanvas-nav/src/scss/hc-offcanvas-nav.css" rel="stylesheet" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/app-w-classes.js"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "953981534727552");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=953981534727552&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <!-- <body class="" ng-init="getScheduleData()"> -->
+  <body>
+    <!-- banner include -->
+    <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
+    <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
+    <!-- / banner include -->
+
+    <div class="container pb-5 pt-5 mt-5">
+      <div class="h2 font-tdc text-orange text-center text-uppercase py-4">Camp</div>
+
+      <div class="pt-4">
+        <div class="h4 text-dark font-weight-bold">General Information</div>
+        <div>
+          <p>We have totally cool, totally fun camps planned for nearly every PA Day, Christmas Holidays, Spring Break, and Summer!</p>
+          <p>The Dream Centre's Themed Camps have all the ingredients of an Activity Camp and more! A typical day in one of our Themed Camps can include:</p>
+          <ul>
+            <li>Gymnastics fun and games</li>
+            <li>Ninja Warrior Circuit</li>
+            <li>Dance fun and games</li>
+            <li>Martial Arts fun and games</li>
+            <li>Activities</li>
+            <li>Field Trips</li>
+            <li>Arts and crafts</li>
+            <li>Nutrition breaks</li>
+            <li>PIZZA PARTY!!</li>
+          </ul>
+          <p>* Per day and half day options available, please outline your preferences in the 'comments' section during the registration process</p>
+          <p>* Full Day Camp for Students ages 3-12, campers will be divided based on age and skill level</p>
+          <p>* Camp times 9:00 AM to 4:00 PM – Extended Care Before 7:00 to 9:00 AM & After 4:00 to 6:00 PM no extra cost.</p>
+          <!-- <p>* Before and After Care included in camp pricing.  7am-9am and 4pm-6pm. Please outline your preferences in the "Comments" section during the registration process.</p> -->
+          <p>* Prices for weekly camps may vary</p>
+        </div>
+      </div>
+
+      <div id="paday" style="padding-top: 80px">
+        <div ng-init="getClasses('Camp', 'Recreational', 'PA Day'); brandColor='orange';" ng-controller="ClassController">
+          <div class="h2 text-dark font-weight-bold">PA Days</div>
+          <div class="h6 font-weight-bold pb-2">Register below for PA Day camps</div>
+          <div>
+            <table class="table table-hover">
+              <tbody>
+                <tr ng-repeat="item in classes | orderBy:'start_date'">
+                  <td>
+                    <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="btn btn-orange text-white btn-sm glass px-3">
+                      <span ng-if="item.openings.calculated_openings > 0" style="white-space: nowrap">Register Now!</span>
+                      <span ng-if="item.openings.calculated_openings <= 0" style="white-space: nowrap">Wait List</span>
+                    </a>
+                  </td>
+                  <td class="font-weight-bold w-100">
+                    <div>{{item.name}}</div>
+                    <div class="small font-weight-light">{{ item.start_date | date:'fullDate' }}</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="winter" style="padding-top: 80px">
+        <div ng-init="getClasses('Camp', 'Winter Break', ''); brandColor='orange';" ng-controller="ClassController">
+          <div ng-repeat="item in classes | orderBy:'name'">
+            <div class="h2 font-weight-bold mb-3">{{item.name}}</div>
+            <div class="h5 font-weight-light">{{ item.start_date | date:'MMM d yyyy' }} - {{ item.end_date | date:'MMM d yyyy' }}</div>
+            <!-- <div class="h5 font-weight-light">December 27 - 31</div> -->
+            <div class="py-3">
+              <a ng-if="item.online_reg_link" class="btn btn-orange glass text-white px-3" ng-href="{{item.online_reg_link}}" target="_blank">
+                <span ng-if="item.openings.calculated_openings > 0" style="white-space: nowrap">Register Now!</span>
+                <span ng-if="item.openings.calculated_openings <= 0" style="white-space: nowrap">Wait List</span>
+              </a>
+            </div>
+            <div>
+              <div class="float-right mr-4">
+                <img src="./img/letitsnow02.jpg" height="180" alt="" />
+              </div>
+              <p>We have an exciting Winter Break Camp themed Let It Snow from December 27 to 31.</p>
+              <div>Camp includes:</div>
+              <div class="float-left mr-4 pt-1">
+                <img src="./img/letitsnow01.jpg" class="mb-4" width="160" alt="" />
+              </div>
+              <div>
+                <ul>
+                  <li>Gymnastics</li>
+                  <li>Martial Arts</li>
+                  <li>Dance</li>
+                  <li>Ninja Warrior</li>
+                  <li>Lots of wintery actives, arts and crafts</li>
+                  <li>New Year's Eve PIZZA Party lunch (December 31)</li>
+                  <li>Lots and lots of fun!!!</li>
+                </ul>
+              </div>
+              <p>Full day camp for campers of ages 4 - 12 - campers will be divided based on age and skill level</p>
+              <p>Camp times - 9:00 to 4:00</p>
+              <p>Extended Care: Before - 7:00 AM to 9:00 AM &amp; After - 4:00 PM to 6:00 PM at no extra cost</p>
+              <p class="font-weight-bold">Cost</p>
+              <p>$259.99 - full week</p>
+              <p>$59.99 - individual days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="marchbreak" style="padding-top: 80px">
+        <div ng-init="getClasses('March Break Camp', 'March Break', ''); brandColor='orange';" ng-controller="ClassController">
+          <div ng-repeat="item in classes | orderBy:'name'">
+            <div class="h2 font-weight-bold mb-3">{{item.name}}</div>
+            <div class="h5 font-weight-light">{{ item.start_date | date:'MMM d yyyy' }} - {{ item.end_date | date:'MMM d yyyy' }}</div>
+            <div class="py-3">
+              <a ng-if="item.online_reg_link" class="btn btn-orange glass text-white px-3" ng-href="{{item.online_reg_link}}" target="_blank">
+                <span ng-if="item.openings.calculated_openings > 0" style="white-space: nowrap">Register Now!</span>
+                <span ng-if="item.openings.calculated_openings <= 0" style="white-space: nowrap">Wait List</span>
+              </a>
+            </div>
+            <div>
+              <div class="float-right m-3">
+                <img src="./img/marchbreakcamp01.jpg" height="120" alt="" />
+              </div>
+              <p>
+                Spring into our fantastic Spring Break Camp! Our campers will spend the week learning gymnastics, dance, martial arts, and Ninja Warrior Circuit. We also have games, crafts, activities, pizza day and so much more planned throughout the week. Registration is now open. Can’t wait to
+                see you there!
+              </p>
+              <p>Spring Break camp includes:</p>
+              <div>
+                <ul>
+                  <li>Gymnastics, Dance, Martial Arts</li>
+                  <li>Ninja Warrior Circuit</li>
+                  <li>Lots of fun games &amp; Activities</li>
+                  <li>Nutrition breaks</li>
+                  <li>Extended Care</li>
+                  <li>PIZZA PARTY FRIDAY!!</li>
+                </ul>
+              </div>
+              <div>
+                <p>Full Day Camp for campers ages 4 -12, campers will be divided based on age and skill level.</p>
+                <p>Camp times 9:00 AM to 4:00 PM</p>
+                <p>Extended Care: Before - 7:00 to 9:00 AM &amp; After - 4:00 to 6:00 PM no extra cost</p>
+                <p class="font-weight-bold">Cost</p>
+                <p>$259.99 - full week</p>
+                <p>$59.99 - individual days</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer include -->
+    <div ng-include src="'footer.html'"></div>
+    <!-- / footer include -->
+  </body>
+</html>

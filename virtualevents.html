@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MainController">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <title>The Dream Centre</title>
+    <link href="node_modules/hc-offcanvas-nav/src/scss/hc-offcanvas-nav.css" rel="stylesheet" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="./js/app-w-classes.js"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "953981534727552");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=953981534727552&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body class="" ng-cloak>
+    <!-- banner include -->
+    <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
+    <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
+    <!-- / banner include -->
+    <div class="container pb-5 pt-5 mt-5">
+      <div class="mt-4">
+        <div ng-init="getClasses('Virtual Events', '', '');" ng-controller="ClassController">
+          <!-- <div class="small">
+            <pre class="small">{{ classes | json }}</pre>
+          </div> -->
+          <div class="">
+            <div class="h2 font-tdc text-center">VIRTUAL EVENTS</div>
+            <div class="py-4">
+              <p>
+                At The Dream Centre, we strive to develop habits that promote sharing, teamwork and friendship while bringing the community together. We created special events to help capture your child’s energy and ignite their confidence! Our events are hosted by highly experienced instructor and
+                include character visits, special guests, Q&A periods, themed music, contests, prizes and interactive activities to help keep our children engaged. Our goals is to help build confidence, motivation, respect, body awareness and many other tools for lifelong success.
+              </p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center pb-5">
+              <div class="custom-control custom-radio px-4">
+                <input class="custom-control-input" type="radio" name="eventtype" id="eventtype1" value="Recreational" ng-model="eventtype" />
+                <label class="custom-control-label font-weight-bold" for="eventtype1">For Everyone!</label>
+              </div>
+              <div class="custom-control custom-radio px-4">
+                <input class="custom-control-input" type="radio" name="eventtype" id="eventtype2" value="Competitive" ng-model="eventtype" />
+                <label class="custom-control-label font-weight-bold" for="eventtype2">Experienced Athletes</label>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="row no-gutters justify-content-center pb-4" ng-init="cat2='dance'; brandColor='pink';">
+              <div class="col text-center p-1">
+                <a ng-click="cat2='dance'; brandColor='pink';">
+                  <img ng-src="./img/orb-dance-wtext.svg" class="img-fluid grow" style="max-width: 90px" alt="" />
+                </a>
+                <div ng-class="{'border-pink':cat2=='dance', 'border-white':cat2!='dance'}" class="border-bottom" style="border-bottom-width: 8px !important"></div>
+              </div>
+              <div class="col text-center p-1">
+                <a ng-click="cat2='gymnastics'; brandColor='purple';">
+                  <img ng-src="./img/orb-gymnastics-wtext.svg" class="img-fluid grow" style="max-width: 90px" alt="" />
+                </a>
+                <div ng-class="{'border-purple':cat2=='gymnastics', 'border-white':cat2!='gymnastics'}" class="border-bottom" style="border-bottom-width: 8px !important"></div>
+              </div>
+              <div class="col text-center p-1">
+                <a ng-click="cat2='martial arts'; brandColor='blue';">
+                  <img ng-src="./img/orb-martialarts-wtext.svg" class="img-fluid grow" style="max-width: 90px" alt="" />
+                </a>
+                <div ng-class="{'border-blue':cat2=='martial arts', 'border-white':cat2!='martial arts'}" class="border-bottom" style="border-bottom-width: 8px !important"></div>
+              </div>
+              <div class="col text-center p-1">
+                <a ng-click="cat2='musical theatre'; brandColor='red';">
+                  <img ng-src="./img/orb-theatre-wtext.svg" class="img-fluid grow" style="max-width: 90px" alt="" />
+                </a>
+                <div ng-class="{'border-red':cat2=='musical theatre', 'border-white':cat2!='musical theatre'}" class="border-bottom" style="border-bottom-width: 8px !important"></div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="pb-4">
+              <div ng-if="!classesreturned" class="font-weight-light text-center"><i class="fas fa-spinner fa-pulse mr-2"></i>Loading virtual events...</div>
+              <div ng-if="classesreturned">
+                <div class="row">
+                  <div class="col-12 pb-4">
+                    <div class="bg-light p-2 text-center small font-weight-light text-muted">{{results.length}} events found</div>
+                  </div>
+                  <div class="col-12" ng-show="results.length==0">
+                    <hr />
+                    <div class="text-center">
+                      <div class="h5 font-weight-light"><i class="fas fa-exclamation-circle fa-sm"></i> No events found</div>
+                      <div class="font-weight-light">Check back here soon. New events are being added all the time!</div>
+                    </div>
+                    <hr />
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4" ng-repeat="item in results = (classes | orderBy:['start_date','start_time'] | filter:{name:search} | filter:{category2:eventtype + ' ' + cat2} | ageFilter:age )">
+                    <div class="card shadow h-100 border">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-stretch flex-column h-100">
+                          <div class="flex-fill">
+                            <div class="h6 font-weight-bold text-center text-{{brandColor}}">{{ item.name }}</div>
+                            <hr />
+                            <div class="text-center">
+                              <div>
+                                <div ng-if="item.meeting_days.daylist.length > 1">
+                                  <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}}<span ng-if="!$last">, </span></span>
+                                </div>
+                                <div>
+                                  <span>{{ item.start_date | date:'mediumDate' }}</span>
+                                  <span ng-if="item.start_date!=item.end_date"> - {{ item.end_date | date:'mediumDate' }}</span>
+                                </div>
+                                <div ng-if="item.start_time">{{ item.start_time }} - {{ item.end_time }}</div>
+                              </div>
+                              <div>
+                                <div>Ages {{item.min_age}} - {{item.max_age}}</div>
+                                <div ng-if="item.tuition.fee">{{item.tuition.fee | currency:'$':2}}</div>
+                              </div>
+                            </div>
+                            <div ng-if="item.description">
+                              <hr />
+                              <div class="small font-weight-light text-justify" ng-bind-html="item.description | to_trusted"></div>
+                            </div>
+                          </div>
+                          <div>
+                            <hr />
+                            <div class="d-flex justify-content-center align-items-center">
+                              <div ng-if="item.online_reg_link" class="w-75">
+                                <a ng-href="{{item.online_reg_link}}" target="_blank" ng-if="item.openings.calculated_openings > 0" class="btn btn-block btn-sm" ng-class="'btn-' + brandColor">Register Now!</a>
+                                <a ng-href="{{item.online_reg_link}}" target="_blank" ng-if="item.openings.calculated_openings <= 0" class="btn btn-block btn-sm" ng-class="'btn-outline-' + brandColor">Join Wait List</a>
+                              </div>
+                              <div ng-if="!item.online_reg_link">
+                                <div class="small text-center font-weight-bold">Please contact us for registration info</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div ng-show="eventtype=='Competitive'">
+            <div class="pb-4">
+              <div ng-if="!classesreturned" class="font-weight-light text-center"><i class="fas fa-spinner fa-pulse mr-2"></i>Loading virtual events...</div>
+              <div ng-if="classesreturned">
+                <div class="row">
+                  <div class="col-12 pb-4">
+                    <div class="bg-light p-2 text-center small font-weight-light text-muted">{{results.length}} events found</div>
+                  </div>
+                  <div class="col-12" ng-show="results.length==0">
+                    <hr />
+                    <div class="text-center">
+                      <div class="h5 font-weight-light"><i class="fas fa-exclamation-circle fa-sm"></i> No events found</div>
+                      <div class="font-weight-light">Check back here soon. New events are being added all the time!</div>
+                    </div>
+                    <hr />
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4" ng-repeat="item in results = (classes | orderBy:['start_date','start_time'] | filter:{name:search} | filter:{category2:'Competitive'} | ageFilter:age )">
+                    <div class="card shadow h-100 border">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-stretch flex-column h-100">
+                          <div class="flex-fill">
+                            <div class="h6 font-weight-bold text-center text-{{brandColor}}">{{ item.name }}</div>
+                            <hr />
+                            <div class="text-center">
+                              <div>
+                                <div ng-if="item.meeting_days.daylist.length > 1">
+                                  <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}}<span ng-if="!$last">, </span></span>
+                                </div>
+                                <div>
+                                  <span>{{ item.start_date | date:'mediumDate' }}</span>
+                                  <span ng-if="item.start_date!=item.end_date"> - {{ item.end_date | date:'mediumDate' }}</span>
+                                </div>
+                                <div ng-if="item.start_time">{{ item.start_time }} - {{ item.end_time }}</div>
+                              </div>
+                              <div>
+                                <div>Ages {{item.min_age}} - {{item.max_age}}</div>
+                                <div ng-if="item.tuition.fee">{{item.tuition.fee | currency:'$':2}}</div>
+                              </div>
+                            </div>
+                            <div ng-if="item.description">
+                              <hr />
+                              <div class="small font-weight-light text-justify" ng-bind-html="item.description | to_trusted"></div>
+                            </div>
+                          </div>
+                          <div>
+                            <hr />
+                            <div class="d-flex justify-content-center align-items-center">
+                              <div ng-if="item.online_reg_link" class="w-75">
+                                <a ng-href="{{item.online_reg_link}}" target="_blank" ng-if="item.openings.calculated_openings > 0" class="btn btn-block btn-sm" ng-class="'btn-' + brandColor">Register Now!</a>
+                                <a ng-href="{{item.online_reg_link}}" target="_blank" ng-if="item.openings.calculated_openings <= 0" class="btn btn-block btn-sm" ng-class="'btn-outline-' + brandColor">Join Wait List</a>
+                              </div>
+                              <div ng-if="!item.online_reg_link">
+                                <div class="small text-center font-weight-bold">Please contact us for registration info</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- footer include -->
+    <div ng-include src="'footer.html'"></div>
+    <!-- / footer include -->
+  </body>
+</html>

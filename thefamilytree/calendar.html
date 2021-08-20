@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- <meta name="theme-color" content="#000000" /> -->
+    <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="./img/badge-colour-transparent.png" type="image/png" />
+    <title>The Family Tree</title>
+    <link href="./scss/nav/hc-offcanvas-nav.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js" integrity="sha256-23hi0Ag650tclABdGCdMNSjxvikytyQ44vYGo9HyOrU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-animate.min.js" integrity="sha256-biQnzwpmTVb5ZZDRDiU8iwbj7ZPTH9SZSxn5gewyFA0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js" integrity="sha256-jZRUyy674QanjfVAn9YBW+d1iuxj8csDOxrwS35/GLo=" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-cloak>
+    <div class="d-none d-md-block" ng-include src="'banner.html'"></div>
+    <div class="d-md-none" ng-include src="'_banner-slide.html'"></div>
+
+    <div ng-include src="'_page-intro.html'"></div>
+
+    <div class="container bg-white pb-5 mb-5">
+      <div class="display-4 mb-3 text-center font-cursive font-weight-bold">Calendar</div>
+      <div ng-include="'_brand-divider.html'"></div>
+      <div id="calendarCarousel" class="carousel slide" data-interval="false" data-wrap="false">
+        <div class="text-center h4 mb-0 font-weight-bold mt-4 no-print">
+          <a class="px-3 carousel-nav" data-target="#calendarCarousel" data-slide="prev">
+            <i class="fas fa-chevron-left fa-lg"></i>
+            <span class="font-weight-light">PREV</span>
+          </a>
+          <a class="px-3 carousel-nav" data-target="#calendarCarousel" data-slide="next">
+            <span class="font-weight-light">NEXT</span>
+            <i class="fas fa-chevron-right fa-lg"></i>
+          </a>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item" ng-class="{'active' : showMonth == 'August'}">
+            <div class="d-md-none" ng-repeat="param in [{'month':'August'}]" ng-include src="'_schedule-component.html'"></div>
+            <div class="d-none d-md-block" ng-repeat="param in [{'month':'August'}]" ng-include src="'_calendar-component.html'"></div>
+          </div>
+          <div class="carousel-item" ng-class="{'active' : showMonth == 'September'}">
+            <div class="d-md-none" ng-repeat="param in [{'month':'September'}]" ng-include src="'_schedule-component.html'"></div>
+            <div class="d-none d-md-block" ng-repeat="param in [{'month':'September'}]" ng-include src="'_calendar-component.html'"></div>
+          </div>
+          <!-- <div class="carousel-item" ng-class="{'active' : showMonth == 'February'}">
+            <div class="d-md-none" ng-repeat="param in [{'month':'February'}]" ng-include src="'_schedule-component.html'"></div>
+            <div class="d-none d-md-block" ng-repeat="param in [{'month':'February'}]" ng-include src="'_calendar-component.html'"></div>
+          </div>
+          <div class="carousel-item" ng-class="{'active' : showMonth == 'March'}">
+            <div class="d-md-none" ng-repeat="param in [{'month':'March'}]" ng-include src="'_schedule-component.html'"></div>
+            <div class="d-none d-md-block" ng-repeat="param in [{'month':'March'}]" ng-include src="'_calendar-component.html'"></div>
+          </div>
+          <div class="carousel-item" ng-class="{'active' : showMonth == 'April'}">
+            <div class="d-md-none" ng-repeat="param in [{'month':'April'}]" ng-include src="'_schedule-component.html'"></div>
+            <div class="d-none d-md-block" ng-repeat="param in [{'month':'April'}]" ng-include src="'_calendar-component.html'"></div>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="small text-center font-weight-light">Classes are subject to change without notice. Please check back often so you don't miss anything!</div>
+    </div>
+
+    <div ng-include src="'footer.html'"></div>
+  </body>
+</html>

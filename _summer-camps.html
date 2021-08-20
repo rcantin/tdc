@@ -1,0 +1,96 @@
+<div
+  class="h1 text-uppercase text-center font-weight-bold"
+  ng-class="{'text-pink': campgroup.type == 'Dance', 'text-purple': campgroup.type == 'Gymnastics', 'text-blue': campgroup.type == 'Martial Arts', 'text-red': campgroup.type == 'Musical Theatre', 'text-black': campgroup.type == 'Ninja Warrior', 'text-orange': campgroup.type == 'Activity'}"
+>
+  2020 {{ campgroup.type }} CAMPS
+</div>
+
+<div class="text-center py-3">
+  <a
+    class="font-weight-bold text-uppercase"
+    ng-class="{'text-pink': campgroup.type == 'Dance', 'text-purple': campgroup.type == 'Gymnastics', 'text-blue': campgroup.type == 'Martial Arts', 'text-red': campgroup.type == 'Musical Theatre', 'text-black': campgroup.type == 'Ninja Warrior', 'text-orange': campgroup.type == 'Activity'}"
+    data-toggle="collapse"
+    data-target="#morecampinfo{{campgroup.id}}"
+    aria-expanded="false"
+    aria-controls="morecampinfo{{campgroup.id}}"
+  >
+    More Camp Info
+    <i class="fas fa-chevron-up expanded"></i>
+    <i class="fas fa-chevron-down collapsed"></i>
+  </a>
+</div>
+
+<div class="collapse" id="morecampinfo{{campgroup.id}}">
+  <div class="row pt-3 small">
+    <div class="col-12 col-md-4" ng-repeat="general in campgroup.general">
+      <div
+        class="font-weight-bold"
+        ng-class="{'text-pink': campgroup.type == 'Dance', 'text-purple': campgroup.type == 'Gymnastics', 'text-blue': campgroup.type == 'Martial Arts', 'text-red': campgroup.type == 'Musical Theatre', 'text-black': campgroup.type == 'Ninja Warrior', 'text-orange': campgroup.type == 'Activity'}"
+      >
+        {{ general.title }}
+      </div>
+      <ul>
+        <li ng-repeat="item in general.items">{{ item }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div class="clearfix">
+  <div ng-repeat="week in campgroup.weeks">
+    <div class="small d-flex pb-4">
+      <div class="bg-dark text-white p-2 text-center">
+        <div class="small font-weight-bold">WEEK</div>
+        <div class="display-4 font-weight-light">{{week.week}}</div>
+      </div>
+      <div>
+        <div ng-repeat="camp in week.camps" class="font-weight-light pl-3">
+          <h3
+            class="font-weight-bold"
+            ng-class="{'text-pink': campgroup.type == 'Dance', 'text-purple': campgroup.type == 'Gymnastics', 'text-blue': campgroup.type == 'Martial Arts', 'text-red': campgroup.type == 'Musical Theatre', 'text-black': campgroup.type == 'Ninja Warrior', 'text-orange': campgroup.type == 'Activity'}"
+          >
+            {{ camp.name }}
+          </h3>
+          <h5 class="font-weight-bold">{{ camp.date }}</h5>
+          <div ng-if="camp.registration" class="pt-2 pb-3">
+            <a
+              ng-href="{{camp.registration}}"
+              class="btn btn-block glass"
+              style="max-width: 150px;"
+              target="_blank"
+              ng-class="{'btn-pink': campgroup.type == 'Dance', 'btn-purple': campgroup.type == 'Gymnastics', 'btn-blue': campgroup.type == 'Martial Arts', 'btn-red': campgroup.type == 'Musical Theatre', 'btn-black': campgroup.type == 'Ninja Warrior', 'btn-orange': campgroup.type == 'Activity'}"
+            >
+              Register
+            </a>
+          </div>
+          <p class="font-weight-light" ng-bind-html="camp.description | to_trusted"></p>
+
+          <!-- <p class="font-weight-bold">Pizza Lunch Friday</p> -->
+
+          <div class="d-block d-md-flex">
+            <div class="pr-4 pb-3" ng-if="camp.events">
+              <h5>Special Events</h5>
+              <div ng-repeat="event in camp.events">{{ event }}</div>
+            </div>
+            <div class="pr-4 pb-3" ng-if="camp.costs">
+              <h5>Cost</h5>
+              <div ng-repeat="cost in camp.costs">
+                <div ng-bind-html="cost | to_trusted">{{ cost }}</div>
+              </div>
+            </div>
+            <div class="pr-4 pb-3" ng-if="camp.age">
+              <h5>Ages</h5>
+              <div>{{ camp.age }}</div>
+            </div>
+          </div>
+          <hr ng-if="!$last" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+<div class="h4 font-weight-light text-center py-5">HST will be added to the cost of all camp pricing.</div>

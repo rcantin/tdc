@@ -1,0 +1,27 @@
+<div class="schedule" ng-init="loadCalendar()">
+  <div ng-repeat="month in calendar | filter:{name:param.month}" class="month">
+    <div class="monthname">{{month.name}} Schedule</div>
+    <div class="">
+      <div ng-repeat="day in month.days | filter:filterNoEvents" class="row day">
+        <div class="col-2 pt-1">
+          <div class="datemon">{{month.shortname}}</div>
+          <div class="datenum">{{day.day | date:'dd'}}</div>
+          <div class="datewkd">{{day.day | date:'EEE'}}</div>
+        </div>
+        <div class="col">
+          <div class="banner" ng-bind-html="day.banner | to_trusted"></div>
+          <div ng-repeat="event in day.events" class="event">
+            <div>
+              <div class="title" ng-bind-html="event.title | to_trusted"></div>
+              <div class="time" ng-if="event.starttime">
+                {{event.starttime | date:'shortTime'}} - {{event.endtime | date:'shortTime'}}
+              </div>
+              <div class="caption" ng-bind-html="event.caption | to_trusted"></div>
+            </div>
+          </div>
+          <div class="footer" ng-if="day.footer" ng-bind-html="day.footer | to_trusted">{{day.footer}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <title>The Dream Centre</title>
+    <link href="node_modules/hc-offcanvas-nav/src/scss/hc-offcanvas-nav.css" rel="stylesheet" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "953981534727552");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=953981534727552&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body class="" ng-init="getScheduleData()">
+    <!-- banner include -->
+    <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
+    <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
+    <!-- / banner include -->
+
+    <div class="container pb-5" style="padding-top: 60px">
+      <div class="h2 font-tdc text-secondary text-center text-uppercase pt-5 pb-2">Gymnastics</div>
+
+      <div class="row pt-5">
+        <div class="col-12 col-md-7 col-xl-7">
+          <div class="pb-4">
+            <div class="h4 text-secondary font-weight-bold">Foundations</div>
+            <div>
+              Our Foundations team is the perfect opportunity for recreational gymnasts looking to experience the excitement of competitive gymnastics on a simplified schedule. Our pre-competitive program is based on 4 disciplines (bars, beam, vault, floor) with a minimal time commitment of 4 hours
+              per week and attendance of up to 2 competitions. These classes are all taught by our Foundations team staff. Ideal for the newcomer to competitive, but also full time gymnasts looking for a step back from the demands of a full time program. Please connect with The Dream Centre for
+              further program details at 905-690-9022 or <a href="contact.html" class="font-weight-bold text-purple">send us a message</a>.
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-5 col-lg-4 offset-lg-1 border-left bg-light pt-3">
+          <div class="small">
+            <div class="h5 text-secondary">What to Wear</div>
+            <div>
+              For your child's classes, please have them wear form fitted attire to any gymnastics class. When coaches are hands on and spotting children, loose fitting clothing can get caught up and be unsafe. Bodysuits and spandex shorts, tight fitting leggings, bikertards, bodysuits are all
+              appropriate.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="pt-4">
+            <table class="table table-striped table-hover table-sm small">
+              <thead class="thead-sm">
+                <tr>
+                  <th></th>
+                  <th>Class</th>
+                  <th>When</th>
+                  <!-- <th>Age(s)</th> -->
+                  <th>Tuition</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="item in scheduledata | orderBy:'name' | filter:{category1:'Gymnastics'} | filter:{category2:'Pre-Competitive'}">
+                  <td>
+                    <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="text-purple font-weight-bold">
+                      <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                      <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                    </a>
+                  </td>
+                  <td>
+                    {{item.name}}
+                    <div class="small font-weight-light">{{item.category1}} | {{item.category2}} | {{item.category3}}</div>
+                  </td>
+                  <td class="">
+                    <div>
+                      <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                      <span>{{item.start_time}} - {{item.end_time}}</span>
+                    </div>
+                    <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                  </td>
+                  <!-- <td>{{item.min_age}} - {{item.max_age}}</td> -->
+                  <td>
+                    {{item.tuition.fee | currency}}
+                    <div class="small font-weight-light">monthly</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer include -->
+    <div ng-include src="'footer.html'"></div>
+    <!-- / footer include -->
+  </body>
+</html>

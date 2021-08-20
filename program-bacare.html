@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <title>The Dream Centre</title>
+    <link href="node_modules/hc-offcanvas-nav/src/scss/hc-offcanvas-nav.css" rel="stylesheet" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "953981534727552");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=953981534727552&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body class="">
+    <!-- banner include -->
+    <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
+    <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
+    <!-- / banner include -->
+
+    <div class="container pb-5 pt-5 mt-5">
+      <div class="h2 font-tdc text-dark text-center text-uppercase py-4">Before & After School Program</div>
+
+      <div class="row pt-2">
+        <div class="col-12">
+          <div class="text-center pb-4">
+            <hr />
+            <div class="h5 mb-4 font-weight-bold">
+              We are
+              <span class="text-yellow">EXCITED</span>
+              to announce that Registration is
+              <span class="text-yellow">NOW OPEN</span>
+              for our
+              <span class="text-yellow text-nowrap">Before &amp; After School Program</span>
+              <span class="text-nowrap">for the 2021-2022 season</span>
+            </div>
+            <!-- <div class="mb-4">There are spots currently open for the Before &amp; After School Program for the 2021 - 2022 season</div> -->
+            <div class="font-weight-bold text-center">
+              <div class="h4 mb-0 font-weight-bold">TO REGISTER</div>
+              <div class="font-weight-bold">call us at 905-690-9022 or <a href="./contact.html">send us a message</a>.</div>
+            </div>
+            <hr />
+          </div>
+          <!-- <div class="text-center pb-5 pt-3 h5 font-weight-light">We are EXCITED to announce that Registration is NOW open for our Before and After School Program for the 2020 - 2021 season.</div> -->
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="pb-4">
+            <div class="h4 text-dark font-weight-bold">Included in tuition</div>
+            <div>
+              <ul>
+                <li>3 – 4 scheduled class in Dance, Gymnastics, Martial Arts, Ninja Warrior</li>
+                <li>Snacks (nut free)</li>
+                <li>Fun activities and games</li>
+                <li>Arts and crafts</li>
+                <li>Homework time</li>
+                <li>Special guests</li>
+              </ul>
+              <p>Registered ECE staff</p>
+              <p>Staff are Vulnerable Sector Screened and First Aid &amp; CPR certified.</p>
+            </div>
+          </div>
+          <div class="pb-4">
+            <div class="h4 text-dark font-weight-bold">Pick-up &amp; Drop-off at:</div>
+            <div>
+              <ul>
+                <li>Mary Hopkins</li>
+                <li>Guy Brown</li>
+                <li>Allan A. Greenleaf</li>
+                <li>St. Thomas</li>
+                <li>Guardian Angels</li>
+                <li>Flamborough Centre</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pb-4">
+            <div class="h4 text-dark font-weight-bold">Ages</div>
+            <div>
+              <div>Junior Kindergarten to Grade 6</div>
+              <div>Minimum 3 years 8 months</div>
+            </div>
+          </div>
+          <div class="pb-4">
+            <div class="h4 text-dark font-weight-bold">Times</div>
+            <div>
+              <div>7:00 am until school drop-off (approx. 9:00 am)</div>
+              <div>After school pick-up until 6:00 pm</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5 offset-lg-1">
+          <div class="pb-4">
+            <div class="h4 text-dark font-weight-bold">Pricing for 2020-2021 School Year</div>
+            <div class="pt-3 font-weight-bold">Part-time 3 days or less is $129 bi-weekly</div>
+            <div>
+              <ul>
+                <li>Up to 3 regularly scheduled classes per week in Dance, Gymnastics, Martial Arts, Ninja Warrior. *</li>
+                <li>Friday is open gym if registered on this day</li>
+              </ul>
+            </div>
+            <div class="pt-3 font-weight-bold">Full-time 4-5 days is $199 bi-weekly</div>
+            <div>
+              <ul>
+                <li>Up to 4 regularly scheduled classes per week in Dance, Gymnastics, Martial Arts, Ninja Warrior. *</li>
+                <li>Friday is open gym if registered on this day</li>
+              </ul>
+            </div>
+            <div class="pt-3 pb-3 font-weight-bold small">Restrictions *</div>
+            <div>
+              <div class="small">
+                <p>Fees and Scheduling does NOT include weekend classes</p>
+                <p>Only for classes scheduled between 4:30 and 5:45 Monday-Thursday only based on availability.</p>
+                <p>Tuition is billed at the first of each month for the bi-monthly amount in full plus HST.</p>
+                <p>There is a $100 deposit to secure a spot will be withdrawn on March 1st. The deposit will go toward September's tuition.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer include -->
+    <div ng-include src="'footer.html'"></div>
+    <!-- / footer include -->
+  </body>
+</html>

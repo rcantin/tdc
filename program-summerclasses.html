@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="MainController">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <title>The Dream Centre</title>
+    <link href="node_modules/hc-offcanvas-nav/src/scss/hc-offcanvas-nav.css" rel="stylesheet" />
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="js/app-w-classes.js"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "953981534727552");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=953981534727552&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body ng-cloak>
+    <!-- banner include -->
+    <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
+    <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
+    <!-- / banner include -->
+
+    <div class="container pb-5 pt-5 mt-5">
+      <div class="h2 font-tdc text-dark text-center text-uppercase py-4">2021 Summer Classes</div>
+
+      <div class="d-flex justify-content-center align-items-center pb-5" ng-init="classtype='Recreational'">
+        <div class="custom-control custom-radio custom-control-inline">
+          <input class="custom-control-input" type="radio" name="classtype" id="classtype1" value="Recreational" ng-model="classtype" />
+          <label class="custom-control-label font-weight-bold" for="classtype1">For Everyone!</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input class="custom-control-input" type="radio" name="classtype" id="classtype2" value="Competitive" ng-model="classtype" />
+          <label class="custom-control-label font-weight-bold" for="classtype2">Experienced Athletes</label>
+        </div>
+      </div>
+
+      <div ng-if="classtype=='Recreational'">
+        <div class="row no-gutters justify-content-center pb-5" ng-init="camptype='dance'">
+          <div class="col text-center p-1">
+            <a ng-click="camptype='dance'">
+              <img ng-src="./img/orb-dance-wtext.svg" class="img-fluid grow" style="max-width: 90px" alt="" />
+            </a>
+            <div ng-class="{'border-pink':camptype=='dance', 'border-white':camptype!='dance'}" class="border-bottom" style="border-bottom-width: 8px !important"></div>
+          </div>
+          <div class="col text-center p-1">
+            <a ng-click="camptype='gymnastics'">
+              <img ng-src="./img/orb-gymnastics-wtext.svg" class="img-fluid grow" style="max-width: 90px" alt="" />
+            </a>
+            <div ng-class="{'border-purple':camptype=='gymnastics', 'border-white':camptype!='gymnastics'}" class="border-bottom" style="border-bottom-width: 8px !important"></div>
+          </div>
+          <!-- <div class="col text-center p-1">
+            <a ng-click="camptype='martialarts'">
+              <img ng-src="./img/orb-martialarts-wtext.svg" class="img-fluid grow" style="max-width: 90px" alt="" />
+            </a>
+            <div ng-class="{'border-blue':camptype=='martialarts', 'border-white':camptype!='martialarts'}" class="border-bottom" style="border-bottom-width: 8px !important"></div>
+          </div> -->
+          <div class="col text-center p-1">
+            <a ng-click="camptype='ninja'">
+              <img ng-src="./img/orb-ninja-wtext.svg" class="img-fluid grow" style="max-width: 90px" alt="" />
+            </a>
+            <div ng-class="{'border-black':camptype=='ninja', 'border-white':camptype!='ninja'}" class="border-bottom" style="border-bottom-width: 8px !important"></div>
+          </div>
+        </div>
+
+        <div ng-if="camptype=='dance'">
+          <div ng-init="getClasses('Summer Classes', 'Recreational Dance', ''); brandColor='pink';" ng-controller="ClassController">
+            <div>
+              <div class="pb-4">
+                <div class="h4 font-weight-bold text-{{brandColor}}">Dance Class Attire</div>
+                <ul>
+                  <li>Hair: Tied back in a ponytail or ballet bun if possible</li>
+                  <li>Body: Dress up like a princess or, bodysuit and tights (so specific colour) or, a fitted tank or T-shirt with fitted leggings.</li>
+                  <li>Feet: Jazz or ballet slippers (pink or beige)</li>
+                </ul>
+              </div>
+              <div class="pb-4">
+                <div class="h4 font-weight-bold text-{{brandColor}}">Princess and Prince Ballet/Jazz Combo</div>
+                <p>
+                  A new and innovative dance class to the dance scene in Waterdown. Children's minds will be engaged through the art of imagination and movement within a fun-filled, family environment. Children will learn the fundamentals of ballet positions and movement with fun props, exercises,
+                  and Princess terminology.
+                </p>
+              </div>
+              <div class="pb-4">
+                <div class="h4 font-weight-bold text-{{brandColor}}">Acro-Jazz</div>
+                <p>
+                  Acrobatic movements are combined with dance steps as students learn the fundamentals of movement and timing with tumbling. Younger students are introduced to basic tumbling skills including cartwheels, handstands, forward and backward rolls. Older students learn more advanced floor
+                  tumbling skills. Our weekly class is also combined with work in our gymnastics facility to add that extra special element of training. Come tumble and soar with us all Summer!
+                </p>
+              </div>
+              <!-- <div class="pb-4">
+                <div class="h4 font-weight-bold text-{{brandColor}}">Hip Hop</div>
+                <p>
+                  Very popular with all ages! Hip Hop is a blend of today's high-energy "street style" movement. Dance to popular music and learn the coolest hip hop moves, and the art of choreography and improvisation. Some skills developed in these classes are: popping, locking, robot, breaking,
+                  tutting, floating, etc. Everyone is capable of taking part and having fun this summer!
+                </p>
+              </div> -->
+              <!-- <div class="pb-4">
+                <div class="h4 font-weight-bold text-{{brandColor}}">Mommy (or Daddy) and Me Dance</div>
+                <p>Our 2-for-1 Sweet Dreamers Promotion CONTINUES!!! (Ages 18-36 months). Register for any one of these classes and attend a 2nd weekly class in the same session at no additional charge!</p>
+                <p>Our Mommy and Me Dance class is a wonderful introduction to dance that Mom and/or Dad can attend with their little one. It’s an introduction to learning fine motor skills, musicality, marching, galloping, stretches, and learning feet, leg and arm positions in dance.</p>
+                <p>
+                  We also use many props and themes in the class to keep the little ones engaged. For example, we use wands and ribbons while learning our moves like walking on our "tippy toes" and galloping. Another example is a Valentine's Day theme we’ve used in the past where the kids used heart
+                  wands, plush hearts to spin with, hula hoops and jump through, etc. We also focus on the beginnings of musicality by clapping and stepping along to the music, and some Mommy "boogie down time" to fun, children's music.
+                </p>
+              </div> -->
+              <div>
+                <div ng-include="'./_summer-class-list.html'"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div ng-if="camptype=='gymnastics'">
+          <div ng-init="getClasses('Summer Classes', 'Recreational Gymnastics', ''); brandColor='purple';" ng-controller="ClassController">
+            <div>
+              <div class="pb-4">
+                <div class="h4 font-weight-bold text-{{brandColor}}">Gymnastics Class Attire</div>
+                <ul>
+                  <li>Hair: Tied back in a ponytail if possible</li>
+                  <li>Body: Bodysuit (no specific colour) or, a fitted tank or T-shirt with fitted leggings or shorts</li>
+                  <li>Feet: Bare feet</li>
+                </ul>
+              </div>
+
+              <div class="pb-4">
+                <div class="h4 font-weight-bold text-{{brandColor}}">Mini Dreamers / Junior Dreamers / Intermediate Dreamers</div>
+                <p>
+                  We strive to develop habits that promote sharing, teamwork and friendship. Developmentally appropriate gymnastics fundamentals and equipment size ensures safety and encourages children to learn at their own pace. Alongside friends and the leadership of The Dream Centres’ certified
+                  Instructors, your child will learn the foundational skills in gymnastics: Beam, Bars, Vault, Trampoline, Floor and much more. More so, each child will experience what it feels like to succeed and be confident in playing, making friends, mastering skills and having fun through out
+                  the summer.
+                </p>
+              </div>
+
+              <!-- <div class="pb-4">
+                <div class="h4 font-weight-bold text-{{brandColor}}">Tumbling/Trampoline</div>
+                <p>
+                  We strive to develop habits that promote sharing, teamwork and friendship. Developmentally appropriate gymnastics fundamentals and equipment size ensures safety and encourages children to learn at their own pace. Alongside friends and the leadership of The Dream Centres’ certified
+                  Instructors, your child will learn the foundational skills in Tumbling and Trampoline: walkovers, cartwheels, bridges, flips, handsprings, aerials, seat drops, and much more(skills developed will be based on the level of an individual child). More so, each child will experience
+                  what it feels like to succeed and be confident in playing, making friends, mastering skills and having fun throughout the summer.
+                </p>
+              </div> -->
+
+              <!-- <div class="pb-4">
+                <div class="h4 font-weight-bold text-{{brandColor}}">Foundations Pre-Competitive Gymnastics</div>
+                <p>
+                  Our Foundations team is the perfect opportunity for recreational gymnasts looking to experience the excitement of competitive gymnastics on a simplified schedule. Our pre-competitive program is based on 4 disciplines (Bars, Beam, Vault, Floor) with a minimal time commitment of 4
+                  hours per week and attendance of up to 2 competitions. These classes are all taught by our Foundations team staff. Ideal for the newcomer to competitive, but also full-time gymnasts looking for a step back from the demands of a full-time program. Please connect with The Dream
+                  Centre for further program details.
+                </p>
+                <p>To register for Foundations Pre-Competitive, call us at 905-690-9022 or <a href="./contact.html" class="font-weight-bold text-{{brandColor}}">send us a message</a>.</p>
+              </div> -->
+              <div class="pb-4">
+                <div class="h4 font-weight-bold text-{{brandColor}}">Parent &amp; Tot Gymnastics</div>
+                <p>Our 2-for-1 Sweet Dreamers Promotion CONTINUES!!! (Ages 18-36 months). Register for any one of these classes and attend a 2nd weekly class in the same session at no additional charge!</p>
+                <p>Enjoy an enthusiastic, fun-filled program specially designed for boys and girls 18-36 of age, complete with songs, circuits, games and exciting themes!</p>
+                <p>Supervised by our specially trained coaches and with each child's parent providing hands-on guidance, tots will explore and learn the six fundamental movement patterns used in gymnastics - Statics, Landings, Rotations, Swings, Springs and Locomotions.</p>
+                <p>This program also introduces tots to the various gymnastics apparatus - vault, bars, beam, floor, tumbletrak, trampoline, ropes and swings.</p>
+              </div>
+              <div>
+                <div ng-include="'./_summer-class-list.html'"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div ng-if="camptype=='martialarts'">
+          <div ng-init="getClasses('Summer Classes', 'Recreational Martial Arts', ''); brandColor='blue';" ng-controller="ClassController">
+            <div>
+              <div class="pb-4">
+                <div class="h4 font-weight-bold text-{{brandColor}}">Martial Arts Class Attire</div>
+                <ul>
+                  <li>Hair: Tied back out of the face if applicable</li>
+                  <li>Body: T-shirt and track pants if the student does not have a martial arts uniform</li>
+                  <li>Feet: Bare feet</li>
+                </ul>
+              </div>
+              <div class="pb-4">
+                <div class="h4 font-weight-bold text-{{brandColor}}">Taekwondo Mini / Taekwondo Juniors</div>
+                <p>
+                  Our program is designed to encourage children to excel to the best of their abilities in a fun, positive atmosphere. We introduce concepts of respect, discipline, focus and control through our martial arts program. Our classes are geared to increase balance, strength, flexibility,
+                  and co-ordination. All classes are taught by qualified and caring black belt instructors who will help your child learn to set goals and achieve them with confidence.
+                </p>
+              </div>
+              <div class="pb-4">
+                <div class="h4 font-weight-bold text-{{brandColor}}">Parent &amp; Lil' Ninjas Taekwando</div>
+                <p>Our 2-for-1 Sweet Dreamers Promotion CONTINUES!!! (Ages 18-36 months). Register for any one of these classes and attend a 2nd weekly class in the same session at no additional charge!</p>
+                <p>
+                  This class is a wonderful introduction for any budding martial artist. With the assistance of mom and/or dad, children will engage in the basics of martial arts through the use of many props and themes. For example, striking pads, foam swords, climbing ladders, boards breaking(soft
+                  surface touch for this age group), music, and more. All classes are led by our specially trained martial arts Instructors.
+                </p>
+              </div>
+              <div>
+                <div ng-include="'./_summer-class-list.html'"></div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div ng-if="camptype=='ninja'">
+          <div ng-init="getClasses('Summer Classes', 'Recreational Ninja Warrior', ''); brandColor='black';" ng-controller="ClassController">
+            <div>
+              <div class="pb-4">
+                <div class="h4 font-weight-bold text-{{brandColor}}">Ninja Warrior Class Attire</div>
+                <ul>
+                  <li>Hair: Tied back in a ponytail if possible</li>
+                  <li>Body: Bodysuit (no specific colour) or, a fitted tank or T-shirt with fitted leggings or shorts</li>
+                  <li>Feet: Clean indoor running shoes</li>
+                </ul>
+              </div>
+
+              <div class="pb-4">
+                <div class="h4 font-weight-bold text-{{brandColor}}">Intermediate Ninja Warrior / Junior Ninja Warrior</div>
+                <p>
+                  Our Ninja Warrior Program is designed to have kids using their bodies for what they were made for in a fun, creative way: running, jumping, climbing, tumbling, swinging, balancing, stretching, and crawling. Each class begins with a warm-up, stretching and an overview of our rules.
+                  Our ninja warriors will then get a chance to tackle the obstacles that lye ahead on each apparatus with the help of our fantastic instructors. Every month the obstacles will change to keep the ninjas challenged and engaged. The end of class will consist of a timed race to see who
+                  can complete the course the fastest. Friendships will be built, personal bests will be achieved, and memories will be made!
+                </p>
+              </div>
+              <div>
+                <div ng-include="'./_summer-class-list.html'"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div ng-if="classtype=='Competitive'">
+        <div class="card mb-4 mt-3">
+          <div class="card-body bg-light text-center shadow">
+            <div class="h5 font-weight-bold">TO REGISTER</div>
+            <div class="pb-2">Please connect with The Dream Centre to register, or for further program details.</div>
+            <div class="font-weight-bold">905-690-9022 or <a href="./contact.html">send us a message</a></div>
+          </div>
+        </div>
+        <div class="py-4">
+          <div class="h6 font-weight-bold text-pink">COMPETETIVE DANCE CLASSES</div>
+          <div class="h3 font-weight-bold text-pink">TECH TUESDAYS</div>
+          <p>
+            Keep up your training over the summer with stretches, technical skills, & learning new combos! After working so hard all year these classes are focused on Competitive Dancers who want to keep up their training and progression throughout the summer! You have worked hard all year to get
+            where you are...keep it up even during your summer vacation!
+          </p>
+          <div class="d-flex justify-content-start align-items-start flex-wrap">
+            <div class="pr-5 pb-3">
+              <div class="font-weight-bold">Beginner</div>
+              <div>Ages 6 to 11</div>
+              <div>$159.99 +hst for 8 weeks</div>
+              <div>5:40PM to 6:40PM</div>
+            </div>
+            <div class="pr-5 pb-3">
+              <div class="font-weight-bold">Advanced</div>
+              <div>Ages 12 to 16</div>
+              <div>$199.99 +hst for 8 weeks</div>
+              <div>5:40PM to 7:00PM</div>
+            </div>
+          </div>
+          <!-- <div class="font-weight-bold mb-3">
+            <span class="text-nowrap">Age: 6 to 11</span>
+            <span class="px-2">|</span>
+            <span class="text-nowrap">Cost: $159.99 +hst for 8 weeks</span>
+            <span class="px-2">|</span>
+            <span class="text-nowrap">5:40PM to 6:40PM</span>
+          </div> -->
+          <!-- <div class="font-weight-bold mb-3">
+            <span class="text-nowrap">Age: 12 to 16</span>
+            <span class="px-2">|</span>
+            <span class="text-nowrap">Cost: $199.99 +hst for 8 weeks</span>
+            <span class="px-2">|</span>
+            <span class="text-nowrap">5:40PM to 7:00PM</span>
+          </div> -->
+        </div>
+        <hr />
+        <div class="py-4">
+          <div class="h6 font-weight-bold text-purple">PRE-COMPETITIVE GYMNASTICS CLASSES</div>
+          <div class="h3 font-weight-bold text-purple">SUPER DREAMERS</div>
+          <p>
+            Our Super Dreamers program is the perfect opportunity for recreational gymnasts looking to experience the excitement of competitive gymnastics on a simplified schedule. Our Super Dreamers program is based on 4 disciplines (Vault, Uneven Bars, Balance Beam & Floor Exercise) with a minimal
+            time commitment of 2-6 hours per week. The program is split into 3 levels in which the students are selected based on age & ability.
+          </p>
+          <p>
+            Our students training 2 hours per week are in the developmental stage of our pre-competitive program and will work their way up to the 4 or 6 hour program. Our students training 4-6 hours per week will be eligible to attend up to 2 competitions. These classes are all taught by our
+            experienced team staff. This program is ideal for the newcomer to competitive, but also full-time gymnasts looking for a step back from the demands of a full time program.
+          </p>
+          <div class="pr-5 pb-3">
+            <div class="font-weight-bold">Super Dreamers</div>
+            <div>Ages 5 to 14</div>
+            <div>$289.99 +hst for 8 weeks</div>
+            <div>4:45PM to 6:35PM</div>
+          </div>
+          <!-- <div class="font-weight-bold mb-3">
+            <span class="text-nowrap">Age: 5 to 14</span>
+            <span class="px-2">|</span>
+            <span class="text-nowrap">Cost: $289.99 +hst for 8 weeks</span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- footer include -->
+    <div ng-include src="'footer.html'"></div>
+    <!-- / footer include -->
+  </body>
+</html>

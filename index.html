@@ -15,6 +15,32 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
     <script src="js/app.js"></script>
+    <!-- do not remove - facebook ad helper stuff -->
+    <meta name="facebook-domain-verification" content="pxyvjdmr0sz4jc5f6u6ho9mr5y2o1q" />
+    <!-- / do not remove - facebook ad helper stuff -->
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "953981534727552");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=953981534727552&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
   </head>
   <body ng-cloak class="" ng-init="getScheduleData()">
     <!-- banner include -->
@@ -24,6 +50,19 @@
 
     <div class="container pb-5 pt-5 mt-5">
       <div class="row">
+        <div class="col-12 pb-4 d-lg-none">
+          <div class="d-flex justify-content-center">
+            <a class="btn btn-primary btn-block btn-lg text-white px-3" style="max-width: 300px" target="_self" href="./virtualevents.html">
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="mr-2"><i class="fas fa-desktop fa-lg animate-flicker"></i></div>
+                <div class="text-left" style="line-height: 1em">
+                  <div class="small">Register for</div>
+                  <div class="font-weight-bold">Virtual Events</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
         <div class="col-12">
           <div class="card bg-light text-center mb-2">
             <div class="card-body p-2 font-weight-light">Please <a href="./policies/index.html" class="font-weight-bold" target="_blank">click here</a> to review our new COVID policies and procedures</div>
@@ -32,19 +71,19 @@
         <div class="col-12 pt-4">
           <div class="">
             <div class="">
-              <img src="img/SarahSordoni_Super_Portrait.jpg" class="rounded-circle my-1 mr-3 float-left" style="width: 100px;" />
+              <img src="img/SarahSordoni_Super_Portrait.jpg" class="rounded-circle my-1 mr-3 float-left" style="width: 100px" />
               <div class="text-dark">
                 <span class="h4 m-0 font-weight-light">A Message from </span>
                 <span class="h2 m-0 font-tdc text-nowrap text-uppercase">the Director</span>
               </div>
               <div class="pb-3 pt-1 font-weight-light text-muted">
                 Sarah Sordoni,
-                <span class=" text-nowrap">Owner/Director of The Dream Centre</span>
+                <span class="text-nowrap">Owner/Director of The Dream Centre</span>
               </div>
             </div>
             <div class="font-weight-light">
               <div class="float-right">
-                <img src="img/tmtdw01b.svg" class="mx-2" style="max-width: 200px;" />
+                <img src="img/tmtdw01b.svg" class="mx-2" style="max-width: 200px" />
               </div>
               At The Dream Centre, we pride ourselves on a warm, caring, family atmosphere. We believe high success can be achieved through encouragement and instilling self-confidence in our dancers, gymnasts, martial arts and fitness students no matter what size, shape, age or ethnicity. Our award
               winning faculty bring much expertise to The Dream Centre and to the Waterdown community. We do not believe in putting students down to get results. People who are encouraged to keep trying will be more confident and ultimately will get great results by feeling good about what they are
@@ -57,107 +96,114 @@
           <div class="orb-grid">
             <div class="cell">
               <a data-toggle="collapse" data-target="#orblinksDance">
-                <img src="img/orb-dance-wtext.svg" class="img-fluid grow" style="max-height: 130px;" />
+                <img src="img/orb-dance-wtext.svg" class="img-fluid grow" style="max-height: 130px" />
               </a>
               <div id="orblinksDance" class="collapse">
-                <a href="program-sweetdreamers.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px;"
+                <a href="program-sweetdreamers.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px"
                   >Sweet Dreamers
                   <div class="small">(ages 1.5 - 3)</div>
                 </a>
-                <a href="program-dance-recreational.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px;">Recreational</a>
-                <a href="program-theatre.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px;">Musical Theatre</a>
-                <a href="program-dance-precompetitive.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px;">Pre-Competitive</a>
-                <a href="program-dance-competitive.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px;">Competitive</a>
-                <a href="program-privatelessons.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px;">Private Lessons</a>
-                <a href="program-summerclasses.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px;">Summer Classes</a>
-                <a href="program-adult.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px;">Adult Classes</a>
+                <a href="program-dance-recreational.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px">Recreational</a>
+                <!-- <a href="program-theatre.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px">Musical Theatre</a> -->
+                <a href="program-dance-precompetitive.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px">Pre-Competitive</a>
+                <a href="program-dance-competitive.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px">Competitive</a>
+                <a href="program-privatelessons.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px">Private Lessons</a>
+                <a href="program-summerclasses.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px">Summer Classes</a>
+                <a href="program-adult.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px">Adult Classes</a>
+                <a href="./faculty.html?fc=dance" target="_self" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px">Faculty</a>
               </div>
             </div>
             <div class="cell">
               <a data-toggle="collapse" data-target="#orblinksGymnastics">
-                <img src="img/orb-gymnastics-wtext.svg" class="img-fluid grow" style="max-height: 130px;" />
+                <img src="img/orb-gymnastics-wtext.svg" class="img-fluid grow" style="max-height: 130px" />
               </a>
               <div id="orblinksGymnastics" class="collapse">
-                <a href="program-sweetdreamers.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px;"
+                <a href="program-sweetdreamers.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px"
                   >Sweet Dreamers
                   <div class="small">(ages 1.5 - 3)</div></a
                 >
-                <a href="program-gymnastics-recreational.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px;">Recreational</a>
-                <a href="program-gymnastics-tumbling.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px;">Recreational<br />Tumbling</a>
-                <a href="program-gymnastics-precompetitive.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px;">Pre-Competitive</a>
-                <a href="program-privatelessons.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px;">Private Lessons</a>
-                <a href="program-summerclasses.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px;">Summer Classes</a>
+                <a href="program-gymnastics-recreational.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px">Recreational</a>
+                <a href="program-gymnastics-tumbling.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px">Recreational<br />Tumbling</a>
+                <a href="program-gymnastics-precompetitive.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px">Pre-Competitive</a>
+                <a href="program-privatelessons.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px">Private Lessons</a>
+                <a href="program-summerclasses.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px">Summer Classes</a>
+                <a href="./faculty.html?fc=gymnastics" target="_self" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px">Faculty</a>
               </div>
             </div>
             <div class="cell">
               <a data-toggle="collapse" data-target="#orblinksMartialArts">
-                <img src="img/orb-martialarts-wtext.svg" class="img-fluid grow" style="max-height: 130px;" />
+                <img src="img/orb-martialarts-wtext.svg" class="img-fluid grow" style="max-height: 130px" />
               </a>
               <div id="orblinksMartialArts" class="collapse">
-                <a href="program-sweetdreamers.html" class="btn btn-blue btn-sm btn-block mx-auto glass" style="max-width: 180px;"
+                <a href="program-sweetdreamers.html" class="btn btn-blue btn-sm btn-block mx-auto glass" style="max-width: 180px"
                   >Sweet Dreamers
                   <div class="small">(ages 1.5 - 3)</div></a
                 >
-                <a href="program-martialarts-recreational.html" class="btn btn-blue btn-sm btn-block mx-auto glass" style="max-width: 180px;">Recreational</a>
-                <a href="program-summerclasses.html" class="btn btn-blue btn-sm btn-block mx-auto glass" style="max-width: 180px;">Summer Classes</a>
+                <a href="program-martialarts-recreational.html" class="btn btn-blue btn-sm btn-block mx-auto glass" style="max-width: 180px">Recreational</a>
+                <a href="program-summerclasses.html" class="btn btn-blue btn-sm btn-block mx-auto glass" style="max-width: 180px">Summer Classes</a>
+                <a href="./faculty.html?fc=martialarts" target="_self" class="btn btn-blue btn-sm btn-block mx-auto glass" style="max-width: 180px">Faculty</a>
               </div>
             </div>
             <div class="cell">
-              <a href="program-ninja.html">
-                <img src="img/orb-ninja-wtext.svg" class="img-fluid grow" style="max-height: 130px;" />
+              <a data-toggle="collapse" data-target="#orblinksNinja">
+                <img src="img/orb-ninja-wtext.svg" class="img-fluid grow" style="max-height: 130px" />
               </a>
+              <div id="orblinksNinja" class="collapse">
+                <a href="program-ninja.html" class="btn btn-black btn-sm btn-block mx-auto glass" style="max-width: 180px">Recreational</a>
+                <a href="program-summerclasses.html" class="btn btn-black btn-sm btn-block mx-auto glass" style="max-width: 180px">Summer Classes</a>
+              </div>
             </div>
             <div class="cell">
               <a href="program-theatre.html">
-                <img src="img/orb-theatre-wtext.svg" class="img-fluid grow" style="max-height: 130px;" />
+                <img src="img/orb-theatre-wtext.svg" class="img-fluid grow" style="max-height: 130px" />
               </a>
             </div>
             <div class="cell">
               <a data-toggle="collapse" data-target="#orblinksCamps">
-                <img src="img/orb-camps-wtext.svg" class="img-fluid grow" style="max-height: 130px;" />
+                <img src="img/orb-camps-wtext.svg" class="img-fluid grow" style="max-height: 130px" />
               </a>
               <div id="orblinksCamps" class="collapse">
-                <a href="program-camp.html#paday" target="_self" class="btn btn-orange btn-sm btn-block mx-auto glass" style="max-width: 180px;">PA Day</a>
-                <a href="program-camp.html#marchbreak" target="_self" class="btn btn-orange btn-sm btn-block mx-auto glass" style="max-width: 180px;">March Break</a>
-                <a href="program-camp.html#winter" target="_self" class="btn btn-orange btn-sm btn-block mx-auto glass" style="max-width: 180px;">Winter Break</a>
-                <a href="program-camp-summer.html" class="btn btn-orange btn-sm btn-block mx-auto glass" style="max-width: 180px;">Summer Camp</a>
-                <a href="program-summerclasses.html" class="btn btn-orange btn-sm btn-block mx-auto glass" style="max-width: 180px;">Summer Classes</a>
+                <a href="program-camp.html#paday" target="_self" class="btn btn-orange btn-sm btn-block mx-auto glass" style="max-width: 180px">PA Day</a>
+                <a href="program-camp.html#marchbreak" target="_self" class="btn btn-orange btn-sm btn-block mx-auto glass" style="max-width: 180px">Spring Break</a>
+                <a href="program-camp.html#winter" target="_self" class="btn btn-orange btn-sm btn-block mx-auto glass" style="max-width: 180px">Winter Break</a>
+                <a href="program-camp-summer.html" class="btn btn-orange btn-sm btn-block mx-auto glass" style="max-width: 180px">Summer Camp</a>
+                <a href="program-summerclasses.html" class="btn btn-orange btn-sm btn-block mx-auto glass" style="max-width: 180px">Summer Classes</a>
               </div>
             </div>
             <div class="cell">
               <a href="./thefamilytree/index.html" target="_blank">
-                <img src="img/orb-familytree-wtext.svg" class="img-fluid grow" style="max-height: 130px;" />
+                <img src="img/orb-familytree-wtext.svg" class="img-fluid grow" style="max-height: 130px" />
               </a>
             </div>
             <div class="cell">
               <a href="program-birthdayparties.html">
-                <img src="img/orb-birthdays-wtext.svg" class="img-fluid grow" style="max-height: 130px;" />
+                <img src="img/orb-birthdays-wtext.svg" class="img-fluid grow" style="max-height: 130px" />
               </a>
             </div>
             <div class="cell">
               <a href="program-bacare.html">
-                <img src="img/orb-bacare-wtext.svg" class="img-fluid grow" style="max-height: 130px;" />
+                <img src="img/orb-bacare-wtext.svg" class="img-fluid grow" style="max-height: 130px" />
               </a>
             </div>
             <div class="cell">
               <a href="program-musiclessons.html">
-                <img src="img/orb-music-wtext.svg" class="img-fluid grow" style="max-height: 130px;" />
+                <img src="img/orb-music-wtext.svg" class="img-fluid grow" style="max-height: 130px" />
               </a>
             </div>
             <div class="cell">
               <a data-toggle="collapse" data-target="#orblinksChiropractic">
-                <img src="img/orb-chiropractic-wtext.svg" class="img-fluid grow" style="max-height: 130px;" />
+                <img src="img/orb-chiropractic-wtext.svg" class="img-fluid grow" style="max-height: 130px" />
               </a>
               <div id="orblinksChiropractic" class="collapse">
-                <a href="https://www.kinstructhealth.com" target="_blank" class="btn btn-kinstruct btn-sm btn-block mx-auto glass" style="max-width: 180px;">Home</a>
-                <a href="https://www.kinstructhealth.com/meet-the-team" target="_blank" class="btn btn-kinstruct btn-sm btn-block mx-auto glass" style="max-width: 180px;">Meet the team</a>
-                <a href="https://kinstruct.janeapp.com" target="_blank" class="btn btn-kinstruct btn-sm btn-block mx-auto glass" style="max-width: 180px;">Book Online</a>
-                <a href="https://www.kinstructhealth.com/dream-centre-location" target="_blank" class="btn btn-kinstruct btn-sm btn-block mx-auto glass" style="max-width: 180px;">Contact Us</a>
+                <a href="https://www.kinstructhealth.com" target="_blank" class="btn btn-kinstruct btn-sm btn-block mx-auto glass" style="max-width: 180px">Home</a>
+                <a href="https://www.kinstructhealth.com/meet-the-team" target="_blank" class="btn btn-kinstruct btn-sm btn-block mx-auto glass" style="max-width: 180px">Meet the team</a>
+                <a href="https://kinstruct.janeapp.com" target="_blank" class="btn btn-kinstruct btn-sm btn-block mx-auto glass" style="max-width: 180px">Book Online</a>
+                <a href="https://www.kinstructhealth.com/dream-centre-location" target="_blank" class="btn btn-kinstruct btn-sm btn-block mx-auto glass" style="max-width: 180px">Contact Us</a>
               </div>
             </div>
             <div class="cell">
               <a href="https://www.barbella.ca" target="_blank">
-                <img src="img/orb-barbella-wtext.svg" class="img-fluid grow" style="max-height: 130px;" />
+                <img src="img/orb-barbella-wtext.svg" class="img-fluid grow" style="max-height: 130px" />
               </a>
             </div>
           </div>
@@ -268,9 +314,7 @@
         <div class="col-12 col-lg-4">
           <div class="pt-5 pb-5">
             <div class="">
-              <div class="text-center h2 m-0 font-tdc text-uppercase">
-                Employment Opportunities
-              </div>
+              <div class="text-center h2 m-0 font-tdc text-uppercase">Employment Opportunities</div>
               <div class="text-center pt-2">
                 <a href="employment.html" class="btn btn-dark glass px-3">Find out more</a>
               </div>
@@ -290,33 +334,34 @@
                   <!-- spinner for getting event data -->
                   <div ng-show="!eventdatareturned" class="text-center m-0 pt-4 pb-5 font-weight-light"><i class="fas fa-spinner fa-pulse mr-1"></i>Getting events...</div>
 
-                  <div ng-show="eventdatareturned" class="pt-2">
+                  <div ng-show="eventdatareturned" class="pt-1">
                     <table class="table" ng-if="eventdata">
                       <tbody>
-                        <tr ng-repeat="event in eventdata | orderBy:'startdate' | filterBeforeToday | limitTo:5">
+                        <tr ng-show="results.length < 1">
+                          <td colspan="4" class="font-weight-light py-3 text-center">No events found. Check back soon for updates.</td>
+                        </tr>
+                        <tr ng-repeat="event in results = (eventdata | orderBy:'startdate' | filterBeforeToday | limitTo:5)">
                           <td class="text-right font-weight-light d-none d-md-table-cell">
                             <div class="text-uppercase">
-                              <span style="white-space: nowrap;">{{ event.startdate | date:"mediumDate" }}</span>
-                              <span ng-if="event.startdate < event.enddate" style="white-space: nowrap;"> - {{ event.enddate | date:"mediumDate" }}</span>
+                              <span style="white-space: nowrap">{{ event.startdate | date:"mediumDate" }}</span>
+                              <span ng-if="event.startdate < event.enddate" style="white-space: nowrap"> - {{ event.enddate | date:"mediumDate" }}</span>
                             </div>
                             <div class="font-weight-light text-uppercase">
-                              <span ng-if="event.starttime" style="white-space: nowrap;">{{ event.starttime | date:"shortTime" }}</span>
-                              <span ng-if="event.starttime < event.endtime" style="white-space: nowrap;"> - {{ event.endtime | date:"shortTime" }}</span>
+                              <span ng-if="event.starttime" style="white-space: nowrap">{{ event.starttime | date:"shortTime" }}</span>
+                              <span ng-if="event.starttime < event.endtime" style="white-space: nowrap"> - {{ event.endtime | date:"shortTime" }}</span>
                             </div>
                           </td>
                           <td class="text-left">
                             <div class="font-weight-bold" ng-bind-html="event.description | to_trusted"></div>
-                            <div ng-if="event.caption" class="small font-weight-light">
-                              {{ event.caption }}
-                            </div>
+                            <div ng-if="event.caption" class="small font-weight-light">{{ event.caption }}</div>
                             <div class="d-md-none">
                               <div class="text-uppercase">
-                                <span style="white-space: nowrap;">{{ event.startdate | date:"mediumDate" }}</span>
-                                <span ng-if="event.startdate < event.enddate" style="white-space: nowrap;"> - {{ event.enddate | date:"mediumDate" }}</span>
+                                <span style="white-space: nowrap">{{ event.startdate | date:"mediumDate" }}</span>
+                                <span ng-if="event.startdate < event.enddate" style="white-space: nowrap"> - {{ event.enddate | date:"mediumDate" }}</span>
                               </div>
                               <div class="font-weight-light text-uppercase">
-                                <span ng-if="event.starttime" style="white-space: nowrap;">{{ event.starttime | date:"shortTime" }}</span>
-                                <span ng-if="event.starttime < event.endtime" style="white-space: nowrap;"> - {{ event.endtime | date:"shortTime" }}</span>
+                                <span ng-if="event.starttime" style="white-space: nowrap">{{ event.starttime | date:"shortTime" }}</span>
+                                <span ng-if="event.starttime < event.endtime" style="white-space: nowrap"> - {{ event.endtime | date:"shortTime" }}</span>
                               </div>
                             </div>
                           </td>

@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Dancing+Script:400,700');
+
+$font-size-base:              1rem; // Assumes the browser default, typically '16px'
+$font-family-sans-serif:      'Roboto Condensed', Arial, sans-serif;
+.font-script {font-family: 'Dancing Script', cursive !important;}
+.text-spaced {letter-spacing: .25em;}
+a {cursor: pointer;}
+// body {padding-top: 80px;}
+
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$blue:     rgb(0,149,218);
+$indigo:   rgb(102,16,242); // not used
+$purple:   rgb(132,77,158);
+$pink:     rgb(237,14,123);
+$red:      rgb(204,0,0); // not used
+$orange:   rgb(255,153,51); // not used
+$yellow:   rgb(253,182,13); // not used
+$green:    rgb(0,175,0); // not used
+$teal:     rgb(142,216,248);
+$cyan:     rgb(23,162,184); // not used
+$brown:    rgb(102,51,0); // not used
+
+$primary:       $pink;
+$secondary:     $purple;
+$success:       $green;
+$info:          $blue;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $black;
+
+// $headings-line-height:        1em;
+
+$popover-bg:                  $blue;
+$popover-body-color:          $white;
+$popover-border-color:        $blue;
+
+$border-radius:               0;
+$border-radius-lg:            0;
+$border-radius-sm:            0;
+
+$navbar-dark-color:                 $white;
+$navbar-dark-hover-color:           $primary;
+$navbar-dark-active-color:          $primary;
+//$navbar-padding-y:                  0;
+
+
+$dropdown-header-color:             $info;
+
+$navbar-dark-toggler-border-color:  transparent;
+
+.navbar-toggler[aria-expanded="true"] .expandericon.expanded, .navbar-toggler[aria-expanded="false"] .expandericon.collapsed {
+    display: inline-block;
+}
+.navbar-toggler[aria-expanded="false"] .expandericon.expanded, .navbar-toggler[aria-expanded="true"] .expandericon.collapsed {
+    display: none;
+}
+a:focus,
+button:focus {
+    outline: none !important;
+}
+
+
+$dropdown-bg:                       $dark;
+$dropdown-border-color:             $dark;
+
+$dropdown-link-color:               $white;
+$dropdown-link-hover-color:         $white;
+$dropdown-link-hover-bg:            lighten($dark, 20%);
+
+
+
+.equal {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .equal > [class*='col'] {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+

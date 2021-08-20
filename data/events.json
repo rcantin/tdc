@@ -1,0 +1,105 @@
+
+[
+    {
+        "id": 55,
+        "date": "December 16 - 21",
+        "description": "PARENT VIEWING WEEK"
+    },
+    {
+        "id": 60,
+        "date": "December 22 - January 5",
+        "description": "Christmas Break"
+    },
+    {
+        "id": 65,
+        "date": "February 10 - 15",
+        "description": "VALENTINES PARTY WEEK"
+    },
+    {
+        "id": 70,
+        "date": "February 17",
+        "description": "Family Day - Studio Closed"
+    },
+    {
+        "id": 75,
+        "date": "March 9 - 14",
+        "description": "WACKY HAIR WEEK"
+    },
+    {
+        "id": 80,
+        "date": "March 16 - 22",
+        "description": "March Break"
+    },
+    {
+        "id": 85,
+        "date": "April 6 - 11",
+        "description": "EASTER PARTY WEEK"
+    },
+    {
+        "id": 90,
+        "date": "April 10",
+        "description": "Good Friday - Waterdown Easter Egg Hunt Performance"
+    },
+    {
+        "id": 95,
+        "date": "April 13",
+        "description": "Easter Monday - WE ARE OPEN!"
+    },
+    {
+        "id": 100,
+        "date": "April 3 - 5 **",
+        "description": "Move with the Beat Competition (Brantford)"
+    },
+    {
+        "id": 110,
+        "date": "April 23 - 26 **",
+        "description": "View Dance Competition (Hamilton Convention Centre)"
+    },
+    {
+        "id": 120,
+        "date": "May 8 - 10 **",
+        "description": "Breaking Bounds (Niagara Falls)"
+    },
+    {
+        "id": 130,
+        "date": "May 22 - 24 **",
+        "description": "Rhythm Dance (Waterloo)"
+    },
+    {
+        "id": 140,
+        "date": "May 18",
+        "description": "Victoria Day - Studio Closed"
+    },
+    {
+        "id": 150,
+        "date": "May 31 @ 9AM-3PM",
+        "description": "Recreational Photo Day"
+    },
+    {
+        "id": 155,
+        "date": "June 1 - 6",
+        "description": "Parent Viewing Week - GYMNASTICS and MARTIAL ARTS"
+    },
+    {
+        "id": 160,
+        "date": "June 5 @ 5PM-9PM",
+        "description": "Recital Dress Rehearsal"
+    },
+    {
+        "id": 170,
+        "date": "June 6 @ 12PM and 6PM",
+        "description": "Recital Show Day"
+    },
+    {
+        "id": 175,
+        "date": "June 8 - 13",
+        "description": "Bring a Friend To DANCE, GYMNASTICS, MARTIAL ARTS"
+    },
+    {
+        "id": 180,
+        "date": "July 21 - 24",
+        "description": "Competitive Intensive Week"
+    }
+
+]
+

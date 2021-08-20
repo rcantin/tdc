@@ -1,0 +1,7 @@
+[22-Jul-2020 21:33:41 UTC] PHP Notice:  Array to string conversion in /home/bjrspntjgy7p/public_html/db/getEvents.php on line 14
+[22-Jul-2020 21:34:50 UTC] PHP Notice:  Array to string conversion in /home/bjrspntjgy7p/public_html/db/getEvents.php on line 14
+[22-Jul-2020 21:35:05 UTC] PHP Notice:  Array to string conversion in /home/bjrspntjgy7p/public_html/db/getEvents.php on line 14
+[22-Jul-2020 22:48:24 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/bjrspntjgy7p/public_html/db/getEvents.php on line 8
+[22-Jul-2020 22:50:33 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/bjrspntjgy7p/public_html/db/getEvents.php on line 8
+[22-Jul-2020 22:50:36 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/bjrspntjgy7p/public_html/db/getEvents.php on line 8
+[22-Jul-2020 22:50:37 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/bjrspntjgy7p/public_html/db/getEvents.php on line 8

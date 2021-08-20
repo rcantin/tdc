@@ -1,0 +1,16 @@
+$hc-offcanvas-nav-transition-duration: 0.2s;
+// $hc-offcanvas-nav-transition-timing-function: ease !default;
+$hc-offcanvas-nav-container-width: 80%;
+// $hc-offcanvas-nav-container-height: auto !default;
+
+// // $hc-offcanvas-nav-trigger-width:              28px;
+// // $hc-offcanvas-nav-trigger-height:             24px;
+// $hc-offcanvas-nav-trigger-line-width: 3px;
+// $hc-offcanvas-nav-trigger-color: #aaa;
+// // $hc-offcanvas-nav-trigger-transform-speed:    .2s !default;
+// $hc-offcanvas-nav-background-color: #ccc;
+// // $hc-offcanvas-nav-text-color:                 pink;
+
+@import "./core";
+@import "./mixins";
+@import "./theme";

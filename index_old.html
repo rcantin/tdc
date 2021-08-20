@@ -1,0 +1,250 @@
+
+<!doctype html>
+<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="theme-color" content="#000000">
+        <link href="scss/theme.css" type="text/css" rel="Stylesheet" />
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+        <title>The Dream Centre</title>
+        <link href="node_modules/hc-offcanvas-nav/src/scss/hc-offcanvas-nav.css" rel="stylesheet">
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/hc-offcanvas-nav/src/js/hc-offcanvas-nav.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <script src="js/app.js"></script>
+        <!-- <script src="js/contactscript.js"></script> -->
+    </head>
+    <body ng-cloak class="" ng-init="getScheduleData()">
+
+        <!-- banner include -->
+        <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
+        <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
+        <!-- / banner include -->
+
+        <div class="container pb-5 pt-5 mt-5">
+
+            <div class="row">
+
+                <div class="col-12 pt-4">
+
+                    <div class="">
+                        <div class="">
+                            <div class="text-dark">
+                                <span class="h4 m-0 font-weight-light">A Message from </span>
+                                <span class="h2 m-0 font-tdc text-nowrap text-uppercase">the Director</span>
+                            </div>
+                            <div class="pb-3 pt-1 font-weight-light text-muted">Sarah Sordoni, Owner/Director of The Dream Centre</div>
+                        </div>
+                        <div class="font-weight-light">
+                            <div class="float-right">
+                                <img src="img/SarahSordoni_Super_Portrait.jpg" class="rounded-circle m-2" style="width: 120px;">
+                                <img src="img/tmtdw01b.svg" class="mx-2" style="max-width: 200px;">
+                            </div>
+                            At The Dream Centre, we pride ourselves on a warm, caring, family atmosphere. We believe high success can be achieved through encouragement and instilling self-confidence in our dancers, gymnasts, martial arts and fitness students no matter what size, shape, age or ethnicity. Our award winning faculty bring much expertise to The Dream Centre and to the Waterdown community. We do not believe in putting students down to get results. People who are encouraged to keep trying will be more confident and ultimately will get great results by feeling good about what they are doing in class. At The Dream Centre, we offer fun physical activity that targets all muscles of the body, enhances stretching and flexibility and promotes health and well being to all ages of our wonderful community of Waterdown and surrounding area.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 py-4">
+
+                    <div class="row">
+                        <div class="col-6 col-md-4 col-xl-2 pb-5">
+                            <div class="card border-0 text-center h-100">
+                                <div class="card-body p-1">
+                                    <a data-toggle="collapse" data-target="#collapse01" role="button" aria-expanded="false" aria-controls="collapse01">
+                                        <!-- <h5 class="h4 mb-0 py-1 text-pink font-tdc text-uppercase">Dance</h5> -->
+                                        <img src="img/orb-dance-wtext.svg" class="img-fluid grow" style="max-height: 150px;">
+                                    </a>
+                                    <div class="collapse" id="collapse01">
+                                        <a href="program-sweetdreamers.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px;">Sweet Dreamers<div class="small">(ages 1.5 - 3)</div></a>
+                                        <a href="program-dance-recreational.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px;">Recreational</a>
+                                        <a href="program-theatre.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px;">Musical Theatre</a>
+                                        <a href="program-dance-precompetitive.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px;">Pre-Competitive</a>
+                                        <a href="program-dance-competitive.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px;">Competitive</a>
+                                        <a href="program-privatelessons.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px;">Private Lessons</a>
+                                        <a href="program-summerclasses.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px;">Summer Classes</a>
+                                        <a href="program-adult.html" class="btn btn-pink btn-sm btn-block mx-auto glass" style="max-width: 180px;">Adult Classes</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-xl-2 pb-5">
+                            <div class="card border-0 text-center h-100">
+                                <div class="card-body p-1">
+                                    <a data-toggle="collapse" data-target="#collapse02" role="button" aria-expanded="false" aria-controls="collapse02">
+                                        <!-- <h5 class="h4 mb-0 py-1 text-purple font-tdc text-uppercase">Gymnastics</h5> -->
+                                        <img src="img/orb-gymnastics-wtext.svg" class="img-fluid grow" style="max-height: 150px;">
+                                    </a>
+                                    <div class="collapse" id="collapse02">
+                                        <a href="program-sweetdreamers.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px;">Sweet Dreamers<div class="small">(ages 1.5 - 3)</div></a>
+                                        <a href="program-gymnastics-recreational.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px;">Recreational</a>
+                                        <!-- <a href="program-gymnastics-cheerleading.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px;">Recreational<br>Cheerleading</a> -->
+                                        <a href="program-gymnastics-tumbling.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px;">Recreational<br>Tumbling</a>
+                                        <a href="program-gymnastics-precompetitive.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px;">Pre-Competitive</a>
+                                        <a href="program-privatelessons.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px;">Private Lessons</a>
+                                        <a href="program-summerclasses.html" class="btn btn-purple btn-sm btn-block mx-auto glass" style="max-width: 180px;">Summer Classes</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-xl-2 pb-5">
+                            <div class="card border-0 text-center h-100">
+                                <div class="card-body p-1">
+                                    <a data-toggle="collapse" data-target="#collapse03" role="button" aria-expanded="false" aria-controls="collapse03">
+                                        <!-- <h5 class="h4 mb-0 py-1 text-blue font-tdc text-uppercase">Martial Arts</h5> -->
+                                        <img src="img/orb-martialarts-wtext.svg" class="img-fluid grow" style="max-height: 150px;">
+                                    </a>
+                                    <div class="collapse" id="collapse03">
+                                        <a href="program-sweetdreamers.html" class="btn btn-blue btn-sm btn-block mx-auto glass" style="max-width: 180px;">Sweet Dreamers<div class="small">(ages 1.5 - 3)</div></a>
+                                        <a href="program-martialarts-recreational.html" class="btn btn-blue btn-sm btn-block mx-auto glass" style="max-width: 180px;">Recreational</a>
+                                        <a href="program-summerclasses.html" class="btn btn-blue btn-sm btn-block mx-auto glass" style="max-width: 180px;">Summer Classes</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-xl-2 pb-5">
+                            <div class="card border-0 text-center h-100">
+                                <div class="card-body p-1">
+                                    <a data-toggle="collapse" data-target="#collapse04" role="button" aria-expanded="false" aria-controls="collapse04">
+                                        <!-- <h5 class="h4 mb-0 py-1 text-yellow font-tdc text-uppercase">Camps</h5> -->
+                                        <img src="img/orb-camps-wtext.svg" class="img-fluid grow" style="max-height: 150px;">
+                                    </a>
+                                    <div class="collapse" id="collapse04">
+                                        <a href="program-camp.html#paday" target="_self" class="btn btn-orange btn-sm btn-block mx-auto glass" style="max-width: 180px;">PA Day</a>
+                                        <a href="program-camp.html#marchbreak" target="_self" class="btn btn-orange btn-sm btn-block mx-auto glass" style="max-width: 180px;">March Break</a>
+                                        <a href="program-camp.html#winter" target="_self" class="btn btn-orange btn-sm btn-block mx-auto glass" style="max-width: 180px;">Winter Break</a>
+                                        <a href="program-camp-summer.html" class="btn btn-orange btn-sm btn-block mx-auto glass" style="max-width: 180px;">Summer Camp</a>
+                                        <a href="program-summerclasses.html" class="btn btn-orange btn-sm btn-block mx-auto glass" style="max-width: 180px;">Summer Classes</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-xl-2 pb-5">
+                            <div class="card border-0 text-center h-100">
+                                <div class="card-body p-1">
+                                    <a data-toggle="collapse" data-target="#collapse05" role="button" aria-expanded="false" aria-controls="collapse05">
+                                        <!-- <h5 class="h4 mb-0 py-1 text-yellow font-tdc text-uppercase">Camps</h5> -->
+                                        <img src="img/orb-bacare-wtext.svg" class="img-fluid grow" style="max-height: 150px;">
+                                    </a>
+                                    <div class="collapse" id="collapse05">
+                                        <a href="program-bacare.html" class="btn btn-yellow btn-sm btn-block mx-auto glass" style="max-width: 180px;">Find out more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-xl-2 pb-5">
+                            <div class="card border-0 text-center h-100">
+                                <div class="card-body p-1">
+                                    <a data-toggle="collapse" data-target="#collapse06" role="button" aria-expanded="false" aria-controls="collapse06">
+                                        <!-- <h5 class="h4 mb-0 py-1 text-yellow font-tdc text-uppercase">Camps</h5> -->
+                                        <img src="img/orb-otherprograms-wtext.svg" class="img-fluid grow" style="max-height: 150px;">
+                                    </a>
+                                    <div class="collapse" id="collapse06">
+                                        <a href="program-theatre.html" class="btn btn-green btn-sm btn-block mx-auto glass" style="max-width: 180px;">Musical Theatre</a>
+                                        <a href="program-birthdayparties.html" class="btn btn-green btn-sm btn-block mx-auto glass" style="max-width: 180px;">Birthday Parties</a>
+                                        <!-- <a href="program-commonmoms.html" class="btn btn-green btn-sm btn-block mx-auto glass" style="max-width: 180px;">Common Moms<div class="small">(ages 8 - 18 months)</div></a> -->
+                                        <a href="program-musiclessons.html" class="btn btn-green btn-sm btn-block mx-auto glass" style="max-width: 180px;">Music Lessons</a>
+                                        <a href="program-adult.html" class="btn btn-green btn-sm btn-block mx-auto glass" style="max-width: 180px;">Adult Classes</a>
+                                        <a href="program-chiropractic.html" class="btn btn-green btn-sm btn-block mx-auto glass" style="max-width: 180px;">Chiropractic</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4">
+                    <!-- <div class="pt-5 pb-5">
+                        <div class="">
+                            <div class="text-center font-tdc h5 my-0 mr-5 pr-5">THE </div>
+                            <div class="text-center h1 m-0 font-tdc">DREAMS BOUTIQUE</div>
+                            <div class="text-center font-weight-bold h5 my-0 ml-5 pl-5">is now open!</div>
+                            <div class="text-center pt-2"><a href="dreamsboutique.html" class="btn btn-dark glass px-3">Find out more</a></div>
+                        </div>
+                    </div> -->
+                    <div class="pt-5 pb-5">
+                        <div class="">
+                            <div class="text-center h2 m-0 font-tdc text-uppercase">Employment Opportunities</div>
+                            <div class="text-center pt-2"><a href="employment.html" class="btn btn-dark glass px-3">Find out more</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-7 offset-lg-1">
+                    <div class="pt-5 pb-1">
+                        <div class="">
+                            <div class="">
+                                <div class="h3 text-dark text-center">
+                                    <span class="font-weight-light">Upcoming </span>
+                                    <span class="font-tdc text-nowrap text-uppercase">Events</span>
+                                </div>
+                                <div ng-init="getEventData()">
+
+
+                                    <!-- spinner for getting event data -->
+                                    <div ng-show="!eventdatareturned" class="text-center m-0 pt-4 pb-5 font-weight-light"><i class="fas fa-spinner fa-pulse mr-1"></i>Getting events...</div>
+
+                                    <div ng-show="eventdatareturned" class="pt-2">
+
+                                        <table class="table" ng-if="eventdata">
+                                            <tbody>
+                                                <tr ng-repeat="event in eventdata | orderBy:'startdate' | filterBeforeToday | limitTo:5">
+                                                    <td class="text-right font-weight-light d-none d-md-table-cell">
+                                                        <div class="text-uppercase">
+                                                            <span style="white-space: nowrap;">{{ event.startdate | date:"mediumDate" }}</span>
+                                                            <span ng-if="event.startdate < event.enddate" style="white-space: nowrap;"> - {{ event.enddate | date:"mediumDate" }}</span>
+                                                        </div>
+                                                        <div class="font-weight-light text-uppercase">
+                                                            <span ng-if="event.starttime" style="white-space: nowrap;">{{ event.starttime | date:"shortTime" }}</span>
+                                                            <span ng-if="event.starttime < event.endtime" style="white-space: nowrap;"> - {{ event.endtime | date:"shortTime" }}</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-left">
+                                                        <div class="font-weight-bold" ng-bind-html="event.description | to_trusted"></div>
+                                                        <div ng-if="event.caption" class="small font-weight-light">{{ event.caption }}</div>
+                                                        <div class="d-md-none">
+                                                            <div class="text-uppercase">
+                                                                <span style="white-space: nowrap;">{{ event.startdate | date:"mediumDate" }}</span>
+                                                                <span ng-if="event.startdate < event.enddate" style="white-space: nowrap;"> - {{ event.enddate | date:"mediumDate" }}</span>
+                                                            </div>
+                                                            <div class="font-weight-light text-uppercase">
+                                                                <span ng-if="event.starttime" style="white-space: nowrap;">{{ event.starttime | date:"shortTime" }}</span>
+                                                                <span ng-if="event.starttime < event.endtime" style="white-space: nowrap;"> - {{ event.endtime | date:"shortTime" }}</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class=" d-none d-md-table-cell"></td>
+                                                    <td class="font-weight-bold pr-3 py-3">** subject to change</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                </div>
+                                <div class="text-center"><a href="events.html" class="btn btn-dark glass px-3">See All Events</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- footer include -->
+        <div ng-include src="'footer.html'"></div>
+        <!-- / footer include -->
+
+
+    </body>
+</html>
