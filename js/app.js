@@ -36,7 +36,7 @@ myApp.service("dataService", function ($http) {
     });
   };
   this.getNav = function (callbackFunc) {
-    $http.get("../data/nav.json").then(function (data) {
+    $http.get("./data/nav.json").then(function (data) {
       callbackFunc(data);
     });
   };
@@ -46,22 +46,22 @@ myApp.service("dataService", function ($http) {
     });
   };
   this.getDBEvents = function (callbackFunc) {
-    $http.get("../db/getEvents.php").then(function (data) {
+    $http.get("./db/getEvents.php").then(function (data) {
       callbackFunc(data);
     });
   };
   this.getSummerCampData = function (callbackFunc) {
-    $http.get("../data/summer-camp.json").then(function (data) {
+    $http.get("./data/summer-camp.json").then(function (data) {
       callbackFunc(data);
     });
   };
   this.getSummerCampFAQData = function (callbackFunc) {
-    $http.get("../data/summer-camp-faq.json").then(function (data) {
+    $http.get("./data/summer-camp-faq.json").then(function (data) {
       callbackFunc(data);
     });
   };
   this.getFacultyData = function (callbackFunc) {
-    $http.get("../data/faculty.json").then(function (data) {
+    $http.get("./data/faculty.json").then(function (data) {
       callbackFunc(data);
     });
   };
