@@ -17,14 +17,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js" integrity="sha256-jZRUyy674QanjfVAn9YBW+d1iuxj8csDOxrwS35/GLo=" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
   </head>
-  <body ng-cloak ng-init="getScheduleData()">
+  <body ng-cloak>
     <div class="d-none d-md-block" ng-include src="'banner.html'"></div>
     <div class="d-md-none" ng-include src="'_banner-slide.html'"></div>
 
     <!-- <div ng-include src="'_page-intro.html'"></div> -->
 
-    <div class="container bg-white pb-5 mb-5">
-      <div class="bg-danger text-white p-4 mb-5">Check registration links!</div>
+    <div class="container bg-white pb-5 mb-5 pt-5">
+      <!-- <div class="pt-4">
+        <div class="bg-danger text-white p-3 mb-5 text-center"><i class="fas fa-exclamation-circle mr-1"></i> Need to update registration links once Jackrabbit classes are aligned with new class structure</div>
+      </div> -->
 
       <!-- <div class="display-4 mb-3 text-center font-cursive font-weight-bold">Memberships &amp; Passes</div>
       <div ng-include="'_brand-divider.html'"></div>
@@ -60,6 +62,18 @@
                 <span class="text-nowrap">9:30 AM <span>to</span> 2:00 PM</span>
               </div>
             </div>
+            <div class="pb-3">
+              <div class="d-flex justify-content-start align-items-center">
+                <div class="pr-3">
+                  <a class="btn btn-primary btn-lg" href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10692769&loc=" target="_blank"> Register </a>
+                </div>
+                <div>
+                  <div class="h5 mb-0">$49.99/month</div>
+                  <div class="small font-weight-light">All prices subject to HST</div>
+                </div>
+              </div>
+            </div>
+            <div class="h6">Child under 6 months are FREE</div>
             <div>
               <div class="font-weight-light pb-2">
                 Our beautiful 3600 sq/ft lounge area where Mamas can relax while they nurture their Littles, and grow new friendships. Our Nest is equipped with two large-screen televisions for educational programming, sofas, lounge chairs, and additional seating, enclosed play area with lots of fun
@@ -72,22 +86,23 @@
                 <li>Special Guests and Events may be an additional charge</li>
               </ul>
             </div>
-            <div class="pt-3">
+          </div>
+          <hr />
+          <div class="pb-5">
+            <div class="h3 font-weight-bold">Family Tree All Access</div>
+            <div class="py-3">
               <div class="d-flex justify-content-start align-items-center">
                 <div class="pr-3">
                   <a class="btn btn-primary btn-lg" href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10692769&loc=" target="_blank"> Register </a>
                 </div>
                 <div>
-                  <div class="h5 mb-0">$49.99/month</div>
-                  <div class="mb-2 small font-weight-light">All prices subject to HST</div>
-                  <div class="">Child under 6 months are FREE</div>
+                  <div class="h5 mb-0">$99.99/month</div>
+                  <div class="small font-weight-light">All prices subject to HST</div>
                 </div>
               </div>
             </div>
-          </div>
-          <hr />
-          <div class="pb-5">
-            <div class="h3 font-weight-bold">Family Tree All Access</div>
+            <div class="h6">Mama + Little (2nd Child is FREE)</div>
+            <div class="h6">Children 6-40 months recommended</div>
             <div>
               <div class="font-weight-light pb-2">
                 We provide our Mamas and their Littles with fun activities, events, programs and resources designed to enhance both physical and social development all within our stunning, 20,000 sq/ft state-of-the-art facility. Our Family Tree Memberships include full Nest access, as well as every
@@ -103,24 +118,27 @@
                 <li>Extra Littles are FREE and limited to The Nest Membership structure</li>
               </ul>
             </div>
-            <div class="pt-3">
-              <div class="d-flex justify-content-start align-items-center">
-                <div class="pr-3">
-                  <a class="btn btn-primary btn-lg" href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10692769&loc=" target="_blank"> Register </a>
-                </div>
-                <div>
-                  <div class="h5 mb-0">$99.99/month</div>
-                  <div class="mb-2 small font-weight-light">All prices subject to HST</div>
-                  <div class="">Mama + Little (2nd Child is FREE)</div>
-                  <div class="">Children 6-40 months recommended</div>
-                </div>
-              </div>
-            </div>
           </div>
           <hr />
           <div class="pb-5">
             <div class="h3 font-weight-bold">Drop-In Rate</div>
-            <div>
+            <div class="py-3">
+              <div class="d-flex justify-content-start align-items-center">
+                <div class="pr-3">
+                  <div class="text-muted text-center bg-light p-3">
+                    Pay Upon Arrival <br />
+                    via Credit or Debit only
+                  </div>
+                </div>
+                <div>
+                  <div class="h5 mb-0">$19.99</div>
+                  <div class="small font-weight-light">All prices subject to HST</div>
+                </div>
+              </div>
+            </div>
+            <div class="h6">Mama + Little (2nd Child is FREE)</div>
+            <div class="h6">Children 6-40 months recommended</div>
+            <div class="pt-3">
               <div class="font-weight-light">Includes</div>
               <ul class="font-weight-light">
                 <li>Full Nest access during regularly scheduled hours</li>
@@ -129,25 +147,25 @@
                 <li>Some Special Guests</li>
                 <li>Some Special Events</li>
               </ul>
-            </div>
-            <div class="pt-3">
-              <div class="d-flex justify-content-start align-items-center">
-                <div class="pr-3">
-                  <div class="text-muted text-center bg-light p-3">Pay Upon Arrival via Credit or Debit only</div>
-                </div>
-                <div>
-                  <div class="h5 mb-0">$19.99</div>
-                  <div class="mb-2 small font-weight-light">All prices subject to HST</div>
-                  <div class="">Mama + Little (2nd Child is FREE)</div>
-                  <div class="">Children 6-40 months recommended</div>
-                </div>
-              </div>
             </div>
           </div>
           <hr />
           <div class="pb-5">
             <div class="h3 font-weight-bold">6 Visit Pass</div>
-            <div>
+            <div class="py-3">
+              <div class="d-flex justify-content-start align-items-center">
+                <div class="pr-3">
+                  <a class="btn btn-primary btn-lg" href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10692769&loc=" target="_blank"> Register </a>
+                </div>
+                <div>
+                  <div class="h5 mb-0">$99.99/month</div>
+                  <div class="small font-weight-light">All prices subject to HST</div>
+                </div>
+              </div>
+            </div>
+            <div class="h6">Mama + Little (2nd Child is FREE)</div>
+            <div class="h6">Children 6-40 months recommended</div>
+            <div class="pt-3">
               <div class="font-weight-light">Includes</div>
               <ul class="font-weight-light">
                 <li>Full Nest access during regularly scheduled hours</li>
@@ -156,19 +174,6 @@
                 <li>Some Special Guests</li>
                 <li>Some Special Events</li>
               </ul>
-            </div>
-            <div class="pt-3">
-              <div class="d-flex justify-content-start align-items-center">
-                <div class="pr-3">
-                  <a class="btn btn-primary btn-lg" href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10692769&loc=" target="_blank"> Register </a>
-                </div>
-                <div>
-                  <div class="h5 mb-0">$99.99/month</div>
-                  <div class="mb-2 small font-weight-light">All prices subject to HST</div>
-                  <div class="">Mama + Little (2nd Child is FREE)</div>
-                  <div class="">Children 6-40 months recommended</div>
-                </div>
-              </div>
             </div>
           </div>
           <!-- <div class="row">
