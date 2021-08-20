@@ -18,9 +18,7 @@
         <div ng-repeat="event in day.events" class="event">
           <div class="banner" ng-bind-html="event.banner | to_trusted"></div>
           <div class="title" ng-bind-html="event.title | to_trusted"></div>
-          <div class="time" ng-if="event.starttime">
-            {{event.starttime | date:'shortTime'}} - {{event.endtime | date:'shortTime'}}
-          </div>
+          <div class="time" ng-if="event.starttime">{{event.starttime | date:'shortTime'}} - {{event.endtime | date:'shortTime'}}</div>
           <div class="caption" ng-bind-html="event.caption | to_trusted"></div>
         </div>
         <div class="footer" ng-if="day.footer" ng-bind-html="day.footer | to_trusted">{{day.footer}}</div>
