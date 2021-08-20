@@ -41,7 +41,7 @@ myApp.service("dataService", function ($http) {
     });
   };
   this.getEvents = function (callbackFunc) {
-    $http.get("./../data/events-new.json").then(function (data) {
+    $http.get("./data/events-new.json").then(function (data) {
       callbackFunc(data);
     });
   };
