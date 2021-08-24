@@ -1,5 +1,6 @@
 <div class="calendar" ng-init="loadCalendar()">
-  <div ng-repeat="month in calendar | filter:{name:param.month}" class="month">
+  <div ng-show="results.length < 1" class="h5 mb-0 font-weight-light py-4 text-center">Our calendar is being updated. Please check back soon!</div>
+  <div ng-show="results.length > 0" ng-repeat="month in results = (calendar | filter:{name:param.month})" class="month">
     <!-- <div ng-repeat="month in calendar" class="month"> -->
     <div class="monthname">{{month.name}}</div>
     <div class="day-of-week">

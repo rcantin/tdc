@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+<html lang="en" ng-app="myApp" ng-controller="MainController">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -15,7 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js" integrity="sha256-23hi0Ag650tclABdGCdMNSjxvikytyQ44vYGo9HyOrU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-animate.min.js" integrity="sha256-biQnzwpmTVb5ZZDRDiU8iwbj7ZPTH9SZSxn5gewyFA0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js" integrity="sha256-jZRUyy674QanjfVAn9YBW+d1iuxj8csDOxrwS35/GLo=" crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>
+    <script src="js/app-w-classes.js"></script>
   </head>
   <body ng-cloak>
     <div class="d-none d-md-block" ng-include src="'banner.html'"></div>
@@ -51,72 +51,84 @@
         <div class="px-3">Extra Littles (under 6 months)</div>
       </div>
 
-      <div class="row">
+      <div class="row" ng-init="getClasses('Family Tree', '', ''); brandColor='pink';" ng-controller="ClassController">
         <div class="col-12 col-lg-7 col-xl-7">
           <!-- <hr /> -->
           <div class="pb-5">
-            <div class="h3 font-weight-bold">The Nest</div>
-            <div class="pb-3">
-              <div class="">
-                <span class="text-nowrap">Open Tuesday to Thursday:</span>
-                <span class="text-nowrap">9:30 AM <span>to</span> 2:00 PM</span>
-              </div>
-            </div>
-            <div class="pb-3">
-              <div class="d-flex justify-content-start align-items-center">
-                <div class="pr-3">
-                  <a class="btn btn-primary btn-lg" href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10692769&loc=" target="_blank"> Register </a>
-                </div>
-                <div>
-                  <div class="h5 mb-0">One-time registration <span class="text-nowrap">fee of $39.99</span></div>
-                  <div class="small font-weight-light">All prices subject to HST</div>
+            <div ng-repeat="item in classes | filter:{name:'the nest'} | limitTo:1">
+              <div class="h3 font-weight-bold">The Nest</div>
+              <div class="pb-3">
+                <div class="">
+                  <span class="text-nowrap">Open Tuesday to Thursday:</span>
+                  <span class="text-nowrap">9:30 AM <span>to</span> 2:00 PM</span>
                 </div>
               </div>
-            </div>
-            <div class="h6">Child under 6 months are FREE</div>
-            <div>
-              <div class="font-weight-light pb-2">
-                Our beautiful 3600 sq/ft lounge area where Mamas can relax while they nurture their Littles, and grow new friendships. Our Nest is equipped with two large-screen televisions for educational programming, sofas, lounge chairs, and additional seating, enclosed play area with lots of fun
-                toys for Littles, change tables, change areas, water station, wi-fi.
+              <div class="pb-3">
+                <div class="d-flex justify-content-start align-items-center">
+                  <div class="pr-3">
+                    <div ng-if="!item.online_reg_link" class="small font-weight-light font-italic">Contact us for registration</div>
+                    <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="btn btn-primary btn-lg">
+                      <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                      <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                    </a>
+                  </div>
+                  <div>
+                    <div class="h5 mb-0">One-time registration <span class="text-nowrap">fee of $39.99</span></div>
+                    <div class="small font-weight-light">All prices subject to HST</div>
+                  </div>
+                </div>
               </div>
-              <div class="font-weight-light">Includes</div>
-              <ul class="font-weight-light">
-                <li>Full Nest access during regularly scheduled hours</li>
-                <li>Classes and Open Gym excluded</li>
-                <li>Special Guests and Events may be an additional charge</li>
-              </ul>
+              <div class="h6">Child under 6 months are FREE</div>
+              <div>
+                <div class="font-weight-light pb-2">
+                  Our beautiful 3600 sq/ft lounge area where Mamas can relax while they nurture their Littles, and grow new friendships. Our Nest is equipped with two large-screen televisions for educational programming, sofas, lounge chairs, and additional seating, enclosed play area with lots of
+                  fun toys for Littles, change tables, change areas, water station, wi-fi.
+                </div>
+                <div class="font-weight-light">Includes</div>
+                <ul class="font-weight-light">
+                  <li>Full Nest access during regularly scheduled hours</li>
+                  <li>Classes and Open Gym excluded</li>
+                  <li>Special Guests and Events may be an additional charge</li>
+                </ul>
+              </div>
             </div>
           </div>
           <hr />
           <div class="pb-5">
-            <div class="h3 font-weight-bold">Family Tree All Access</div>
-            <div class="py-3">
-              <div class="d-flex justify-content-start align-items-center">
-                <div class="pr-3">
-                  <a class="btn btn-primary btn-lg" href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10692769&loc=" target="_blank"> Register </a>
-                </div>
-                <div>
-                  <div class="h5 mb-0">$89.99/month</div>
-                  <div class="small font-weight-light">All prices subject to HST</div>
+            <div ng-repeat="item in classes | filter:{name:'family tree'}">
+              <div class="h3 font-weight-bold">Family Tree All Access</div>
+              <div class="py-3">
+                <div class="d-flex justify-content-start align-items-center">
+                  <div class="pr-3">
+                    <div ng-if="!item.online_reg_link" class="small font-weight-light font-italic">Contact us for registration</div>
+                    <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="btn btn-primary btn-lg">
+                      <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                      <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                    </a>
+                  </div>
+                  <div>
+                    <div class="h5 mb-0">$89.99/month</div>
+                    <div class="small font-weight-light">All prices subject to HST</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="h6">Mama + Little (2nd Child is FREE)</div>
-            <div class="h6">Children 6-40 months recommended</div>
-            <div>
-              <div class="font-weight-light pb-2">
-                We provide our Mamas and their Littles with fun activities, events, programs and resources designed to enhance both physical and social development all within our stunning, 20,000 sq/ft state-of-the-art facility. Our Family Tree Memberships include full Nest access, as well as every
-                activity listed on our calendar, including Open Gym, and access to nearly all Special Guests and Events.
+              <div class="h6">Mama + Little (2nd Child is FREE)</div>
+              <div class="h6">Children 6-40 months recommended</div>
+              <div>
+                <div class="font-weight-light pb-2">
+                  We provide our Mamas and their Littles with fun activities, events, programs and resources designed to enhance both physical and social development all within our stunning, 20,000 sq/ft state-of-the-art facility. Our Family Tree Memberships include full Nest access, as well as
+                  every activity listed on our calendar, including Open Gym, and access to nearly all Special Guests and Events.
+                </div>
+                <div class="font-weight-light">Includes</div>
+                <ul class="font-weight-light">
+                  <li>Full Nest access during regularly scheduled hours</li>
+                  <li>Open Gym access</li>
+                  <li>All weekly classes based on available spaces</li>
+                  <li>Some Special Guests</li>
+                  <li>Some Special Events</li>
+                  <li>Extra Littles are FREE and limited to The Nest Membership structure</li>
+                </ul>
               </div>
-              <div class="font-weight-light">Includes</div>
-              <ul class="font-weight-light">
-                <li>Full Nest access during regularly scheduled hours</li>
-                <li>Open Gym access</li>
-                <li>All weekly classes based on available spaces</li>
-                <li>Some Special Guests</li>
-                <li>Some Special Events</li>
-                <li>Extra Littles are FREE and limited to The Nest Membership structure</li>
-              </ul>
             </div>
           </div>
           <hr />
@@ -151,29 +163,35 @@
           </div>
           <hr />
           <div class="pb-5">
-            <div class="h3 font-weight-bold">6 Visit Pass</div>
-            <div class="py-3">
-              <div class="d-flex justify-content-start align-items-center">
-                <div class="pr-3">
-                  <a class="btn btn-primary btn-lg" href="https://app.jackrabbitclass.com/reg.asp?id=520628&hc=&initEmpty=&hdrColor=&WL=0&preLoadClassID=10692769&loc=" target="_blank"> Register </a>
-                </div>
-                <div>
-                  <div class="h5 mb-0">$99.99</div>
-                  <div class="small font-weight-light">All prices subject to HST</div>
+            <div ng-repeat="item in classes | filter:{name:'6 visit pass'}">
+              <div class="h3 font-weight-bold">6 Visit Pass</div>
+              <div class="py-3">
+                <div class="d-flex justify-content-start align-items-center">
+                  <div class="pr-3">
+                    <div ng-if="!item.online_reg_link" class="small font-weight-light font-italic">Contact us for registration</div>
+                    <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank" class="btn btn-primary btn-lg">
+                      <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                      <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                    </a>
+                  </div>
+                  <div>
+                    <div class="h5 mb-0">$99.99</div>
+                    <div class="small font-weight-light">All prices subject to HST</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="h6">Mama + Little (2nd Child is FREE)</div>
-            <div class="h6">Children 6-40 months recommended</div>
-            <div class="pt-3">
-              <div class="font-weight-light">Includes</div>
-              <ul class="font-weight-light">
-                <li>Full Nest access during regularly scheduled hours</li>
-                <li>Open Gym access</li>
-                <li>Daily classes based on available spaces</li>
-                <li>Some Special Guests</li>
-                <li>Some Special Events</li>
-              </ul>
+              <div class="h6">Mama + Little (2nd Child is FREE)</div>
+              <div class="h6">Children 6-40 months recommended</div>
+              <div class="pt-3">
+                <div class="font-weight-light">Includes</div>
+                <ul class="font-weight-light">
+                  <li>Full Nest access during regularly scheduled hours</li>
+                  <li>Open Gym access</li>
+                  <li>Daily classes based on available spaces</li>
+                  <li>Some Special Guests</li>
+                  <li>Some Special Events</li>
+                </ul>
+              </div>
             </div>
           </div>
           <!-- <div class="row">

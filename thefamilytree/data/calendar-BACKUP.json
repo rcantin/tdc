@@ -1,0 +1,913 @@
+[
+  {
+    "name": "February",
+    "shortname": "Feb",
+    "offset": "7",
+    "days": [
+      {
+        "day": "2020-02-01",
+        "events": []
+      },
+      {
+        "day": "2020-02-02",
+        "events": []
+      },
+      {
+        "day": "2020-02-03",
+        "events": []
+      },
+      {
+        "day": "2020-02-04",
+        "events": []
+      },
+      {
+        "day": "2020-02-05",
+        "events": []
+      },
+      {
+        "day": "2020-02-06",
+        "events": []
+      },
+      {
+        "day": "2020-02-07",
+        "events": []
+      },
+      {
+        "day": "2020-02-08",
+        "events": []
+      },
+      {
+        "day": "2020-02-09",
+        "events": []
+      },
+      {
+        "day": "2020-02-10",
+        "events": []
+      },
+      {
+        "day": "2020-02-11",
+        "events": []
+      },
+      {
+        "day": "2020-02-12",
+        "events": []
+      },
+      {
+        "day": "2020-02-13",
+        "events": []
+      },
+      {
+        "day": "2020-02-14",
+        "events": []
+      },
+      {
+        "day": "2020-02-15",
+        "events": []
+      },
+      {
+        "day": "2020-02-16",
+        "events": []
+      },
+      {
+        "day": "2020-02-17",
+        "events": []
+      },
+      {
+        "day": "2020-02-18",
+        "events": []
+      },
+      {
+        "day": "2020-02-19",
+        "events": []
+      },
+      {
+        "day": "2020-02-20",
+        "events": []
+      },
+      {
+        "day": "2020-02-21",
+        "events": []
+      },
+      {
+        "day": "2020-02-22",
+        "events": []
+      },
+      {
+        "day": "2020-02-23",
+        "events": []
+      },
+      {
+        "day": "2020-02-24",
+        "banner": "Welcome to the Family Tree!<div class='small'>Photo booth & goodies!</div>",
+        "footer": "Giveaways will be drawn at 2pm & pickup is the following day at the Family Tree",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-02-24T09:30:00",
+            "endtime": "2020-02-24T14:00:00"
+          },
+          {
+            "title": "Colours, Textures & Sound Sensory for your Littles",
+            "caption": "",
+            "starttime": "2020-02-24T10:00:00",
+            "endtime": "2020-02-24T11:00:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-02-24T11:00:00",
+            "endtime": "2020-02-24T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-02-25",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-02-25T09:30:00",
+            "endtime": "2020-02-25T14:00:00"
+          },
+          {
+            "title": "Mama & Mini Flow Yoga with Andrea Mina",
+            "caption": "Bring your mats and flow with us. Extra mats provided if needed!",
+            "starttime": "2020-02-25T10:00:00",
+            "endtime": "2020-02-25T10:30:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-02-25T10:30:00",
+            "endtime": "2020-02-25T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-02-26",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-02-26T09:30:00",
+            "endtime": "2020-02-26T14:00:00"
+          },
+          {
+            "title": "Mama & Mini Workout",
+            "caption": "Alana, Owner at Barbella",
+            "starttime": "2020-02-26T11:00:00",
+            "endtime": "2020-02-26T11:45:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-02-26T10:30:00",
+            "endtime": "2020-02-26T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-02-27",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-02-27T09:30:00",
+            "endtime": "2020-02-27T14:00:00"
+          },
+          {
+            "title": "Messy Art",
+            "caption": "",
+            "starttime": "2020-02-27T09:45:00",
+            "endtime": "2020-02-27T10:25:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-02-27T11:00:00",
+            "endtime": "2020-02-27T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-02-28",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-02-28T09:30:00",
+            "endtime": "2020-02-28T13:00:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-02-28T09:30:00",
+            "endtime": "2020-02-28T13:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-02-29",
+        "events": []
+      }
+    ]
+  },
+  {
+    "name": "March",
+    "shortname": "Mar",
+    "offset": "1",
+    "days": [
+      {
+        "day": "2020-03-01",
+        "events": []
+      },
+      {
+        "day": "2020-03-02",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-03-02T09:30:00",
+            "endtime": "2020-03-02T14:00:00"
+          },
+          {
+            "title": "Sensory Play",
+            "caption": "",
+            "starttime": "2020-03-02T10:00:00",
+            "endtime": "2020-03-02T10:30:00"
+          },
+          {
+            "title": "Mama & Mini Yoga Flow",
+            "caption": "with Andrea Mina",
+            "starttime": "2020-03-02T10:45:00",
+            "endtime": "2020-03-02T11:30:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-03-02T11:00:00",
+            "endtime": "2020-03-02T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-03-03",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-03-03T09:30:00",
+            "endtime": "2020-03-03T14:00:00"
+          },
+          {
+            "title": "Mom & Littles Nutrition",
+            "caption": "Dr. Laura from Kinstruct Health",
+            "starttime": "2020-03-02T10:00:00",
+            "endtime": "2020-03-02T10:30:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-03-03T10:30:00",
+            "endtime": "2020-03-03T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-03-04",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-03-04T09:30:00",
+            "endtime": "2020-03-04T14:00:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-03-04T10:30:00",
+            "endtime": "2020-03-04T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-03-05",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-03-05T09:30:00",
+            "endtime": "2020-03-05T14:00:00"
+          },
+          {
+            "title": "Messy Art",
+            "caption": "",
+            "starttime": "2020-03-05T09:45:00",
+            "endtime": "2020-03-05T10:25:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-03-05T11:00:00",
+            "endtime": "2020-03-05T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-03-06",
+        "events": [
+          {
+            "title": "PA Day.  ENJOY!",
+            "caption": "We're closed.  See you Monday!",
+            "starttime": "",
+            "endtime": ""
+          }
+        ]
+      },
+      {
+        "day": "2020-03-07",
+        "events": []
+      },
+      {
+        "day": "2020-03-08",
+        "events": []
+      },
+      {
+        "day": "2020-03-09",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-03-09T09:30:00",
+            "endtime": "2020-03-09T14:00:00"
+          },
+          {
+            "title": "Sensory Play",
+            "caption": "",
+            "starttime": "2020-03-09T10:00:00",
+            "endtime": "2020-03-09T10:30:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-03-09T11:00:00",
+            "endtime": "2020-03-09T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-03-10",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-03-10T09:30:00",
+            "endtime": "2020-03-10T14:00:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-03-10T10:30:00",
+            "endtime": "2020-03-10T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-03-11",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-03-11T09:30:00",
+            "endtime": "2020-03-11T14:00:00"
+          },
+          {
+            "title": "Strong Mama & Mini Workout",
+            "caption": "Alana, Barbella",
+            "starttime": "2020-03-11T11:00:00",
+            "endtime": "2020-03-11T11:45:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-03-11T10:30:00",
+            "endtime": "2020-03-11T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-03-12",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-03-12T09:30:00",
+            "endtime": "2020-03-12T14:00:00"
+          },
+          {
+            "title": "Messy Art",
+            "caption": "",
+            "starttime": "2020-03-12T10:15:00",
+            "endtime": "2020-03-12T10:45:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-03-12T11:00:00",
+            "endtime": "2020-03-12T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-03-13",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-03-13T09:30:00",
+            "endtime": "2020-03-13T13:00:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-03-13T09:30:00",
+            "endtime": "2020-03-13T13:00:00"
+          },
+          {
+            "title": "Pyjama Day!",
+            "caption": "Everyone wear your PJs all day!",
+            "starttime": "",
+            "endtime": ""
+          }
+        ]
+      },
+      {
+        "day": "2020-03-14",
+        "events": []
+      },
+      {
+        "day": "2020-03-15",
+        "events": []
+      },
+      {
+        "day": "2020-03-16",
+        "events": [
+          {
+            "title": "March Break",
+            "caption": "No classes",
+            "starttime": "",
+            "endtime": ""
+          }
+        ]
+      },
+      {
+        "day": "2020-03-17",
+        "events": [
+          {
+            "title": "March Break",
+            "caption": "No classes",
+            "starttime": "",
+            "endtime": ""
+          }
+        ]
+      },
+      {
+        "day": "2020-03-18",
+        "events": [
+          {
+            "title": "March Break",
+            "caption": "No classes",
+            "starttime": "",
+            "endtime": ""
+          }
+        ]
+      },
+      {
+        "day": "2020-03-19",
+        "events": [
+          {
+            "title": "March Break",
+            "caption": "No classes",
+            "starttime": "",
+            "endtime": ""
+          }
+        ]
+      },
+      {
+        "day": "2020-03-20",
+        "events": [
+          {
+            "title": "March Break",
+            "caption": "No classes",
+            "starttime": "",
+            "endtime": ""
+          }
+        ]
+      },
+      {
+        "day": "2020-03-21",
+        "events": []
+      },
+      {
+        "day": "2020-03-22",
+        "events": []
+      },
+      {
+        "day": "2020-03-23",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-03-23T09:30:00",
+            "endtime": "2020-03-23T14:00:00"
+          },
+          {
+            "title": "Sensory Play",
+            "caption": "",
+            "starttime": "2020-03-23T09:45:00",
+            "endtime": "2020-03-23T10:25:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-03-23T11:00:00",
+            "endtime": "2020-03-23T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-03-24",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-03-24T09:30:00",
+            "endtime": "2020-03-24T14:00:00"
+          },
+          {
+            "title": "Dance with Mamas & Littles",
+            "caption": "Sarah Sordoni, Director, Dream Centre",
+            "starttime": "2020-03-24T09:45:00",
+            "endtime": "2020-03-24T10:30:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-03-24T10:30:00",
+            "endtime": "2020-03-24T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-03-25",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-03-25T09:30:00",
+            "endtime": "2020-03-25T14:00:00"
+          },
+          {
+            "title": "Strong Mama & Mini Workout",
+            "caption": "Alana , Barbella",
+            "starttime": "2020-03-25T12:00:00",
+            "endtime": "2020-03-25T12:30:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-03-25T10:30:00",
+            "endtime": "2020-03-25T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-03-26",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-03-26T09:30:00",
+            "endtime": "2020-03-26T14:00:00"
+          },
+          {
+            "title": "Craft Time",
+            "caption": "",
+            "starttime": "2020-03-26T10:00:00",
+            "endtime": "2020-03-26T10:30:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-03-26T11:00:00",
+            "endtime": "2020-03-26T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-03-27",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-03-27T09:30:00",
+            "endtime": "2020-03-27T13:00:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-03-27T09:30:00",
+            "endtime": "2020-03-27T13:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-03-28",
+        "events": []
+      },
+      {
+        "day": "2020-03-29",
+        "events": []
+      },
+      {
+        "day": "2020-03-30",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-03-30T09:30:00",
+            "endtime": "2020-03-30T14:00:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-03-30T11:00:00",
+            "endtime": "2020-03-30T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-03-31",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2020-03-31T09:30:00",
+            "endtime": "2020-03-31T14:00:00"
+          },
+          {
+            "title": "Side Note Boutique is coming to talk style for every mama post baby!",
+            "caption": "",
+            "starttime": "2020-03-31T09:45:00",
+            "endtime": "2020-03-31T10:30:00"
+          },
+          {
+            "title": "Open Gym",
+            "caption": "",
+            "starttime": "2020-03-31T10:30:00",
+            "endtime": "2020-03-31T14:00:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "April",
+    "shortname": "Apr",
+    "offset": "4",
+    "days": [
+      {
+        "day": "2020-04-01",
+        "events": []
+      },
+      {
+        "day": "2020-04-02",
+        "events": []
+      },
+      {
+        "day": "2020-04-03",
+        "events": []
+      },
+      {
+        "day": "2020-04-04",
+        "events": []
+      },
+      {
+        "day": "2020-04-05",
+        "events": []
+      },
+      {
+        "day": "2020-04-06",
+        "events": []
+      },
+      {
+        "day": "2020-04-07",
+        "events": []
+      },
+      {
+        "day": "2020-04-08",
+        "events": []
+      },
+      {
+        "day": "2020-04-09",
+        "events": []
+      },
+      {
+        "day": "2020-04-10",
+        "events": []
+      },
+      {
+        "day": "2020-04-11",
+        "events": []
+      },
+      {
+        "day": "2020-04-12",
+        "events": []
+      },
+      {
+        "day": "2020-04-13",
+        "events": []
+      },
+      {
+        "day": "2020-04-14",
+        "events": []
+      },
+      {
+        "day": "2020-04-15",
+        "events": []
+      },
+      {
+        "day": "2020-04-16",
+        "events": []
+      },
+      {
+        "day": "2020-04-17",
+        "events": []
+      },
+      {
+        "day": "2020-04-18",
+        "events": []
+      },
+      {
+        "day": "2020-04-19",
+        "events": []
+      },
+      {
+        "day": "2020-04-20",
+        "events": []
+      },
+      {
+        "day": "2020-04-21",
+        "events": []
+      },
+      {
+        "day": "2020-04-22",
+        "events": []
+      },
+      {
+        "day": "2020-04-23",
+        "events": []
+      },
+      {
+        "day": "2020-04-24",
+        "events": []
+      },
+      {
+        "day": "2020-04-25",
+        "events": []
+      },
+      {
+        "day": "2020-04-26",
+        "events": []
+      },
+      {
+        "day": "2020-04-27",
+        "events": []
+      },
+      {
+        "day": "2020-04-28",
+        "events": []
+      },
+      {
+        "day": "2020-04-29",
+        "events": []
+      },
+      {
+        "day": "2020-04-30",
+        "events": []
+      }
+    ]
+  },
+  {
+    "name": "September",
+    "shortname": "Sep",
+    "offset": "4",
+    "days": [
+      {
+        "day": "2021-09-01",
+        "events": [
+          {
+            "title": "Nest",
+            "caption": "",
+            "starttime": "2021-09-01T09:30:00",
+            "endtime": "2021-09-01T14:00:00"
+          },
+          {
+            "title": "Something Else",
+            "caption": "",
+            "starttime": "2021-09-01T11:00:00",
+            "endtime": "2021-09-01T14:00:00"
+          }
+        ]
+      },
+      {
+        "day": "2020-09-02"
+      },
+      {
+        "day": "2020-09-03"
+      },
+      {
+        "day": "2020-09-04"
+      },
+      {
+        "day": "2020-09-05"
+      },
+      {
+        "day": "2020-09-06"
+      },
+      {
+        "day": "2020-09-07"
+      },
+      {
+        "day": "2020-09-08"
+      },
+      {
+        "day": "2020-09-09"
+      },
+      {
+        "day": "2020-09-10"
+      },
+      {
+        "day": "2020-09-11"
+      },
+      {
+        "day": "2020-09-12"
+      },
+      {
+        "day": "2020-09-13"
+      },
+      {
+        "day": "2020-09-14"
+      },
+      {
+        "day": "2020-09-15"
+      },
+      {
+        "day": "2020-09-16"
+      },
+      {
+        "day": "2020-09-17"
+      },
+      {
+        "day": "2020-09-18"
+      },
+      {
+        "day": "2020-09-19"
+      },
+      {
+        "day": "2020-09-20"
+      },
+      {
+        "day": "2020-09-21"
+      },
+      {
+        "day": "2020-09-22"
+      },
+      {
+        "day": "2020-09-23"
+      },
+      {
+        "day": "2020-09-24"
+      },
+      {
+        "day": "2020-09-25"
+      },
+      {
+        "day": "2020-09-26"
+      },
+      {
+        "day": "2020-09-27"
+      },
+      {
+        "day": "2020-09-28"
+      },
+      {
+        "day": "2020-09-29"
+      },
+      {
+        "day": "2020-09-30"
+      }
+    ]
+  }
+]
