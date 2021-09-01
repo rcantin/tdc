@@ -44,8 +44,8 @@
   },
   {
     "startdate": "2021-12-20",
-    "enddate": "2022-01-02",
-    "description": "No Classes Winter Break"
+    "enddate": "2022-01-03",
+    "description": "No Classes - Winter Break"
   },
   {
     "startdate": "2021-12-27",
@@ -90,6 +90,11 @@
   {
     "startdate": "2022-03-14",
     "enddate": "2022-03-18",
+    "description": "No Classes - March Break"
+  },
+  {
+    "startdate": "2022-03-14",
+    "enddate": "2022-03-18",
     "description": "March Break Camp"
   },
   {
@@ -121,5 +126,10 @@
   {
     "startdate": "2022-06-18",
     "description": "Last Day of Classes"
+  },
+  {
+    "startdate": "2022-07-18",
+    "enddate": "2022-07-21",
+    "description": "Competitive Dance Intensive"
   }
 ]
