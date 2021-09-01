@@ -42,16 +42,25 @@
     "name": "Anthony Smith",
     "title": "Hip Hop",
     "photo": "./img/faculty/dance/as01.jpg",
-    "bio": "<p>With over 15 years’ experience in the dance industry, Ambitious Anthony does nothing less than inspire every dancer he works with. In March of 2010, he created Ambitious Movement (AM). His vision was to bring professional trainers in street dance (Waving, Popping, Tutting, Breaking, House, party dances) mixed with his hip-hop choreography to dancers, developing a strong foundation in hip-hop and street dance technique. Since then AM was the runner up of Much Music's New.Music.Live Best Dance Crew, has featured dancers on the 2018 iHeartRadio Much Music Video Awards, the Family Channel’s “The Next Step”, Xbox's Dance Central commercial, a Toronto Public Health commercial, a Chapman’s Ice Cream commercial, WE Day Toronto and the hype crew for New Year’s Eve 2014 at Mississauga’s Celebration Square.</p><p>In addition, Ambitious Anthony has choreographed and artistically directed eleven theatre productions and numerous corporate events for companies including Nike, Walmart, Hugo Boss and Diet Pepsi Max, to name a few. He has also choreographed for local artists and has opened for artists such as T-Pain, Ciara and Ludacris.</p><p>\"Why settle for less? Be ambitious!\" This is not only his company slogan, but his way of life that he aims to pass on to every dancer he works with.</p>"
+    "bio": "<p>With over 15 years’ experience in the dance industry, Ambitious Anthony does nothing less than inspire every dancer he works with. In March of 2010, he created Ambitious Movement (AM). His vision was to bring professional trainers in street dance (Waving, Popping, Tutting, Breaking, House, party dances) mixed with his hip-hop choreography to dancers, developing a strong foundation in hip-hop and street dance technique. Since then AM was the runner up of Much Music's New.Music.Live Best Dance Crew, has featured dancers on the 2018 iHeartRadio Much Music Video Awards, the Family Channel’s \"The Next Step\", Xbox's Dance Central commercial, a Toronto Public Health commercial, a Chapman’s Ice Cream commercial, WE Day Toronto and the hype crew for New Year’s Eve 2014 at Mississauga’s Celebration Square.</p><p>In addition, Ambitious Anthony has choreographed and artistically directed eleven theatre productions and numerous corporate events for companies including Nike, Walmart, Hugo Boss and Diet Pepsi Max, to name a few. He has also choreographed for local artists and has opened for artists such as T-Pain, Ciara and Ludacris.</p><p>\"Why settle for less? Be ambitious!\" This is not only his company slogan, but his way of life that he aims to pass on to every dancer he works with.</p>"
+  },
+  {
+    "ord": 10,
+    "category": "dance",
+    "colour": "pink",
+    "name": "Megan Caines",
+    "title": "Acro",
+    "photo": "./img/faculty/dance/mc01.jpg",
+    "bio": "<p>Megan Caines is a passionate performer born and raised in Richmond Hill, Ontario. She found her love for dance at Vlad’s Dance Company at the age of 13, where she began to grow and evolve into the artist she is today. She has trained in ballet, pointe, jazz, acrobatics, partnering, contemporary, hip-hop, ballroom, modern, freestyle, tumbling, choreography, musical theatre, acting, singing and modelling. Megan has won numerous awards as a soloist and duet partner including 1st -  Runner up Senior Soloist at The Dance Awards in Florida and was also asked to represent Dancer Palooza as a member of the 2017 & 2018 Beat Squad in Los Angeles. Megan has also been featured as an Actress/Dancer/Singer in many television shows such as Family Channel’s \"The Next Step\", Disney Channel’s \"Backstage\", \"Degrassi\", \"Star Trek'', Hallmark’s Movie – \"Magical Christmas Ornament\", \"Disney Zombies 2\", \"Disney Zombies 3\" and performed in a new Netflix original \"Ginny and Georgia''. Megan has worked at the Stratford Festival and in those 10 months she starred Gracie Shinn in the \"Music Man\", performed \"The Shining People of Leonard Cohen\" at the PAL Event, took part in \"The Lab Track\" and also helped workshop the Romeo and Juliet Remix. Megan performed 42 shows as a Dancer and Magician’s Assistant on \"The Illusionists, Live from Broadway\". She has also performed in 11 shows with the professional dance company \"Bridge to Artists\". This performer has starred in many promotional events including \"The Nut Cracker\" for MAC Cosmetics as well as \"Welcoming Spring\" for the Eaton Centre. She also teaches and shares her knowledge with young dancers across Canada. Megan recently became a certified personal trainer and barre instructor. She created her own 4 Week Fitness Challenge eBook called \"Elevate your Game\" to help dancers cross train and get in their best shape. Megan continues to dance, act, sing and teach and is excited to grow as an artist and reach new goals in this upcoming year.</p>"
   },
   {
     "ord": 11,
     "category": "dance",
     "colour": "pink",
     "name": "Kaelyn Hine",
-    "title": "Competitive and Recreational Dance Assistant",
+    "title": "Recreational Dance Instructor/Assistant",
     "photo": "./img/faculty/dance/kh01.jpg",
-    "bio": "<p>Kaelyn is a grade 10 honours student. She started dance when she was 4 years old and has been a competitive dancer since she was 7. She has received several special awards, placed overall and won scholarships over the years. Dance is Kaelyn's passion.  Not only is it physically challenging but it allows her to express herself. It brings her so much joy watching the younger students learn and grow.  She loves dancing and teaching at TDC!</p>"
+    "bio": "<p>Kaelyn is a grade 11 honours student. She started dance when she was 4 years old and has been a competitive dancer since she was 7. She has received several special awards, placed overall and won scholarships over the years. Dance is Kaelyn's passion. Not only is it physically challenging but it allows her to express herself. Kaelyn has been teaching the younger students at The Dream centre for 3 years now. It brings her so much joy watching her students learn and grow. She loves dancing and teaching at TDC!</p>"
   },
   {
     "ord": 13,
@@ -63,13 +72,22 @@
     "bio": "<p>Emma started dancing at The Dream Center at five years old and has been part of the competitive team since the age of nine. Dancing at TDC competitively has given Emma the opportunities to attend the NBS summer program, be part of the World Performers national team, and most recently she got accepted to the Apprentice division of The Rhythm Ensemble. Emma loves all styles of dance, but her favourites are Tap and Hip Hop. Outside of dance, Emma loves using her artistic skill to paint and draw. She will be a teaching intern for two classes this year and looks forward to helping students enjoy their time at The Dream Center.</p>"
   },
   {
+    "ord": 14,
+    "category": "dance",
+    "colour": "pink",
+    "name": "Leah Stevenson",
+    "photo": "./img/faculty/dance/ls01.jpg",
+    "title": "Recreational Dance Instructor/Assistant",
+    "bio": "<p>Leah started dancing at The Dream Centre at age 7 and started competing a year later at age 8. Since then, Leah’s passion for dance has grown and her personal style has evolved. She’s trained in ballet, jazz, acro, lyrical, and contemporary. Dancing competitively not only demands physical and mental strength, but also allows her to express herself creatively and learn valuable lessons. Teaching young dancers to love the art and grow in many ways, inspires Leah and brings her so much joy.</p>"
+  },
+  {
     "ord": 1,
     "category": "theatre",
     "colour": "red",
     "name": "Jo Payne",
     "photo": "./img/faculty/theatre/jp.jpg",
     "title": "Star Project Director",
-    "bio": "<p>Jo is a British Director and Performer and owner of The Star Project.</p><p>Jo graduated from The Midlands Academy of Dance and Drama, Nottingham, UK with a distinction in 2006, along with her Teaching Associate qualification with IDTA. Since then Jo has had extensive professional experience within the arts with credits in TV, film and theatre. Travelling to Paris, Edinburgh and now Canada with her work.</p><p>After graduating it was Jo’s vision to create a happy and inspiring theatre school that had a family atmosphere in the area where she had grown up. Jo’s vision was a place where children could discover and grow their talents, build confidence and learn skills every week where she and her team could “capture their imagination”.</p><p>Over 13 years later and The Star Project has welcomed over a thousand children through its doors. As SP continues to flourish, Jo runs the first international franchise of that school here at The Dream Centre with Musical Theatre classes along with continuing to write and create new material for theatre and her other venture ZOOMSICAL. www.zoomsical.co.uk</p>"
+    "bio": "<p>Jo is a British Director and Performer and owner of The Star Project.</p><p>Jo graduated from The Midlands Academy of Dance and Drama, Nottingham, UK with a distinction in 2006, along with her Teaching Associate qualification with IDTA. Since then Jo has had extensive professional experience within the arts with credits in TV, film and theatre. Travelling to Paris, Edinburgh and now Canada with her work.</p><p>After graduating it was Jo’s vision to create a happy and inspiring theatre school that had a family atmosphere in the area where she had grown up. Jo’s vision was a place where children could discover and grow their talents, build confidence and learn skills every week where she and her team could \"capture their imagination\".</p><p>Over 13 years later and The Star Project has welcomed over a thousand children through its doors. As SP continues to flourish, Jo runs the first international franchise of that school here at The Dream Centre with Musical Theatre classes along with continuing to write and create new material for theatre and her other venture ZOOMSICAL. www.zoomsical.co.uk</p>"
   },
   {
     "ord": 1,
