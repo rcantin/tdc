@@ -90,6 +90,15 @@
     "bio": "<p>Leah started dancing at The Dream Centre at age 7 and started competing a year later at age 8. Since then, Leah’s passion for dance has grown and her personal style has evolved. She’s trained in ballet, jazz, acro, lyrical, and contemporary. Dancing competitively not only demands physical and mental strength, but also allows her to express herself creatively and learn valuable lessons. Teaching young dancers to love the art and grow in many ways, inspires Leah and brings her so much joy.</p>"
   },
   {
+    "ord": 15,
+    "category": "dance",
+    "colour": "pink",
+    "name": "Sami Tavares",
+    "photo": "./img/faculty/dance/st01.jpg",
+    "title": "Recreational Dance Instructor",
+    "bio": "<p>Sami Tavares started her dance training at the age of 3. Since then has trained in a variety of styles such as ballet, jazz, contemporary, hip hop, lyrical, tap, pointe, acro and more. She has successfully accomplished several ballet examinations through the Royal Academy of Dance and is currently working on her Advanced Two exam. Sami danced competitively for 13 years and received many overall awards, judge recognition awards and scholarships. Between 2014 and 2017, she competed with Airtight Entertainment Dance Company in hip hop competitions such as The Beatdown and World of Dance Toronto where they placed 1st in the Youth Division. She has also done various shows with companies such as Ballet Jorgen, Drayton Entertainment, and danced in a music video for Hedley. Sami started as a teachers assistant at the age of 10 and started teaching her own classes at the age of 15. Sami has always had a strong passion for dance and loves sharing that passion with her students.</p>"
+  },
+  {
     "ord": 1,
     "category": "theatre",
     "colour": "red",
