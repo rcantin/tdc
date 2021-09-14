@@ -99,6 +99,15 @@
     "bio": "<p>Sami Tavares started her dance training at the age of 3. Since then has trained in a variety of styles such as ballet, jazz, contemporary, hip hop, lyrical, tap, pointe, acro and more. She has successfully accomplished several ballet examinations through the Royal Academy of Dance and is currently working on her Advanced Two exam. Sami danced competitively for 13 years and received many overall awards, judge recognition awards and scholarships. Between 2014 and 2017, she competed with Airtight Entertainment Dance Company in hip hop competitions such as The Beatdown and World of Dance Toronto where they placed 1st in the Youth Division. She has also done various shows with companies such as Ballet Jorgen, Drayton Entertainment, and danced in a music video for Hedley. Sami started as a teachers assistant at the age of 10 and started teaching her own classes at the age of 15. Sami has always had a strong passion for dance and loves sharing that passion with her students.</p>"
   },
   {
+    "ord": 16,
+    "category": "dance",
+    "colour": "pink",
+    "name": "Kiara Fina",
+    "photo": "./img/faculty/dance/kf01.jpg",
+    "title": "Recreational Dance Instructor",
+    "bio": "<p>Kiara Fina is a hard working and driven artist born and raised in Toronto, Ontario. She grew up training at Vlad’s Dance Company and is skilled in various art forms such as contemporary, jazz, ballet, point, partnering, musical theatre, hip hop, acro, modern, and lyrical. She has also had the chance to work with world renowned choreographers such as Mia Michaels, Teddy Forance, Travis Wall, Talia Favia, Lex Ishimoto and many more! In 2019 and 2020 Kiara has placed in the Top Ten female Best Dancer category at The Dance Awards. She is also a VIP Winner at Jump Dance Convention, Breakout Artist Winner at Nuvo Dance Convention and was part of “Beat Squad.” Kiara has performed in numerous shows such as Bridge to Artists, In An Instant and OTF Sick Kids Gala. She has also danced in Osé’s music video “faded”. Kiara teaches dance across the GTA and is passionate about sharing her knowledge with young aspiring dancers.</p>"
+  },
+  {
     "ord": 1,
     "category": "theatre",
     "colour": "red",
