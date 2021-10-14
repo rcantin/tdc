@@ -15,7 +15,7 @@
     <div class="date-grid">
       <div class="day" ng-style="{ 'grid-column': $first ? month.offset : ''}" ng-repeat="day in month.days" ng-class="{'text-muted': day.events.length < 1 || !day.events}">
         <div class="datenum">{{day.day | date:'d'}}</div>
-        <div class="banner" ng-if="day.banner" ng-bind-html="day.banner | to_trusted">{{day.banner}}</div>
+        <div class="banner" ng-if="day.banner" ng-bind-html="day.banner | to_trusted"></div>
         <div ng-repeat="event in day.events" class="event">
           <div class="banner" ng-bind-html="event.banner | to_trusted"></div>
           <div class="title" ng-bind-html="event.title | to_trusted"></div>
