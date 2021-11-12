@@ -265,10 +265,19 @@
     "ord": 3,
     "category": "bacare",
     "colour": "yellow",
-    "name": "Cari Gangaram RECE",
-    "photo": "./img/faculty/bacare/cari.jpg",
-    "title": "Before & After School Program Early Childhood Educator",
-    "bio": "<p>Cari is a graduate of the Early Childhood Education program from Sheridan college.  After 14 years in the field as a teacher of all ages and then in management, Cari moved to Waterdown to open her own licensed childcare center.  For over 10 years Cari was the owner operator of 2 daycares in town that had 130 children.  Cari has 2 children, Taylor & Nicholas.  With over 20 years in the childcare field Cari is enjoying her time with the children here at The Dream Centre.</p>"
+    "name": "Sami Hill",
+    "photo": "./img/faculty/bacare/sami.jpg",
+    "title": "Before & After School Program Staff",
+    "bio": "<p>Sami Hill is in the first year of completing her MSc in Child Life and Pediatric Psychosocial Care at McMaster University.  She has experience working with children of all ages in various centres across Ontario, including foster homes, daycare centres and paediatric hospital units. Her goal is to become a Certified Child Life Specialist, but she is currently enjoying working with the children at the Dream Centre!</p>"
+  },
+  {
+    "ord": 4,
+    "category": "bacare",
+    "colour": "yellow",
+    "name": "Grace Cauchi",
+    "photo": "./img/faculty/bacare/grace.jpg",
+    "title": "Before & After School Program Staff",
+    "bio": "<p>Grace is an honours student at Waterdown District High School.  She was a pre-competitive dancer for many years with the Dream Centre, and is very happy to be part of the aftercare program.  She brings great experience working with children to this role and is excited to support a wonderful learning, development and fun after care program.</p>"
   },
   {
     "ord": 1,
