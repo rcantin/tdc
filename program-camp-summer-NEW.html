@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp" ng-controller="MainCtrl">
+<html lang="en" ng-app="myApp" ng-controller="MainController">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -14,7 +14,7 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/app-w-classes.js"></script>
     <!-- Facebook Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
@@ -48,7 +48,81 @@
     <div class="container pb-5 pt-5 mt-5">
       <div class="h2 font-tdc text-center text-uppercase py-4">Summer Camp 2022</div>
 
-      <div class="row no-gutters justify-content-center mb-5" ng-init="camptype='activity'; brandColor='orange';">
+      <div ng-init="getClasses('Dance', 'Recreational', ''); brandColor='pink';" ng-controller="ClassController" ng-cloak>
+        <div ng-show="results.length==0">
+          <div class="text-center pt-4 pb-5 mb-5">
+            <div class="h5 font-weight-bold">Our exciting Summer Camps are coming soon!</div>
+            <div class="font-weight-light">Please check back soon so you don't miss out.</div>
+          </div>
+        </div>
+        <div class="py-4">
+          <div class="row">
+            <div class="col-12 col-md-6 col-xl-4 pb-4" ng-repeat="item in results = (classes | orderBy:'start_date')">
+              <div class="card shadow h-100">
+                <div class="card-header pb-4" ng-class="'bg-' + brandColor" style="clip-path: polygon(0px 0px, 100% 0px, 100% 70%, 0px 100%)">
+                  <div class="font-weight-bold text-white h5 mb-0">{{item.name}}</div>
+                </div>
+                <div class="card-body">
+                  <table class="table table-sm mb-0">
+                    <tbody>
+                      <tr>
+                        <td class="font-weight-light border-0">When</td>
+                        <td class="border-0">
+                          {{item.start_date | date:'MMM d'}}
+                          <span ng-if="item.start_date != item.end_date"> - {{item.end_date | date:'MMM d'}}</span>  
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="font-weight-light border-0">Ages</td>
+                        <td class="border-0">
+                          {{item.min_age}}
+                          <span ng-if="item.min_age != item.max_age"> - {{item.max_age}}</span>  
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- <div class="d-flex justify-content-around align-items-start pb-3 text-center">
+                    <div>
+                      <div class="font-weight-light h5 mb-0 text-uppercase">When</div>
+                      <div class="font-weight-bold h5 mb-0 text-uppercase">
+                        {{item.start_date | date:'MMM d'}}
+                        <span ng-if="item.start_date != item.end_date"> - {{item.end_date | date:'MMM d'}}</span>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-weight-light h5 mb-0 text-uppercase">Ages</div>
+                      <div class="font-weight-bold h5 mb-0 text-uppercase">
+                        {{item.min_age}}
+                        <span ng-if="item.min_age != item.max_age"> - {{item.max_age}}</span>
+                      </div>
+                    </div>
+                  </div> -->
+                  <div class="font-weight-light small" ng-bind-html="item.description | to_trusted"></div>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <div class="d-flex justify-content-start align-items-center">
+                    <div>
+                      <a ng-if="item.online_reg_link && item.openings.calculated_openings > 0" ng-href="{{item.online_reg_link}}" target="_blank" class="btn px-3 glass" ng-class="'btn-' + brandColor">Register Now!</a>
+                      <a ng-if="item.online_reg_link && item.openings.calculated_openings <= 0" ng-href="{{item.online_reg_link}}" target="_blank" class="btn px-3" ng-class="'btn-outline-' + brandColor">Wait List</a>
+                      <div ng-if="!item.online_reg_link" class="pt-2"><a href="./contact.html" class="font-weight-bold" ng-class="'text-' + brandColor">Contact us</a> for registration info</div>
+                    </div>
+                    <div class="pl-3">
+                      <div ng-show="item.tuition.fee || item.tuition.fee > 0">
+                        <div>{{item.tuition.fee | currency:'$':2}}</div>
+                        <div class="small font-weight-light">(full week only)</div>
+                      </div>
+                      <div ng-hide="item.tuition.fee || item.tuition.fee > 0 || !item.online_reg_link" class="small"><a href="./contact.html" ng-class="'text-' + brandColor">Contact us</a> for pricing</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- <div class="row no-gutters justify-content-center mb-5" ng-init="camptype='activity'; brandColor='orange';">
         <div class="col-4 col-md-2 text-center p-1 pb-4">
           <a ng-click="camptype='activity'; brandColor='orange';">
             <img ng-src="./img/orb-activitycamp-wtext.svg" class="img-fluid grow" style="max-width: 90px" alt="" />
@@ -85,47 +159,8 @@
           </a>
           <div ng-class="{'border-red':camptype=='theatre', 'border-white':camptype!='theatre'}" class="border-bottom" style="border-bottom-width: 8px !important"></div>
         </div>
-      </div>
+      </div> -->
 
-      <div ng-show="results.length==0">
-        <div class="text-center py-5">
-          <div class="h5 font-weight-bold">No Camps Found</div>
-          <div class="font-weight-light">Try changing your search parameters</div>
-        </div>
-      </div>
-
-      <div>
-        <div ng-init="getSummerCamps();">
-          <div class="row">
-            <div class="col-12 col-md-6 col-xl-4 pb-4" ng-repeat="camp in results = (camps | orderBy:'fromdate' | filter:{'type':camptype})">
-              <div class="card shadow h-100" style="border-top-right-radius: 20px; overflow: hidden">
-                <div class="card-header pb-4" ng-class="'bg-' + brandColor" style="clip-path: polygon(0px 0px, 100% 0px, 100% 70%, 0px 100%)">
-                  <div class="font-weight-bold text-white h5 mb-0">{{camp.name}}</div>
-                </div>
-                <div class="card-body">
-                  <div class="d-flex justify-content-around align-items-start pb-3 text-center">
-                    <div>
-                      <div class="font-weight-light">When</div>
-                      <div class="font-weight-bold h5 mb-0">{{camp.fromdate | date:'MMM d'}} - {{camp.todate | date:'MMM d'}}</div>
-                    </div>
-                    <div>
-                      <div class="font-weight-light small">Ages</div>
-                      <div class="font-weight-bold h5 mb-0">{{camp.minage}} - {{camp.maxage}}</div>
-                    </div>
-                  </div>
-                  <div class="font-weight-light small" ng-bind-html="camp.description | to_trusted"></div>
-                </div>
-                <div class="card-footer bg-white border-0">
-                  <div class="d-flex justify-content-center align-items-center">
-                    <div class="pr-3" ng-bind-html="camp.cost | to_trusted"></div>
-                    <div><button class="btn btn-sm px-3" ng-class="'btn-' + brandColor">Register</button></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- footer include -->
