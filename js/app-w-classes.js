@@ -1,11 +1,33 @@
 var myApp = angular.module("myApp", []);
 
-myApp.controller("MainController", function ($scope, $http) {});
+myApp.controller("MainController", function ($scope, $http) {
+
+  $scope.getSummerCampFAQs = function () {
+    $scope.campfaqreturned = false;
+    var req = {
+      method: "GET",
+      url: "./data/summer-camp-faq.json",
+      headers: {
+        "Content-Type": undefined,
+      },
+    };
+    $http(req).then(
+      function successCallback(response) {
+        $scope.campfaqs = response.data;
+        $scope.campfaqreturned = true;
+        console.log($scope.campfaqs);
+      },
+      function errorCallback(response) {
+        console.log(response);
+      }
+    );
+  }
+
+});
 
 myApp.controller("ClassController", function ($scope, $http) {
   $scope.getClasses = function (cat1, cat2, cat3, day) {
     $scope.classesreturned = false;
-
     var req = {
       method: "GET",
       url: "https://app.jackrabbitclass.com/jr3.0/Openings/OpeningsJSON",

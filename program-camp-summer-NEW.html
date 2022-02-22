@@ -40,15 +40,328 @@
     <!-- End Facebook Pixel Code -->
   </head>
   <body>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalFAQ" tabindex="-1" role="dialog" aria-labelledby="modalFAQLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title font-weight-bold h4 mb-0" id="modalFAQLabel">Summer Camp FAQ</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"><i class="fas fa-times"></i></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div ng-include="'_summer-camps-faq.html'"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-orange btn-sm glass px-4" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalCampInfo" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="h5 mb-0 font-weight-bold">Summer Camps at The Dream Centre</div>
+              <div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                </button>
+              </div>
+            </div>
+            <hr />
+            <div>
+              <div class="pb-3">
+                <h6 class="font-weight-bold">What to Bring</h6>
+                <ul>
+                  <li>Lunch &amp; Snacks (nut free please)</li>
+                  <li>Water Bottle</li>
+                  <li>Mask</li>
+                  <li>Hat</li>
+                  <li>Sunscreen</li>
+                  <li>Running shoes</li>
+                  <li>Change of clothes</li>
+                </ul>
+              </div>
+
+              <div class="pb-3">
+                <h6 class="font-weight-bold">Camp Hours</h6>
+                <ul>
+                  <li>9:00 am to 4:00 pm</li>
+                  <li>No camp on holiday long weekends</li>
+                </ul>
+              </div>
+
+              <div class="pb-3">
+                <h6 class="font-weight-bold">Extended Care</h6>
+                <ul>
+                  <li>7:00 to 9:00 &amp; 4:00 to 6:00</li>
+                  <li>Avaiable at no extra charge!</li>
+                  <li>Please let us know if you require Before or Aftercare. In order to provide a safe environment for your children, we need to know how many kids require extended hours so we can staff accordingly.</li>
+                </ul>
+              </div>
+
+              <div class="pb-3">
+                <h6 class="font-weight-bold">Pizza Lunch</h6>
+                <ul>
+                  <li>Every Friday (for full day campers only)</li>
+                  <li>Campers with dietary restrictions should still provide their own lunch.</li>
+                </ul>
+              </div>
+
+              <div class="pb-3">
+                <h6 class="font-weight-bold">Health &amp; Safety</h6>
+                <ul>
+                  <li>For the safety of all campers, The Dream Centre’s First Aid/CPR/AED certified staff are always a present during camp programming.</li>
+                  <li>The Dream Centre is a nut free facility. Please do not send your children with any food containing nuts.</li>
+                  <li>If your child requires medication of any kind to be administered to them during camp hours, please contact us prior to the start of camp.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-orange btn-sm glass px-4" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- banner include -->
     <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
     <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
     <!-- / banner include -->
 
-    <div class="container pb-5 pt-5 mt-5">
-      <div class="h2 font-tdc text-center text-uppercase py-4">Summer Camp 2022</div>
+    <div class="container pb-5 pt-5 mt-5" ng-cloak>
 
-      <div ng-init="getClasses('Dance', 'Recreational', ''); brandColor='pink';" ng-controller="ClassController" ng-cloak>
+      <div class="card bg-light text-center mb-2">
+        <div class="card-body p-2 font-weight-light">Please <a href="./policies/index.html" class="font-weight-bold text-orange" target="_blank">click here</a> to review our new COVID policies and procedures</div>
+      </div>
+
+      <div class="h1 font-tdc text-center text-uppercase pt-4">Summer Camp 2022</div>
+      <div class="text-center pb-4">
+        <div class="h5 mb-0 font-weight-bold"><span class="text-nowrap">9:00 am to 4:00 pm</span> - <span class="text-nowrap">Monday to Friday</span></div>
+        <div class="font-weight-light">No camp on holiday long weekends</div>
+      </div>
+
+      <div class="text-center text-xl-left font-weight-light">
+        Each week of summer camp at The Dream Centre includes fun and structured lessons in Dance, Gymnastics, Martial Arts and our brand-new Ninja Warrior circuit! Games, crafts, activities, special guests and excursions related to our weekly theme are incorporated to keep things engaging,
+        energetic and educational.
+      </div>
+
+      <div class="row pt-4">
+        <div class="col pb-3">
+          <div class="form-row justify-content-center align-items-center text-nowrap">
+            <div class="col pb-3 text-center">
+              <div class="d-flex justify-content-center align-items-end flex-wrap">
+                <div class="pr-1"><img src="./img/clock.png" style="width: 30px" alt="" /></div>
+                <div class="font-weight-bold">Extended Care</div>
+              </div>
+              <div class="small">
+                <div>Available at no extra cost!</div>
+                <div>7:00 to 9:00 & 4:00 to 6:00</div>
+              </div>
+            </div>
+            <div class="col pb-3 text-center">
+              <div class="d-flex justify-content-center align-items-end flex-wrap">
+                <div class="pr-1"><img src="./img/first-aid.png" style="width: 30px" alt="" /></div>
+                <div class="font-weight-bold">Health &amp; Safety</div>
+              </div>
+              <div class="small">
+                <div>First Aid/CPR/AED certified staff</div>
+                <div>Nut free facility</div>
+              </div>
+            </div>
+            <div class="col pb-3 text-center">
+              <div class="d-flex justify-content-center align-items-end flex-wrap">
+                <div class="pr-1"><img src="./img/pizza.png" style="width: 30px" alt="" /></div>
+                <div class="font-weight-bold">Pizza Lunch</div>
+              </div>
+              <div class="small">
+                <div>Every Friday!</div>
+                <div>Full day campers only</div>
+              </div>
+            </div>
+            <div class="col pb-3 text-center">
+              <div><button class="btn btn-orange btn-sm glass px-3" data-toggle="modal" data-target="#modalCampInfo">More Information...</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="d-flex justify-content-center flex-wrap py-3">
+          <div class="p-1 font-weight-bold">Have questions about Summer Camps?</div>
+          <div class="p-1"><a href="#" class="font-weight-bold text-orange" role="button" data-toggle="modal" data-target="#modalFAQ">Read our FAQ</a> or <a href="./contact.html" class="font-weight-bold text-orange">Contact Us</a></div>
+        </div>
+      </div>
+
+
+<!-- --------------------------------------------------- -->
+<!-- --------------------------------------------------- -->
+<!-- --------------------------------------------------- -->
+      <div ng-init="getClasses('Camp', '', '');" ng-controller="ClassController" ng-cloak>
+        <div ng-show="results.length==0">
+          <div class="text-center pt-4 pb-5 mb-5">
+            <div class="h5 font-weight-bold">Our exciting Summer Camps are coming soon!</div>
+            <div class="font-weight-light">Please check back soon so you don't miss out.</div>
+          </div>
+        </div>
+        <div class="py-5" id="sectionRegistration">
+
+          <div ng-if="!classesreturned" class="font-weight-light text-center"><i class="fas fa-spinner fa-pulse mr-2"></i>Loading camps...</div>
+          <div ng-if="classesreturned">
+            <div class="h1 mb-0 pb-5 text-center text-uppercase font-tdc text-dark">Register</div>
+            <div ng-show="classes.length == 0" class="text-center">Check back soon to register for our exciting summer camps!</div>
+            <div ng-show="classes.length > 0">
+              <div class="row no-gutters justify-content-center mb-4" ng-init="camptype='TDC Experience Camp'; brandColor='orange'">
+                <div class="col-4 col-sm-2 text-center p-1">
+                  <a ng-click="camptype='TDC Experience Camp'; brandColor='orange'">
+                    <img ng-src="./img/orb-tdcexperience-wtext.svg" class="img-fluid grow" style="max-width: 120px" alt="" />
+                  </a>
+                </div>
+                <div class="col-4 col-sm-2 text-center p-1">
+                  <a ng-click="camptype='Recreational Dance'; brandColor='pink'">
+                    <img ng-src="./img/orb-dance-wtext.svg" class="img-fluid grow" style="max-width: 120px" alt="" />
+                  </a>
+                </div>
+                <div class="col-4 col-sm-2 text-center p-1">
+                  <a ng-click="camptype='Recreational Gymnastics'; brandColor='purple'">
+                    <img ng-src="./img/orb-gymnastics-wtext.svg" class="img-fluid grow" style="max-width: 120px" alt="" />
+                  </a>
+                </div>
+                <div class="col-4 col-sm-2 text-center p-1">
+                  <a ng-click="camptype='Recreational Martial Arts'; brandColor='blue'">
+                    <img ng-src="./img/orb-martialarts-wtext.svg" class="img-fluid grow" style="max-width: 120px" alt="" />
+                  </a>
+                </div>
+                <div class="col-4 col-sm-2 text-center p-1">
+                  <a ng-click="camptype='Recreational Ninja Warrior'; brandColor='black'">
+                    <img ng-src="./img/orb-ninja-wtext.svg" class="img-fluid grow" style="max-width: 120px" alt="" />
+                  </a>
+                </div>
+                <div class="col-4 col-sm-2 text-center p-1">
+                  <a ng-click="camptype='Recreational Musical Theatre'; brandColor='red'">
+                    <img ng-src="./img/orb-theatre-wtext.svg" class="img-fluid grow" style="max-width: 120px" alt="" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="p-3 font-tdc h3 mb-0 text-center text-uppercase">
+                <div ng-if="camptype=='TDC Experience Camp'" class="text-orange">TDC Experience Camps</div>
+                <div ng-if="camptype=='Recreational Dance'" class="text-pink">Dance Camps</div>
+                <div ng-if="camptype=='Recreational Gymnastics'" class="text-purple">Gymnastics Camps</div>
+                <div ng-if="camptype=='Recreational Martial Arts'" class="text-blue">Martial Arts Camps</div>
+                <div ng-if="camptype=='Recreational Ninja Warrior'" class="text-black">Ninja Warrior Camps</div>
+                <div ng-if="camptype=='Recreational Musical Theatre'" class="text-red">Musical Theatre Camps</div>
+              </div>
+
+              <div ng-show="results.length > 0">
+                <div ng-repeat="item in results = (classes | orderBy:'start_date' | filter:{category2:camptype})">
+                  <hr />
+                  <div class="row py-3">
+                    <div class="col-12 col-md-4 text-md-right pr-md-4">
+                      <div class="h4 font-weight-bold" ng-class="'text-' + brandColor">
+                        {{ item.name }}
+                      </div>
+                      <div>
+                        <div class="font-weight-bold">
+                          {{ item.start_date | date:'MMM d' }}
+                          <span ng-if="item.start_date != item.end_date"> - {{ item.end_date | date:'MMM d' }}</span>
+                        </div>
+                        <div ng-if="item.meeting_days.daylist.length < 5" class="font-weight-light">(short week)</div>
+                      </div>
+                      <div class="font-weight-bold">Ages {{ item.min_age }} to {{ item.max_age }}</div>
+                      <div ng-if="item.tuition.fee">
+                        <span class="font-weight-bold">{{item.tuition.fee | currency:'$':2}}</span>
+                        <span class="small">+ HST</span>
+                      </div>
+                      <!-- <div class="h6 font-weight-light" ng-if="!item.tuition.fee">Please contact us for pricing information</div> -->
+                      <div class="py-3" ng-if="!item.online_reg_link">
+                        <div class="small font-weight-bold">Please contact us to register</div>
+                      </div>
+                      <div class="py-3" ng-if="item.online_reg_link">
+                        <a ng-if="item.openings.calculated_openings > 0" ng-href="{{item.online_reg_link}}" target="_blank" class="btn px-4 glass" ng-class="'btn-' + brandColor">Register</a>
+                        <a ng-if="item.openings.calculated_openings <= 0" ng-href="{{item.online_reg_link}}" target="_blank" class="btn px-4" ng-class="'btn-outline-' + brandColor">Join Wait List</a>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div ng-if="!item.description">
+                        <div>Please contact us for camp details and planned activities.</div>
+                      </div>
+                      <div class="font-weight-light pb-2" ng-bind-html="item.description | to_trusted"></div>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <!-- <div class="text-center font-weight-bold">HST will be added to all camp pricing</div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+          <!-- <div class="row">
+            <div class="col-12 col-md-6 col-xl-4 pb-4" ng-repeat="item in results = (classes | orderBy:'start_date')">
+              <div class="card shadow h-100">
+                <div class="card-header pb-4" ng-class="'bg-' + brandColor" style="clip-path: polygon(0px 0px, 100% 0px, 100% 70%, 0px 100%)">
+                  <div class="font-weight-bold text-white h5 mb-0">{{item.name}}</div>
+                </div>
+                <div class="card-body">
+                  <table class="table table-sm mb-0">
+                    <tbody>
+                      <tr>
+                        <td class="font-weight-light border-0">When</td>
+                        <td class="border-0">
+                          {{item.start_date | date:'MMM d'}}
+                          <span ng-if="item.start_date != item.end_date"> - {{item.end_date | date:'MMM d'}}</span>  
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="font-weight-light border-0">Ages</td>
+                        <td class="border-0">
+                          {{item.min_age}}
+                          <span ng-if="item.min_age != item.max_age"> - {{item.max_age}}</span>  
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="font-weight-light" ng-bind-html="item.description | to_trusted"></div>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <div class="d-flex justify-content-start align-items-center">
+                    <div>
+                      <a ng-if="item.online_reg_link && item.openings.calculated_openings > 0" ng-href="{{item.online_reg_link}}" target="_blank" class="btn px-3 glass" ng-class="'btn-' + brandColor">Register Now!</a>
+                      <a ng-if="item.online_reg_link && item.openings.calculated_openings <= 0" ng-href="{{item.online_reg_link}}" target="_blank" class="btn px-3" ng-class="'btn-outline-' + brandColor">Wait List</a>
+                      <div ng-if="!item.online_reg_link" class="pt-2"><a href="./contact.html" class="font-weight-bold" ng-class="'text-' + brandColor">Contact us</a> for registration info</div>
+                    </div>
+                    <div class="pl-3">
+                      <div ng-show="item.tuition.fee || item.tuition.fee > 0">
+                        <div>{{item.tuition.fee | currency:'$':2}}</div>
+                        <div class="small font-weight-light">(full week only)</div>
+                      </div>
+                      <div ng-hide="item.tuition.fee || item.tuition.fee > 0 || !item.online_reg_link" class="small"><a href="./contact.html" ng-class="'text-' + brandColor">Contact us</a> for pricing</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+<!-- --------------------------------------------------- -->
+<!-- --------------------------------------------------- -->
+<!-- --------------------------------------------------- -->
+
+
+
+
+
+      <!-- <div ng-init="getClasses('Dance', 'Recreational', ''); brandColor='pink';" ng-controller="ClassController" ng-cloak>
         <div ng-show="results.length==0">
           <div class="text-center pt-4 pb-5 mb-5">
             <div class="h5 font-weight-bold">Our exciting Summer Camps are coming soon!</div>
@@ -81,22 +394,6 @@
                       </tr>
                     </tbody>
                   </table>
-                  <!-- <div class="d-flex justify-content-around align-items-start pb-3 text-center">
-                    <div>
-                      <div class="font-weight-light h5 mb-0 text-uppercase">When</div>
-                      <div class="font-weight-bold h5 mb-0 text-uppercase">
-                        {{item.start_date | date:'MMM d'}}
-                        <span ng-if="item.start_date != item.end_date"> - {{item.end_date | date:'MMM d'}}</span>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="font-weight-light h5 mb-0 text-uppercase">Ages</div>
-                      <div class="font-weight-bold h5 mb-0 text-uppercase">
-                        {{item.min_age}}
-                        <span ng-if="item.min_age != item.max_age"> - {{item.max_age}}</span>
-                      </div>
-                    </div>
-                  </div> -->
                   <div class="font-weight-light small" ng-bind-html="item.description | to_trusted"></div>
                 </div>
                 <div class="card-footer bg-white border-0">
@@ -119,7 +416,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
 
       <!-- <div class="row no-gutters justify-content-center mb-5" ng-init="camptype='activity'; brandColor='orange';">
