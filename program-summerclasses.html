@@ -46,7 +46,7 @@
     <!-- / banner include -->
 
     <div class="container pb-5 pt-5 mt-5">
-      <div class="h2 font-tdc text-dark text-center text-uppercase py-4">2021 Summer Classes</div>
+      <div class="h2 font-tdc text-dark text-center text-uppercase py-4">2022 Summer Classes</div>
 
       <div class="d-flex justify-content-center align-items-center pb-5" ng-init="classtype='Recreational'">
         <div class="custom-control custom-radio custom-control-inline">
@@ -73,12 +73,12 @@
             </a>
             <div ng-class="{'border-purple':camptype=='gymnastics', 'border-white':camptype!='gymnastics'}" class="border-bottom" style="border-bottom-width: 8px !important"></div>
           </div>
-          <!-- <div class="col text-center p-1">
+          <div class="col text-center p-1">
             <a ng-click="camptype='martialarts'">
               <img ng-src="./img/orb-martialarts-wtext.svg" class="img-fluid grow" style="max-width: 90px" alt="" />
             </a>
             <div ng-class="{'border-blue':camptype=='martialarts', 'border-white':camptype!='martialarts'}" class="border-bottom" style="border-bottom-width: 8px !important"></div>
-          </div> -->
+          </div>
           <div class="col text-center p-1">
             <a ng-click="camptype='ninja'">
               <img ng-src="./img/orb-ninja-wtext.svg" class="img-fluid grow" style="max-width: 90px" alt="" />
@@ -188,7 +188,7 @@
           </div>
         </div>
 
-        <!-- <div ng-if="camptype=='martialarts'">
+        <div ng-if="camptype=='martialarts'">
           <div ng-init="getClasses('Summer Classes', 'Recreational Martial Arts', ''); brandColor='blue';" ng-controller="ClassController">
             <div>
               <div class="pb-4">
@@ -219,7 +219,7 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
 
         <div ng-if="camptype=='ninja'">
           <div ng-init="getClasses('Summer Classes', 'Recreational Ninja Warrior', ''); brandColor='black';" ng-controller="ClassController">
