@@ -26,6 +26,23 @@
     "description": "PA Day Camp"
   },
   {
+    "startdate": "2022-06-03",
+    "description": "Dress rehearsal for Dance Recital"
+  },
+  {
+    "startdate": "2022-06-09",
+    "description": "Last Day of Family Tree"
+  },
+  {
+    "startdate": "2022-06-06",
+    "enddate": "2022-06-11",
+    "description": "Parents Viewing for Recreational Classes"
+  },
+  {
+    "startdate": "2022-06-29",
+    "description": "Last Day of Before & After School"
+  },
+  {
     "startdate": "2022-07-18",
     "enddate": "2022-07-21",
     "description": "Competitive Dance Intensive"
