@@ -60,11 +60,12 @@
     "description": "Parents Night Out"
   },
   {
-    "startdate": "2022-06-11",
+    "startdate": "2022-06-14",
     "description": "Last Day of Classes"
   },
   {
-    "startdate": "2022-07-11",
-    "description": "First Day of Camp and Summer Classes"
+    "startdate": "2022-07-04",
+    "enddate": "2022-07-08",
+    "description": "First Week of Summer Camps and Classes"
   }
 ]
