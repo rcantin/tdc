@@ -38,7 +38,7 @@
                   <span ng-if="event.start_date < event.end_date" style="white-space: nowrap;"> - {{ event.end_date | date:"mediumDate" }}</span>
                 </div>
               </td>
-              <td class="font-weight-bold">{{ event.title }}</td>
+              <td class="font-weight-bold" ng-bind-html="event.title | to_trusted"></td>
             </tr>
             <tr ng-if="eventlist.length == 0">
               <td colspan="2" class="text-center font-weight-light small py-3">No events available at this time. Please check back soon!</td>
