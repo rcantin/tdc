@@ -21,30 +21,45 @@
     <div class="d-none d-lg-block" ng-include src="'banner_new.html'"></div>
     <div class="d-lg-none" ng-include src="'_banner-slide.html'"></div>
     <!-- / banner include -->
-
+    
     <div class="container pb-5 pt-5 mt-5" ng-init="getDBEvents()">
-      <div class="h2 font-tdc text-dark text-center text-uppercase py-4">Upcoming Events</div>
-
-      <!-- spinner for getting event data -->
+      <div class="py-4">
+        <div class="h2 font-tdc text-dark text-center text-uppercase pb-2">Upcoming Events</div>
+        <div class="font-weight-light text-center small">Event details are subject to change</div>
+      </div>
       <div ng-show="!eventdatareturned" class="text-center m-0 pt-4 pb-5 font-weight-light"><i class="fas fa-spinner fa-pulse mr-1"></i>Getting events...</div>
-
       <div ng-show="eventdatareturned" class="pt-1">
         <table class="table" ng-if="dbevents">
           <tbody>
-            <tr ng-repeat="event in eventlist = (dbevents | orderBy:'start_date')">
-              <td class="text-right font-weight-light">
+            <tr ng-show="results.length < 1">
+              <td colspan="4" class="font-weight-light py-3 text-center">No events found. Check back soon for updates.</td>
+            </tr>
+            <!-- <tr ng-repeat="event in results = (dbevents | orderBy:'start_date' | filterBeforeToday)"> -->
+            <tr ng-repeat="event in results = (dbevents | orderBy:'start_date')">
+              <td class="text-right font-weight-bold d-none d-md-table-cell">
                 <div class="text-uppercase">
-                  <span style="white-space: nowrap;">{{ event.start_date | date:"mediumDate" }}</span>
-                  <span ng-if="event.start_date < event.end_date" style="white-space: nowrap;"> - {{ event.end_date | date:"mediumDate" }}</span>
+                  <span style="white-space: nowrap">{{ event.start_date | date:"mediumDate" }}</span>
+                  <span ng-if="event.start_date < event.end_date" style="white-space: nowrap"> - {{ event.end_date | date:"mediumDate" }}</span>
+                </div>
+                <div class="text-uppercase">
+                  <span ng-if="event.starttime" style="white-space: nowrap">{{ event.starttime | date:"shortTime" }}</span>
+                  <span ng-if="event.starttime < event.endtime" style="white-space: nowrap"> - {{ event.endtime | date:"shortTime" }}</span>
                 </div>
               </td>
-              <td class="font-weight-bold" ng-bind-html="event.title | to_trusted"></td>
-            </tr>
-            <tr ng-if="eventlist.length == 0">
-              <td colspan="2" class="text-center font-weight-light small py-3">No events available at this time. Please check back soon!</td>
-            </tr>
-            <tr>
-              <td colspan="2" class="font-weight-bold small py-3 text-right bg-light">Event details are subject to change</td>
+              <td class="text-left">
+                <div class="d-md-none font-weight-bold">
+                  <div class="pb-1">
+                    <span style="white-space: nowrap">{{ event.start_date | date:"mediumDate" }}</span>
+                    <span ng-if="event.start_date < event.end_date" style="white-space: nowrap"> - {{ event.end_date | date:"mediumDate" }}</span>
+                  </div>
+                  <div class="text-uppercase">
+                    <span ng-if="event.starttime" style="white-space: nowrap">{{ event.starttime | date:"shortTime" }}</span>
+                    <span ng-if="event.starttime < event.endtime" style="white-space: nowrap"> - {{ event.endtime | date:"shortTime" }}</span>
+                  </div>
+                </div>
+                <div ng-bind-html="event.title | to_trusted"></div>
+                <div ng-if="event.caption" class="small font-weight-light">{{ event.caption }}</div>
+              </td>
             </tr>
           </tbody>
         </table>
