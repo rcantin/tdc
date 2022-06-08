@@ -330,50 +330,39 @@
                   <span class="font-weight-light">Upcoming </span>
                   <span class="font-tdc text-nowrap text-uppercase">Events</span>
                 </div>
-                <div ng-init="getEventData()">
-                  <!-- spinner for getting event data -->
+                <div class="font-weight-light text-center small">Event details are subject to change</div>
+                <div class="container pb-5 pt-2" ng-init="getDBEvents()">            
                   <div ng-show="!eventdatareturned" class="text-center m-0 pt-4 pb-5 font-weight-light"><i class="fas fa-spinner fa-pulse mr-1"></i>Getting events...</div>
-
                   <div ng-show="eventdatareturned" class="pt-1">
-                    <table class="table" ng-if="eventdata">
+                    <div ng-if="!dbevents" class="font-weight-light py-3 text-center">No events found. Check back soon for updates.</div>
+                    <table ng-if="dbevents" class="table">
                       <tbody>
                         <tr ng-show="results.length < 1">
-                          <td colspan="4" class="font-weight-light py-3 text-center">No events found. Check back soon for updates.</td>
+                          <td colspan="2" class="font-weight-light py-3 text-center">No events found. Check back soon for updates.</td>
                         </tr>
-                        <tr ng-repeat="event in results = (eventdata | orderBy:'startdate' | filterBeforeToday | limitTo:5)">
-                          <td class="text-right font-weight-light d-none d-md-table-cell">
-                            <div class="text-uppercase">
-                              <span style="white-space: nowrap">{{ event.startdate | date:"mediumDate" }}</span>
-                              <span ng-if="event.startdate < event.enddate" style="white-space: nowrap"> - {{ event.enddate | date:"mediumDate" }}</span>
-                            </div>
-                            <div class="font-weight-light text-uppercase">
-                              <span ng-if="event.starttime" style="white-space: nowrap">{{ event.starttime | date:"shortTime" }}</span>
-                              <span ng-if="event.starttime < event.endtime" style="white-space: nowrap"> - {{ event.endtime | date:"shortTime" }}</span>
+                        <tr ng-repeat="event in results = (dbevents | orderBy:'start_date' | filterBeforeTodayDB)">
+                          <td class="d-none d-sm-table-cell">
+                            <div class="d-flex justify-content-end align-items-center text-uppercase">
+                              <div class="font-weight-light text-nowrap">{{ event.start_date | date:"MMM d" }}</div>
+                              <div ng-if="event.start_date < event.end_date" class="px-1 font-weight-light">-</div>
+                              <div ng-if="event.start_date < event.end_date" class="font-weight-light text-nowrap">{{ event.end_date | date:"MMM d" }}</div>
                             </div>
                           </td>
-                          <td class="text-left">
-                            <div class="font-weight-bold" ng-bind-html="event.description | to_trusted"></div>
-                            <div ng-if="event.caption" class="small font-weight-light">{{ event.caption }}</div>
-                            <div class="d-md-none">
-                              <div class="text-uppercase">
-                                <span style="white-space: nowrap">{{ event.startdate | date:"mediumDate" }}</span>
-                                <span ng-if="event.startdate < event.enddate" style="white-space: nowrap"> - {{ event.enddate | date:"mediumDate" }}</span>
-                              </div>
-                              <div class="font-weight-light text-uppercase">
-                                <span ng-if="event.starttime" style="white-space: nowrap">{{ event.starttime | date:"shortTime" }}</span>
-                                <span ng-if="event.starttime < event.endtime" style="white-space: nowrap"> - {{ event.endtime | date:"shortTime" }}</span>
-                              </div>
+                          <td>
+                            <div class="font-weight-bold" ng-bind-html="event.title | to_trusted"></div>
+                            <div ng-if="event.caption" class="font-weight-light">{{ event.caption }}</div>
+                            <div class="d-sm-none d-flex justify-content-sm-end align-items-center text-uppercase">
+                              <div class="font-weight-light text-nowrap">{{ event.start_date | date:"MMM d" }}</div>
+                              <div ng-if="event.start_date < event.end_date" class="px-1 font-weight-light">-</div>
+                              <div ng-if="event.start_date < event.end_date" class="font-weight-light text-nowrap">{{ event.end_date | date:"MMM d" }}</div>
                             </div>
                           </td>
-                        </tr>
-                        <tr>
-                          <td colspan="2" class="font-weight-bold small py-3 text-right">Event details are subject to change</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
-                <div class="text-center">
+                            <div class="text-center">
                   <a href="events.html" class="btn btn-dark glass px-3">See All Events</a>
                 </div>
               </div>

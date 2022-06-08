@@ -363,6 +363,25 @@ myApp.filter("filterBeforeToday", function () {
   };
 });
 
+myApp.filter("filterBeforeTodayDB", function () {
+  return function (items) {
+    var today = new Date();
+    var arrayToReturn = [];
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].end_date) {
+        var tempDate = items[i].end_date.replace(/-/g, "/");
+      } else {
+        var tempDate = items[i].start_date.replace(/-/g, "/");
+      }
+      var eventenddate = new Date(tempDate);
+      if (today < eventenddate) {
+        arrayToReturn.push(items[i]);
+      }
+    }
+    return arrayToReturn;
+  };
+});
+
 // ------------- new controller for class listing tables -------------------------
 
 myApp.controller("ClassController", function ($scope, $http) {
