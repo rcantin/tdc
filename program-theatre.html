@@ -46,17 +46,14 @@
     <!-- / banner include -->
 
     <div class="container pb-5 pt-5 mt-5" ng-init="brandColor='red'">
-      <div>
+      <div class="pb-5">
         <div class="h2 font-tdc text-red text-center text-uppercase pt-4">Musical Theatre</div>
-        <div class="h5 mb-3 font-weight-bold text-center">Led by The Star Project &amp; Director Jo Payne</div>
-        <div class="text-center pb-5">
-          Musical Theatre is a wonderful way of bringing out the confidence in young people by exploring the 3 main disciplines, dance, singing and acting. Musical Theatre discovers childrens' ability to express themselves in many different ways. Students explore different show themes and learn
-          techniques such as improvisation, characterisation, script work, accents, voice projection, mime, comedy, physical theatre, dance genres, vocal technique, harmonies, ensemble singing and much more! They will also get to perform many times a year.
-        </div>
+        <!-- <div class="py-4">Musical Theatre is a wonderful way of bringing out the confidence in young people. Musical Theatre discovers childrens' ability to express themselves in many different ways. Students explore different show themes and learn techniques such as improvisation, characterisation, script work, accents, voice projection, mime, comedy, physical theatre, dance genres, vocal technique, harmonies, ensemble singing and much more!</div> -->
+      </div>
 
-        <div class="pb-5" ng-init="getClasses('Dance', 'Recreational Musical Theatre', '');" ng-controller="ClassController">
+        <!-- <div ng-init="getClasses('Dance', 'Recreational Musical Theatre', '');" ng-controller="ClassController">
           <div ng-if="classesreturned">
-            <div class="card bg-light" ng-repeat="item in results = (classes | orderBy:'start_date')">
+            <div class="card bg-light mb-3" ng-repeat="item in results = (classes | orderBy:'start_date')">
               <div class="card-body">
                 <div>
                   <div class="pb-3">
@@ -85,9 +82,71 @@
               </div>
             </div>
           </div>
+        </div> -->
+
+        <div class="pb-4">
+          <div class="h4 text-red font-weight-bold">Show Themes</div>
+          <div class="h6 font-weight-light">Coming soon!  Check back often so you don't miss anything.</div>
         </div>
 
-        <div class="row">
+        <div class="pb-4">
+          <div class="h4 text-red font-weight-bold">Classes</div>
+          <div ng-init="getClasses('Dance', 'Recreational', 'Triple Threat');" ng-controller="ClassController">
+            <div ng-if="classesreturned">
+              <table class="table table-hover table-borderless">
+                <tbody>
+                  <tr class="border-bottom"
+                    ng-repeat="item in filteredmon = (classes | orderBy:'min_age')">
+                    <td>
+                      <div class="d-none d-md-block">
+                        <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank"
+                        class="btn btn-red btn-sm px-3 text-white">
+                          <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                          <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                        </a>
+                      </div>
+                      <div class="d-md-none py-3">
+                        <div class="h4 font-weight-bold">{{item.name}}</div>
+                        <div class="font-weight-light">
+                          <div class="font-weight-bold">Ages: {{item.min_age}} - {{item.max_age}}</div>
+                          <div class="">
+                            <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                            <span>{{item.start_time}} - {{item.end_time}}</span>
+                          </div>
+                          <div class="">{{item.start_date | date:'mediumDate'}} - {{item.end_date | date:'mediumDate'}}</div>
+                          <div class="">{{item.tuition.fee | currency}} monthly</div>
+                        </div>
+                        <div class="pt-1">
+                          <a ng-if="item.online_reg_link" ng-href="{{item.online_reg_link}}" target="_blank"
+                            class="btn btn-red btn-sm px-4 text-white">
+                            <span ng-if="item.openings.calculated_openings > 0">Register</span>
+                            <span ng-if="item.openings.calculated_openings <= 0">Wait List</span>
+                          </a>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="d-none d-md-table-cell font-weight-bold h5 mb-0">{{item.name}}</td>
+                    <td class="d-none d-md-table-cell">
+                      <div>
+                        <span class="text-uppercase" ng-repeat="day in item.meeting_days.daylist">{{day}} </span>
+                        <span>{{item.start_time}} - {{item.end_time}}</span>
+                      </div>
+                      <div class="small font-weight-light">{{item.start_date | date:'mediumDate'}} - {{item.end_date |
+                        date:'mediumDate'}}</div>
+                    </td>
+                    <td class="d-none d-md-table-cell">Ages: {{item.min_age}} - {{item.max_age}}</td>
+                    <td class="d-none d-md-table-cell">
+                      {{item.tuition.fee | currency}}
+                      <div class="small font-weight-light">monthly</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="row">
           <div class="col pb-5">
             <div class="h3 mb-0 font-weight-bold" ng-class="'text-' + brandColor">SHOW THEMES</div>
             <hr />
@@ -253,8 +312,7 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div> -->
     </div>
 
     <!-- footer include -->
