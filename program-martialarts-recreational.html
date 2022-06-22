@@ -49,7 +49,7 @@
       <div class="h2 font-tdc text-info text-center text-uppercase pt-5 pb-2">Martial Arts</div>
 
       <div class="row pt-5">
-        <div class="col-12 col-md-7 col-xl-7">
+        <div class="col-12 col-lg-7 col-xl-7">
           <div class="pb-4">
             <h3 class="text-blue font-weight-bold">Recreational</h3>
             <p>Martial Arts promotes respect, self-discipline, body awareness and confidence in students of all ages and is an excellent tool for lifelong success. Our classes are taught by experienced instructors with many years of training and teaching, both in martial arts and child development studies.</p>
@@ -102,16 +102,16 @@
           </div>
         </div>
 
-        <div class="col-12 col-md-5 col-lg-4 offset-lg-1">
-          <div class="border-left bg-light p-3">
-            <div class="h5 text-info">Uniform</div>
+        <div class="col-12 col-lg-5 col-xl-4 offset-xl-1">
+          <div class="border-left bg-light p-3 mb-4">
+            <div class="h5 font-weight-bold text-info">Uniform</div>
             <div class="font-weight-light">
               <p>When you register, please indicate if you would like to purchase one ($19.99) or two ($34.99) martial arts t-shirts for your student to be billed to your account. <strong>This is your only uniform cost.</strong></p>
               <p>Each student will receive a white belt in their first month of classes if taking part in our Traditional Martial Arts classes (not fitness kickboxing or lil ninjas).</p>
               <p>For their first few classes, they should arrive in a comfortable shirt that allows easy movement, and any athletic style black pants (leggings, track pants, etc). They will be fitted for their martial arts shirt and receive it by the end of their first month.</p>
             </div>
           </div>
-          <div class="py-4">
+          <!-- <div class="py-4">
             <div class="accordion" id="maAges">
               <div class="card">
                 <div class="card-header p-0" id="maAge1">
@@ -208,19 +208,19 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <div class="col-12">
           <div class="h3 font-weight-bold text-blue">Classes</div>
           <!-- <div class="font-weight-light small pb-2">Please ensure you are careful to register for the age and day you want.</div> -->
           <div>
-            <table class="table table-hover table-borderless table-sm small">
+            <table class="table table-hover table-borderless table-sm mb-4">
               <tbody
                 ng-repeat="group in [{'daylong':'Monday','dayshort':'mon'},{'daylong':'Tuesday','dayshort':'tue'},{'daylong':'Wednesday','dayshort':'wed'},{'daylong':'Thursday','dayshort':'thu'},{'daylong':'Friday','dayshort':'fri'},{'daylong':'Saturday','dayshort':'sat'},{'daylong':'Sunday','dayshort':'sun'}]"
               >
                 <tr ng-show="filteredmon.length > 0" class="border-bottom">
-                  <td colspan="5" class="h6 mb-0 font-weight-bold pb-2 pt-4">{{group.daylong}} Classes</td>
+                  <td colspan="5" class="h6 mb-0 font-weight-bold pb-2 pt-4 text-blue">{{group.daylong}} Classes</td>
                 </tr>
                 <tr class="border-bottom" ng-repeat="item in filteredmon = (scheduledata | orderBy:['min_age', 'max_age'] | filter:{category1:'Martial Arts'} | filter:{category2:'Recreational'} | filter:{category3:'!Sweet Dreamers'} | filter:limitDay(group.dayshort))">
                   <td>
