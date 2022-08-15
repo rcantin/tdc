@@ -244,3 +244,13 @@ a[aria-expanded="false"] {
     column-count: 2;
   }
 }
+.fundraising-page {
+  .card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 2rem !important;
+    .card {
+      margin: 0;
+    }
+  }
+}

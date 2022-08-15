@@ -11138,4 +11138,16 @@ a.text-birthday:hover, a.text-birthday:focus {
             column-count: 2;
   }
 }
+
+.fundraising-page .card-deck {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 2rem !important;
+}
+
+.fundraising-page .card-deck .card {
+  margin: 0;
+}
 /*# sourceMappingURL=theme.css.map */
