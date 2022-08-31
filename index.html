@@ -340,7 +340,7 @@
                         <tr ng-show="results.length < 1">
                           <td colspan="2" class="font-weight-light py-3 text-center">No events found. Check back soon for updates.</td>
                         </tr>
-                        <tr ng-repeat="event in results = (dbevents | orderBy:'start_date' | filterBeforeTodayDB)">
+                        <tr ng-repeat="event in results = (dbevents | orderBy:'start_date' | filterBeforeTodayDB | limitTo:5)">
                           <td class="d-none d-sm-table-cell">
                             <div class="d-flex justify-content-end align-items-center text-uppercase">
                               <div class="font-weight-light text-nowrap">{{ event.start_date | date:"MMM d" }}</div>
