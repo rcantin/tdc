@@ -37,7 +37,7 @@ $success = "
 // Failure Message
 $failure = "
 <div class=\"h5 text-danger pt-2\"><i class=\"fa fa-exclamation-circle fa-lg\"></i> Message not sent!</div>
-<div class=\"text-dark p-2 font-weight-light\">Something went wrong while sending your message.  Please try again.  Sorry for the trouble!</div>
+<div class=\"text-dark p-2 font-weight-light\">Something went wrong while sending your message.  Please try again or email dreamcentrefundraising@gmail.com.  Sorry for the trouble!</div>
 ";
 
 //$headers = "From: $contactname <$contactemail> \r\n";
