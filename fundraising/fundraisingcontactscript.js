@@ -51,7 +51,7 @@ $(function () {
         var post_data = form.serialize();
         $.ajax({
             type: 'POST',
-            url: '../fundraisingcontactsend.php',
+            url: './fundraisingcontactsend.php',
             data: post_data,
             success: function(msg) {
                 $(form).fadeOut(500, function(){
