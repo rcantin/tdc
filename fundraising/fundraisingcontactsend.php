@@ -4,8 +4,8 @@ date_default_timezone_set('US/Eastern');
 
 /* Configuration */
 $subject = 'Fundraising Online Inquiry'; // Set email subject line here
-$mailto  = 'ryan.cantin@gmail.com'; // Email address to send the form to
-$mailfrom  = 'do-not-reply@thedreamcentre.ca'; // Email address to send the form from
+$mailto  = 'dreamcentrefundraising@gmail.com'; // Email address to send the form to
+// $mailfrom  = 'do-not-reply@thedreamcentre.ca'; // Email address to send the form from
 /* END Configuration */
 
 $contactname     	= $_POST['contactname'];
