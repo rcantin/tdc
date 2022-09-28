@@ -26,86 +26,59 @@
     <div class="container bg-white pb-5 mb-4">
       <div class="display-4 mb-3 font-cursive font-weight-bold text-center">Programs</div>
       <div ng-include="'_brand-divider.html'"></div>
-      <div class="row mt-5">
-        <div class="col-12 col-md-4 col-xl-3 pt-2">
-          <img src="./img/photos/img_0053.JPG" class="img-fluid" alt="" />
-        </div>
-        <div class="col pt-3 pt-md-0">
-          <div class="h1 font-cursive font-weight-bold">Toddler's Open Gym</div>
-          <div>
-            If they’re on the move then your little one will LOVE to explore our 7000 sq/ft, beautiful soft play space, open daily! Our gymnastics facility will be open daily to climb, roll, slide and create lasting memories. We will have circuits set up each day for them to explore as they
-            socialize, learn and develop on the go. Your Littles will thrive in our high energy environment. The perfect space to release energy &amp; enjoy new adventures every single day. See
-            <a href="./calendar.html" target="_self" class="font-weight-bold">The Family Tree calendar</a>. Find the right
-            <a href="./membership.html" target="_self" class="font-weight-bold">Membership</a>
-            for you and your Littles.
+
+      <div class="py-5">
+
+        <div class="row py-2">
+          <div class="col-12 col-md-4 col-lg-3">
+            <img src="./img/photos/img_0053.JPG" class="img-fluid" alt="">
           </div>
-          <hr />
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-12 col-md-4 col-xl-3 pt-2">
-          <img src="./img/photos/IMG_4635.jpg" class="img-fluid" alt="" />
-        </div>
-        <div class="col pt-3 pt-md-0">
-          <div class="h1 font-cursive font-weight-bold">Sensory Play</div>
-          <div>
-            Bring your Littles to our Sensory play and let them explore the world around them! It’s all about their journey and your connection as we discover a variety of sensory activities and new sensations. During this fun program, you and your Little will develop, play and discover together as
-            you explore our sensory stations. Dive into our bins of excitement, roll &amp; play, explore light and mirrors, play in tubs of colourful spaghetti, get messy, laugh and share an unforgettable experience. See
-            <a href="./calendar.html" target="_self" class="font-weight-bold">The Family Tree calendar</a>. Find the right
-            <a href="./membership.html" target="_self" class="font-weight-bold">Membership</a>
-            for you and your Littles.
+          <div class="col">
+            <div class="h3 font-weight-light">Toddler's Open Gym</div>
+            <div class="font-weight-light">If they’re on the move then your little one will LOVE to explore our 7000 sq/ft, beautiful soft play space, open daily! Our gymnastics facility will be open daily to climb, roll, slide and create lasting memories. We will have circuits set up each day for them to explore as they socialize, learn and develop on the go. Your Littles will thrive in our high energy environment. The perfect space to release energy &amp; enjoy new adventures every single day.</div>
           </div>
-          <hr />
         </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-12 col-md-4 col-xl-3 pt-2">
-          <img src="./img/photos/IMG_4632.JPG" class="img-fluid" alt="" />
-        </div>
-        <div class="col pt-3 pt-md-0">
-          <div class="h1 font-cursive font-weight-bold">Messy Art</div>
-          <div>
-            A fun-filled, hands-on class where our Littles will make messes &amp; memories. Join us and let your little one explore a variety of tactile and messy play activities they will love! It&#39;s all about creating babies artwork masterpieces through exploration. They will experiment with
-            all different textures, strengthen their fine motor skills, gross motor skills, hand-eye coordination and use their senses to see, touch, taste, hear and feel. See
-            <a href="./calendar.html" target="_self" class="font-weight-bold">The Family Tree calendar</a>. Find the right
-            <a href="./membership.html" target="_self" class="font-weight-bold">Membership</a>
-            for you and your Littles.
+        <hr>
+        <div class="row py-2">
+          <div class="col-12 col-md-4 col-lg-3 py-1">
+            <img src="./img/photos/IMG_4635.jpg" class="img-fluid" alt="">
           </div>
-          <hr />
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-12 col-md-4 col-xl-3 pt-2">
-          <img src="./img/photos/IMG_4637.JPG" class="img-fluid" alt="" />
-        </div>
-        <div class="col pt-3 pt-md-0">
-          <div class="h1 font-cursive font-weight-bold">Sing Along &amp; Story Time</div>
-          <div>
-            Music ignites all areas of child development. It helps their little bodies and minds to connect while allowing them to practice self-expression from a very young age. This interactive class is meant for both mamas, daddies and Littles to come together and bond over sound and movement.
-            Each class will be a new adventure filled with instruments, new songs, dance and laughter. Sing Along with us and indulge in an interactive story! Your Littles are sure to enjoy, and be engaged. See
-            <a href="./calendar.html" target="_self" class="font-weight-bold">The Family Tree calendar</a>. Find the right
-            <a href="./membership.html" target="_self" class="font-weight-bold">Membership</a>
-            for you and your Littles.
+          <div class="col">
+            <div class="h3 font-weight-light">Sensory Play</div>
+            <div class="font-weight-light">Bring your Littles to our Sensory play and let them explore the world around them! It’s all about their journey and your connection as we discover a variety of sensory activities and new sensations. During this fun program, you and your Little will develop, play and discover together as you explore our sensory stations. Dive into our bins of excitement, roll & play, explore light and mirrors, play in tubs of colourful spaghetti, get messy, laugh and share an unforgettable experience.</div>
+            <div class="pt-4" ng-init="getClasses('Family Tree', 'Sensory', '')" ng-controller="ClassController">
+              <div class="h5 text-pink">Session Registration</div>
+              <div ng-include="'./_class-list.html'" ng-init="brandColor='pink'"></div>
+            </div>
           </div>
-          <hr />
         </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-12 col-md-4 col-xl-3 pt-2">
-          <img src="./img/photos/IMG_0613.JPG" class="img-fluid" alt="" />
-        </div>
-        <div class="col pt-3 pt-md-0">
-          <div class="h1 font-cursive font-weight-bold">Special Guests</div>
-          <div>
-            We will have “Family Tree Approved” guest speakers and experts who inspire and support us Mamas on all things growth, play, and development for everyone in the family. Our calendar is set with the most amazing experts and interactive speakers in order to support our happy, healthy
-            journey! See
-            <a href="./calendar.html" target="_self" class="font-weight-bold">The Family Tree calendar</a>. Find the right
-            <a href="./membership.html" target="_self" class="font-weight-bold">Membership</a>
-            for you and your Littles.
+        <hr>
+        <div class="row py-2">
+          <div class="col-12 col-md-4 col-lg-3 py-1">
+            <img src="./img/photos/IMG_4632.JPG" class="img-fluid" alt="">
           </div>
-          <hr />
+          <div class="col">
+            <div class="h3 font-weight-light">Messy Art</div>
+            <div class="font-weight-light">A fun-filled, hands-on class where our Littles will make messes & memories. Join us and let your little one explore a variety of tactile and messy play activities they will love! It's all about creating babies artwork masterpieces through exploration. They will experiment with all different textures, strengthen their fine motor skills, gross motor skills, hand-eye coordination and use their senses to see, touch, taste, hear and feel.</div>
+            <div class="pt-4" ng-init="getClasses('Family Tree', 'Messy Art', '')" ng-controller="ClassController">
+              <div class="h5 text-pink">Session Registration</div>
+              <div ng-include="'./_class-list.html'" ng-init="brandColor='pink'"></div>
+            </div>
+          </div>
         </div>
+        <hr>
+        <div class="row py-2">
+          <div class="col-12 col-md-4 col-lg-3 py-1">
+            <img src="./img/photos/IMG_0613.JPG" class="img-fluid" alt="">
+          </div>
+          <div class="col">
+            <div class="h3 font-weight-light">Special Guests</div>
+            <div class="font-weight-light">We will have “Family Tree Approved” guest speakers and experts who inspire and support us Mamas on all things growth, play, and development for everyone in the family. Our calendar is set with the most amazing experts and interactive speakers in order to support our happy, healthy journey!</div>
+          </div>
+        </div>
+
       </div>
+
     </div>
 
     <div ng-include src="'footer.html'"></div>

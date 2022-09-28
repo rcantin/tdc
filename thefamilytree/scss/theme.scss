@@ -40,7 +40,7 @@ body {
 $theme-colors: (
   "pink": rgb(255, 153, 255),
   "purple": rgb(204, 153, 255),
-  "blue": rgb(153, 204, 255)
+  "blue": rgb(153, 204, 255),
 );
 
 $primary: rgb(255, 153, 255);
@@ -143,6 +143,22 @@ button:focus {
       background: $info;
     }
   }
+}
+
+.table {
+  &.table-borderless {
+    border: none;
+    tbody {
+      border: none;
+      td {
+        border: none !important;
+      }
+    }
+  }
+}
+
+.shadow {
+  box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.2);
 }
 
 // .svg {

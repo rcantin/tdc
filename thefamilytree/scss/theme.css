@@ -119,6 +119,23 @@ button:focus {
   background: #99ccff;
 }
 
+.table.table-borderless {
+  border: none;
+}
+
+.table.table-borderless tbody {
+  border: none;
+}
+
+.table.table-borderless tbody td {
+  border: none !important;
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.2);
+}
+
 @media print {
   .no-print,
   .no-print * {
