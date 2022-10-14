@@ -69,7 +69,7 @@
     "name": "Kaelyn Hine",
     "title": "Recreational Dance Instructor/Assistant",
     "photo": "./img/faculty/dance/kh01.jpg",
-    "bio": "<p>Kaelyn is a grade 11 honours student. She started dance when she was 4 years old and has been a competitive dancer since she was 7. She has received several special awards, placed overall and won scholarships over the years. Dance is Kaelyn's passion. Not only is it physically challenging but it allows her to express herself. Kaelyn has been teaching the younger students at The Dream centre for 3 years now. It brings her so much joy watching her students learn and grow. She loves dancing and teaching at TDC!</p>"
+    "bio": "<p>Kaelyn started dance when she was 4 years old and has been a competitive dancer at The Dream Centre for 7 years. Kaelyn has trained and competed in ballet, jazz, lyrical, acro and contemporary. She has received many special awards, placed overall and won scholarships at several dance competitions over the years. Kaelyn has been teaching Dance to the younger students at The Dream Centre for 4 years now. She also loves to teach Gymnastics and Ninja warrior classes. Coaching in the gym has become a big passion of Kaelyn’s and she hopes to continue teaching Gymnastics, Ninja Warrior and Dance for many years at TDC. It brings her so much joy watching her students learn and grow. She hopes everyone has an amazing season!</p>"
   },
   {
     "ord": 14,
@@ -114,62 +114,7 @@
     "name": "Coach Brittany",
     "photo": "./img/faculty/gymnastics/bb.jpg",
     "title": "Gymnastics & Ninja Warrior Director, COO",
-    "bio": "<p>Brittany has been coaching gymnastics since 2005 and has had the opportunity to work with gymnasts from beginner to national level. She has also worked with athletes in cheerleading, dance, figure skating delivering specific athletic training needs. She was a judge for the Ontario Developmental Program (ODP) for 7 years. Since 2016, she has expanded her focus towards online education and program development for coaches to be able to provide quality coaching while incorporating a positive mindset. She has held clinics in both US and Canada.</p><p>Brittany has a bachelor’s degree in Applied Science (BASc) and a diploma as a Social Service Worker (SSW). She is also a Certified Personal Trainer through the National Academy Of Sports Medicine (NASM), certified in First Aid/CPR. Brittany studied in a variety of different areas such as sociology, psychology, counselling, and mediation which allows for a higher quality of coaching. She has experience working with children outside of sport as well, such as elementary schools and long-term care homes. She has a substantial amount of experience working with children and adults with exceptional needs.</p><p>Brittany did gymnastics in her youth and then moved into fitness later on in life. She grew up training as an opera singer and travelled US, Canada and Europe to sing. She participated in many operas, broadway productions, musicals, and other performances over the years. In her spare time, she enjoys cooking, doing puzzles and writing.</p><p>As a coach, one of Brittany’s most important values is to always see progress. Whether that be physical or emotional, she does her best to make sure her athletes and coaches are always progressing in some way. Her consistent and positive demand for quality and focus allows her to successfully guide each athlete to reach their highest potential.</p>"
-  },
-
-  {
-    "ord": 2,
-    "category": "gymnastics",
-    "colour": "purple",
-    "name": "Coach Shannon",
-    "photo": "./img/faculty/gymnastics/sc.jpg",
-    "title": "Recreational & Pre-Competitive Gymnastics Coach, Gym Supervisor",
-    "bio": "<p>Shannon has been a coach for over twenty years. She grew up training as a competitive gymnast and Trampolinist. She has been coaching in our recreational and pre-competitive programs at the Dream Centre since 2015.</p><p>Shannon has a College Diploma in Recreation and Leisure Services and her certifications and accomplishments include: Level 1&2 NCCP coaching in Gymnastics, Trampoline and Tumbling. She is also a Registered Reflexologist and Reiki Practitioner. Shannon has a cross trained in a variety of other sports including, dance, cheerleading, soccer, hockey and snowboarding. In her spare time she loves to paint.</p>"
-  },
-  {
-    "ord": 4,
-    "category": "gymnastics",
-    "colour": "purple",
-    "name": "Coach Chloe",
-    "photo": "./img/faculty/gymnastics/chh.jpg",
-    "title": "Recreational & Pre-Competitive Gymnastics Coach, Ninja Warrior Coach",
-    "bio": "<p>Chloe was a competitive dancer at The Dream Centre from the ages of 7-13. Following competitive dance, she started volunteering in the gymnastics program. Chloe has been an amazing and committed coach since 2017.  She has recently grown into teaching our new Ninja Warrior program as well as our pre-competitive gymnasts.</p><p>Chloe is currently an honours student at Glendale Secondary School in their audition based performing arts program.</p><p>Chloe is a certified gymnastics coach and has attained her First Aid/CPR certification. Chloe’s strong leadership skills bring quality to her classes and help the kids grow and progress throughout the season. Her goal is to put a smile on all of their faces and make sure they have fun. She is excited to grow with the Dream Centre this year.</p>"
-  },
-  {
-    "ord": 5,
-    "category": "gymnastics",
-    "colour": "purple",
-    "name": "Coach Megan",
-    "photo": "./img/faculty/gymnastics/ms.jpg",
-    "title": "Recreational Gymnastics Coach",
-    "bio": "<p>Megan is an honours student at Waterdown District High School. She hopes to study Sciences and/or Sports Management in University. Megan has been a gymnast since she was 3 years old and has been involved in a variety of other sports such as ballet, dance, tennis, rock climbing and other fitness programs. She is also a certified rock climbing coach. She has been coaching gymnastics at the Dream Centre since 2018. Coaching and being a mentor for young children has been a passion of Megan. Her eagerness to learn and inspire shows evidently in her coaching abilities.</p>"
-  },
-  {
-    "ord": 6,
-    "category": "gymnastics",
-    "colour": "purple",
-    "name": "Coach Sarah",
-    "photo": "./img/faculty/gymnastics/sv.jpg",
-    "title": "Recreational Gymnastics Coach",
-    "bio": "<p>Sarah Visser is a certified gymnastics coach and has been a gymnastics coach for over 20 years. She grew up training as a provincial gymnast and has coached both recreational and competitive levels. Her extensive experience in coaching and outgoing personality allows for a fun but progressive class environment. On her spare time, she loves biking, hiking and spending time with family.</p>"
-  },
-  {
-    "ord": 7,
-    "category": "gymnastics",
-    "colour": "purple",
-    "name": "Coach Carina",
-    "photo": "./img/faculty/gymnastics/cf.jpg",
-    "title": "Recreational Gymnastics Coach",
-    "bio": "<p>Carina is a Grade 12 Honour Roll student. She has been dancing and doing tumbling since the age of four. Carina has won scholarships to the Canadian Dance Expo and multiple awards at various competitions.</p><p>Carina has found her passion in coaching gymnastics and has been teaching at The Dream Centre Since 2018. Carina is excited to pursue her career as a gymnastics coach and works hard every day to inspire and mentor the children in her classes. Her excitement for fitness and health has pushed her to see herself coaching long-term.</p>"
-  },
-  {
-    "ord": 8,
-    "category": "gymnastics",
-    "colour": "purple",
-    "name": "Coach Courtney",
-    "photo": "./img/faculty/gymnastics/coh.jpg",
-    "title": "Recreational Gymnastics Coach",
-    "bio": "<p>Courtney is a certified gymnastics and trampoline coach and has been working at the Dream Centre since 2018. She is passionate about teaching and mentoring children. Her outgoing personality brings character and excitement to all of her classes.</p><p>Courtney started out as a competitive gymnast herself and then moved into lyrical dance and circus training on the hoops, silks, hamic and trapeze bars. She has won multiple awards for best tumbling and high scores on each apparatus in gymnastics.</p><p>Courtney graduated with honours at Waterdown District High School. She has volunteered at Allan A Greenleaf School and the Burlington SPCA. On her spare time she enjoys different types of art and loves spending time with her kitten.</p>"
+    "bio": "<p>Brittany has been coaching gymnastics since 2005 and has had the opportunity to work with gymnasts from beginner to national level. She has also worked with athletes in cheerleading, dance, figure skating delivering specific athletic training needs. She was a judge for the Ontario Developmental Program (ODP) for 7 years. Since 2016, she has expanded her focus towards online education and program development for coaches to be able to provide quality coaching while incorporating a positive mindset. She has held clinics in both US and Canada.</p><p>Brittany has a bachelor’s degree in Applied Science (BASc) and a diploma as a Social Service Worker (SSW). She is also a Certified Personal Trainer through the National Academy Of Sports Medicine (NASM), certified in First Aid/CPR and as an Athletic Trainer. Brittany studied in a variety of different areas such as sociology, psychology, counselling, and mediation, which allows for a higher quality of coaching.</p><p>She has experience working with children and youth outside of sport as well, such as elementary schools, homes and day programs for children with exceptional needs. She also has experience with adults in primary care homes and long-term care. She has a substantial amount of experience working with people of all ages.</p><p>Brittany did gymnastics in her youth and then moved into fitness training later on in life. She grew up training as an opera singer and travelled US, Canada and Europe to sing. She participated in many operas, Broadway productions, musicals, and other performances over the years. In her spare time, she enjoys cooking, doing puzzles and writing.</p><p>As a coach, one of Brittany’s most important values is to always see progress. Whether that be physical or emotional, she does her best to make sure her athletes and coaches are always progressing in some way. Her consistent and positive demand for quality and focus allows her to successfully guide each athlete to reach their highest potential.</p>"
   },
   {
     "ord": 9,
@@ -196,7 +141,34 @@
     "name": "Coach Martina",
     "photo": "./img/faculty/gymnastics/mc.jpg",
     "title": "Recreational Gymnastics Assistant",
-    "bio": "<p>Martina has just started at The Dream Centre as a Recreational Gymnastics Assistant. She is 14 years old and attends St. Mary's High School in Hamilton. Martina has a passion for gymnastics and was part of our pre-competitive gymnastics program when she was younger. She loves working with children and believes that coaching is a great way to continue to share her knowledge and passion with others. She looks forward to an amazing year at The Dream Centre.</p>"
+    "bio": "<p>Martina has just started at The Dream Centre as a gymnast and then moved to a Recreational Gymnastics Assistant over the next few years. She now coaches in both our Gymnastics and Ninja Warrior programs and has been with TDC for over 8+ years. Martina has a passion for gymnastics and was part of our pre-competitive gymnastics program when she was younger. She loves working with children and believes that coaching is a great way to continue to share her knowledge and passion with others.  She is a positive and uplifting person, and it reflects perfectly into her coaching qualities.</p>"
+  },
+  {
+    "ord": 12,
+    "category": "gymnastics",
+    "colour": "purple",
+    "name": "Coach Kaelyn",
+    "title": "Recreational Gymnastics Coach",
+    "photo": "./img/faculty/gymnastics/kh.jpg",
+    "bio": "<p>Kaelyn started dance when she was 4 years old and has been a competitive dancer at The Dream Centre for 7 years. Kaelyn has trained and competed in ballet, jazz, lyrical, acro and contemporary. She has received many special awards, placed overall and won scholarships at several dance competitions over the years. Kaelyn has been teaching Dance to the younger students at The Dream Centre for 4 years now. She also loves to teach Gymnastics and Ninja warrior classes. Coaching in the gym has become a big passion of Kaelyn’s and she hopes to continue teaching Gymnastics, Ninja Warrior and Dance for many years at TDC. It brings her so much joy watching her students learn and grow. She hopes everyone has an amazing season!</p>"
+  },
+  {
+    "ord": 13,
+    "category": "gymnastics",
+    "colour": "purple",
+    "name": "Coach Charleigh",
+    "title": "Recreational Gymnastics Coach",
+    "photo": "./img/faculty/gymnastics/charleigh.jpg",
+    "bio": "<p>Charleigh enjoys coaching because she finds it rewarding and satisfying. She believes it makes her a better person. It warms her heart to be able to watch some amazing children do things that they worked so hard to learn. This is her second-year coaching but due to her dedication and willingness to learn, it feels like she has been coaching forever. She did gymnastics when she was younger and had fun meeting new friends and learning new skills. She is a fun and enthusiastic coach. She also likes to play basketball and enjoys hanging out with her family in her extra time.</p>"
+  },
+  {
+    "ord": 14,
+    "category": "gymnastics",
+    "colour": "purple",
+    "name": "Coach Elenice",
+    "title": "Recreational Gymnastics Coach",
+    "photo": "./img/faculty/gymnastics/elenice.jpg",
+    "bio": "<p>Elenice has been a gymnast since she was 11 years old and has been coaching since 2014. She loves coaching because she can inspire children and teach them new skills. Her passion started after watching the 2008 Beijing Olympics. She also taught ballet classes which has helped immensely to expand her knowledge and help her athletes focus on proper form in the gym. She went to University in Mexico where she became part of the volleyball and Cheerleading team.</p><p>Outside of Gymnastics, she is a passionate and dedicated designer. She has a bachelor’s degree in Multimedia Design and an associate degree in Graphic design. She is an all-around athletic person and loves to dance and swim.  Elenice enjoys travelling, experiencing other cultures, spending time with family and friends, cooking, drawing, riding horses, watching movies, and walking her dogs.</p><p>Elenice has so much knowledge and understanding of the sport and we are incredibly grateful to have her on our coaching team. She loves working with kids of all ages and her personality brings so much positivity to her coaching.</p>"
   },
   {
     "ord": 1,
@@ -247,13 +219,22 @@
     "ord": 3,
     "category": "bacare",
     "colour": "yellow",
-    "name": "Sami Hill",
-    "photo": "./img/faculty/bacare/sami.jpg",
+    "name": "Steve Sordoni",
+    "photo": "./img/faculty/bacare/steve.jpg",
     "title": "Before & After School Program Staff",
-    "bio": "<p>Sami Hill is in the first year of completing her MSc in Child Life and Pediatric Psychosocial Care at McMaster University.  She has experience working with children of all ages in various centres across Ontario, including foster homes, daycare centres and paediatric hospital units. Her goal is to become a Certified Child Life Specialist, but she is currently enjoying working with the children at the Dream Centre!</p>"
+    "bio": "<p>Steve has been working in the Aftercare program at The Dream Centre since November 2021. He has worked with children and youth since 2005 and graduated from Humber College in 2006 as a Child and Youth Worker. He has worked in settings such as group homes, treatment and independence programs, shelters, and school programs. Steve has run a variety of programs through Children's Aid Society and The YMCA Of Greater Toronto, including life skills and social skills, community support, and strength building programs. He has worked with children from a variety of different backgrounds and experiences, including ADHD, FASD and ASD.</p>"
   },
   {
     "ord": 4,
+    "category": "bacare",
+    "colour": "yellow",
+    "name": "Tammy Day",
+    "photo": "./img/faculty/bacare/tammy.jpg",
+    "title": "Before & After School Program Staff",
+    "bio": "<p>Tammy has previous experience working with children has an EA teacher at a catholic school in Newfoundland. She worked with kindergarten children as well as school age.  She decided to move back to Ontario and pursue my well-loved career of working with children again. She is very excited to be joining or aftercare team.</p>"
+  },
+  {
+    "ord": 5,
     "category": "bacare",
     "colour": "yellow",
     "name": "Grace Cauchi",
@@ -268,62 +249,7 @@
     "name": "Coach Brittany",
     "photo": "./img/faculty/ninja/bb.jpg",
     "title": "Gymnastics & Ninja Warrior Director, COO",
-    "bio": "<p>Brittany has been coaching gymnastics since 2005 and has had the opportunity to work with gymnasts from beginner to national level. She has also worked with athletes in cheerleading, dance, figure skating delivering specific athletic training needs. She was a judge for the Ontario Developmental Program (ODP) for 7 years. Since 2016, she has expanded her focus towards online education and program development for coaches to be able to provide quality coaching while incorporating a positive mindset. She has held clinics in both US and Canada.</p><p>Brittany has a bachelor’s degree in Applied Science (BASc) and a diploma as a Social Service Worker (SSW). She is also a Certified Personal Trainer through the National Academy Of Sports Medicine (NASM), certified in First Aid/CPR. Brittany studied in a variety of different areas such as sociology, psychology, counselling, and mediation which allows for a higher quality of coaching. She has experience working with children outside of sport as well, such as elementary schools and long-term care homes. She has a substantial amount of experience working with children and adults with exceptional needs.</p><p>Brittany did gymnastics in her youth and then moved into fitness later on in life. She grew up training as an opera singer and travelled US, Canada and Europe to sing. She participated in many operas, broadway productions, musicals, and other performances over the years. In her spare time, she enjoys cooking, doing puzzles and writing.</p><p>As a coach, one of Brittany’s most important values is to always see progress. Whether that be physical or emotional, she does her best to make sure her athletes and coaches are always progressing in some way. Her consistent and positive demand for quality and focus allows her to successfully guide each athlete to reach their highest potential.</p>"
-  },
-
-  {
-    "ord": 2,
-    "category": "ninja",
-    "colour": "black",
-    "name": "Coach Shannon",
-    "photo": "./img/faculty/ninja/sc.jpg",
-    "title": "Recreational & Pre-Competitive Gymnastics Coach, Gym Supervisor",
-    "bio": "<p>Shannon has been a coach for over twenty years. She grew up training as a competitive gymnast and Trampolinist. She has been coaching in our recreational and pre-competitive programs at the Dream Centre since 2015.</p><p>Shannon has a College Diploma in Recreation and Leisure Services and her certifications and accomplishments include: Level 1&2 NCCP coaching in Gymnastics, Trampoline and Tumbling. She is also a Registered Reflexologist and Reiki Practitioner. Shannon has a cross trained in a variety of other sports including, dance, cheerleading, soccer, hockey and snowboarding. In her spare time she loves to paint.</p>"
-  },
-  {
-    "ord": 4,
-    "category": "ninja",
-    "colour": "black",
-    "name": "Coach Chloe",
-    "photo": "./img/faculty/ninja/chh.jpg",
-    "title": "Recreational & Pre-Competitive Gymnastics Coach, Ninja Warrior Coach",
-    "bio": "<p>Chloe was a competitive dancer at The Dream Centre from the ages of 7-13. Following competitive dance, she started volunteering in the gymnastics program. Chloe has been an amazing and committed coach since 2017.  She has recently grown into teaching our new Ninja Warrior program as well as our pre-competitive gymnasts.</p><p>Chloe is currently an honours student at Glendale Secondary School in their audition based performing arts program.</p><p>Chloe is a certified gymnastics coach and has attained her First Aid/CPR certification. Chloe’s strong leadership skills bring quality to her classes and help the kids grow and progress throughout the season. Her goal is to put a smile on all of their faces and make sure they have fun. She is excited to grow with the Dream Centre this year.</p>"
-  },
-  {
-    "ord": 5,
-    "category": "ninja",
-    "colour": "black",
-    "name": "Coach Megan",
-    "photo": "./img/faculty/ninja/ms.jpg",
-    "title": "Recreational Gymnastics Coach",
-    "bio": "<p>Megan is an honours student at Waterdown District High School. She hopes to study Sciences and/or Sports Management in University. Megan has been a gymnast since she was 3 years old and has been involved in a variety of other sports such as ballet, dance, tennis, rock climbing and other fitness programs. She is also a certified rock climbing coach. She has been coaching gymnastics at the Dream Centre since 2018. Coaching and being a mentor for young children has been a passion of Megan. Her eagerness to learn and inspire shows evidently in her coaching abilities.</p>"
-  },
-  {
-    "ord": 6,
-    "category": "ninja",
-    "colour": "black",
-    "name": "Coach Sarah",
-    "photo": "./img/faculty/ninja/sv.jpg",
-    "title": "Recreational Gymnastics Coach",
-    "bio": "<p>Sarah Visser is a certified gymnastics coach and has been a gymnastics coach for over 20 years. She grew up training as a provincial gymnast and has coached both recreational and competitive levels. Her extensive experience in coaching and outgoing personality allows for a fun but progressive class environment. On her spare time, she loves biking, hiking and spending time with family.</p>"
-  },
-  {
-    "ord": 7,
-    "category": "ninja",
-    "colour": "black",
-    "name": "Coach Carina",
-    "photo": "./img/faculty/ninja/cf.jpg",
-    "title": "Recreational Gymnastics Coach",
-    "bio": "<p>Carina is a Grade 12 Honour Roll student. She has been dancing and doing tumbling since the age of four. Carina has won scholarships to the Canadian Dance Expo and multiple awards at various competitions.</p><p>Carina has found her passion in coaching gymnastics and has been teaching at The Dream Centre Since 2018. Carina is excited to pursue her career as a gymnastics coach and works hard every day to inspire and mentor the children in her classes. Her excitement for fitness and health has pushed her to see herself coaching long-term.</p>"
-  },
-  {
-    "ord": 8,
-    "category": "ninja",
-    "colour": "black",
-    "name": "Coach Courtney",
-    "photo": "./img/faculty/ninja/coh.jpg",
-    "title": "Recreational Gymnastics Coach",
-    "bio": "<p>Courtney is a certified gymnastics and trampoline coach and has been working at the Dream Centre since 2018. She is passionate about teaching and mentoring children. Her outgoing personality brings character and excitement to all of her classes.</p><p>Courtney started out as a competitive gymnast herself and then moved into lyrical dance and circus training on the hoops, silks, hamic and trapeze bars. She has won multiple awards for best tumbling and high scores on each apparatus in gymnastics.</p><p>Courtney graduated with honours at Waterdown District High School. She has volunteered at Allan A Greenleaf School and the Burlington SPCA. On her spare time she enjoys different types of art and loves spending time with her kitten.</p>"
+    "bio": "<p>Brittany has been coaching gymnastics since 2005 and has had the opportunity to work with gymnasts from beginner to national level. She has also worked with athletes in cheerleading, dance, figure skating delivering specific athletic training needs. She was a judge for the Ontario Developmental Program (ODP) for 7 years. Since 2016, she has expanded her focus towards online education and program development for coaches to be able to provide quality coaching while incorporating a positive mindset. She has held clinics in both US and Canada.</p><p>Brittany has a bachelor’s degree in Applied Science (BASc) and a diploma as a Social Service Worker (SSW). She is also a Certified Personal Trainer through the National Academy Of Sports Medicine (NASM), certified in First Aid/CPR and as an Athletic Trainer. Brittany studied in a variety of different areas such as sociology, psychology, counselling, and mediation, which allows for a higher quality of coaching.</p><p>She has experience working with children and youth outside of sport as well, such as elementary schools, homes and day programs for children with exceptional needs. She also has experience with adults in primary care homes and long-term care. She has a substantial amount of experience working with people of all ages.</p><p>Brittany did gymnastics in her youth and then moved into fitness training later on in life. She grew up training as an opera singer and travelled US, Canada and Europe to sing. She participated in many operas, Broadway productions, musicals, and other performances over the years. In her spare time, she enjoys cooking, doing puzzles and writing.</p><p>As a coach, one of Brittany’s most important values is to always see progress. Whether that be physical or emotional, she does her best to make sure her athletes and coaches are always progressing in some way. Her consistent and positive demand for quality and focus allows her to successfully guide each athlete to reach their highest potential.</p>"
   },
   {
     "ord": 9,
@@ -350,6 +276,33 @@
     "name": "Coach Martina",
     "photo": "./img/faculty/ninja/mc.jpg",
     "title": "Recreational Gymnastics Assistant",
-    "bio": "<p>Martina has just started at The Dream Centre as a Recreational Gymnastics Assistant. She is 14 years old and attends St. Mary's High School in Hamilton. Martina has a passion for gymnastics and was part of our pre-competitive gymnastics program when she was younger. She loves working with children and believes that coaching is a great way to continue to share her knowledge and passion with others. She looks forward to an amazing year at The Dream Centre.</p>"
+    "bio": "<p>Martina has just started at The Dream Centre as a gymnast and then moved to a Recreational Gymnastics Assistant over the next few years. She now coaches in both our Gymnastics and Ninja Warrior programs and has been with TDC for over 8+ years. Martina has a passion for gymnastics and was part of our pre-competitive gymnastics program when she was younger. She loves working with children and believes that coaching is a great way to continue to share her knowledge and passion with others.  She is a positive and uplifting person, and it reflects perfectly into her coaching qualities.</p>"
+  },
+  {
+    "ord": 12,
+    "category": "ninja",
+    "colour": "black",
+    "name": "Coach Kaelyn",
+    "title": "Recreational Gymnastics Coach",
+    "photo": "./img/faculty/ninja/kh.jpg",
+    "bio": "<p>Kaelyn started dance when she was 4 years old and has been a competitive dancer at The Dream Centre for 7 years. Kaelyn has trained and competed in ballet, jazz, lyrical, acro and contemporary. She has received many special awards, placed overall and won scholarships at several dance competitions over the years. Kaelyn has been teaching Dance to the younger students at The Dream Centre for 4 years now. She also loves to teach Gymnastics and Ninja warrior classes. Coaching in the gym has become a big passion of Kaelyn’s and she hopes to continue teaching Gymnastics, Ninja Warrior and Dance for many years at TDC. It brings her so much joy watching her students learn and grow. She hopes everyone has an amazing season!</p>"
+  },
+  {
+    "ord": 13,
+    "category": "ninja",
+    "colour": "black",
+    "name": "Coach Charleigh",
+    "title": "Recreational Gymnastics Coach",
+    "photo": "./img/faculty/ninja/charleigh.jpg",
+    "bio": "<p>Charleigh enjoys coaching because she finds it rewarding and satisfying. She believes it makes her a better person. It warms her heart to be able to watch some amazing children do things that they worked so hard to learn. This is her second-year coaching but due to her dedication and willingness to learn, it feels like she has been coaching forever. She did gymnastics when she was younger and had fun meeting new friends and learning new skills. She is a fun and enthusiastic coach. She also likes to play basketball and enjoys hanging out with her family in her extra time.</p>"
+  },
+  {
+    "ord": 14,
+    "category": "ninja",
+    "colour": "black",
+    "name": "Coach Elenice",
+    "title": "Recreational Gymnastics Coach",
+    "photo": "./img/faculty/ninja/elenice.jpg",
+    "bio": "<p>Elenice has been a gymnast since she was 11 years old and has been coaching since 2014. She loves coaching because she can inspire children and teach them new skills. Her passion started after watching the 2008 Beijing Olympics. She also taught ballet classes which has helped immensely to expand her knowledge and help her athletes focus on proper form in the gym. She went to University in Mexico where she became part of the volleyball and Cheerleading team.</p><p>Outside of Gymnastics, she is a passionate and dedicated designer. She has a bachelor’s degree in Multimedia Design and an associate degree in Graphic design. She is an all-around athletic person and loves to dance and swim.  Elenice enjoys travelling, experiencing other cultures, spending time with family and friends, cooking, drawing, riding horses, watching movies, and walking her dogs.</p><p>Elenice has so much knowledge and understanding of the sport and we are incredibly grateful to have her on our coaching team. She loves working with kids of all ages and her personality brings so much positivity to her coaching.</p>"
   }
 ]
