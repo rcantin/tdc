@@ -11149,5 +11149,9 @@ a.text-birthday:hover, a.text-birthday:focus {
 
 .fundraising-page .card-deck .card {
   margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
 }
 /*# sourceMappingURL=theme.css.map */

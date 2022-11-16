@@ -251,6 +251,9 @@ a[aria-expanded="false"] {
     grid-gap: 2rem !important;
     .card {
       margin: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
     }
   }
 }
